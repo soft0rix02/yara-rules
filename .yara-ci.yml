@@ -1,5 +1,8 @@
 # Which files are YARA rules
-rules_path: rules/*.yar
+files:
+  accept:
+  - "**.yar"
+  - "**.yara"
 
 # Negative datasets → anything matching here is a FALSE POSITIVE
 false_positives:
@@ -14,5 +17,6 @@ false_negatives:
     limit: 500
   - query: 'entity:file tag:emotet  p:10+ fs:2024-06-01+'
     limit: 500
+
 
 
