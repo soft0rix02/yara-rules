@@ -1,0 +1,28 @@
+# Which files are YARA rules
+rules_path: rules/**/*.yar
+
+# If your rules use externals (e.g., LiveHunt variables), define them here:
+variables:            # YARA-CI infers types from values
+  file_name: ""
+  file_type: ""
+  md5: ""
+  sha1: ""
+  sha256: ""
+  positives: 0
+  new_file: true
+  tags: ""
+  # (add others you use)                                   # <-- from VT LiveHunt set
+                                                           #     (safe defaults)
+# Negative datasets → anything matching here is a FALSE POSITIVE
+false_positives:
+  - query: 'entity:file type:peexe positives:0 fs:2024-01-01+ size:<2MB'
+    limit: 3000
+  - query: 'entity:file (type:pdf OR type:docx OR type:xlsx) positives:0 fs:2024-01-01+'
+    limit: 2000
+
+# Positive datasets → things you EXPECT to match (FN if you don’t)
+false_negatives:
+  - query: 'entity:file tag:formbook p:10+ fs:2024-06-01+'   # replace with families you care about
+    limit: 500
+  - query: 'entity:file tag:emotet  p:10+ fs:2024-06-01+'
+    limit: 500
