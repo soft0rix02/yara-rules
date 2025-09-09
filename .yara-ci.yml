@@ -1,5 +1,5 @@
 # Which files are YARA rules
-rules_path: rules/**/*.yar
+rules_path: rules/*.yar
 
 # If your rules use externals (e.g., LiveHunt variables), define them here:
 variables:            # YARA-CI infers types from values
@@ -26,3 +26,4 @@ false_negatives:
     limit: 500
   - query: 'entity:file tag:emotet  p:10+ fs:2024-06-01+'
     limit: 500
+
