@@ -1,9 +1,9 @@
 /*
    YARA Rule Set
-   Author: yarGen Rule Generator
+   Author: Rule Generator
    Date: 2025-08-29
    Identifier: dropzone
-   Reference: https://github.com/Neo23x0/yarGen
+   Reference: 
 */
 
 /* Rule Set ----------------------------------------------------------------- */
