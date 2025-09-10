@@ -1031,9 +1031,9 @@ rule RemcosRAT_signature__be5e11f6 {
       hash1 = "be5e11f6e953105b0f317defdcdcc60e8c8a59d2d90c63ced02711a7169b200a"
    strings:
       $x1 = "E.text=\"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmF" ascii /* score: '72.00'*/
-      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                          ' */ /* score: '26.50'*/
-      $s4 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                   ' */ /* score: '26.50'*/
+      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
+      $s4 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
       $s5 = "YTEwYmQ3ZGRjNwBtXzAxZGFkOWJmMDllZDQzNmJhZTE4M2VmYmQxODM2Mjc0AG1fMDBjMDM5ZTE5YmExNGQxZWI3OGNhNmU3MWE2Yjc0OTAAbV9lMzAxOGI2MGRlOTU0" ascii /* base64 encoded string 'a10bd7ddc7 m_01dad9bf09ed436bae183efbd1836274 m_00c039e19ba14d1eb78ca6e71a6b7490 m_e3018b60de954' */ /* score: '26.00'*/
       $s6 = "ZmJhNDI0NDhlNTRjY2I5ZGFlOGUyYTYAbV8xNzg5YTc0YjViMzQ0MGI4ODVhYTZkY2I1NzkwNDdlZABtXzVhNzhkMmFlOGU2OTQ1NGQ5NDFkZmJlNjU1ZDMzZmUxAG1f" ascii /* base64 encoded string 'fba42448e54ccb9dae8e2a6 m_1789a74b5b3440b885aa6dcb579047ed m_5a78d2ae8e69454d941dfbe655d33fe1 m_' */ /* score: '26.00'*/
       $s7 = "NTEwZGQ3YzgAbV9mNDFmYzM3NjFlOGU0NzVhYmY3ZDY3ZWZhZGJmMWNjMABtX2IzZmY1OGEwYmE3YzRhNzc5YzYxMGNhODg5ODc5OWVhAG1fYTZjN2YxZTlkMjljNDky" ascii /* base64 encoded string '510dd7c8 m_f41fc3761e8e475abf7d67efadbf1cc0 m_b3ff58a0ba7c4a779c610ca8898799ea m_a6c7f1e9d29c492' */ /* score: '26.00'*/
