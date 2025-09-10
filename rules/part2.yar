@@ -3554,7 +3554,7 @@ rule a3__Logger_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__8083f782 {
       $s2 = "TimeZoneConverter.Data.Aliases.csv.gz" fullword ascii /* score: '14.00'*/
       $s3 = "TimeZoneConverter.Data.RailsMapping.csv.gz" fullword ascii /* score: '14.00'*/
       $s4 = "TimeZoneConverter.Data.Mapping.csv.gz" fullword ascii /* score: '14.00'*/
-      $s5 = "Vz9LNEoA4" fullword ascii /* base64 encoded string 'W?K4J ' */ /* score: '11.00'*/
+      $s5 = "Vz9LNEoA4" fullword ascii /* base64 encoded string*/ /* score: '11.00'*/
       $s6 = "9NM6sd2uifgso9SmxN4gqtbt5tk6oNWhy9Nygt234sQ9t8GC1NksqNqv3pEuoMyc4d8lqfaiys9yqsic7sQstM2iy8M9vIOkwt4Wid2twN4h/v+m0/4wtd2F1cUkjdmt" wide /* score: '11.00'*/
       $s7 = "UhjW^- " fullword ascii /* score: '8.00'*/
       $s8 = "Yefe* A" fullword ascii /* score: '8.00'*/
