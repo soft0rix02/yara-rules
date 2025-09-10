@@ -307,35 +307,6 @@ rule Mirai_signature__9fd09078 {
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
       8 of them
-}
-
-rule Mirai_signature__a682edb7 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_a682edb7.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "a682edb7b3d25c19767cbfce5eb9f02aee924a2e3ad08b4fcdae06eb2b8c55c1"
-   strings:
-      $s1 = "AWAVAUATA" fullword ascii /* reversed goodware string 'ATAUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
-
-rule Mirai_signature__a69e5ac1 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_a69e5ac1.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "a69e5ac18b4acdcd5db56bb4d8d0b29c212a6f71eaa45fc8a2d1b251ed7e0952"
-   strings:
-      $s1 = "AWAVAUATA" fullword ascii /* reversed goodware string 'ATAUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
 
 rule Mirai_signature__ca22edc4 {
    meta:
@@ -350,34 +321,6 @@ rule Mirai_signature__ca22edc4 {
       $s3 = "zl}Jffb`l!." fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
-
-rule Mirai_signature__ab7fd9b5 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_ab7fd9b5.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "ab7fd9b59fda874718d1bf12a34750a754e58212bd37cc2ae0becbe939fda808"
-   strings:
-      $s1 = "AWAVAUA" fullword ascii /* reversed goodware string 'AUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 100KB and
-      all of them
-}
-
-rule Mirai_signature__bebe60a5 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_bebe60a5.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "bebe60a59467902919f2c799e78c37af3370753e7cd16abac733a88ef1cbc574"
-   strings:
-      $s1 = "AWAVAUA" fullword ascii /* reversed goodware string 'AUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 100KB and
       all of them
 }
 
