@@ -249,34 +249,6 @@ rule ACRStealer_signature__efb56419c1ba206d8c70e3157d5c83a0_imphash_ {
       8 of them
 }
 
-rule sig_9fb7124d1a355a73a9290333dd58e8b67ec768d3dc440f187d335881a07acdff_9fb7124d {
-   meta:
-      description = "_subset_batch - file 9fb7124d1a355a73a9290333dd58e8b67ec768d3dc440f187d335881a07acdff_9fb7124d.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "9fb7124d1a355a73a9290333dd58e8b67ec768d3dc440f187d335881a07acdff"
-   strings:
-      $s1 = "__pthread_mutexattr_getkind_np" fullword ascii /* score: '23.00'*/
-      $s2 = "__pthread_mutexattr_getpshared" fullword ascii /* score: '23.00'*/
-      $s3 = "__pthread_mutexattr_gettype" fullword ascii /* score: '23.00'*/
-      $s4 = "grep -l '%s' /proc/[0-9]*/comm 2>/dev/null | head -n1 | xargs dirname 2>/dev/null | xargs basename 2>/dev/null" fullword ascii /* score: '23.00'*/
-      $s5 = "__pthread_mutexattr_settype" fullword ascii /* score: '18.00'*/
-      $s6 = "__pthread_mutex_init" fullword ascii /* score: '18.00'*/
-      $s7 = "__pthread_mutex_unlock" fullword ascii /* score: '18.00'*/
-      $s8 = "__pthread_mutex_trylock" fullword ascii /* score: '18.00'*/
-      $s9 = "pthread_keys_mutex" fullword ascii /* score: '18.00'*/
-      $s10 = "__pthread_mutexattr_setkind_np" fullword ascii /* score: '18.00'*/
-      $s11 = "__pthread_mutexattr_setpshared" fullword ascii /* score: '18.00'*/
-      $s12 = "__pthread_mutexattr_destroy" fullword ascii /* score: '18.00'*/
-      $s13 = "__pthread_mutex_destroy" fullword ascii /* score: '18.00'*/
-      $s14 = "__pthread_mutex_lock" fullword ascii /* score: '18.00'*/
-      $s15 = "__pthread_mutexattr_init" fullword ascii /* score: '18.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 700KB and
-      8 of them
-}
-
 rule sig_98ee0cb07c92488fdf159e5d505f6927_imphash_ {
    meta:
       description = "_subset_batch - file 98ee0cb07c92488fdf159e5d505f6927(imphash).exe"
@@ -1936,34 +1908,6 @@ rule AgentTesla_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__6a58063f {
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
       all of them
-}
-
-rule afdc8317dc5a474dc57175fafed280aa189b1f8a8449a27ff3c292cd7c53fe8c_afdc8317 {
-   meta:
-      description = "_subset_batch - file afdc8317dc5a474dc57175fafed280aa189b1f8a8449a27ff3c292cd7c53fe8c_afdc8317.msi"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "afdc8317dc5a474dc57175fafed280aa189b1f8a8449a27ff3c292cd7c53fe8c"
-   strings:
-      $x1 = "TableTypeColumnIdentifier_ValidationValueNPropertyId_SummaryInformationDescriptionSetCategoryKeyTableMaxValueNullableKeyColumnMi" ascii /* score: '61.00'*/
-      $x2 = ".If the expression syntax is invalid, the engine will terminate, returning iesBadActionData.SequenceNumber that determines the s" ascii /* score: '41.00'*/
-      $x3 = "dminUISequenceAdvtExecuteSequenceComponentPrimary key used to identify a particular component record.ComponentIdGuidA string GUI" ascii /* score: '31.00'*/
-      $s4 = "35-BDF4F3E57D48}SetZUBOoaCSCf[%LOCALAPPDATA]\\CWwIZuZRlDAZpwOTARGETDIR[%LOCALAPPDATA]\\CWwIZuZ\\cnmpaui.exe.SourceDirMainProgran" ascii /* score: '27.00'*/
-      $s5 = "dows Installercnmpaui.exe0.3.0.01033cnmpaui.dllcnmplog.datValidateProductIDProcessComponentsUnpublishFeaturesRemoveFilesRegister" ascii /* score: '27.00'*/
-      $s6 = "lumnAdminExecuteSequenceActionName of action to invoke, either in the engine or the handler DLL.ConditionOptional expression whi" ascii /* score: '23.00'*/
-      $s7 = "ort order in which the actions are to be executed.  Leave blank to suppress action.AdminUISequenceAdvtExecuteSequenceComponentPr" ascii /* score: '21.00'*/
-      $s8 = "imary key used to identify a particular component record.ComponentIdGuidA string GUID unique to this component, version, and lan" ascii /* score: '20.00'*/
-      $s9 = "with respect to the media images; order must track cabinet order.InstallExecuteSequenceInstallUISequenceMediaDiskIdPrimary key, " ascii /* score: '20.00'*/
-      $s10 = "InstallValidateInstallInitializeInstallAdminPackageInstallFilesInstallFinalizeExecuteActionPublishFeaturesPublishProductzVFBIbjM" ascii /* score: '18.00'*/
-      $s11 = "om the Directory table.AttributesRemote execution option, one of irsEnumA conditional statement that will disable this component" ascii /* score: '18.00'*/
-      $s12 = "ionData.SequenceNumber that determines the sort order in which the actions are to be executed.  Leave blank to suppress action.A" ascii /* score: '17.00'*/
-      $s13 = "me of table to which data must linkColumn to which foreign key connectsText;Formatted;Template;Condition;Guid;Path;Version;Langu" ascii /* score: '17.00'*/
-      $s14 = "tem.TitleShort text identifying a visible feature item.Longer descriptive text descr" fullword ascii /* score: '16.00'*/
-      $s15 = "ual path, set either by the AppSearch action or with the default setting obtained from the Directory table.AttributesRemote exec" ascii /* score: '15.00'*/
-   condition:
-      uint16(0) == 0xcfd0 and filesize < 6000KB and
-      1 of ($x*) and 4 of them
 }
 
 rule a3__Logger_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__56c2cb80 {
@@ -6852,34 +6796,6 @@ rule _AgentTesla_signature__057cca90_AgentTesla_signature__1e90a0e0769973c9f8edd
       ) or ( all of them )
 }
 
-rule _9cbefe68f395e67356e2a5d8d1b285c0_imphash__a520fd20530cf0b0db6a6c3c8b88d11d_imphash__49 {
-   meta:
-      description = "_subset_batch - from files 9cbefe68f395e67356e2a5d8d1b285c0(imphash).exe, a520fd20530cf0b0db6a6c3c8b88d11d(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "aa02002f4cdb80fe881ccaad7626f3161e83490b276659ab01879e736f44540f"
-      hash2 = "8f54612f441c4a18564e6badf5709544370715e4529518d04b402dcd7f11b0fb"
-   strings:
-      $s1 = "sync.runtime_SemacquireMutex" fullword ascii /* score: '21.00'*/
-      $s2 = "runtime.getlasterror" fullword ascii /* score: '18.00'*/
-      $s3 = "runtime.getLoadLibraryEx" fullword ascii /* score: '15.00'*/
-      $s4 = "runtime.getargp" fullword ascii /* score: '15.00'*/
-      $s5 = "runtime.getRandomData" fullword ascii /* score: '15.00'*/
-      $s6 = "runtime.traceGCSweepStart" fullword ascii /* score: '15.00'*/
-      $s7 = "runtime.traceGCSweepDone" fullword ascii /* score: '15.00'*/
-      $s8 = "runtime.traceGCSweepSpan" fullword ascii /* score: '15.00'*/
-      $s9 = "runtime.getLoadLibrary" fullword ascii /* score: '15.00'*/
-      $s10 = "runtime.getStackMap" fullword ascii /* score: '15.00'*/
-      $s11 = "runtime.heapBits.forwardOrBoundary" fullword ascii /* score: '15.00'*/
-      $s12 = "runtime.getPageSize" fullword ascii /* score: '15.00'*/
-      $s13 = "runtime.getArgInfo" fullword ascii /* score: '15.00'*/
-      $s14 = "runtime.heapBits.forward" fullword ascii /* score: '15.00'*/
-      $s15 = "runtime.getArgInfoFast" fullword ascii /* score: '15.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 14000KB and ( 8 of them )
-      ) or ( all of them )
-}
 
 rule _a65f66967ed69bd39685e5b02b99ec97_imphash__AgentTesla_signature__56ffbbdda63dbdf1891621098d41e68d_imphash__50 {
    meta:
@@ -7059,36 +6975,6 @@ rule _a3__Logger_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__f63101d1_A
       $s13 = "GetRecentContacts" fullword ascii /* score: '9.00'*/
    condition:
       ( uint16(0) == 0x5a4d and filesize < 3000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _9a06f0024c1694774ae97311608bab5b_imphash__AgentTesla_signature__ccc8dfebc5d9971e8491d80ecc850a15_imphash__AsyncRAT_signatur_56 {
-   meta:
-      description = "_subset_batch - from files 9a06f0024c1694774ae97311608bab5b(imphash).exe, AgentTesla(signature)_ccc8dfebc5d9971e8491d80ecc850a15(imphash).exe, AsyncRAT(signature)_b4a3b157700e07d805d7f946a6215505(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "b5887e126bce96f2fb30abe3d085b83ebdf99e4d89f7fb24b0da6d4c98cc9873"
-      hash2 = "134d4c6cd667d14ed0fb492442a5d759bc2878bacad500c6eb638f3343b02ec2"
-      hash3 = "5e088f3ae8bf2631e5aaa8de2facd537a65ef5e269924213e14ee41d94b6a446"
-   strings:
-      $s1 = "Alt+ Clipboard does not support Icons/Menu '%s' is already being used by another formDocked control must have a name%Error remo" wide /* score: '16.00'*/
-      $s2 = "clWebDarkMagenta" fullword ascii /* score: '14.00'*/
-      $s3 = "Stream write error\"Unable to find a Table of Contents" fullword wide /* score: '14.00'*/
-      $s4 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\FontSubstitutes" fullword ascii /* score: '12.00'*/
-      $s5 = "\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layouts\\" fullword ascii /* score: '11.00'*/
-      $s6 = "Write$Error creating variant or safe array!'%s' is not a valid integer value" fullword wide /* score: '10.00'*/
-      $s7 = "clWebDarkRed" fullword ascii /* score: '9.00'*/
-      $s8 = "clWebDarkSeaGreen" fullword ascii /* score: '9.00'*/
-      $s9 = "clWebDarkKhaki" fullword ascii /* score: '9.00'*/
-      $s10 = "clWebDarkTurquoise" fullword ascii /* score: '9.00'*/
-      $s11 = "clWebGhostWhite" fullword ascii /* score: '9.00'*/
-      $s12 = "clWebDarkViolet" fullword ascii /* score: '9.00'*/
-      $s13 = "clWebDarkBlue" fullword ascii /* score: '9.00'*/
-      $s14 = "clWebDarkGoldenRod" fullword ascii /* score: '9.00'*/
-      $s15 = "clWebDarkSlategray" fullword ascii /* score: '9.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 5000KB and ( 8 of them )
       ) or ( all of them )
 }
 
@@ -7979,64 +7865,6 @@ rule _a65f66967ed69bd39685e5b02b99ec97_imphash__AgentTesla_signature__057cca90_A
       ) or ( all of them )
 }
 
-rule _a65f66967ed69bd39685e5b02b99ec97_imphash__AgentTesla_signature__56ffbbdda63dbdf1891621098d41e68d_imphash__AgentTesla_signat_85 {
-   meta:
-      description = "_subset_batch - from files a65f66967ed69bd39685e5b02b99ec97(imphash).exe, AgentTesla(signature)_56ffbbdda63dbdf1891621098d41e68d(imphash).exe, AgentTesla(signature)_fdfd597602a97b999259741e5480e514(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "758082eaec75e22c896aa70ece7305dc9e3964fcb435fe6e5e1cbb73d379d9bc"
-      hash2 = "6a15d4e73d8b68c7cd91c14c0fa94cc3781ed4d6e8a3ec946c792720c843c5f8"
-      hash3 = "27d0c0261bf8a7f0dbbf04d60e775834b7150294e25f15f99c679dc1a1663be9"
-   strings:
-      $s1 = "(UnprocessableContent" fullword ascii /* score: '20.00'*/
-      $s2 = "&UnprocessableEntity" fullword ascii /* score: '15.00'*/
-      $s3 = "8System.Collections.IList.Add@" fullword ascii /* score: '13.00'*/
-      $s4 = "Null ObjectIdentifier ObjectDescriptor" fullword ascii /* score: '13.00'*/
-      $s5 = "\"GetCombinedString" fullword ascii /* score: '12.00'*/
-      $s6 = "IdnEquivalent.TryGetUnicodeEquivalent" fullword ascii /* score: '12.00'*/
-      $s7 = ".GetDefaultProviderFlags*CryptGetKeyParamFlags" fullword ascii /* score: '12.00'*/
-      $s8 = "6GetMaxHttp2StreamWindowSize" fullword ascii /* score: '12.00'*/
-      $s9 = "\"TemporaryRedirect" fullword ascii /* score: '11.00'*/
-      $s10 = "AlreadyReportedA" fullword ascii /* score: '10.00'*/
-      $s11 = "ResetContent5" fullword ascii /* score: '10.00'*/
-      $s12 = "PartialContent9" fullword ascii /* score: '10.00'*/
-      $s13 = "NoContent1" fullword ascii /* score: '10.00'*/
-      $s14 = ".HttpVersionNotSupported" fullword ascii /* score: '10.00'*/
-      $s15 = "6RequestHeaderFieldsTooLarge" fullword ascii /* score: '9.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 22000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _AmosStealer_signature__AmosStealer_signature__2a61643c_86 {
-   meta:
-      description = "_subset_batch - from files AmosStealer(signature).dmg, AmosStealer(signature)_2a61643c.dmg"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "74181455892ed362735d9c7aba8891903e46b71371c02b028f3df75e4792b969"
-      hash2 = "2a61643c3b42ead1846d935a4c9f997e624100e42599756cdd1c819ee5d165d7"
-   strings:
-      $s1 = "AAAAAAAAAAAAAAB" ascii /* base64 encoded string*/ /* reversed goodware string 'BAAAAAAAAAAAAAA' */ /* score: '26.50'*/
-      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAEAAAA" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s3 = "AAAAAAAAAABAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s4 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAA" fullword ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAD" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s7 = "aAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '16.00'*/
-      $s8 = "aAAAAAEAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s9 = "8AAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s10 = "aAAAAAEAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s11 = "AAAAAAAAAAAAACAAAAAAA" ascii /* base64 encoded string*/ /* score: '12.50'*/
-      $s12 = "<string>GPT Header (Primary GPT Header : 1)</string>" fullword ascii /* score: '9.00'*/
-      $s13 = "<string>GPT Header (Backup GPT Header : 7)</string>" fullword ascii /* score: '9.00'*/
-      $s14 = "AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* score: '8.50'*/
-   condition:
-      ( uint16(0) == 0xda78 and filesize < 10000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
 rule _a65f66967ed69bd39685e5b02b99ec97_imphash__AgentTesla_signature__057cca90_AgentTesla_signature__1e90a0e0769973c9f8edd53d008c_87 {
    meta:
       description = "_subset_batch - from files a65f66967ed69bd39685e5b02b99ec97(imphash).exe, AgentTesla(signature)_057cca90.tar, AgentTesla(signature)_1e90a0e0769973c9f8edd53d008ca694(imphash).exe, AgentTesla(signature)_462a1c4623dd5653cfbabfcb88d6bdd9(imphash).exe, AgentTesla(signature)_57a57b52c398ba0bf2f72c7ddb5a9e1e(imphash).exe, AgentTesla(signature)_792661c7a60d6624adab7be57ff57e58(imphash).exe, AgentTesla(signature)_9eeb76c5ed4b34e66260a9300680a9c0(imphash).exe, AgentTesla(signature)_bb4d11c9.tar, AgentTesla(signature)_fcf36bf30437909fd62937df8a303a93(imphash).exe"
@@ -8781,38 +8609,6 @@ rule _a65f66967ed69bd39685e5b02b99ec97_imphash__AgentTesla_signature__057cca90_A
       $s11 = "GetLocalValue" fullword ascii /* score: '8.00'*/
    condition:
       ( ( uint16(0) == 0x5a4d or uint16(0) == 0x5550 ) and filesize < 22000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _9de24f4b875ab03a090f4ef94a1a134cd945d25380e089184c51ec945250cf13_9de24f4b_a69bc1b3ee708440bc5022a053b93f3622d22a677a472465d_110 {
-   meta:
-      description = "_subset_batch - from files 9de24f4b875ab03a090f4ef94a1a134cd945d25380e089184c51ec945250cf13_9de24f4b.msi, a69bc1b3ee708440bc5022a053b93f3622d22a677a472465d41b6240e5bccea3_a69bc1b3.msi, AteraAgent(signature).msi, AteraAgent(signature)_0345dafe.msi, AteraAgent(signature)_123ee7b9.msi"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "9de24f4b875ab03a090f4ef94a1a134cd945d25380e089184c51ec945250cf13"
-      hash2 = "a69bc1b3ee708440bc5022a053b93f3622d22a677a472465d41b6240e5bccea3"
-      hash3 = "698dbae0f0a37b59c0ba4197135a279511881fe3cffd675feedc5b357b572ec9"
-      hash4 = "0345dafeea831a7e4f70756ee3d3bff609f65ac1986798a8c13cb420c4c89797"
-      hash5 = "123ee7b9737081cd149be31fde2cb882b40f126a9c5d208898cc4bb072203759"
-   strings:
-      $s1 = "failed to execute view" fullword ascii /* score: '19.00'*/
-      $s2 = "failed to get MsiLogging property" fullword ascii /* score: '17.00'*/
-      $s3 = "Failed to get module filename" fullword ascii /* score: '12.00'*/
-      $s4 = "Failed to get previous size of string" fullword ascii /* score: '12.00'*/
-      $s5 = "Failed to get string from record" fullword ascii /* score: '12.00'*/
-      $s6 = "Failed to set verbose logging global atom" fullword ascii /* score: '12.00'*/
-      $s7 = "Failed to get data for property '%ls'" fullword ascii /* score: '12.00'*/
-      $s8 = "Failed to get previous size of property data string." fullword ascii /* score: '12.00'*/
-      $s9 = "LOGVERBOSE" fullword ascii /* score: '11.50'*/
-      $s10 = "Entering %s in %ls, version %u.%u.%u.%u" fullword ascii /* score: '10.00'*/
-      $s11 = "failed to fetch single record from view" fullword ascii /* score: '9.00'*/
-      $s12 = "failed to initialize" fullword ascii /* score: '9.00'*/
-      $s13 = "failed to open view on database" fullword ascii /* score: '9.00'*/
-      $s14 = "Failed to create WcaVerboseLogging global atom." fullword ascii /* score: '8.00'*/
-      $s15 = "Failed to create WcaNotVerboseLogging global atom." fullword ascii /* score: '8.00'*/
-   condition:
-      ( uint16(0) == 0xcfd0 and filesize < 15000KB and ( 8 of them )
       ) or ( all of them )
 }
 
