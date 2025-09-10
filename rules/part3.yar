@@ -7317,7 +7317,6 @@ rule _cdb0a360cca7a5099c2d2357be1a833e032ffdeb3f467a6fac845f6bb77031c9_cdb0a360_
       hash3 = "662a1ce669ea5867deb1e22b76c29e8a4d6e2cd8b8becbec0aa7dc9d80748a60"
    strings:
       $x1 = "costura.newtonsoft.json.dll.compressed|13.0.0.0|Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6a" ascii /* score: '41.00'*/
-      $x2 = "costura.newtonsoft.json.dll.compressed|13.0.0.0|Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6a" ascii /* score: '39.00'*/
       $s3 = "costura.system.runtime.compilerservices.unsafe.dll.compressed" fullword wide /* score: '28.00'*/
       $s4 = "costura.system.memory.dll.compressed" fullword wide /* score: '25.00'*/
       $s5 = "costura.system.buffers.dll.compressed" fullword wide /* score: '25.00'*/
@@ -7327,7 +7326,7 @@ rule _cdb0a360cca7a5099c2d2357be1a833e032ffdeb3f467a6fac845f6bb77031c9_cdb0a360_
       $s9 = "system.runtime.compilerservices.unsafe" fullword wide /* score: '20.00'*/
       $s10 = "eed|Newtonsoft.Json.dll|1E76E6099570EDE620B76ED47CF8D03A936D49F8|711952" fullword ascii /* score: '18.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 17000KB and and 3 of them )
+      ( uint16(0) == 0x5a4d and filesize < 17000KB and $x1 and 3 of ($s*) )
       
 }
 
