@@ -5171,7 +5171,7 @@ rule AsyncRAT_signature__16fc2662 {
       $s5 = "amic.Emiit]::Running();\"\"\",LOL" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x7243 and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 2 of them
 }
 
 rule AsyncRAT_signature__9c259e27 {
