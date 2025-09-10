@@ -1330,7 +1330,7 @@ rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__0a62f3c0 {
       $s8 = "\\test.jpg" fullword wide /* score: '8.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 2000KB and
-      all of them
+      5 of them
 }
 
 rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__49da1259 {
@@ -1800,7 +1800,7 @@ rule XWorm_signature__709335ec {
       $s15 = "tM6XMnO9g0XfUiYEMAX1BA2byJIsRrFkpqfG8L59k6w958+0xEye4lATbPNLa+GzHG7cmFz4pWgQdYDjqOHcFOVlpCGL2XdO5obQMDzgu/Te43PoMRBMDs4qagpwZlpZ" ascii /* score: '16.00'*/
    condition:
       uint16(0) == 0x6f25 and filesize < 500KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 3 of them
 }
 
 rule VIPKeylogger_signature__2 {
@@ -3815,7 +3815,7 @@ rule XWorm_signature__1e309735 {
       $s10 = "lWjo6XXJ0UHRuSVsgLGNvclBoJChkYWVyaFRldG9tZVJldGFlckM6Ol1yb3RjZWpuSVtdZGlvdlsKDSkwXWZlclsgLGh0Z25lTC5lZG9jbGxlaHMkICxlZG9jbGxlaHM" ascii /* score: '11.00'*/
    condition:
       uint16(0) == 0x6540 and filesize < 7KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 5 of them
 }
 
 rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__5ea46a99 {
@@ -4524,7 +4524,7 @@ rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__ab82ee46 {
       $s6 = "SCsn0yHd7KCoDtUkytX70EkkakNrG6PHSRs5UJU7NP0ccxVY0B4pbFjCGan0WJxwxrMSWow2isfXuzPHFOPsryiqaG" fullword wide /* score: '9.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 400KB and
-      all of them
+      3 of them
 }
 
 rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__c9944f21 {
