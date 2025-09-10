@@ -767,7 +767,7 @@ rule Mirai_signature__a32bb4c1 {
       $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and $s2
 }
 
 rule Mirai_signature__d27f42e7 {
@@ -782,57 +782,6 @@ rule Mirai_signature__d27f42e7 {
    condition:
       uint16(0) == 0x457f and filesize < 300KB and
       all of them
-}
-
-rule Mirai_signature__a76ce9a1 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_a76ce9a1.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "a76ce9a12146d3d130dd5a903da9ceb78e51d05bced71885a4025137e6747bd0"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " http://196.251.70.174/bins/mips; /bin/busybox chmod 777 * atp.mips; ./atp.mips huawei)</NewStatusURL><NewDownloadURL>$(echo HUA" ascii /* score: '29.00'*/
-      $s3 = "WEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__c7d18597 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_c7d18597.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "c7d18597395d8d87d8b1ea9e3b74ce16e797bd204263845617718c9d2aabd822"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " http://196.251.70.174/bins/mips; /bin/busybox chmod 777 * atp.mips; ./atp.mips huawei)</NewStatusURL><NewDownloadURL>$(echo HUA" ascii /* score: '29.00'*/
-      $s3 = "WEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__ce37d753 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_ce37d753.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "ce37d753a2c16b59562b32dd05a604e063e05e59d41a5f9e020c12f23ba0d59a"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " http://196.251.70.174/bins/mips; /bin/busybox chmod 777 * atp.mips; ./atp.mips huawei)</NewStatusURL><NewDownloadURL>$(echo HUA" ascii /* score: '29.00'*/
-      $s3 = "WEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
 }
 
 rule Mirai_signature__b0d67ece {
@@ -1053,7 +1002,7 @@ rule Mirai_signature__a4a0362e {
       $s6 = " 777 mpsl ; ./mpsl goahead ;" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x6463 and filesize < 1KB and
-      all of them
+      2 of them
 }
 
 rule Mirai_signature__a4d5dde3 {
@@ -3021,8 +2970,8 @@ rule _Mirai_signature__b2a40c07_Mirai_signature__c06c4b11_Mirai_signature__c3b79
       $s9 = "Content-Length: 1024" fullword ascii /* score: '9.00'*/
       $s10 = "</types><content><switch>true</switch><filterType type=\"filterTypeMode\">refuse</filterType><filterList type=\"list\"><itemType" ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 300KB and ( all of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x457f and filesize < 300KB and ( 8 of them )
+      ) or ( 8 of them )
 }
 
 rule _Mirai_signature__bce528f7_Mirai_signature__c0d9224a_Mirai_signature__d3316ac5_24 {
