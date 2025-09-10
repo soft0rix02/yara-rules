@@ -5739,36 +5739,6 @@ rule _MassLogger_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__04eca2d8_M
       ) or ( all of them )
 }
 
-rule _LummaStealer_signature__MetaStealer_signature__MetaStealer_signature__bbab4a89_14 {
-   meta:
-      description = "_subset_batch - from files LummaStealer(signature).msi, MetaStealer(signature).msi, MetaStealer(signature)_bbab4a89.msi"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "4cb6ec9522d8c1315cd3a2985d2204c634edc579b08a1b132254bd7dd5df72d8"
-      hash2 = "94d81ac9d0d494318c5e37b755d954378314936b47d2a68927ea933638bb6c5e"
-      hash3 = "bbab4a89983f4e585fe856afb9c899af8a7ed97e58bdd6e41e530d29bf906c42"
-   strings:
-      $x1 = "on.AdminUISequenceAdvtExecuteSequenceBinaryUnique key identifying the binary data.DataThe unformatted binary data.ComponentPrima" ascii /* score: '31.00'*/
-      $s2 = " - UNREGISTERED - Wrapped using MSI Wrapper from www.exemsi.com" fullword wide /* score: '26.00'*/
-      $s3 = "f columnAdminExecuteSequenceActionName of action to invoke, either in the engine or the handler DLL.ConditionOptional expression" ascii /* score: '23.00'*/
-      $s4 = "MsiCustomActions.dll" fullword ascii /* score: '23.00'*/
-      $s5 = "C:\\ss2\\Projects\\MsiWrapper\\MsiCustomActions\\Release\\MsiCustomActions.pdb" fullword ascii /* score: '22.00'*/
-      $s6 = "Error removing temp executable." fullword wide /* score: '22.00'*/
-      $s7 = "EXPAND.EXE" fullword wide /* score: '22.00'*/
-      $s8 = " format.InstallExecuteSequenceInstallUISequenceLaunchConditionExpression which must evaluate to TRUE in order for install to com" ascii /* score: '21.00'*/
-      $s9 = "ry key used to identify a particular component record.ComponentIdGuidA string GUID unique to this component, version, and langua" ascii /* score: '20.00'*/
-      $s10 = "OS supports elevation" fullword wide /* score: '19.00'*/
-      $s11 = "OS does not support elevation" fullword wide /* score: '19.00'*/
-      $s12 = "ack cabinet order.IconPrimary key. Name of the icon file.Binary stream. The binary icon data in PE (.DLL or .EXE) or icon (.ICO)" ascii /* score: '18.00'*/
-      $s13 = "Execute view" fullword wide /* score: '18.00'*/
-      $s14 = "ICACLS.EXE" fullword wide /* score: '18.00'*/
-      $s15 = "dActionData.SequenceNumber that determines the sort order in which the actions are to be executed.  Leave blank to suppress acti" ascii /* score: '17.00'*/
-   condition:
-      ( uint16(0) == 0xcfd0 and filesize < 17000KB and ( 1 of ($x*) and 4 of them )
-      ) or ( all of them )
-}
-
 rule _GuLoader_signature__GuLoader_signature__18386a8b_15 {
    meta:
       description = "_subset_batch - from files GuLoader(signature).js, GuLoader(signature)_18386a8b.js"
