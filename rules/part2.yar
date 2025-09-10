@@ -1675,20 +1675,6 @@ rule AmosStealer_signature_ {
       all of them
 }
 
-rule AmosStealer_signature__b27e4320 {
-   meta:
-      description = "_subset_batch - file AmosStealer(signature)_b27e4320.macho"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "b27e43206e0998dfb09e588c80ba6d4c0c4fcae9c52d24d2a5e0196cba438272"
-   strings:
-      $s1 = "__mh_execute_header" fullword ascii /* score: '19.00'*/
-   condition:
-      uint16(0) == 0xfacf and filesize < 2000KB and
-      all of them
-}
-
 rule aa84261665380ec86d7ca0083cd23e8bcf948aae3a008272485484b3eff53796_aa842616 {
    meta:
       description = "_subset_batch - file aa84261665380ec86d7ca0083cd23e8bcf948aae3a008272485484b3eff53796_aa842616.unknown"
