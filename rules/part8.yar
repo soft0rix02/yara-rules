@@ -105,18 +105,18 @@ rule XWorm_signature_ {
       $s1 = "NativeEncoderx86.dll" fullword ascii /* score: '23.00'*/
       $s2 = "NativeEncoderx64.dll" fullword ascii /* score: '23.00'*/
       $s3 = "Runtime Broker.exe" fullword wide /* score: '22.00'*/
-      $s4 = "UnVudGltZSBCcm9rZXIuZXhlfFRydWV8RmFsc2V8VHJ1ZXwlV2luRGlyJVxTeXN0ZW0zMnxUcnVlfEZhbHNlfEZhbHNl" fullword wide /* base64 encoded string 'Runtime Broker.exe|True|False|True|%WinDir%\System32|True|False|False' */ /* score: '14.00'*/
-      $s5 = "dVV1SmhucnpjcUMyTFNieGI=" fullword wide /* base64 encoded string 'uUuJhnrzcqC2LSbxb' */ /* score: '14.00'*/
-      $s6 = "U29mdHdhcmVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cRXhwbG9yZXJcQWR2YW5jZWQ=" fullword wide /* base64 encoded string 'Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' */ /* score: '14.00'*/
-      $s7 = "U2hvd1N1cGVySGlkZGVu" fullword wide /* base64 encoded string 'ShowSuperHidden' */ /* score: '14.00'*/
-      $s8 = "JUN1cnJlbnQl" fullword wide /* base64 encoded string '%Current%' */ /* score: '14.00'*/
-      $s9 = "U09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVu" fullword wide /* base64 encoded string 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run' */ /* score: '14.00'*/
-      $s10 = "U2VsZWN0ICogZnJvbSBXaW4zMl9Db21wdXRlclN5c3RlbQ==" fullword wide /* base64 encoded string 'Select * from Win32_ComputerSystem' */ /* score: '14.00'*/
-      $s11 = "TWFudWZhY3R1cmVy" fullword wide /* base64 encoded string 'Manufacturer' */ /* score: '14.00'*/
-      $s12 = "bWljcm9zb2Z0IGNvcnBvcmF0aW9u" fullword wide /* base64 encoded string 'microsoft corporation' */ /* score: '14.00'*/
-      $s13 = "VklSVFVBTA==" fullword wide /* base64 encoded string 'VIRTUAL' */ /* score: '14.00'*/
-      $s14 = "VmlydHVhbEJveA==" fullword wide /* base64 encoded string 'VirtualBox' */ /* score: '14.00'*/
-      $s15 = "U2JpZURsbC5kbGw=" fullword wide /* base64 encoded string 'SbieDll.dll' */ /* score: '14.00'*/
+      $s4 = "UnVudGltZSBCcm9rZXIuZXhlfFRydWV8RmFsc2V8VHJ1ZXwlV2luRGlyJVxTeXN0ZW0zMnxUcnVlfEZhbHNlfEZhbHNl" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s5 = "dVV1SmhucnpjcUMyTFNieGI=" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s6 = "U29mdHdhcmVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cRXhwbG9yZXJcQWR2YW5jZWQ=" fullword wide /* base64 encoded string*/ /* score: '14.00'*/
+      $s7 = "U2hvd1N1cGVySGlkZGVu" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s8 = "JUN1cnJlbnQl" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s9 = "U09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVu" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s10 = "U2VsZWN0ICogZnJvbSBXaW4zMl9Db21wdXRlclN5c3RlbQ==" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s11 = "TWFudWZhY3R1cmVy" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s12 = "bWljcm9zb2Z0IGNvcnBvcmF0aW9u" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s13 = "VklSVFVBTA==" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s14 = "VmlydHVhbEJveA==" fullword wide /* base64 encoded string*/ /* score: '14.00'*/
+      $s15 = "U2JpZURsbC5kbGw=" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 1000KB and
       8 of them
@@ -765,14 +765,14 @@ rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__b6e5f2f7 {
       $s5 = "\\Connection Tru Text\\LogString.txt" fullword wide /* score: '20.00'*/
       $s6 = "allan@uni-latex.com" fullword wide /* score: '18.00'*/
       $s7 = "hodiumalchest@gmail.com" fullword wide /* score: '18.00'*/
-      $s8 = "Pendiente" fullword wide /* base64 encoded string 'zwbz{^' */ /* score: '16.00'*/
+      $s8 = "Pendiente" fullword wide /* base64 encoded string */ /* score: '16.00'*/
       $s9 = "\\Connection Tru Text\\ConnectionStrings.txt" fullword wide /* score: '15.00'*/
-      $s10 = "Re3woWy59bSs" fullword ascii /* base64 encoded string '{|([.}m+' */ /* score: '14.00'*/
+      $s10 = "Re3woWy59bSs" fullword ascii /* base64 encoded string */ /* score: '14.00'*/
       $s11 = "ShellOpenFile" fullword wide /* score: '14.00'*/
       $s12 = "Select target directory" fullword wide /* score: '14.00'*/
       $s13 = "PASSWORD :" fullword wide /* score: '12.00'*/
       $s14 = "Insert PASSWORD" fullword wide /* score: '12.00'*/
-      $s15 = "Rz5kaSg09" fullword ascii /* base64 encoded string 'G>di(4' */ /* score: '11.00'*/
+      $s15 = "Rz5kaSg09" fullword ascii /* base64 encoded string */ /* score: '11.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
       8 of them
@@ -862,18 +862,18 @@ rule WSHRAT_signature__2 {
       $x1 = "rMSYYjR = rMSYYjR & \"UEsDBBQAAAgAAEUetVCFbDmKLgAAAC4AAAAIAAAAbWltZXR5cGVhcHBsaWNhdGlvbi92bmQub2FzaXMub3BlbmRvY3VtZW50LnNwcmVhZH" ascii /* score: '37.00'*/
       $x2 = "EhmTjVvldqfDhvqxxHLbHeGHILGzwLVLryoJzOJAT = EhmTjVvldqfDhvqxxHLbHeGHILGzwLVLryoJzOJAT & \"VUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUV" ascii /* score: '36.00'*/
       $x3 = "EhmTjVvldqfDhvqxxHLbHeGHILGzwLVLryoJzOJAT = EhmTjVvldqfDhvqxxHLbHeGHILGzwLVLryoJzOJAT & \"b24gZXJyb3IgcmVzdW1lIG5leHQNCkRpbSB3VG" ascii /* score: '35.00'*/
-      $x4 = "jMVdrZHNOSFZJTnpaQ1EwZHhLMnMzVGs1SGJFbDFTRGMxVmtkd1dUaEhlVFZDUmpCWmRVVTNOVlpIYkRSMWNqWXJWbXhFU1dwQ056VmFSMncwZFVnM056bERNMWwyY3p" ascii /* base64 encoded string '1WkdsNHVINzZCQ0dxK2s3Tk5HbEl1SDc1VkdwWThHeTVCRjBZdUU3NVZHbDR1cjYrVmxESWpCNzVaR2w0dUg3NzlDM1l2cz' */ /* score: '31.00'*/
-      $x5 = "ZMFZtNDFXSEJ3Y0VadFNGVjFTMjEyV2xSQ0wwZHBkVVpFVTB4SVp6VlRhRFpUT1RGRlR5dHhVV3BDUmpSUk1uWTNRblU1UkhZdk0weHVRMjh5UVZnMFNsSnpkRlZwUkR" ascii /* base64 encoded string '0Vm41WHBwcEZtSFV1S212WlRCL0dpdUZEU0xIZzVTaDZTOTFFTytxUWpCRjRRMnY3QnU5RHYvM0xuQ28yQVg0SlJzdFVpRD' */ /* score: '31.00'*/
-      $s6 = "CamVFTk9VR0V5Y1VwbFZUbEJXbWswVmxwaU5qTmhNRTFDUmpkc1YwRmpNUzlxTDA5NFptOTFSR05QUzJKa0t6TTBRVE16ZGpkSk1UWnBiU3RqZVZkYVYzUkxTakphTmp" ascii /* base64 encoded string 'jeENOUGEycUplVTlBWmk0VlpiNjNhME1CRjdsV0FjMS9qL094Zm91RGNPS2JkKzM0QTMzdjdJMTZpbStjeVdaV3RLSjJaNj' */ /* score: '30.00'*/
-      $s7 = "GWE5ITldaMEU0ZFVOd01GWlZiWGhMY2pWVVRsQklhMjlPUjNGblUwMHlTMjlJTDBOM1prUjZOM1JQSzA4dlltbDFWMjFTTmpWaVZrdzNjbFZIVGk5TlpFNTVVbFpuV0U" ascii /* base64 encoded string 'XNHNWZ0E4dUNwMFZVbXhLcjVUTlBIa29OR3FnU00yS29IL0N3ZkR6N3RPK08vYml1V21SNjViVkw3clVHTi9NZE55UlZnWE' */ /* score: '29.00'*/
-      $s8 = "WTUt6UjJZbWtyZFV4dE5IWk1XUzkwYzJreU5tSmhWSFJ3TmpKdllsWnNkRmRITVdaTVdGcDBaa2N4TDB4WFUzUkZVekJXY2xGWmRFUTJNRGR5VTFOMFRIRjZVWEpPVjN" ascii /* base64 encoded string 'MKzR2YmkrdUxtNHZMWS90c2kyNmJhVHRwNjJvYlZsdFdHMWZMWFp0ZkcxL0xXU3RFUzBWclFZdEQ2MDdyU1N0THF6UXJOV3' */ /* score: '29.00'*/
-      $s9 = "kMlZtOTFUR2swZFVwMk5GTjJZa0ZQVlZZM2JWcDFORFEzTmpSMVMzVlJjM0pwTkhKS1JFbDFURkVyZVhKcGVYVk1hWFZyVDBkNWRVeHBkbXRRYURadlltazBkVXhwTkc" ascii /* base64 encoded string '2Vm91TGk0dUp2NFN2YkFPVVY3bVp1NDQ3NjR1S3VRc3JpNHJKREl1TFEreXJpeXVMaXVrT0d5dUxpdmtQaDZvYmk0dUxpNG' */ /* score: '29.00'*/
-      $s10 = "ESk5jSW50aHNuZkF0ZFhqQ0l4aFBSalNaellDS3NRRlRVY1FtakRjeHJOZ2pxVGtTc0h6RXVabGF2Q0lPcVh6V1pnWkFHeFRGVmtZRUNpamdva1JrUkJadXFxcmd1Tkd" ascii /* base64 encoded string 'JNcInthsnfAtdXjCIxhPRjSZzYCKsQFTUcQmjDcxrNgjqTkSsHzEuZlavCIOqXzWZgZAGxTFVkYECijgokRkRBZuqqrguNG' */ /* score: '27.00'*/
-      $s11 = "wT2Jrc3paR0prTHpoeVpERk9TRWt4WkdZM2RVNHpUWHBrY2xKNWMzcE5LMlo2Y3k5TWFtUjZUa2hNTlM5WE5ETmplbEo1ZFM5TU9HSnFaSHBPU0VzM09XSmFLemt6VFR" ascii /* base64 encoded string 'ObkszZGJkLzhyZDFOSEkxZGY3dU4zTXpkclJ5c3pNK2Z6cy9MamR6TkhMNS9XNDNjelJ5dS9MOGJqZHpOSEs3OWJaKzkzTT' */ /* score: '27.00'*/
-      $s12 = "oNWVrUnViR3M0VTFSSVdFOHpiblp0U0U1a1RVdE9helJKTldkcFowTkZSbEJtWW5ReVFURTJVRGxrUjBSWmVsTmxjVTlvTmpWUlQybGxZbnBwY0hoemVGSmhTR0l6ZVV" ascii /* base64 encoded string '5ekRubGs4U1RIWE8zbnZtSE5kTUtOazRJNWdpZ0NFRlBmYnQyQTE2UDlkR0RZelNlcU9oNjVRT2llYnppcHhzeFJhSGIzeU' */ /* score: '27.00'*/
-      $s13 = "Zd0wyNXBibTh4U0ZCMmFVWjJZbWx5UWtWaWRDOVlhVGxWVFZoek1TdHRjRUZoUWs5bWREQXlORkEyUkdacmMwOHlWR2htTmpGT04xTlljVzlZTjBsaldrSk1URzlIUTB" ascii /* base64 encoded string 'wL25pbm8xSFB2aUZ2YmlyQkVidC9YaTlVTVhzMSttcEFhQk9mdDAyNFA2RGZrc08yVGhmNjFON1NYcW9YN0ljWkJMTG9HQ0' */ /* score: '27.00'*/
-      $s14 = "0UWFGcEJSMmswZFV4cE5HMHZhRXBHUmpseE9YaG9abTAzYVhsMVRHbDFhMDlLTkZZdmFHOTFUR2swZFVwMk5IVk1hVFIxVEdrMGRVcDFOSFZQVEdnME56WTBkVXQxVVh" ascii /* base64 encoded string 'QaFpBR2k0dUxpNG0vaEpGRjlxOXhoZm03aXl1TGl1a09KNFYvaG91TGk0dUp2NHVMaTR1TGk0dUp1NHVPTGg0NzY0dUt1UX' */ /* score: '26.00'*/
-      $s15 = "WdllqSkdkM1pYTUVFM1lXaFFLMVkxU0ZaR1NHOXFSVVIwWVZGMlZFWnRWVzFyYWxsdFJtUk5jMGxIUjBKbWNuQmlLMnh3VWxSdE1ISXdRbVJUYjBWb04xTmhWMjh3YzJ" ascii /* base64 encoded string 'vYjJGd3ZXMEE3YWhQK1Y1SFZGSG9qRUR0YVF2VEZtVW1ralltRmRNc0lHR0JmcnBiK2xwUlRtMHIwQmRTb0VoN1NhV28wc2' */ /* score: '26.00'*/
+      $x4 = "jMVdrZHNOSFZJTnpaQ1EwZHhLMnMzVGs1SGJFbDFTRGMxVmtkd1dUaEhlVFZDUmpCWmRVVTNOVlpIYkRSMWNqWXJWbXhFU1dwQ056VmFSMncwZFVnM056bERNMWwyY3p" ascii /* base64 encoded string  */ /* score: '31.00'*/
+      $x5 = "ZMFZtNDFXSEJ3Y0VadFNGVjFTMjEyV2xSQ0wwZHBkVVpFVTB4SVp6VlRhRFpUT1RGRlR5dHhVV3BDUmpSUk1uWTNRblU1UkhZdk0weHVRMjh5UVZnMFNsSnpkRlZwUkR" ascii /* base64 encoded string  */ /* score: '31.00'*/
+      $s6 = "CamVFTk9VR0V5Y1VwbFZUbEJXbWswVmxwaU5qTmhNRTFDUmpkc1YwRmpNUzlxTDA5NFptOTFSR05QUzJKa0t6TTBRVE16ZGpkSk1UWnBiU3RqZVZkYVYzUkxTakphTmp" ascii /* base64 encoded string  */ /* score: '30.00'*/
+      $s7 = "GWE5ITldaMEU0ZFVOd01GWlZiWGhMY2pWVVRsQklhMjlPUjNGblUwMHlTMjlJTDBOM1prUjZOM1JQSzA4dlltbDFWMjFTTmpWaVZrdzNjbFZIVGk5TlpFNTVVbFpuV0U" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s8 = "WTUt6UjJZbWtyZFV4dE5IWk1XUzkwYzJreU5tSmhWSFJ3TmpKdllsWnNkRmRITVdaTVdGcDBaa2N4TDB4WFUzUkZVekJXY2xGWmRFUTJNRGR5VTFOMFRIRjZVWEpPVjN" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s9 = "kMlZtOTFUR2swZFVwMk5GTjJZa0ZQVlZZM2JWcDFORFEzTmpSMVMzVlJjM0pwTkhKS1JFbDFURkVyZVhKcGVYVk1hWFZyVDBkNWRVeHBkbXRRYURadlltazBkVXhwTkc" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s10 = "ESk5jSW50aHNuZkF0ZFhqQ0l4aFBSalNaellDS3NRRlRVY1FtakRjeHJOZ2pxVGtTc0h6RXVabGF2Q0lPcVh6V1pnWkFHeFRGVmtZRUNpamdva1JrUkJadXFxcmd1Tkd" ascii /* base64 encoded string  */ /* score: '27.00'*/
+      $s11 = "wT2Jrc3paR0prTHpoeVpERk9TRWt4WkdZM2RVNHpUWHBrY2xKNWMzcE5LMlo2Y3k5TWFtUjZUa2hNTlM5WE5ETmplbEo1ZFM5TU9HSnFaSHBPU0VzM09XSmFLemt6VFR" ascii /* base64 encoded string  */ /* score: '27.00'*/
+      $s12 = "oNWVrUnViR3M0VTFSSVdFOHpiblp0U0U1a1RVdE9helJKTldkcFowTkZSbEJtWW5ReVFURTJVRGxrUjBSWmVsTmxjVTlvTmpWUlQybGxZbnBwY0hoemVGSmhTR0l6ZVV" ascii /* base64 encoded string  */ /* score: '27.00'*/
+      $s13 = "Zd0wyNXBibTh4U0ZCMmFVWjJZbWx5UWtWaWRDOVlhVGxWVFZoek1TdHRjRUZoUWs5bWREQXlORkEyUkdacmMwOHlWR2htTmpGT04xTlljVzlZTjBsaldrSk1URzlIUTB" ascii /* base64 encoded string  */ /* score: '27.00'*/
+      $s14 = "0UWFGcEJSMmswZFV4cE5HMHZhRXBHUmpseE9YaG9abTAzYVhsMVRHbDFhMDlLTkZZdmFHOTFUR2swZFVwMk5IVk1hVFIxVEdrMGRVcDFOSFZQVEdnME56WTBkVXQxVVh" ascii /* base64 encoded string  */ /* score: '26.00'*/
+      $s15 = "WdllqSkdkM1pYTUVFM1lXaFFLMVkxU0ZaR1NHOXFSVVIwWVZGMlZFWnRWVzFyYWxsdFJtUk5jMGxIUjBKbWNuQmlLMnh3VWxSdE1ISXdRbVJUYjBWb04xTmhWMjh3YzJ" ascii /* base64 encoded string  */ /* score: '26.00'*/
    condition:
       uint16(0) == 0x6e6f and filesize < 8000KB and
       1 of ($x*) and all of them
@@ -988,14 +988,14 @@ rule XWorm_signature__2 {
       $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
       $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
       $s7 = "set TEMPEXE=%TEMP%\\gi9nmvgkx6.exe" fullword ascii /* score: '26.00'*/
-      $s8 = "ZWwAqMiBFAAAAKlpYWFtYKiJaAFpYKlsqKjIgXQAAAFlbW1lZKiouW1kgYgAAAFoAWSpGW1pYKlsgUwAAAAAgYgAAACpGWFgqACBdAAAAIDoAAABaKioyWVsAKlogNQA" ascii /* base64 encoded string '[ *2 E   *ZXX[X*"Z ZX*[**2 ]   Y[[YY**.[Y b   Z Y*F[ZX*[ S     b   *FXX*  ]    :   Z**2Y[ *Z 5 ' */ /* score: '26.00'*/
+      $s8 = "ZWwAqMiBFAAAAKlpYWFtYKiJaAFpYKlsqKjIgXQAAAFlbW1lZKiouW1kgYgAAAFoAWSpGW1pYKlsgUwAAAAAgYgAAACpGWFgqACBdAAAAIDoAAABaKioyWVsAKlogNQA" ascii /* base64 encoded string  */ /* score: '26.00'*/
       $s9 = "echo 85cPXhEtF6GMxsKI6jzJTMSs8UBmNTUp+mdyB2ur0ytLCXfUCKNRgDLlQRQdC/l1z8TVpabwwVt3ADnKUPtb8GOwnNcFtlhf9ivCRwPh9YUqHrhO6QjJhyZGwr2" ascii /* score: '26.00'*/
       $s10 = "echo /itoo3v5msCANWe2y++asoUbrQ/Wsr2eGRHf2GeHdYSa1ZbohpgI40DJO5XnwPvNmYLq849DIjTaPoGYZL3uRtKrNOQHY61tusEzixEQmiKqb2TX1qHkcaaUjt9" ascii /* score: '26.00'*/
-      $s11 = "qACA2AAAAWCAmAAAAAComKlpbW1paWFkqPlogJQAAAFsgRQAAAFtbKjIqID4AAAAqKlgAWioyAFgAW1ggWwAAAAAqIllbKllaWgAqQgBZWVggQgAAACBAAAAAWSouACA" ascii /* base64 encoded string '  6   X &    *&*Z[[ZZXY*>Z %   [ E   [[*2* >   **X Z*2 X [X [    *"Y[*YZZ *B YYX B    @   Y*.  ' */ /* score: '25.00'*/
+      $s11 = "qACA2AAAAWCAmAAAAAComKlpbW1paWFkqPlogJQAAAFsgRQAAAFtbKjIqID4AAAAqKlgAWioyAFgAW1ggWwAAAAAqIllbKllaWgAqQgBZWVggQgAAACBAAAAAWSouACA" ascii /* base64 encoded string  */ /* score: '25.00'*/
       $s12 = "echo YJND63P0HmuR48XaQQnXvnhuE8SiAVtrNMrAtsIhObAVwi7KIZvFHVnVn355dDA8dCuz8MkxIyOaXRKhj2ChAhYkjVch3iZXe6qmL0YmVvWBN2rnhSmRG4NxJgD" ascii /* score: '24.00'*/
-      $s13 = "qWlsqJlpYKllaW1haKlIgXgAAAFhZACBBAAAAIDIAAAAAKiZYWVtYAFtbKioiAAAAACpbKioiWABbWFlZWSpGWFggSAAAAFsqWyBaAAAAWioiWltbWwAAAComWgBYKll" ascii /* base64 encoded string 'Z[*&ZX*YZ[XZ*R ^   XY  A    2    *&XY[X [[**"    *[**"X [XYYY*FXX H   [*[ Z   Z*"Z[[[   *&Z X*Y' */ /* score: '24.00'*/
-      $s14 = "AWVlbKjIqKlhYWSogNAAAAComWgAqWABbW1oqNlkqWiAhAAAAAABbWipCKllaWiApAAAAWiBgAAAAKkJaKiApAAAAWyBMAAAAWVoqJgBbWlhYKlgAKiIqWVgAAFpZKkZ" ascii /* base64 encoded string 'YY[*2**XXY* 4   *&Z *X [[Z*6Y*Z !     [Z*B*YZZ )   Z `   *BZ* )   [ L   YZ*& [ZXX*X *"*YX  ZY*F' */ /* score: '24.00'*/
-      $s15 = "YKipZKjJYICgAAABZWVhbWypGICQAAABaAFggPgAAACpaWSoiAFlZWSpbACpGACoqIFoAAAAgJgAAAFsqKipGWFlaKgBaICUAAAAgQAAAAComWVpZWVtbW1kqNlsqKgA" ascii /* base64 encoded string '**Y*2X (   YYX[[*F $   Z X >   *ZY*" YYY*[ *F ** Z    &   [***FXYZ* Z %    @   *&YZYY[[[Y*6[** ' */ /* score: '24.00'*/
+      $s13 = "qWlsqJlpYKllaW1haKlIgXgAAAFhZACBBAAAAIDIAAAAAKiZYWVtYAFtbKioiAAAAACpbKioiWABbWFlZWSpGWFggSAAAAFsqWyBaAAAAWioiWltbWwAAAComWgBYKll" ascii /* base64 encoded string  */ /* score: '24.00'*/
+      $s14 = "AWVlbKjIqKlhYWSogNAAAAComWgAqWABbW1oqNlkqWiAhAAAAAABbWipCKllaWiApAAAAWiBgAAAAKkJaKiApAAAAWyBMAAAAWVoqJgBbWlhYKlgAKiIqWVgAAFpZKkZ" ascii /* base64 encoded string */ /* score: '24.00'*/
+      $s15 = "YKipZKjJYICgAAABZWVhbWypGICQAAABaAFggPgAAACpaWSoiAFlZWSpbACpGACoqIFoAAAAgJgAAAFsqKipGWFlaKgBaICUAAAAgQAAAAComWVpZWVtbW1kqNlsqKgA" ascii /* base64 encoded string */ /* score: '24.00'*/
    condition:
       uint16(0) == 0x0a0d and filesize < 14000KB and
       1 of ($x*) and 4 of them
@@ -1747,15 +1747,15 @@ rule XWorm_signature__5 {
       $s4 = "a1jUDKdk6QRWdOz2HDqkbkEIUH17Jvdb/nnVvofm7JlP47lVPxQqjdpUw3iMifbXq5+9jd0UlAdExec3wgfZSaTdbGAf7oxg2mnWJ/u+2K6o72iSORsifrfyB4KwgY9o" ascii /* score: '23.00'*/
       $s5 = "RadiantThread.WriteLine(\"!lnpvivxkubwqvlr! \\\"%afmwxhnwl%u%afmwxhnwl%r%afmwxhnwl%w%afmwxhnwl%e%afmwxhnwl%j%afmwxhnwl%x%afmwxhn" ascii /* score: '22.00'*/
       $s6 = " - 23),(125 - 25),(142 - 41),(126 - 12))](2);var ArtificialPortal = CelestialBuffer + '\\\\HelixFramework.bat';" fullword ascii /* score: '22.00'*/
-      $s7 = "AHYAbwBrAGUAKAAkAG4AdQBsAGwALAAgAEAAKAAkAGgAYQBuAGQAbABlAFIAZQBmAGUAcgBlAG4AYwBlACwAIAAkAFAAcgBvAGMAZQBkAHUAcgBlAE4AYQBtAGUAKQAp" ascii /* base64 encoded string ' v o k e ( $ n u l l ,   @ ( $ h a n d l e R e f e r e n c e ,   $ P r o c e d u r e N a m e ) )' */ /* score: '21.00'*/
-      $s8 = "AG4AdABlAG4AdABTAGMAYQBuAEYAdQBuAGMAdABpAG8AbgAgAD0AIAAkAGEAdQB0AG8AbQBhAHQAaQBvAG4AVQB0AGkAbABpAHQAaQBlAHMALgBHAGUAdABNAGUAdABo" ascii /* base64 encoded string ' n t e n t S c a n F u n c t i o n   =   $ a u t o m a t i o n U t i l i t i e s . G e t M e t h' */ /* score: '21.00'*/
-      $s9 = "AG8AbgB0AGUAeAB0AC4AUwBlAHMAcwBpAG8AbgBTAHQAYQB0AGUALgBMAGEAbgBnAHUAYQBnAGUATQBvAGQAZQAgAD0AIAAnAEYAdQBsAGwATABhAG4AZwB1AGEAZwBl" ascii /* base64 encoded string ' o n t e x t . S e s s i o n S t a t e . L a n g u a g e M o d e   =   ' F u l l L a n g u a g e' */ /* score: '21.00'*/
-      $s10 = "AGYAaQBuAGUARAB5AG4AYQBtAGkAYwBBAHMAcwBlAG0AYgBsAHkAKAAkAGEAcwBzAGUAbQBiAGwAeQBOAGEAbQBlACwAIABbAFMAeQBzAHQAZQBtAC4AUgBlAGYAbABl" ascii /* base64 encoded string ' f i n e D y n a m i c A s s e m b l y ( $ a s s e m b l y N a m e ,   [ S y s t e m . R e f l e' */ /* score: '21.00'*/
-      $s11 = "AGkAbABkAGUAcgAuAFMAZQB0AEkAbQBwAGwAZQBtAGUAbgB0AGEAdABpAG8AbgBGAGwAYQBnAHMAKABbAFMAeQBzAHQAZQBtAC4AUgBlAGYAbABlAGMAdABpAG8AbgAu" ascii /* base64 encoded string ' i l d e r . S e t I m p l e m e n t a t i o n F l a g s ( [ S y s t e m . R e f l e c t i o n .' */ /* score: '21.00'*/
-      $s12 = "AGUAcgA6ADoAVwByAGkAdABlAEIAeQB0AGUAKABbAEkAbgB0AFAAdAByAF0AOgA6AEEAZABkACgAJABUAGEAcgBnAGUAdABBAGQAZAByAGUAcwBzACwAIAAkAGkAKQAs" ascii /* base64 encoded string ' e r : : W r i t e B y t e ( [ I n t P t r ] : : A d d ( $ T a r g e t A d d r e s s ,   $ i ) ,' */ /* score: '21.00'*/
-      $s13 = "AHAAUwBlAHIAdgBpAGMAZQBzAC4ASABhAG4AZABsAGUAUgBlAGYAKABbAEkAbgB0AFAAdAByAF0AOgA6AFoAZQByAG8ALAAgACQAbABpAGIAcgBhAHIAeQBIAGEAbgBk" ascii /* base64 encoded string ' p S e r v i c e s . H a n d l e R e f ( [ I n t P t r ] : : Z e r o ,   $ l i b r a r y H a n d' */ /* score: '21.00'*/
-      $s14 = "AGkAbwBuAEEAZABkAHIAZQBzAHMALAAgAFsAVAB5AHAAZQBbAF0AXQAkAEkAbgBwAHUAdABQAGEAcgBhAG0AZQB0AGUAcgBzACwAIABbAFQAeQBwAGUAXQAkAE8AdQB0" ascii /* base64 encoded string ' i o n A d d r e s s ,   [ T y p e [ ] ] $ I n p u t P a r a m e t e r s ,   [ T y p e ] $ O u t' */ /* score: '21.00'*/
-      $s15 = "AHQAaQBvAG4AQQBkAGQAcgBlAHMAcwAgAEAAKABbAEkAbgB0AFAAdAByAF0ALABbAFUASQBuAHQAMwAyAF0ALABbAFUASQBuAHQAMwAyAF0ALABbAFUASQBuAHQAMwAy" ascii /* base64 encoded string ' t i o n A d d r e s s   @ ( [ I n t P t r ] , [ U I n t 3 2 ] , [ U I n t 3 2 ] , [ U I n t 3 2' */ /* score: '21.00'*/
+      $s7 = "AHYAbwBrAGUAKAAkAG4AdQBsAGwALAAgAEAAKAAkAGgAYQBuAGQAbABlAFIAZQBmAGUAcgBlAG4AYwBlACwAIAAkAFAAcgBvAGMAZQBkAHUAcgBlAE4AYQBtAGUAKQAp" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s8 = "AG4AdABlAG4AdABTAGMAYQBuAEYAdQBuAGMAdABpAG8AbgAgAD0AIAAkAGEAdQB0AG8AbQBhAHQAaQBvAG4AVQB0AGkAbABpAHQAaQBlAHMALgBHAGUAdABNAGUAdABo" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s9 = "AG8AbgB0AGUAeAB0AC4AUwBlAHMAcwBpAG8AbgBTAHQAYQB0AGUALgBMAGEAbgBnAHUAYQBnAGUATQBvAGQAZQAgAD0AIAAnAEYAdQBsAGwATABhAG4AZwB1AGEAZwBl" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s10 = "AGYAaQBuAGUARAB5AG4AYQBtAGkAYwBBAHMAcwBlAG0AYgBsAHkAKAAkAGEAcwBzAGUAbQBiAGwAeQBOAGEAbQBlACwAIABbAFMAeQBzAHQAZQBtAC4AUgBlAGYAbABl" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s11 = "AGkAbABkAGUAcgAuAFMAZQB0AEkAbQBwAGwAZQBtAGUAbgB0AGEAdABpAG8AbgBGAGwAYQBnAHMAKABbAFMAeQBzAHQAZQBtAC4AUgBlAGYAbABlAGMAdABpAG8AbgAu" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s12 = "AGUAcgA6ADoAVwByAGkAdABlAEIAeQB0AGUAKABbAEkAbgB0AFAAdAByAF0AOgA6AEEAZABkACgAJABUAGEAcgBnAGUAdABBAGQAZAByAGUAcwBzACwAIAAkAGkAKQAs" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s13 = "AHAAUwBlAHIAdgBpAGMAZQBzAC4ASABhAG4AZABsAGUAUgBlAGYAKABbAEkAbgB0AFAAdAByAF0AOgA6AFoAZQByAG8ALAAgACQAbABpAGIAcgBhAHIAeQBIAGEAbgBk" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s14 = "AGkAbwBuAEEAZABkAHIAZQBzAHMALAAgAFsAVAB5AHAAZQBbAF0AXQAkAEkAbgBwAHUAdABQAGEAcgBhAG0AZQB0AGUAcgBzACwAIABbAFQAeQBwAGUAXQAkAE8AdQB0" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s15 = "AHQAaQBvAG4AQQBkAGQAcgBlAHMAcwAgAEAAKABbAEkAbgB0AFAAdAByAF0ALABbAFUASQBuAHQAMwAyAF0ALABbAFUASQBuAHQAMwAyAF0ALABbAFUASQBuAHQAMwAy" ascii /* base64 encoded string */ /* score: '21.00'*/
    condition:
       uint16(0) == 0x6176 and filesize < 600KB and
       1 of ($x*) and 4 of them
@@ -2343,21 +2343,21 @@ rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__1637ea73 {
       date = "2025-09-10"
       hash1 = "1637ea73a3eef1277f90be7f39dae3fde801946235c699ebc562491327803bda"
    strings:
-      $s1 = "X2sxa2MyYjUyZGE1YTBkNzI2ZmRhMDYyZmI1YTBiNzMy," fullword ascii /* base64 encoded string '_k1kc2b52da5a0d726fda062fb5a0b732' */ /* score: '17.00'*/
+      $s1 = "X2sxa2MyYjUyZGE1YTBkNzI2ZmRhMDYyZmI1YTBiNzMy," fullword ascii /* base64 encoded string '' */ /* score: '17.00'*/
       $s2 = "keyauth.win" fullword wide /* score: '16.00'*/
-      $s3 = "X2ZjZmE4NzM1NDdmZWZlYzBmMzM1MjAzZjY1OGJlYjdi," fullword ascii /* base64 encoded string '_fcfa873547fefec0f335203f658beb7b' */ /* score: '14.00'*/
-      $s4 = "X2s2Yzkya2Q5YTBmOGUwMzMwN2Zkazk3OWY2ZjlmZmFr," fullword ascii /* base64 encoded string '_k6c92kd9a0f8e03307fdk979f6f9ffak' */ /* score: '14.00'*/
-      $s5 = "X2RiMzRhY2I5ZjczOWIyNGEyYmU1NGY3MjlmY2M0NGVi," fullword ascii /* base64 encoded string '_db34acb9f739b24a2be54f729fcc44eb' */ /* score: '14.00'*/
-      $s6 = "X2tiMWJkN2ZhYjU3NzBrYTk4NTRlZWUwMDQ2ZDk4MTcz," fullword ascii /* base64 encoded string '_kb1bd7fab5770ka9854eee0046d98173' */ /* score: '14.00'*/
-      $s7 = "X2RmMWNkZGFlMTE3MDNiMDUyZmE4M2MxMjc4ZTVkODM4," fullword ascii /* base64 encoded string '_df1cddae11703b052fa83c1278e5d838' */ /* score: '14.00'*/
-      $s8 = "X2szZThjZjM4YzhlazE2YWQzN2VrMTdrZWE4N2U5ZmZl," fullword ascii /* base64 encoded string '_k3e8cf38c8ek16ad37ek17kea87e9ffe' */ /* score: '14.00'*/
-      $s9 = "X2sxZmNmMTY0MjAyMzlkMDI4MzZhOTUxZDkwNDYxZWZi," fullword ascii /* base64 encoded string '_k1fcf16420239d02836a951d90461efb' */ /* score: '14.00'*/
-      $s10 = "X2s1YzAwOTNka2tjZmJmazExNDBrZTVlNzE2ZDQzNTZh," fullword ascii /* base64 encoded string '_k5c0093dkkcfbfk1140ke5e716d4356a' */ /* score: '14.00'*/
-      $s11 = "X2s5OWRrM2QzY2NmNjNjNWs4MDRia2tkZjk5MGNrYTUz," fullword ascii /* base64 encoded string '_k99dk3d3ccf63c5k804bkkdf990cka53' */ /* score: '14.00'*/
-      $s12 = "X2IyZWM1MGUwOWMyM2RkMzhjZWQ5NmU1Njk5ZjZkZDAx," fullword ascii /* base64 encoded string '_b2ec50e09c23dd38ced96e5699f6dd01' */ /* score: '14.00'*/
-      $s13 = "X2YwMmVhODNlNDZkOGM4ZmM4MGVmMzJlZDcwOTNmZTQ0," fullword ascii /* base64 encoded string '_f02ea83e46d8c8fc80ef32ed7093fe44' */ /* score: '14.00'*/
-      $s14 = "X2tiYzRmNzFhZDlhNDBjYmZlYmtiazdjZGYzazI3ZmFk," fullword ascii /* base64 encoded string '_kbc4f71ad9a40cbfebkbk7cdf3k27fad' */ /* score: '14.00'*/
-      $s15 = "X2s4MDQ1MGU5ZGMzNjViM2ZkNTJlMms2NTA0MDJlOWU4," fullword ascii /* base64 encoded string '_k80450e9dc365b3fd52e2k650402e9e8' */ /* score: '14.00'*/
+      $s3 = "X2ZjZmE4NzM1NDdmZWZlYzBmMzM1MjAzZjY1OGJlYjdi," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s4 = "X2s2Yzkya2Q5YTBmOGUwMzMwN2Zkazk3OWY2ZjlmZmFr," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s5 = "X2RiMzRhY2I5ZjczOWIyNGEyYmU1NGY3MjlmY2M0NGVi," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s6 = "X2tiMWJkN2ZhYjU3NzBrYTk4NTRlZWUwMDQ2ZDk4MTcz," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s7 = "X2RmMWNkZGFlMTE3MDNiMDUyZmE4M2MxMjc4ZTVkODM4," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s8 = "X2szZThjZjM4YzhlazE2YWQzN2VrMTdrZWE4N2U5ZmZl," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s9 = "X2sxZmNmMTY0MjAyMzlkMDI4MzZhOTUxZDkwNDYxZWZi," fullword ascii /* base64 encoded string */ /* score: '14.00'*/
+      $s10 = "X2s1YzAwOTNka2tjZmJmazExNDBrZTVlNzE2ZDQzNTZh," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s11 = "X2s5OWRrM2QzY2NmNjNjNWs4MDRia2tkZjk5MGNrYTUz," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s12 = "X2IyZWM1MGUwOWMyM2RkMzhjZWQ5NmU1Njk5ZjZkZDAx," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s13 = "X2YwMmVhODNlNDZkOGM4ZmM4MGVmMzJlZDcwOTNmZTQ0," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s14 = "X2tiYzRmNzFhZDlhNDBjYmZlYmtiazdjZGYzazI3ZmFk," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
+      $s15 = "X2s4MDQ1MGU5ZGMzNjViM2ZkNTJlMms2NTA0MDJlOWU4," fullword ascii /* base64 encoded string  */ /* score: '14.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 1000KB and
       8 of them
@@ -3818,8 +3818,8 @@ rule XWorm_signature__1e309735 {
       hash1 = "1e30973571917de125f34c2addde00499a9959c9661028ae24ceb769419681f9"
    strings:
       $x1 = "powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command ^" fullword ascii /* score: '41.00'*/
-      $s2 = "uaXUgLGVweXQgdG5pdSAsZXppcyB0bml1ICxyZGRhIHJ0UHRuSSAsaCBydFB0bkkoeEVjb2xsQWxhdXRyaVYgcnRQdG5JIG5yZXR4ZSBjaXRhdHMgY2lsYnVwIF0pImx" ascii /* base64 encoded string 'iu ,epyt tniu ,ezis tniu ,rdda rtPtnI ,h rtPtnI(xEcollAlautriV rtPtnI nretxe citats cilbup ])"l' */ /* score: '21.00'*/
-      $s3 = "ydFB0bkkgLHRyYXRzIHJ0UHRuSSAsa2NhdHMgdG5pdSAscnR0YSBydFB0bkkgLGggcnRQdG5JKGRhZXJoVGV0b21lUmV0YWVyQyBydFB0bkkgbnJldHhlIGNpdGF0cyB" ascii /* base64 encoded string 'tPtnI ,trats rtPtnI ,kcats tniu ,rtta rtPtnI ,h rtPtnI(daerhTetomeRetaerC rtPtnI nretxe citats ' */ /* score: '21.00'*/
+      $s2 = "uaXUgLGVweXQgdG5pdSAsZXppcyB0bml1ICxyZGRhIHJ0UHRuSSAsaCBydFB0bkkoeEVjb2xsQWxhdXRyaVYgcnRQdG5JIG5yZXR4ZSBjaXRhdHMgY2lsYnVwIF0pImx" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s3 = "ydFB0bkkgLHRyYXRzIHJ0UHRuSSAsa2NhdHMgdG5pdSAscnR0YSBydFB0bkkgLGggcnRQdG5JKGRhZXJoVGV0b21lUmV0YWVyQyBydFB0bkkgbnJldHhlIGNpdGF0cyB" ascii /* base64 encoded string  */ /* score: '21.00'*/
       $s4 = "    \"$decoded=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('%b64%')); $reversed=-join $decoded.ToC" ascii /* score: '18.00'*/
       $s5 = "arArray()[-1..-($decoded.Length)]; IEX $reversed; Read-Host 'Press Enter to exit...'\"" fullword ascii /* score: '13.00'*/
       $s6 = "    \"$decoded=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('%b64%')); $reversed=-join $decoded.ToC" ascii /* score: '13.00'*/
@@ -3954,15 +3954,15 @@ rule XWorm_signature__e05be2a9 {
       $x3 = "PesticideShed = Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(" ascii /* score: '31.00'*/
       $x4 = "SoilHouse6251 = \"C:\\\\Users\\\\Public\\\\BarnEstate.bat\"" fullword ascii /* score: '31.00'*/
       $s5 = "FieldFacility.WriteLine \"!cvtairiublwvyag! \"\"%cbsahjbvd%y%cbsahjbvd%n%cbsahjbvd%j%cbsahjbvd%a%cbsahjbvd%f%cbsahjbvd%u%cbsahjb" ascii /* score: '22.00'*/
-      $s6 = "AHIAYQBtACgAWwBJAG4AdABQAHQAcgBdACQAVwBhAHYAZQBUAGEAcgBnAGUAdABBAGQAZAByAGUAcwBzACwAIABbAGIAeQB0AGUAWwBdAF0AJABUAGkAZABlAEUAeABw" ascii /* base64 encoded string ' r a m ( [ I n t P t r ] $ W a v e T a r g e t A d d r e s s ,   [ b y t e [ ] ] $ T i d e E x p' */ /* score: '21.00'*/
-      $s7 = "AHAAUwBlAHIAdgBpAGMAZQBzAC4ASABhAG4AZABsAGUAUgBlAGYAKABbAEkAbgB0AFAAdAByAF0AOgA6AFoAZQByAG8ALAAgACQAbwBjAGUAYQBuAEwAaQBiAHIAYQBy" ascii /* base64 encoded string ' p S e r v i c e s . H a n d l e R e f ( [ I n t P t r ] : : Z e r o ,   $ o c e a n L i b r a r' */ /* score: '21.00'*/
-      $s8 = "AG0AbwByAHkATQBhAG4AYQBnAGUAcgA6ADoAUgBlAGEAZABJAG4AdAAzADIAKABbAEkAbgB0AFAAdAByAF0AJAB3AGEAdgBlAFMAZQByAHYAaQBjAGUAUAByAG8AdgBp" ascii /* base64 encoded string ' m o r y M a n a g e r : : R e a d I n t 3 2 ( [ I n t P t r ] $ w a v e S e r v i c e P r o v i' */ /* score: '21.00'*/
-      $s9 = "AEEAZABkAHIAZQBzAHMALAAgADYANAAgACsAIAAoACQAdABpAGQAZQBTAGUAcgB2AGkAYwBlAEMAbwB1AG4AdAAgACoAIAAkAHMAZQBhAFAAbwBpAG4AdABlAHIAUwBp" ascii /* base64 encoded string ' A d d r e s s ,   6 4   +   ( $ t i d e S e r v i c e C o u n t   *   $ s e a P o i n t e r S i' */ /* score: '21.00'*/
-      $s10 = "AGkAdABBAHIAYwBoAGkAdABlAGMAdAB1AHIAZQAgAD0AIAAkAE8AYwBlAGEAbgBTAGUAYwB1AHIAaQB0AHkAUwBlAHIAdgBpAGMAZQBJAG4AZgBvAC4ATwBjAGUAYQBu" ascii /* base64 encoded string ' i t A r c h i t e c t u r e   =   $ O c e a n S e c u r i t y S e r v i c e I n f o . O c e a n' */ /* score: '21.00'*/
-      $s11 = "AG8AcgB5AE0AYQBuAGEAZwBlAHIAOgA6AFIAZQBhAGQASQBuAHQAMwAyACgAWwBJAG4AdABQAHQAcgBdACgAJAB0AGkAZABlAFMAZQByAHYAaQBjAGUAQwBvAG4AdABl" ascii /* base64 encoded string ' o r y M a n a g e r : : R e a d I n t 3 2 ( [ I n t P t r ] ( $ t i d e S e r v i c e C o n t e' */ /* score: '21.00'*/
-      $s12 = "AGUARAB5AG4AYQBtAGkAYwBBAHMAcwBlAG0AYgBsAHkAKAAkAHQAaQBkAGUAQQBzAHMAZQBtAGIAbAB5AE4AYQBtAGUALAAgAFsAUwB5AHMAdABlAG0ALgBSAGUAZgBs" ascii /* base64 encoded string ' e D y n a m i c A s s e m b l y ( $ t i d e A s s e m b l y N a m e ,   [ S y s t e m . R e f l' */ /* score: '21.00'*/
-      $s13 = "AFsASQBuAHQAUAB0AHIAXQAsAFsAVQBJAG4AdAAzADIAXQAsAFsAVQBJAG4AdAAzADIAXQAsAFsAVQBJAG4AdAAzADIAXQAuAE0AYQBrAGUAQgB5AFIAZQBmAFQAeQBw" ascii /* base64 encoded string ' [ I n t P t r ] , [ U I n t 3 2 ] , [ U I n t 3 2 ] , [ U I n t 3 2 ] . M a k e B y R e f T y p' */ /* score: '21.00'*/
-      $s14 = "AHYAaQBjAGUASQBuAGYAbwAgACQAdABpAGQAZQBUAGEAcgBnAGUAdABGAHUAbgBjAHQAaQBvAG4AIAAkAHQAaQBkAGUAUwBlAHIAdgBpAGMAZQBDAG8AdQBuAHQAKQAg" ascii /* base64 encoded string ' v i c e I n f o   $ t i d e T a r g e t F u n c t i o n   $ t i d e S e r v i c e C o u n t )  ' */ /* score: '21.00'*/
+      $s6 = "AHIAYQBtACgAWwBJAG4AdABQAHQAcgBdACQAVwBhAHYAZQBUAGEAcgBnAGUAdABBAGQAZAByAGUAcwBzACwAIABbAGIAeQB0AGUAWwBdAF0AJABUAGkAZABlAEUAeABw" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s7 = "AHAAUwBlAHIAdgBpAGMAZQBzAC4ASABhAG4AZABsAGUAUgBlAGYAKABbAEkAbgB0AFAAdAByAF0AOgA6AFoAZQByAG8ALAAgACQAbwBjAGUAYQBuAEwAaQBiAHIAYQBy" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s8 = "AG0AbwByAHkATQBhAG4AYQBnAGUAcgA6ADoAUgBlAGEAZABJAG4AdAAzADIAKABbAEkAbgB0AFAAdAByAF0AJAB3AGEAdgBlAFMAZQByAHYAaQBjAGUAUAByAG8AdgBp" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s9 = "AEEAZABkAHIAZQBzAHMALAAgADYANAAgACsAIAAoACQAdABpAGQAZQBTAGUAcgB2AGkAYwBlAEMAbwB1AG4AdAAgACoAIAAkAHMAZQBhAFAAbwBpAG4AdABlAHIAUwBp" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s10 = "AGkAdABBAHIAYwBoAGkAdABlAGMAdAB1AHIAZQAgAD0AIAAkAE8AYwBlAGEAbgBTAGUAYwB1AHIAaQB0AHkAUwBlAHIAdgBpAGMAZQBJAG4AZgBvAC4ATwBjAGUAYQBu" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s11 = "AG8AcgB5AE0AYQBuAGEAZwBlAHIAOgA6AFIAZQBhAGQASQBuAHQAMwAyACgAWwBJAG4AdABQAHQAcgBdACgAJAB0AGkAZABlAFMAZQByAHYAaQBjAGUAQwBvAG4AdABl" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s12 = "AGUARAB5AG4AYQBtAGkAYwBBAHMAcwBlAG0AYgBsAHkAKAAkAHQAaQBkAGUAQQBzAHMAZQBtAGIAbAB5AE4AYQBtAGUALAAgAFsAUwB5AHMAdABlAG0ALgBSAGUAZgBs" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s13 = "AFsASQBuAHQAUAB0AHIAXQAsAFsAVQBJAG4AdAAzADIAXQAsAFsAVQBJAG4AdAAzADIAXQAsAFsAVQBJAG4AdAAzADIAXQAuAE0AYQBrAGUAQgB5AFIAZQBmAFQAeQBw" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s14 = "AHYAaQBjAGUASQBuAGYAbwAgACQAdABpAGQAZQBUAGEAcgBnAGUAdABGAHUAbgBjAHQAaQBvAG4AIAAkAHQAaQBkAGUAUwBlAHIAdgBpAGMAZQBDAG8AdQBuAHQAKQAg" ascii /* base64 encoded string */ /* score: '21.00'*/
       $s15 = "/9i+TsZvvJ7E1zXLhLIDs2hnvAeh8eKCm6jPLRBRnGRUWleD59ORDLLwlJKAbzUkoCJq0/RtMA9GPxfZdjQtVpIATvmjUfLOgrk+cGc4UlJYV+vKRBNh4X830LyCnTl1" ascii /* score: '21.00'*/
    condition:
       uint16(0) == 0x6147 and filesize < 600KB and
@@ -4102,19 +4102,19 @@ rule XWorm_signature__25513d78 {
    strings:
       $x1 = "::GKn99bAlWXzU6d9Y2EEHZCW1Xg3weuo5UbeLYBO+xUcRZFFdwnz8W67PF7ilQnb9DkmZZNLBKAYoYuNkJ4+McX0LcfYCWdxJVKejDDSm0sbfk51yH57qQb21WwTLn6" ascii /* score: '38.00'*/
       $s2 = "%IOGCSZG%s%IOGCSZG%%IOGCSZG%e%IOGCSZG%%IOGCSZG%t%IOGCSZG% \"LLCWYQ=;$CAAPRUYW = [ConsolKBUFCAUe]::Title;$BXTOYKLKBUFCAUQ = Get-C" ascii /* score: '30.00'*/
-      $s3 = "c2VtYmx5ID0gJHN3ZWV0RGVjb2Rlci5HZXRTdHJpbmcoJGJlcnJ5Q29udmVydGVyOjpGcm9tQmFzZTY0U3RyaW5nKCdVM2x6ZEdWdExsZHBibVJ2ZDNNdVJtOXliWE09" ascii /* base64 encoded string 'sembly = $sweetDecoder.GetString($berryConverter::FromBase64String('U3lzdGVtLldpbmRvd3MuRm9ybXM=' */ /* score: '21.00'*/
-      $s4 = "eUxhc3RDaGVjayA9ICRiZXJyeU1lbU1hbmFnZXI6OlJlYWRCeXRlKFtJbnRQdHJdOjpBZGQoJEJlcnJ5VGFyZ2V0QWRkcmVzcywgJHN3ZWV0TW9kaWZpY2F0aW9uRGF0" ascii /* base64 encoded string 'yLastCheck = $berryMemManager::ReadByte([IntPtr]::Add($BerryTargetAddress, $sweetModificationDat' */ /* score: '21.00'*/
-      $s5 = "ZWxlZ2F0ZSAkc3RyYXdiZXJyeVByb3RlY3Rpb25BZGRyZXNzIEAoW0ludFB0cl0sW1VJbnQzMl0sW1VJbnQzMl0sW1VJbnQzMl0uTWFrZUJ5UmVmVHlwZSgpKSAoW0Jv" ascii /* base64 encoded string 'elegate $strawberryProtectionAddress @([IntPtr],[UInt32],[UInt32],[UInt32].MakeByRefType()) ([Bo' */ /* score: '21.00'*/
-      $s6 = "Z2F0ZVR5cGVCdWlsZGVyID0gJGJlcnJ5TW9kdWxlQnVpbGRlci5EZWZpbmVUeXBlKCdTdHJhd2JlcnJ5RGVsZWdhdGVUeXBlJywgJ0NsYXNzLFB1YmxpYyxTZWFsZWQs" ascii /* base64 encoded string 'gateTypeBuilder = $berryModuleBuilder.DefineType('StrawberryDelegateType', 'Class,Public,Sealed,' */ /* score: '21.00'*/
-      $s7 = "LVN0cmF3YmVycnlEZWxlZ2F0ZSAkc3dlZXRQcm90ZWN0aW9uQWRkcmVzcyBAKFtJbnRQdHJdLFtVSW50MzJdLFtVSW50MzJdLFtVSW50MzJdLk1ha2VCeVJlZlR5cGUo" ascii /* base64 encoded string '-StrawberryDelegate $sweetProtectionAddress @([IntPtr],[UInt32],[UInt32],[UInt32].MakeByRefType(' */ /* score: '21.00'*/
-      $s8 = "bmFtaWNEZWxlZ2F0ZSA9IFtTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXMuTWFyc2hhbF06OkdldERlbGVnYXRlRm9yRnVuY3Rpb25Qb2ludGVyKCRTdHJhd2Jl" ascii /* base64 encoded string 'namicDelegate = [System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer($Strawbe' */ /* score: '21.00'*/
+      $s3 = "c2VtYmx5ID0gJHN3ZWV0RGVjb2Rlci5HZXRTdHJpbmcoJGJlcnJ5Q29udmVydGVyOjpGcm9tQmFzZTY0U3RyaW5nKCdVM2x6ZEdWdExsZHBibVJ2ZDNNdVJtOXliWE09" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s4 = "eUxhc3RDaGVjayA9ICRiZXJyeU1lbU1hbmFnZXI6OlJlYWRCeXRlKFtJbnRQdHJdOjpBZGQoJEJlcnJ5VGFyZ2V0QWRkcmVzcywgJHN3ZWV0TW9kaWZpY2F0aW9uRGF0" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s5 = "ZWxlZ2F0ZSAkc3RyYXdiZXJyeVByb3RlY3Rpb25BZGRyZXNzIEAoW0ludFB0cl0sW1VJbnQzMl0sW1VJbnQzMl0sW1VJbnQzMl0uTWFrZUJ5UmVmVHlwZSgpKSAoW0Jv" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s6 = "Z2F0ZVR5cGVCdWlsZGVyID0gJGJlcnJ5TW9kdWxlQnVpbGRlci5EZWZpbmVUeXBlKCdTdHJhd2JlcnJ5RGVsZWdhdGVUeXBlJywgJ0NsYXNzLFB1YmxpYyxTZWFsZWQs" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s7 = "LVN0cmF3YmVycnlEZWxlZ2F0ZSAkc3dlZXRQcm90ZWN0aW9uQWRkcmVzcyBAKFtJbnRQdHJdLFtVSW50MzJdLFtVSW50MzJdLFtVSW50MzJdLk1ha2VCeVJlZlR5cGUo" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s8 = "bmFtaWNEZWxlZ2F0ZSA9IFtTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXMuTWFyc2hhbF06OkdldERlbGVnYXRlRm9yRnVuY3Rpb25Qb2ludGVyKCRTdHJhd2Jl" ascii /* base64 encoded string  */ /* score: '21.00'*/
       $s9 = "+U2XL7/gi5yRNGiIJLX61ODmT46+C3Wseg1TsPCJ/+5avuLfctPuNehEJqO7csVCdNfHPS59sEcmg0ua14xZt/WslGIjwThm366Fqp/T1st8/G5uoDepDUmPEGlSnsFd" ascii /* score: '21.00'*/
-      $s10 = "U2V0LUV4ZWN1dGlvblBvbGljeSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtU2NvcGUgQ3VycmVudFVzZXIgLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRp" ascii /* base64 encoded string 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser -Force -ErrorAction SilentlyConti' */ /* score: '21.00'*/
-      $s11 = "ICAgJHN0cmF3YmVycnlQcm90ZWN0aW9uUmVzdWx0ID0gJHN0cmF3YmVycnlNZW1vcnlQcm90ZWN0b3IuSW52b2tlKCRCZXJyeVRhcmdldEFkZHJlc3MsIDgsIDB4NDAs" ascii /* base64 encoded string '   $strawberryProtectionResult = $strawberryMemoryProtector.Invoke($BerryTargetAddress, 8, 0x40,' */ /* score: '20.00'*/
+      $s10 = "U2V0LUV4ZWN1dGlvblBvbGljeSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtU2NvcGUgQ3VycmVudFVzZXIgLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRp" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s11 = "ICAgJHN0cmF3YmVycnlQcm90ZWN0aW9uUmVzdWx0ID0gJHN0cmF3YmVycnlNZW1vcnlQcm90ZWN0b3IuSW52b2tlKCRCZXJyeVRhcmdldEFkZHJlc3MsIDgsIDB4NDAs" ascii /* base64 encoded string  */ /* score: '20.00'*/
       $s12 = "nrQRAblw196hanCspy5uWn/utpJZV745uIPEarCdbu5ZjJzuT5WgIpQBcYEAXG8KeYq/YgW2ida0uuBN6ashKxe3FEEpUOs0aSS9wgZYtsyz6CjRPPwuHakvzpEr2GLT" ascii /* score: '19.00'*/
       $s13 = "1n98ZxUA10izSuSZTtT2EIE7jX7YJDUk4eYEI6AmsE24hpO9L3ER88vnXz09eyWs5HbPtmpWLGLYtE8FJSRyyoYPWhECOshhpplkHtO4kcxvhWl/ya7uo2uxqAh03Gyg" ascii /* score: '19.00'*/
       $s14 = "%JMDJWRY%s%JMDJWRY%%JMDJWRY%e%JMDJWRY%%JMDJWRY%t%JMDJWRY% ZCHBQS=C:\\Windows\\System32\\%BHJIXF:KBUFCAU=%" fullword ascii /* score: '18.00'*/
-      $s15 = "ICAkYmVycnlNZW1NYW5hZ2VyOjpXcml0ZUJ5dGUoW0ludFB0cl06OkFkZCgkQmVycnlUYXJnZXRBZGRyZXNzLCAkc3RyYXdiZXJyeUkpLCAkYmVycnlGaWxsQnl0ZSkg" ascii /* base64 encoded string '  $berryMemManager::WriteByte([IntPtr]::Add($BerryTargetAddress, $strawberryI), $berryFillByte) ' */ /* score: '17.00'*/
+      $s15 = "ICAkYmVycnlNZW1NYW5hZ2VyOjpXcml0ZUJ5dGUoW0ludFB0cl06OkFkZCgkQmVycnlUYXJnZXRBZGRyZXNzLCAkc3RyYXdiZXJyeUkpLCAkYmVycnlGaWxsQnl0ZSkg" ascii /* base64 encoded string  */ /* score: '17.00'*/
    condition:
       uint16(0) == 0x4b25 and filesize < 300KB and
       1 of ($x*) and 4 of them
@@ -4759,7 +4759,7 @@ rule _Worm_Mo_ksys_signature__1895460fffad9475fda0c84755ecfee1_imphash__XWorm_si
       $s3 = "/AutoIt3ExecuteLine" fullword wide /* PEStudio Blacklist: strings */ /* score: '23.00'*/
       $s4 = "PROCESSGETSTATS" fullword wide /* score: '22.50'*/
       $s5 = "WINGETPROCESS" fullword wide /* score: '22.50'*/
-      $s6 = "SCRIPTNAME" fullword wide /* base64 encoded string 'H$H=3@0' */ /* score: '22.50'*/
+      $s6 = "SCRIPTNAME" fullword wide /* base64 encoded string */ /* score: '22.50'*/
       $s7 = "SHELLEXECUTEWAIT" fullword wide /* PEStudio Blacklist: strings */ /* score: '21.50'*/
       $s8 = "SHELLEXECUTE" fullword wide /* PEStudio Blacklist: strings */ /* score: '21.50'*/
       $s9 = "*Unable to get a list of running processes." fullword wide /* score: '20.00'*/
@@ -5227,20 +5227,20 @@ rule _XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__XWorm_signature
       hash2 = "cf51d6c002f3888d63d0acc98231e21468f96bb68264f05c2014e3a9e588e6f0"
    strings:
       $s1 = "WinSc32.exe" fullword wide /* score: '22.00'*/
-      $s2 = "ezB9OnsxfTp7Mn06ezN9Ons0fQ==" fullword wide /* base64 encoded string '{0}:{1}:{2}:{3}:{4}' */ /* score: '19.00'*/
+      $s2 = "ezB9OnsxfTp7Mn06ezN9Ons0fQ==" fullword wide /* base64 encoded string  */ /* score: '19.00'*/
       $s3 = "MyProcess" fullword ascii /* score: '15.00'*/
       $s4 = "targetIP" fullword ascii /* score: '14.00'*/
-      $s5 = "JVBhc3RlVXJsJQ==" fullword wide /* base64 encoded string '%PasteUrl%' */ /* score: '14.00'*/
-      $s6 = "aHR0cHM6Ly93aW5kb3dzdXBkYXRlLm1pY3Jvc29mdC5jb20=" fullword wide /* base64 encoded string 'https://windowsupdate.microsoft.com' */ /* score: '14.00'*/
-      $s7 = "aHR0cHM6Ly93aW5hdHAtZ3ctY3VzLm1pY3Jvc29mdC5jb20=" fullword wide /* base64 encoded string 'https://winatp-gw-cus.microsoft.com' */ /* score: '14.00'*/
-      $s8 = "aHR0cHM6Ly93YXRzb24ubWljcm9zb2Z0LmNvbQ==" fullword wide /* base64 encoded string 'https://watson.microsoft.com' */ /* score: '14.00'*/
-      $s9 = "aHR0cHM6Ly9tc2VkZ2UuYXBpLmNkcC5taWNyb3NvZnQuY29t" fullword wide /* base64 encoded string 'https://msedge.api.cdp.microsoft.com' */ /* score: '14.00'*/
-      $s10 = "aHR0cHM6Ly9nby5taWNyb3NvZnQuY29tL2Z3bGluay8=" fullword wide /* base64 encoded string 'https://go.microsoft.com/fwlink/' */ /* score: '14.00'*/
-      $s11 = "aHR0cHM6Ly9hY3RpdmF0aW9uLnNscy5taWNyb3NvZnQuY29t" fullword wide /* base64 encoded string 'https://activation.sls.microsoft.com' */ /* score: '14.00'*/
-      $s12 = "WFNYU1hTWA==" fullword wide /* base64 encoded string 'XSXSXSX' */ /* score: '14.00'*/
-      $s13 = "PFZpb2xldD4=" fullword wide /* base64 encoded string '<Violet>' */ /* score: '14.00'*/
-      $s14 = "VVNCLmV4ZQ==" fullword wide /* base64 encoded string 'USB.exe' */ /* score: '14.00'*/
-      $s15 = "TW96aWxsYS81LjA=" fullword wide /* base64 encoded string 'Mozilla/5.0' */ /* score: '14.00'*/
+      $s5 = "JVBhc3RlVXJsJQ==" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s6 = "aHR0cHM6Ly93aW5kb3dzdXBkYXRlLm1pY3Jvc29mdC5jb20=" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s7 = "aHR0cHM6Ly93aW5hdHAtZ3ctY3VzLm1pY3Jvc29mdC5jb20=" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s8 = "aHR0cHM6Ly93YXRzb24ubWljcm9zb2Z0LmNvbQ==" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s9 = "aHR0cHM6Ly9tc2VkZ2UuYXBpLmNkcC5taWNyb3NvZnQuY29t" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s10 = "aHR0cHM6Ly9nby5taWNyb3NvZnQuY29tL2Z3bGluay8=" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s11 = "aHR0cHM6Ly9hY3RpdmF0aW9uLnNscy5taWNyb3NvZnQuY29t" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s12 = "WFNYU1hTWA==" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s13 = "PFZpb2xldD4=" fullword wide /* base64 encoded string */ /* score: '14.00'*/
+      $s14 = "VVNCLmV4ZQ==" fullword wide /* base64 encoded string  */ /* score: '14.00'*/
+      $s15 = "TW96aWxsYS81LjA=" fullword wide /* base64 encoded string*/ /* score: '14.00'*/
    condition:
       ( uint16(0) == 0x5a4d and filesize < 4000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 8 of them )
       ) or ( all of them )
