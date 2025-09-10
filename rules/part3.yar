@@ -803,34 +803,6 @@ rule dbcc1a0e0407a7ce388ff63308f3ce8d_imphash_ {
       all of them
 }
 
-rule d37ef6e8bf5634c480b229937c7c41f3e1ee39d4ad8a676795eeb39b951d1da3_d37ef6e8 {
-   meta:
-      description = "_subset_batch - file d37ef6e8bf5634c480b229937c7c41f3e1ee39d4ad8a676795eeb39b951d1da3_d37ef6e8.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "d37ef6e8bf5634c480b229937c7c41f3e1ee39d4ad8a676795eeb39b951d1da3"
-   strings:
-      $s1 = "grep -l '%s' /proc/[0-9]*/comm 2>/dev/null | head -n1 | xargs dirname 2>/dev/null | xargs basename 2>/dev/null" fullword ascii /* score: '23.00'*/
-      $s2 = "__pthread_mutexattr_getkind_np" fullword ascii /* score: '23.00'*/
-      $s3 = "__pthread_mutexattr_getpshared" fullword ascii /* score: '23.00'*/
-      $s4 = "__pthread_mutexattr_gettype" fullword ascii /* score: '23.00'*/
-      $s5 = "__pthread_mutexattr_setkind_np" fullword ascii /* score: '18.00'*/
-      $s6 = "__pthread_mutex_lock" fullword ascii /* score: '18.00'*/
-      $s7 = "pthread_keys_mutex" fullword ascii /* score: '18.00'*/
-      $s8 = "__pthread_mutex_init" fullword ascii /* score: '18.00'*/
-      $s9 = "__pthread_mutex_trylock" fullword ascii /* score: '18.00'*/
-      $s10 = "__pthread_mutexattr_setpshared" fullword ascii /* score: '18.00'*/
-      $s11 = "__pthread_mutexattr_settype" fullword ascii /* score: '18.00'*/
-      $s12 = "__pthread_mutex_unlock" fullword ascii /* score: '18.00'*/
-      $s13 = "__pthread_mutex_destroy" fullword ascii /* score: '18.00'*/
-      $s14 = "__pthread_mutexattr_init" fullword ascii /* score: '18.00'*/
-      $s15 = "__pthread_mutexattr_destroy" fullword ascii /* score: '18.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 700KB and
-      8 of them
-}
-
 rule cf062c59c145831833830b6ecf5248d2_imphash_ {
    meta:
       description = "_subset_batch - file cf062c59c145831833830b6ecf5248d2(imphash).exe"
@@ -1333,34 +1305,6 @@ rule df88dcd8448ed860a23c6cada4d1b8fdce1cb6424056e1973b44a29457431f53_df88dcd8 {
    strings:
       $s1 = "Failed to create symlink in %s: %s" fullword ascii /* score: '12.50'*/
       $s2 = "Remote I/O error" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
-
-rule e264bcff8a919e7c5110095287eae592dbe9484449f4b1c7403eb52f9c7a5660_e264bcff {
-   meta:
-      description = "_subset_batch - file e264bcff8a919e7c5110095287eae592dbe9484449f4b1c7403eb52f9c7a5660_e264bcff.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "e264bcff8a919e7c5110095287eae592dbe9484449f4b1c7403eb52f9c7a5660"
-   strings:
-      $s1 = "Remote I/O error" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
-
-rule f11e9fde4d306c9e952a6967d07c4c471140addc88fc3e2e128043a653df1795_f11e9fde {
-   meta:
-      description = "_subset_batch - file f11e9fde4d306c9e952a6967d07c4c471140addc88fc3e2e128043a653df1795_f11e9fde.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "f11e9fde4d306c9e952a6967d07c4c471140addc88fc3e2e128043a653df1795"
-   strings:
-      $s1 = "Remote I/O error" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
       all of them
@@ -1930,21 +1874,6 @@ rule dc107c30d0dbd8d7279c03f4242ec4e66aa94213365ef60f0e38018bff41f997_dc107c30 {
    condition:
       uint16(0) == 0xcfd0 and filesize < 100KB and
       1 of ($x*) and 4 of them
-}
-
-rule f136db6b9e01c0cb88baa51bf3a49037667282939da51aee3b556f31e09a7108_f136db6b {
-   meta:
-      description = "_subset_batch - file f136db6b9e01c0cb88baa51bf3a49037667282939da51aee3b556f31e09a7108_f136db6b.doc"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "f136db6b9e01c0cb88baa51bf3a49037667282939da51aee3b556f31e09a7108"
-   strings:
-      $s1 = "word/header1.xml" fullword ascii /* score: '12.00'*/
-      $s2 = "word/header1.xmlPK" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x4b50 and filesize < 70KB and
-      all of them
 }
 
 rule eccda593bbc09fb143ebd05d1a6116cfb45a61f9e86477d7e33402719bb4c856_eccda593 {
@@ -2977,21 +2906,6 @@ rule bfeba24c1a64046a277ffd7e23a5f5ce64f9a76a315f43b93932395ba6401fa9_bfeba24c {
    condition:
       uint16(0) == 0x7473 and filesize < 20KB and
       1 of ($x*) and all of them
-}
-
-rule Bitter_signature_ {
-   meta:
-      description = "_subset_batch - file Bitter(signature).chm"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "624decbc0445e51873436e42699323bf48093e0c4ba5ea1d348e9e5a1822579b"
-   strings:
-      $s1 = "<(::DataSpace/Storage/MSCompressed/Content" fullword ascii /* score: '12.00'*/
-      $s2 = "HHA Version 4.74.8702" fullword ascii /* PEStudio Blacklist: strings */ /* score: '12.00'*/
-   condition:
-      uint16(0) == 0x5449 and filesize < 30KB and
-      all of them
 }
 
 rule e0c1db5358d4f0bc5cdeaa3def11e7970914e376d10320fd8f4f175d0b7e4a3c_e0c1db53 {
@@ -7209,43 +7123,6 @@ rule _Cephalus_signature__d42595b695fc008ef2c56aabd8efd68e_imphash__da06a1fea03a
       ) or ( all of them )
 }
 
-rule _DBatLoader_signature__0450fabe4e07b9190f5cff35f33d9dea_imphash__DBatLoader_signature__29ce29b57ebba5226e5de7e7b26f6820_imph_20 {
-   meta:
-      description = "_subset_batch - from files DBatLoader(signature)_0450fabe4e07b9190f5cff35f33d9dea(imphash).exe, DBatLoader(signature)_29ce29b57ebba5226e5de7e7b26f6820(imphash).exe, DBatLoader(signature)_3c83dc5402fa63264804679108da9ffe(imphash).exe, DBatLoader(signature)_5e5dbfc002d7f8800c7bdf04d311658e(imphash).exe, DBatLoader(signature)_69ce8a30515c4439d14c13f18ee57b69(imphash).exe, DBatLoader(signature)_aad0f90bf67e1b3fe7dab96cf8d503e3(imphash).exe, DBatLoader(signature)_bf908eefef1abcc17154da68f29113d5(imphash).exe, DBatLoader(signature)_c5097c4844a18a789c2c97ff3f7431b2(imphash).exe, DBatLoader(signature)_ccc8dfebc5d9971e8491d80ecc850a15(imphash).exe, DBatLoader(signature)_ccc8dfebc5d9971e8491d80ecc850a15(imphash)_2b2813d9.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "1626575d77b31d3b8cfebf81867d2dd2da280a4b83ab74a2852bc26143ca8aef"
-      hash2 = "26b94c4ecc51acc762693fda08713b8ca9c8a8857898e700f06c34018f99e24a"
-      hash3 = "571a0851d5035de2d982776a85a67243922ffcff87bfc3d98b3d0a277a5b86e5"
-      hash4 = "de8ca34f11439553884567b2ec4195118a2f0c699ade45be0e26870ca44f250d"
-      hash5 = "79ad3b86c29cab2b9e3ed08686ed2293857f61459e50a78471a45f4161ac76e8"
-      hash6 = "30526cca44c9093565b02bffe96c2801a55e6b4e7322f3c5a2118b9a66b35b82"
-      hash7 = "5ee4fc645fa88cd85eddc57b9fc28733a891d0bb84a648a560264b983b9c5488"
-      hash8 = "cf77ea3d603cf9d76cac65e60a4d53dfbc850631f77c24784361e6f8984c9798"
-      hash9 = "0dfd9f9027f0f6eeb381e55a0668b5b5a146fd4310f10edceeda4454eeaab924"
-      hash10 = "2b2813d971b9a081db71183c0687b4a80b423a1228617b13a13f1baaa6ba9158"
-   strings:
-      $s1 = "clWebDarkMagenta" fullword ascii /* score: '14.00'*/
-      $s2 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\FontSubstitutes" fullword ascii /* score: '12.00'*/
-      $s3 = "evalcomp" fullword ascii /* score: '11.00'*/
-      $s4 = "\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layouts\\" fullword ascii /* score: '11.00'*/
-      $s5 = "clWebDarkRed" fullword ascii /* score: '9.00'*/
-      $s6 = "clWebDarkOrchid" fullword ascii /* score: '9.00'*/
-      $s7 = "clWebDarkSlateBlue" fullword ascii /* score: '9.00'*/
-      $s8 = "Vevalcomp" fullword ascii /* score: '9.00'*/
-      $s9 = "clWebDarkSalmon" fullword ascii /* score: '9.00'*/
-      $s10 = "clWebDarkgreen" fullword ascii /* score: '9.00'*/
-      $s11 = "clWebDarkOliveGreen" fullword ascii /* score: '9.00'*/
-      $s12 = "clWebGhostWhite" fullword ascii /* score: '9.00'*/
-      $s13 = "KernelBASE" fullword ascii /* score: '9.00'*/
-      $s14 = "clWebDarkOrange" fullword ascii /* score: '9.00'*/
-      $s15 = "clWebDarkGoldenRod" fullword ascii /* score: '9.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 5000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
 rule _f34d5f2d4577ed6d9ceec516c1f5a744_imphash__3b79e53a_f34d5f2d4577ed6d9ceec516c1f5a744_imphash__5c69a4e5_21 {
    meta:
       description = "_subset_batch - from files f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_3b79e53a.exe, f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_5c69a4e5.exe"
@@ -8277,39 +8154,6 @@ rule _DarkCloud_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__18491801_e8
       $s15 = "get_NumberOfGuesses" fullword ascii /* score: '9.00'*/
    condition:
       ( uint16(0) == 0x5a4d and filesize < 3000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _c7269d59926fa4252270f407e4dab043_imphash__c7269d59926fa4252270f407e4dab043_imphash__f234f9b7_Cephalus_signature__d42595b695_55 {
-   meta:
-      description = "_subset_batch - from files c7269d59926fa4252270f407e4dab043(imphash).exe, c7269d59926fa4252270f407e4dab043(imphash)_f234f9b7.exe, Cephalus(signature)_d42595b695fc008ef2c56aabd8efd68e(imphash).exe, CobaltStrike(signature)_f0ea7b7844bbc5bfa9bb32efdcea957c(imphash).exe, d42595b695fc008ef2c56aabd8efd68e(imphash)_691c1d6c.exe, DonutLoader(signature)_d42595b695fc008ef2c56aabd8efd68e(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "4c5a823ae5350380c8193063b4d5f01e338b82481f19ddd106d0b3d06058476b"
-      hash2 = "f234f9b798ad23cb4bafca43e166a651ae2bb52bd7df8b004ebb163f0a87cbfd"
-      hash3 = "a34acd47127196ab867d572c2c6cf2fcccffa3a7a87e82d338a8efed898ca722"
-      hash4 = "da2e0c0fcb8accb823745b294de378f99bcfa6fc9856ee21f1ad46bceef1f0ec"
-      hash5 = "691c1d6c02c0153bdfaf6fb31506cd3aced24ed9902747c39fa6ac2094c202f1"
-      hash6 = "93a76dcb046672ce458a272400fdc8040942c1dd8605ed7b81bc98fcca3b5e1b"
-   strings:
-      $s1 = "runtime.getlasterror" fullword ascii /* score: '18.00'*/
-      $s2 = "*syscall.DLL" fullword ascii /* score: '16.00'*/
-      $s3 = "os.commandLineToArgv" fullword ascii /* score: '16.00'*/
-      $s4 = "internal/poll.execIO" fullword ascii /* score: '16.00'*/
-      $s5 = "runtime.getPageSize" fullword ascii /* score: '15.00'*/
-      $s6 = "runtime.initLongPathSupport" fullword ascii /* score: '13.00'*/
-      $s7 = "*syscall.DLLError" fullword ascii /* score: '12.00'*/
-      $s8 = "syscall.GetCommandLine" fullword ascii /* score: '11.00'*/
-      $s9 = "syscall.getprocaddress" fullword ascii /* score: '11.00'*/
-      $s10 = "readbyte" fullword ascii /* score: '11.00'*/
-      $s11 = "runtime.firstcontinuetramp" fullword ascii /* score: '10.00'*/
-      $s12 = "runtime.osPreemptExtExit" fullword ascii /* score: '10.00'*/
-      $s13 = "runtime.writeConsole" fullword ascii /* score: '10.00'*/
-      $s14 = "runtime.createHighResTimer" fullword ascii /* score: '10.00'*/
-      $s15 = "runtime.arenaIdx.l1" fullword ascii /* score: '10.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 17000KB and ( 8 of them )
       ) or ( all of them )
 }
 
