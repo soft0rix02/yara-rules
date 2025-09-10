@@ -529,7 +529,7 @@ rule ValleyRAT_signature__c35bbdf2a1165e98d0e46b0e3882deeb_imphash_ {
       $s15 = "NtOpenProcess" fullword wide /* score: '15.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 500KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 7 of them
 }
 
 rule RemcosRAT_signature__6e7f9a29f2c85394521a08b9f31f6275_imphash_ {
@@ -2014,7 +2014,7 @@ rule SalatStealer_signature__63c558c25deb865d330acf0806bd66bf_imphash_ {
       $s12 = "TwBDAEEATABBAFAAUABEAEEAVABBAFwAVABlAG0AcABcAGYAaQBsAGUAegBpAGwAYQAzADIALgBlAHgAZQAiAA==" fullword ascii /* base64 encoded string*/ /* score: '10.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 400KB and
-      1 of ($x*) and all of them
+      2 of ($x*) and 5 of them
 }
 
 rule SalatStealer_signature__971afde26a9678b597aba00403978dd9_imphash_ {
@@ -2038,7 +2038,7 @@ rule SalatStealer_signature__971afde26a9678b597aba00403978dd9_imphash_ {
       $s11 = "bQBwAFwAdwBpAG4AZABvAHcAcwB5AHMAdABlAG0AMwAyAC4AZQB4AGUAIgA=" fullword ascii /* base64 encoded string*/ /* score: '10.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 400KB and
-      1 of ($x*) and all of them
+      2 of ($x*) and 5 of them
 }
 
 rule RemcosRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__cabce955 {
@@ -6035,8 +6035,8 @@ rule _Rhadamanthys_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__Rhadaman
       $s14 = "OpenThreadTokenProcess32FirstWRegCreateKeyExWRegDeleteValueWUnmapViewOfFile]" fullword ascii /* score: '23.00'*/
       $s15 = "GOMAXPROCSGetIfEntryGetVersionLockFileExWSACleanupWSASocketWWSAStartupatomicand8complex128debug calldnsapi.dllexitThreadfloat32n" ascii /* score: '23.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 1 of ($x*) and 8 of them )
+      ) or ( 8 of them )
 }
 
 rule _To_see_signature__1e0d39391eece9a53254f9143387743a_imphash__To_see_signature__8054ed4a00e159280213636aa14f505f_imphash__27 {
@@ -7025,8 +7025,8 @@ rule _Rhadamanthys_signature__a520fd20530cf0b0db6a6c3c8b88d11d_imphash__Rhadaman
       $s14 = "chemswsock.dllscheddetailsecur32.dllshell32.dlltracealloc(unreachableuserenv.dll [recovered] allocCount  found at *( gcscandone " ascii /* score: '30.00'*/
       $s15 = "p->atomicstatus=CreateSymbolicLinkWCryptReleaseContextGetCurrentProcessIdGetTokenInformationMSpan_Sweep: state=WaitForSingleObje" ascii /* score: '28.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 6000KB and pe.imphash() == "a520fd20530cf0b0db6a6c3c8b88d11d" and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x5a4d and filesize < 6000KB and pe.imphash() == "a520fd20530cf0b0db6a6c3c8b88d11d" and ( 1 of ($x*) and 10 of them )
+      ) or ( 10 of them )
 }
 
 rule _Rhadamanthys_signature__Rhadamanthys_signature__7c513b4a_59 {
