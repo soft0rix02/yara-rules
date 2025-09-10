@@ -1199,8 +1199,6 @@ rule Mirai_signature__e6b0792c {
    strings:
       $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
       $s2 = " http://196.251.70.174/bins/mips; /bin/busybox chmod 777 * atp.mips; ./atp.mips huawei)</NewStatusURL><NewDownloadURL>$(echo HUA" ascii /* score: '29.00'*/
-      $s3 = "WEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
       1 of ($x*) and $s2
