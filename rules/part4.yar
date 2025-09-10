@@ -2943,7 +2943,7 @@ rule LummaStealer_signature__2 {
       $s5 = "span>Booking.com receives all messages written here and processes them according to our <a href=\"https://admin.booking.com/hote" ascii /* score: '28.00'*/
       $s6 = "                           <a href=\"https://admin.booking.com/hotel/hoteladmin/index-hotel.html?perform_routing=1&amp;ses=02287" ascii /* score: '27.00'*/
       $s7 = "i0yMC44Miw0Ni45Ni0yMC44MmwtMTMtMjEuNTlMMTEyMS44MSwzNDkuMTF6Ii8+CjwvZz4KPC9zdmc+ alt=\"Booking.com Logo\" class=ext-header__logo>" ascii /* score: '27.00'*/
-      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                       ' */ /* score: '26.50'*/
+      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
       $s9 = "AAAAAAAAAAAAAAB" ascii /* base64 encoded string '           ' */ /* reversed goodware string 'BAAAAAAAAAAAAAA' */ /* score: '26.50'*/
       $s10 = "MS40MzA3TDQyLjQyMDMgOS42MTA3TDM5LjkxMDQgMTEuNDMwN0w0MC44NzAzIDguNDkwN0wzOC4zNjA0IDYuNjcwN0g0MS40NjA0TDQyLjQyMDMgMy43MjA3WiIgZmls" ascii /* base64 encoded string '1.4307L42.4203 9.6107L39.9104 11.4307L40.8703 8.4907L38.3604 6.6707H41.4604L42.4203 3.7207Z" fil' */ /* score: '25.00'*/
       $s11 = "OUg2My40NjAxTDYwLjk1MDEgMjIuOTIwOUw2MS45MTAxIDI1Ljg3MDlMNTkuNDAwMSAyNC4wNTA5TDU2LjkwMDEgMjUuODcwOUw1Ny44NTAxIDIyLjkyMDlMNTUuMzUw" ascii /* base64 encoded string '9H63.4601L60.9501 22.9209L61.9101 25.8709L59.4001 24.0509L56.9001 25.8709L57.8501 22.9209L55.350' */ /* score: '25.00'*/
