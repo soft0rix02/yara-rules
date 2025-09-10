@@ -7400,8 +7400,7 @@ rule _RemcosRAT_signature__ccc8dfebc5d9971e8491d80ecc850a15_imphash__Rhadamanthy
       $s14 = "clWebDarkOrchid" fullword ascii /* score: '9.00'*/
       $s15 = "clWebDarkOrange" fullword ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 4000KB and ( 8 of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x5a4d and filesize < 4000KB and all of them )
 }
 
 rule _RemcosRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__32d85ec6_SnakeKeylogger_signature__f34d5f2d4577ed6d9ceec516c_71 {
