@@ -1488,7 +1488,7 @@ rule DiskWriter_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__5cb1497a {
       $s1 = "nitroxide.exe" fullword wide /* score: '22.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 300KB and
-      all of them
+      one of them
 }
 
 rule DarkCloud_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__aa8573d4 {
@@ -3982,11 +3982,10 @@ rule ca705f3b80b7e5140b7de8913b67177ac126f9eff7e2fa3974828844f70ecab7_ca705f3b {
       hash1 = "ca705f3b80b7e5140b7de8913b67177ac126f9eff7e2fa3974828844f70ecab7"
    strings:
       $x1 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command \"iex ((New-Object Net.WebClient).DownloadString('htt" ascii /* score: '51.00'*/
-      $x2 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command \"iex ((New-Object Net.WebClient).DownloadString('htt" ascii /* score: '44.00'*/
-      $s3 = "s://bkngssercise.com/bomla'))\"" fullword ascii /* score: '14.00'*/
+      $s1 = "s://bkngssercise.com/bomla'))\"" fullword ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1000KB and
-      1 of ($x*) and all of them
+      $x1 and $s1
 }
 
 rule DiskWriter_signature__8c7420117c1798ccbc1365dd667cfb20_imphash_ {
