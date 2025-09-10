@@ -5430,8 +5430,8 @@ rule _LummaStealer_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__LummaSte
       $s14 = "ime: p scheddetailsecur32.dllshell32.dlltracealloc(unreachableuserenv.dll KiB total,  [recovered] allocCount  found at *( gcscan" ascii /* score: '27.00'*/
       $s15 = "structure needs cleaning bytes failed with errno= to unused region of span with too many arguments GODEBUG: can not enable \"Get" ascii /* score: '27.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 5000KB and pe.imphash() == "4035d2883e01d64f3e7a9dccb1d63af5" and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x5a4d and filesize < 5000KB and ( 4 of ($x*) and 2 of them )
+
 }
 
 rule _LummaStealer_signature__1aae8bf580c846f39c71c05898e57e88_imphash__LummaStealer_signature__1aae8bf580c846f39c71c05898e57e88__4 {
@@ -5652,35 +5652,6 @@ rule _GuLoader_signature__262ff5ee_GuLoader_signature__dcb3432b_10 {
       ) or ( all of them )
 }
 
-rule _LummaStealer_signature__c7269d59926fa4252270f407e4dab043_imphash__d20503a6_LummaStealer_signature__c7269d59926fa4252270f407_11 {
-   meta:
-      description = "_subset_batch - from files LummaStealer(signature)_c7269d59926fa4252270f407e4dab043(imphash)_d20503a6.exe, LummaStealer(signature)_c7269d59926fa4252270f407e4dab043(imphash)_ea37de23.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "d20503a6c683c4cfddc10051531db2ab1b43be7d1b786d71f65938ce84812bbe"
-      hash2 = "ea37de23a99f57a12361c094bfedc9cb91356f1d729a313ae68fcb86febf5701"
-   strings:
-      $x1 = "slice bounds out of range [:%x] with length %ystopTheWorld: not stopped (status != _Pgcstop)sysGrow bounds not aligned to palloc" ascii /* score: '50.00'*/
-      $x2 = ".lib section in a.out corruptedbad write barrier buffer boundscannot assign requested addresscasgstatus: bad incoming valueschec" ascii /* score: '46.50'*/
-      $x3 = "unknown pcws2_32.dll  of size   (targetpc= KiB work,  freeindex= gcwaiting= idleprocs= in status  mallocing= ms clock,  nBSSRoot" ascii /* score: '43.00'*/
-      $x4 = "RtlGetNtVersionNumbersaddress already in useadvapi32.dll not foundargument list too longassembly checks failedbad g->status in r" ascii /* score: '42.00'*/
-      $x5 = "WriteProcessMemorybad manualFreeListconnection refusedfaketimeState.lockfile name too longforEachP: not donegarbage collectionid" ascii /* score: '42.00'*/
-      $x6 = "mismatched count during itab table copymspan.sweep: bad span state after sweepout of memory allocating heap arena mapruntime: ca" ascii /* score: '41.00'*/
-      $x7 = "WSAEnumProtocolsWbad TinySizeClassdebugPtrmask.lockentersyscallblockexec format errorg already scannedglobalAlloc.mutexlocked m0" ascii /* score: '38.00'*/
-      $x8 = "file descriptor in bad statefindrunnable: netpoll with pfound pointer to free objectgcBgMarkWorker: mode not setgcstopm: negativ" ascii /* score: '38.00'*/
-      $x9 = " to unallocated spanCertOpenSystemStoreWCreateProcessAsUserWCryptAcquireContextWGetAcceptExSockaddrsGetCurrentDirectoryWGetFileA" ascii /* score: '37.00'*/
-      $x10 = "Go pointer stored into non-Go memoryUnable to determine system directoryaccessing a corrupted shared libraryruntime: VirtualQuer" ascii /* score: '36.00'*/
-      $x11 = "entersyscallgcBitsArenasgcpacertracehost is downillegal seekinvalid slotiphlpapi.dllkernel32.dllmadvdontneedmheapSpecialmspanSpe" ascii /* score: '32.00'*/
-      $s12 = "ddetailsecur32.dllshell32.dlltracealloc(unreachableuserenv.dll KiB total,  [recovered] allocCount  found at *( gcscandone  heapM" ascii /* score: '30.00'*/
-      $s13 = " to non-Go memory , locked to threadCommandLineToArgvWCreateFileMappingWGetExitCodeProcessGetFileAttributesWLookupAccountNameWRF" ascii /* score: '29.00'*/
-      $s14 = "egEnumKeyExWRegOpenKeyExWVirtualUnlockWriteConsoleWadvapi32.dll" fullword ascii /* score: '28.00'*/
-      $s15 = "structure needs cleaning bytes failed with errno= to unused region of span with too many arguments GODEBUG: can not enable \"Get" ascii /* score: '27.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 5000KB and pe.imphash() == "c7269d59926fa4252270f407e4dab043" and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
-}
-
 rule _LummaStealer_signature__026dda6001e8c6dbad9456432b0003ba_imphash__LummaStealer_signature__3c9ed1bacd930c37be812d1f382b945f__12 {
    meta:
       description = "_subset_batch - from files LummaStealer(signature)_026dda6001e8c6dbad9456432b0003ba(imphash).exe, LummaStealer(signature)_3c9ed1bacd930c37be812d1f382b945f(imphash).exe, LummaStealer(signature)_a1ff5e4ca616afab58cf57e2fa1763ee(imphash).exe"
@@ -5765,35 +5736,6 @@ rule _GuLoader_signature__GuLoader_signature__18386a8b_15 {
       $s15 = "//Conjugations, totemplenes stauracin." fullword ascii /* score: '11.00'*/
    condition:
       ( uint16(0) == 0x0a0d and filesize < 100KB and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _LummaStealer_signature__a520fd20530cf0b0db6a6c3c8b88d11d_imphash__LummaStealer_signature__a520fd20530cf0b0db6a6c3c8b88d11d__16 {
-   meta:
-      description = "_subset_batch - from files LummaStealer(signature)_a520fd20530cf0b0db6a6c3c8b88d11d(imphash).exe, LummaStealer(signature)_a520fd20530cf0b0db6a6c3c8b88d11d(imphash)_93b67e92.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "852fd8e572f18ab2f694153a8943c2ef198c2a5bf6179e7bef30c6dc79f84811"
-      hash2 = "93b67e925e2b9bfe548c1437a40bc558b2b598f5f9c40c34c7c372814e8b89f4"
-   strings:
-      $x1 = ".lib section in a.out corruptedbad write barrier buffer boundscall from within the Go runtimecannot assign requested addresscasg" ascii /* score: '51.00'*/
-      $x2 = "stopTheWorld: not stopped (status != _Pgcstop)P has cached GC work at end of mark terminationattempting to link in too many shar" ascii /* score: '47.00'*/
-      $x3 = "bad lfnode addressbad manualFreeListconnection refusedfile name too longforEachP: not donegarbage collectionidentifier removedin" ascii /* score: '46.00'*/
-      $x4 = "GetAddrInfoWGetLastErrorGetLengthSidGetStdHandleGetTempPathWLoadLibraryWReadConsoleWSetEndOfFileTransmitFile_MSpanManualabi mism" ascii /* score: '44.00'*/
-      $x5 = "unknown pcws2_32.dll  of size   (targetpc= gcwaiting= gp.status= heap_live= idleprocs= in status  m->mcache= mallocing= ms clock" ascii /* score: '43.00'*/
-      $x6 = "object is remotepacer: H_m_prev=reflect mismatchremote I/O errorruntime:  g:  g=runtime: gp: gp=runtime: nelems=schedule: in cgo" ascii /* score: '43.00'*/
-      $x7 = "address already in useadvapi32.dll not foundargument list too longassembly checks failedbad g->status in readycall not at safe p" ascii /* score: '39.00'*/
-      $x8 = "file descriptor in bad statefindrunnable: netpoll with pgchelperstart: bad m->helpgcgcstopm: negative nmspinninginvalid runtime " ascii /* score: '38.00'*/
-      $x9 = "ted waitm - semaphore out of syncs.allocCount != s.nelems && freeIndex == s.nelemsattempt to execute system stack code on user s" ascii /* score: '35.00'*/
-      $x10 = "bad map stateexchange fullfatal error: gethostbynamegetservbynamekernel32.dll" fullword ascii /* score: '33.00'*/
-      $x11 = "atchadvapi32.dllbad g statusbad g0 stackbad recoverycan't happencas64 failedchan receivedumping heapend tracegc" fullword ascii /* score: '32.00'*/
-      $x12 = " MB) workers= called from  gcscanvalid  heap_marked= idlethreads= is nil, not  s.spanclass= span.base()= syscalltick= work.nproc" ascii /* score: '32.00'*/
-      $s13 = "rkrootruntime: VirtualQuery failed; errno=runtime: bad notifyList size - sync=runtime: invalid pc-encoded table f=runtime: inval" ascii /* score: '30.00'*/
-      $s14 = "chemswsock.dllscheddetailsecur32.dllshell32.dlltracealloc(unreachableuserenv.dll [recovered] allocCount  found at *( gcscandone " ascii /* score: '30.00'*/
-      $s15 = "p->atomicstatus=CreateSymbolicLinkWCryptReleaseContextGetCurrentProcessIdGetTokenInformationMSpan_Sweep: state=WaitForSingleObje" ascii /* score: '28.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 4000KB and pe.imphash() == "a520fd20530cf0b0db6a6c3c8b88d11d" and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
@@ -5893,35 +5835,6 @@ rule _HijackLoader_signature__00efed44c47255dff78fbfc7f266ee4b_imphash__LummaSte
       $s15 = "drop column from" fullword ascii /* score: '8.00'*/
    condition:
       ( uint16(0) == 0x5a4d and filesize < 14000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _LummaStealer_signature__91802a615b3a5c4bcc05bc5f66a5b219_imphash__LummaStealer_signature__91802a615b3a5c4bcc05bc5f66a5b219__20 {
-   meta:
-      description = "_subset_batch - from files LummaStealer(signature)_91802a615b3a5c4bcc05bc5f66a5b219(imphash).exe, LummaStealer(signature)_91802a615b3a5c4bcc05bc5f66a5b219(imphash)_1d9bd7df.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "bde9b8b30e8700d3c2759ef0792a3d556063e78670ee31ef19676e5a1a1861cf"
-      hash2 = "1d9bd7dfac193a4dfab75e59091f93b2a46232a7a461a6af02b0dddb0b509346"
-   strings:
-      $x1 = ".lib section in a.out corruptedbad write barrier buffer boundscall from within the Go runtimecannot assign requested addresscasg" ascii /* score: '53.50'*/
-      $x2 = "slice bounds out of range [:%x] with length %ystopTheWorld: not stopped (status != _Pgcstop)sysGrow bounds not aligned to palloc" ascii /* score: '50.00'*/
-      $x3 = "heapBitsSetTypeGCProg: small allocationmismatched count during itab table copymspan.sweep: bad span state after sweepout of memo" ascii /* score: '49.00'*/
-      $x4 = "GetAddrInfoWGetLastErrorGetLengthSidGetStdHandleGetTempPathWLoadLibraryWReadConsoleWSetEndOfFileTransmitFileabi mismatchadvapi32" ascii /* score: '44.00'*/
-      $x5 = "file descriptor in bad statefindrunnable: netpoll with pgcstopm: negative nmspinninginvalid runtime symbol tablemheap.freeSpanLo" ascii /* score: '43.00'*/
-      $x6 = "workbuf is empty initialHeapLive= spinningthreads=, s.searchAddr = : missing method DnsRecordListFreeGC assist markingGetCurrent" ascii /* score: '43.00'*/
-      $x7 = "unknown pcws2_32.dll  of size   (targetpc= KiB work,  gcwaiting= heap_live= idleprocs= in status  m->mcache= mallocing= ms clock" ascii /* score: '43.00'*/
-      $x8 = "address already in useadvapi32.dll not foundargument list too longassembly checks failedbad g->status in readybad sweepgen in re" ascii /* score: '39.00'*/
-      $x9 = " to unallocated spanCertOpenSystemStoreWCreateProcessAsUserWCryptAcquireContextWGetAcceptExSockaddrsGetCurrentDirectoryWGetFileA" ascii /* score: '37.00'*/
-      $x10 = "bad lfnode addressbad manualFreeListconnection refusedfile name too longforEachP: not donegarbage collectionidentifier removedin" ascii /* score: '37.00'*/
-      $x11 = "ProcessGetShortPathNameWLookupAccountSidWWSAEnumProtocolsWbad TinySizeClassentersyscallblockexec format errorg already scannedlo" ascii /* score: '36.00'*/
-      $x12 = "entersyscallgcpacertracehost is downillegal seekinvalid slotiphlpapi.dllkernel32.dlllfstack.pushmadvdontneednetapi32.dllreleasep" ascii /* score: '33.00'*/
-      $s13 = ".dllbad flushGenbad g statusbad g0 stackbad recoverycan't happencas64 failedchan receivedumping heapend tracegc" fullword ascii /* score: '29.00'*/
-      $s14 = "structure needs cleaning bytes failed with errno= to unused region of span with too many arguments GODEBUG: can not enable \"Get" ascii /* score: '27.00'*/
-      $s15 = "mstartdevice not a streamdirectory not emptydisk quota exceededdodeltimer: wrong Pfile already closedfile already existsfile doe" ascii /* score: '27.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 5000KB and pe.imphash() == "91802a615b3a5c4bcc05bc5f66a5b219" and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
