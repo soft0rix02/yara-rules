@@ -307,7 +307,7 @@ rule Mirai_signature__9fd09078 {
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
       8 of them
-
+}
 rule Mirai_signature__aa6a0e34 {
    meta:
       description = "_subset_batch - file Mirai(signature)_aa6a0e34.elf"
