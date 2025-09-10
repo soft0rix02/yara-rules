@@ -250,7 +250,7 @@ rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__af1abd42 {
       $x15 = "C:\\Temp\\client.log" fullword wide /* score: '32.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 10000KB and
-      1 of ($x*)
+      10 of ($x*)
 }
 
 rule XWorm_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__68a36788 {
@@ -502,7 +502,7 @@ rule XWorm_signature__112bfbb18727302cb5425c20a464b02e_imphash__898dd28e {
       $s15 = "D$X.exe" fullword ascii /* score: '16.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule VIPKeylogger_signature__f10c3f6d {
@@ -664,20 +664,6 @@ rule XWorm_signature__112bfbb18727302cb5425c20a464b02e_imphash__a42cb3fb {
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
       8 of them
-}
-
-rule Vidar_signature__8cd0ffc23a93d40428f4277ead307c71_imphash_ {
-   meta:
-      description = "_subset_batch - file Vidar(signature)_8cd0ffc23a93d40428f4277ead307c71(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "abc96e29a342d5766dca5cb791d0ba938fb96db82bd6d8587bb77722d5cf426f"
-   strings:
-      $s1 = " KERNEL32.DLL" fullword wide /* score: '20.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 11000KB and
-      all of them
 }
 
 rule Vidar_signature__c673ef005c8b05c71b0d297e41175e1b_imphash_ {
