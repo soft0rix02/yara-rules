@@ -5531,37 +5531,6 @@ rule _NanoCore_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__NanoCore_sig
       ) or ( all of them )
 }
 
-rule _QuasarRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__6b67447d_QuasarRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a7_13 {
-   meta:
-      description = "_subset_batch - from files QuasarRAT(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_6b67447d.exe, QuasarRAT(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_9aa99c6f.exe, QuasarRAT(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_b4cc1820.exe, QuasarRAT(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_d017447f.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "6b67447d97fcaca79ed98bcd6461b06445e978be3d45d4b0e2637057da97c4c2"
-      hash2 = "9aa99c6f7cab60192507282874b120aa0401f64a2a56c23ef23aa781a90e7c5f"
-      hash3 = "b4cc18207df83ad7c5fee8b34d2f2e680ba7dc45e51002d62712034a4cef69c6"
-      hash4 = "d017447f8ef2d707ce3a908e05bcac2206d8f5b8d63b72e494a81eb379b69853"
-   strings:
-      $x1 = "costura.system.collections.immutable.dll.compressed|7.0.0.0|System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, Publ" ascii /* score: '44.00'*/
-      $x2 = "costura.protobuf-net.core.dll.compressed|3.0.0.0|protobuf-net.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2" ascii /* score: '39.00'*/
-      $x3 = "costura.pulsar.common.dll.compressed|1.6.6.0|Pulsar.Common, Version=1.6.6.0, Culture=neutral, PublicKeyToken=null|Pulsar.Common." ascii /* score: '39.00'*/
-      $x4 = "costura.protobuf-net.dll.compressed|3.0.0.0|protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67|prot" ascii /* score: '39.00'*/
-      $x5 = "costura.protobuf-net.core.dll.compressed|3.0.0.0|protobuf-net.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2" ascii /* score: '37.00'*/
-      $x6 = "costura.protobuf-net.dll.compressed|3.0.0.0|protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67|prot" ascii /* score: '37.00'*/
-      $x7 = "costura.system.collections.immutable.dll.compressed|7.0.0.0|System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, Publ" ascii /* score: '33.00'*/
-      $s8 = "icKeyToken=b03f5f7f11d50a3a|System.Collections.Immutable.dll|2F1EBB67E21B33C74C4C6CF217AC1F797959F18B|198784" fullword ascii /* score: '27.00'*/
-      $s9 = "costura.protobuf-net.core.dll.compressed" fullword wide /* score: '22.00'*/
-      $s10 = "costura.protobuf-net.dll.compressed" fullword wide /* score: '22.00'*/
-      $s11 = "fodhelper.exe" fullword wide /* score: '22.00'*/
-      $s12 = "Pulsar.Common.Messages.FunStuff.GDI" fullword ascii /* score: '17.00'*/
-      $s13 = "obuf-net.dll|A6FF2228E8114A2B4040D0CA137C4B544FF034F4|277504" fullword ascii /* score: '14.00'*/
-      $s14 = "e4d67|protobuf-net.Core.dll|D60DAF9ACAACBEB3DEF349C76F236DF1460A4797|289792" fullword ascii /* score: '14.00'*/
-      $s15 = "float4 main(float4 position : SV_POSITION, float2 texCoord : TEXCOORD) : SV_Target" fullword wide /* score: '14.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 6000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
-}
-
 rule _QuasarRAT_signature__1895460fffad9475fda0c84755ecfee1_imphash__QuasarRAT_signature__1895460fffad9475fda0c84755ecfee1_imphas_14 {
    meta:
       description = "_subset_batch - from files QuasarRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash).exe, QuasarRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_7b215872.exe, QuasarRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_d23c42d9.exe, RedLineStealer(signature).img, RedLineStealer(signature)_1895460fffad9475fda0c84755ecfee1(imphash).exe, RedLineStealer(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_9f6b5b5b.exe, RedLineStealer(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_a671c5c6.exe, RedLineStealer(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_d5bc325e.exe, RedLineStealer(signature)_91d07a5e22681e70764519ae943a5883(imphash).exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash).exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_1c3f0685.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_3e5dc24c.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_65eb3667.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_817054de.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_8e77abb3.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_b8d9098c.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_c1576456.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_d0b78168.exe, RemcosRAT(signature)_1895460fffad9475fda0c84755ecfee1(imphash)_f8849b34.exe"
