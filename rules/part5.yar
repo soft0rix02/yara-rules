@@ -3255,11 +3255,11 @@ rule NanoCore_signature_ {
       $s5 = "kdJdllwWW5pTml2c2hYDQonaXJCWkJYbXRuTmp4YmdPdHdER2h0SG1WR21Lc1pYZXdjY2dyd0FFQk5NVWlvcnhIVFRsc2x6ZGFGZ1NQTnVVUWltVnl6WHh3eUVVZ21FZ" ascii /* score: '19.00'*/
       $s6 = "mRVWFRuYW5hRlRTQnZtT1JxRWJ4a1NhUlogPSAgQ3JlYXRlT2JqZWN0KCBDaHJXKDI4MSs4My0yODEpICYgQ2hyVygxODMrOTktMTgzKSAmIENoclcoMTIxKzExNC0xM" ascii /* score: '19.00'*/
       $s7 = "HCG8QHxwf1xU2dO/fzs7qsi4oq5k7AqZQkIsoKw2wwEQDJnnP+b1HwyAdI0tt+9e6e5HhdvuEhRxcMbF1nmnTo5meAF9piPEaXp1cpNh9L3ZtI39axUl2pRTRWuGqW2C" ascii /* score: '17.00'*/
-      $s8 = "AAAAAAAAAAAAAAAAAB" ascii /* base64 encoded string '             ' */ /* score: '16.50'*/
-      $s9 = "AAAAAAAAAAAAAAAAB" ascii /* base64 encoded string '            ' */ /* score: '16.50'*/
-      $s10 = "AAAAAAAAAAAAAAAAF" ascii /* base64 encoded string '            ' */ /* score: '16.50'*/
-      $s11 = "AAAAAAAAAAAAAAAAAD" ascii /* base64 encoded string '             ' */ /* score: '16.50'*/
-      $s12 = "AAAAAAAAAAAAAAAAAC" ascii /* base64 encoded string '             ' */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAAAAAAAAAB" ascii /* base64 encoded string*/ /* score: '16.50'*/
+      $s9 = "AAAAAAAAAAAAAAAAB" ascii /* base64 encoded string*/ /* score: '16.50'*/
+      $s10 = "AAAAAAAAAAAAAAAAF" ascii /* base64 encoded string*/ /* score: '16.50'*/
+      $s11 = "AAAAAAAAAAAAAAAAAD" ascii /* base64 encoded string*/ /* score: '16.50'*/
+      $s12 = "AAAAAAAAAAAAAAAAAC" ascii /* base64 encoded string*/ /* score: '16.50'*/
       $s13 = "FlWRlRRbTFJTW1sSFEyeHBkVVJ6UTI5dFNuRm5Nbk5MZW10SmNtdE1TRWw1Wm01b2JVbERha0ZxYkdSdk5tVmFVa0ZSU2pkNmEwSnJjbm80TVdJeGVsZ3dNRFpKZVZke" ascii /* score: '16.00'*/
       $s14 = "lFVSkJUM2xhWjNkYU5FRlJRVUZCUVVOQlFVSkZaMDlLY1UxQ2JtdENWazFOUVVGQlFVRkJVV280YlhBd1FtWjNSamgzZDBGQlFVRkJRa05EVTJKYWQwTkJRVkZCUVVGQ" ascii /* score: '16.00'*/
       $s15 = "4KCnkkFQSkqaIjKV6W2cEdFU6VpooJfGZTV1mwGkio45DPSHas4q1/lXFeffoIlKAGiKFx7pOKRKgVp+vJVz/CgETUfJqLKrVEorracUcNxp/LtIkraqcerkkJeh55YQ" ascii /* score: '16.00'*/
