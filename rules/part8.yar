@@ -8,6 +8,7 @@
 
 /* Rule Set ----------------------------------------------------------------- */
 
+
 import "pe"
 
 rule YoungLotus_signature__9b201090749bae06a761156dbad9c4f1_imphash_ {
@@ -1783,24 +1784,9 @@ rule XWorm_signature__709335ec {
       date = "2025-09-10"
       hash1 = "709335ecd149a26555831399ac627f4e7606fdf082ea196d11e5ac1b5ca7be7d"
    strings:
-      $x1 = ":: u7QqUS1inC2plsLC7tzxKQrE0+OSRYN64Rh3IVnIEfZc0o4fh+hIhVKgA1apntea362BP5UOOZeRCH0coflBs5/QPW3YTk2V6A5waiZ/F/LwA+ZmEaM5ewH8tplhQ" ascii /* score: '35.00'*/
-      $s2 = "9CzgDal0uGP275ENxaxvKS+YsxijBu9K4jDgIjpzWNw3kKbXnjRqFfpNsMIeUqlZZ6EpXbgGdVYNm8e2H+x4XqRCq+xXLogCyiux9UuaJVzP75MMf4CdCdcuA2TSpYPK" ascii /* score: '21.00'*/
-      $s3 = "!zkzlovkbubbqdfq! \"%hwfljoyni%k%hwfljoyni%b%hwfljoyni%w%hwfljoyni%d%hwfljoyni%d%hwfljoyni%m%hwfljoyni%o%hwfljoyni%b%hwfljoyni%q" ascii /* score: '19.00'*/
-      $s4 = "hwfljoyni%g%hwfljoyni%d=-nop -w h -c \"\"iex([Text.Enc\"" fullword ascii /* score: '19.00'*/
-      $s5 = "4JYyd1DtoGETTbMhcTztGvua+83SknTbuu6SxTkGY3BWu16cl4aO9X7gvNKtWsnf+UHuN6QxvLw1/slV/IoJnPy1SZDFv4ySCN+N7vazT/oA4PHYJSFFCLQI5o1TA9Td" ascii /* score: '16.00'*/
-      $s6 = "JFkiu+TnS4Z1gyk3RrFZSRG1dPjFUH8k6fWFrmjIoJHYa/0zxqDCCthlwh2RTQIpAcsazUnEOv38PVAQIfAUnKjty+rSHivTn2sf3emraC3HDllX4dLCCBGo6aXYC8Bx" ascii /* score: '16.00'*/
-      $s7 = "j0ECWLp2r1i32h6I8BqGsJE0munHOstBpQRN7kCVJhs+odF9b/kAn1mtGrVpgN+sUHCjD85pf3RsZU37bsA3gHPuBY0IrwZ31zre3uRpywd0/rmagkR+OFtLc/5F3nQ8" ascii /* score: '16.00'*/
-      $s8 = "6CQIcsZFbGEtfoKzAXjVmky1apwNX2LA3L56t/t17HkWTBum3ZSfMqcovLS1EIoe0+/g+KWIHDg/u3QjWRrLMipQn6CfPplSwstxbC8Luq51PXVRU7nHN/bi1Ktfsdr/" ascii /* score: '16.00'*/
-      $s9 = "WOxezULy2wVJRjXXjOcC7VIiri7G3YiKlz86fB/gh7KtgWwdAOeyewvs0g4qgVjhIK2513R6ZFRe2kpi+7W8VDuHqv8+NWeIxWNgfdOfAYqrPKooIq0P5ZVpgt3iyCnu" ascii /* score: '16.00'*/
-      $s10 = "3bgayO6uLv7VHw4XDv5DwKuBV1mhHs1CIVpg3G9azq4uCDsubR/ZRcs1Jo4XScGfLJsxLjmZTWYOK90Pqk5+HGN1ByCCIiHOmdUj5pC57Bb2P0cyhNiwaW4QhWWoG50z" ascii /* score: '16.00'*/
-      $s11 = "boT5/s3gD0K0I9UcjgFGYxeFYLSTyLM5dLlYrQ6rI5+R3om2vZKSGMr3uVQFrywLblM7JHR4v3/DuahZPS//M6AJr2gXUp731Vvc9Ri3q5TTXi2pLqCj62XHOnox1ny3" ascii /* score: '16.00'*/
-      $s12 = "omd7uK7WGyhVP1cWqP0CbYNHFi87aLuyUCw3NGReeIDnfAFVPxGikBURAWtTKCGdmvI2Z4k/piUAl1rQx5ZiGqUqMAUZJO5Z2tRUjyM5bdy34XAbNF8rKcZb9ohCZygu" ascii /* score: '16.00'*/
-      $s13 = "ePIQqAnkC7Hr1jxGP9RmQEcB2ODIRc2RVmw63UitkCPJ24QUzPVwKJ3TsujArhlVQYeEbkgpu2I6fLvbP/6JzdL/F9t4YZRR2qNlnkGCvwCSXOwn7OuxQbMKALcs15/Y" ascii /* score: '16.00'*/
-      $s14 = "fZVPr4b+v2ulyvvfKWfMCBxHMUuj9pqzVDb81mddoMDR3FLn/edZDr4rHGH7zgA7sIU/cJyhaS4cfvSlL0aQCNMxztRn9adnPoBo4qHxDqQJpKfZPkqPNDlls+aGAoXu" ascii /* score: '16.00'*/
-      $s15 = "tM6XMnO9g0XfUiYEMAX1BA2byJIsRrFkpqfG8L59k6w958+0xEye4lATbPNLa+GzHG7cmFz4pWgQdYDjqOHcFOVlpCGL2XdO5obQMDzgu/Te43PoMRBMDs4qagpwZlpZ" ascii /* score: '16.00'*/
+      $s1 = "nAom0Lo0N0U0T0Wl" ascii wide /* score: '21.00'*/
    condition:
-      uint16(0) == 0x6f25 and filesize < 500KB and
-      1 of ($x*) and 3 of them
+      $s1
 }
 
 rule VIPKeylogger_signature__2 {
