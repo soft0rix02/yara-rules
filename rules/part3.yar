@@ -4098,7 +4098,7 @@ rule DiskWriter_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__d83ef371 {
       $s2 = "proxxside.exe" fullword wide /* score: '22.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 20KB and
-      one of them
+      all of them
 }
 
 rule dae02f32a21e03ce65412f6e56942daa_imphash__a8c3af06 {
