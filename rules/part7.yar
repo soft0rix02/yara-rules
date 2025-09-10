@@ -3618,7 +3618,7 @@ rule Rhadamanthys_signature__4 {
       $s15 = "e by launcher or loader.String value for property.  Never null or empty.Name of action to invoke, either in the engine or the ha" ascii /* score: '13.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 8000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule Rhadamanthys_signature__026ce5e7482c82368e554338ef80854e_imphash_ {
