@@ -3080,8 +3080,8 @@ rule Metasploit_signature_ {
       $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '25.00'*/
       $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '22.00'*/
       $s4 = "vWezmQGLIaU = \"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBw" ascii /* score: '18.00'*/
-      $s5 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
+      $s5 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '16.50'*/
       $s8 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s9 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
