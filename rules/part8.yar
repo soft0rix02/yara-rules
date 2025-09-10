@@ -985,8 +985,8 @@ rule XWorm_signature__2 {
       $x2 = "set \"fFiles=C:\\Windows\\System32\\drivers\\anti_cheat.sys C:\\ProgramData\\Games\\Temp\\cache.dat C:\\Users\\%USERNAME%\\AppDa" ascii /* score: '41.00'*/
       $s3 = "echo VrfLeew4BHmCf5E1srXHVrZFdBLwOhOKuZ/VwTMHrXL2gCF2tnbbbHs/iSqdPJw7gK7fYbdNjZJovxVtw0TkZAe2oSv6wIvYgRMf06qjrbpxXpl2LfIY0E7+o2e" ascii /* score: '28.00'*/
       $s4 = "    powershell -Command \"Start-Process '%~f0' -Verb RunAs\"" fullword ascii /* score: '28.00'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                   ' */ /* score: '26.50'*/
+      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
+      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
       $s7 = "set TEMPEXE=%TEMP%\\gi9nmvgkx6.exe" fullword ascii /* score: '26.00'*/
       $s8 = "ZWwAqMiBFAAAAKlpYWFtYKiJaAFpYKlsqKjIgXQAAAFlbW1lZKiouW1kgYgAAAFoAWSpGW1pYKlsgUwAAAAAgYgAAACpGWFgqACBdAAAAIDoAAABaKioyWVsAKlogNQA" ascii /* base64 encoded string '[ *2 E   *ZXX[X*"Z ZX*[**2 ]   Y[[YY**.[Y b   Z Y*F[ZX*[ S     b   *FXX*  ]    :   Z**2Y[ *Z 5 ' */ /* score: '26.00'*/
       $s9 = "echo 85cPXhEtF6GMxsKI6jzJTMSs8UBmNTUp+mdyB2ur0ytLCXfUCKNRgDLlQRQdC/l1z8TVpabwwVt3ADnKUPtb8GOwnNcFtlhf9ivCRwPh9YUqHrhO6QjJhyZGwr2" ascii /* score: '26.00'*/
