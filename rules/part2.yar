@@ -534,7 +534,7 @@ rule sig_9943bdf1b2a37434054b14a1a56a8e67aaa6a8b733ca785017d3ed8c1173ac59_9943bd
       $s11 = "MimeType=application/x-executable;application/octet-stream;application/x-sh;" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x445b and filesize < 2KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 5 of them
 }
 
 rule sig_99a371495a2adeac3ea8b4a3a292d1d2e095fc9df1fb9a6a47d2c0b642b8f1ee_99a37149 {
@@ -1135,7 +1135,7 @@ rule AgentTesla_signature__2 {
       $s7 = "ot circuiting the rest of the code." fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x683c and filesize < 100KB and
-      all of them
+      4 of them
 }
 
 rule sig_9ab5e1ccff616db6e9a7d571b1d932953abadf85a489194827aee8326e436b12_9ab5e1cc {
