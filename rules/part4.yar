@@ -172,11 +172,11 @@ rule Gh_stRAT_signature__c509dbcf0dade053e5588087a4d64742_imphash_ {
       $s1 = "SPUNINST.EXE" fullword wide /* score: '22.00'*/
       $s2 = "%sot%%\\System32\\svc%s %s%s%s" fullword ascii /* score: '19.00'*/
       $s3 = "SOFTWARE\\mIcRoSoFt\\wINDoWS nt\\currentVerSioN\\sVChoST" fullword ascii /* score: '17.00'*/
-      $s4 = "%SystemRo" fullword ascii /* base64 encoded string 'K+-zdh' */ /* score: '17.00'*/
-      $s5 = "eludom" fullword ascii /* reversed goodware string 'module' */ /* score: '15.00'*/
-      $s6 = "AemaNyeKecivreSteG" fullword ascii /* reversed goodware string 'GetServiceKeyNameA' */ /* score: '14.00'*/
-      $s7 = "AecivreSnepO" fullword ascii /* reversed goodware string 'OpenServiceA' */ /* score: '14.00'*/
-      $s8 = "AemaNyalpsiDecivreSteG" fullword ascii /* reversed goodware string 'GetServiceDisplayNameA' */ /* score: '14.00'*/
+      $s4 = "%SystemRo" fullword ascii /* base64 encoded string*/ /* score: '17.00'*/
+      $s5 = "eludom" fullword ascii /* reversed goodware string*/ /* score: '15.00'*/
+      $s6 = "AemaNyeKecivreSteG" fullword ascii /* reversed goodware string*/ /* score: '14.00'*/
+      $s7 = "AecivreSnepO" fullword ascii /* reversed goodware string*/ /* score: '14.00'*/
+      $s8 = "AemaNyalpsiDecivreSteG" fullword ascii /* reversed goodware string*/ /* score: '14.00'*/
       $s9 = "%SESSIONNAME%" fullword ascii /* score: '11.00'*/
       $s10 = "%SESSIONNAME%\\" fullword ascii /* score: '11.00'*/
       $s11 = "SYSTEM\\CurrentControlSet\\seRviCes\\" fullword ascii /* score: '10.00'*/
@@ -1715,7 +1715,7 @@ rule MassLogger_signature__2 {
       $s2 = "Agjbnzfbsj.exe" fullword wide /* score: '22.00'*/
       $s3 = "AAgjbnzfbsj, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" fullword ascii /* score: '21.00'*/
       $s4 = "BByteSizeLib, Version=1.2.4.0, Culture=neutral, PublicKeyToken=null" fullword ascii /* score: '21.00'*/
-      $s5 = "Ybylzcktm" fullword ascii /* base64 encoded string 'o)srKf' */ /* score: '16.00'*/
+      $s5 = "Ybylzcktm" fullword ascii /* base64 encoded string*/ /* score: '16.00'*/
       $s6 = "DHL- IMP.SCR" fullword ascii /* score: '16.00'*/
       $s7 = "PDF.scr" fullword wide /* score: '15.00'*/
       $s8 = "decryptor" fullword wide /* score: '15.00'*/
@@ -2867,20 +2867,20 @@ rule Kimsuky_signature__24a42a91 {
       hash1 = "24a42a912c6ad98ab3910cb1e031edbdf9ed6f452371d5696006c9cf24319147"
    strings:
       $x1 = "try { r0kOoSFyyMi = \"VFZxUUFBTUFBQUFFQUFBQS8vOEFBTGdBQUFBQUFBQUFRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU" ascii /* score: '70.00'*/
-      $x2 = "VRUdMenNkRUpHQndlMTRBRDdiQkFrUWtVREJFREZGSS84RklnL2tTY3V3UHRrUWtVVUdMemtTSWRDUmpQQ0I4RHp4K2Z3di93USsyUkF4UlBDQjk4VW0vSlNNaWhPU2M" ascii /* base64 encoded string 'EGLzsdEJGBwe14AD7bBAkQkUDBEDFFI/8FIg/kScuwPtkQkUUGLzkSIdCRjPCB8Dzx+fwv/wQ+2RAxRPCB98Um/JSMihOSc' */ /* score: '31.00'*/
-      $x3 = "6UW9PWDBqeFB5UkhOSTBPUC9FL0VjZzFFY2cxOFQrc3dPMkppeXp4UHpNd1hlZFlJL0UvSmtpbkdUQWE4VDhSRVJFUkVSSHhQNEFRQWI3N0IvRS9FZkQrRVBEKzhEK2l" ascii /* base64 encoded string 'QoOX0jxPyRHNI0OP/E/Ecg1Ecg18T+swO2JiyzxPzMwXedYI/E/JkinGTAa8T8RERERERHxP4AQAb77B/E/EfD+EPD+8D+i' */ /* score: '31.00'*/
-      $x4 = "RYmdBQkFBQTZDeWhBQUJtRDI4RjVBOERBRVV6OXZNUGYwUWtVRUdMenNkRUpHQndlMTRBRDdiQkFrUWtVREJFREZGSS84RklnL2tTY3V3UHRrUWtVVUdMemtTSWRDUmp" ascii /* base64 encoded string 'bgABAAA6CyhAABmD28F5A8DAEUz9vMPf0QkUEGLzsdEJGBwe14AD7bBAkQkUDBEDFFI/8FIg/kScuwPtkQkUUGLzkSIdCRj' */ /* score: '31.00'*/
-      $x5 = "xQVhYWlNZdkk2TUZhQUFDTFZaaEZNOGxGTThCSmk4My8wTEF4eGtRa1lGUkVEN2JZc1RXQThWUkJnUE5VTS8rSVRDUmpORlJFaUZ3a2FMTUdpRVFrWW9EelZFQ0lmQ1J" ascii /* base64 encoded string 'AXXZSYvI6MFaAACLVZhFM8lFM8BJi83/0LAxxkQkYFRED7bYsTWA8VRBgPNUM/+ITCRjNFREiFwkaLMGiEQkYoDzVECIfCR' */ /* score: '31.00'*/
-      $x6 = "TWVBxQVhYWlNZdkk2TUZhQUFDTFZaaEZNOGxGTThCSmk4My8wTEF4eGtRa1lGUkVEN2JZc1RXQThWUkJnUE5VTS8rSVRDUmpORlJFaUZ3a2FMTUdpRVFrWW9EelZFQ0l" ascii /* base64 encoded string 'YPqAXXZSYvI6MFaAACLVZhFM8lFM8BJi83/0LAxxkQkYFRED7bYsTWA8VRBgPNUM/+ITCRjNFREiFwkaLMGiEQkYoDzVECI' */ /* score: '31.00'*/
-      $x7 = "wTEF4eGtRa1lGUkVEN2JZc1RXQThWUkJnUE5VTS8rSVRDUmpORlJFaUZ3a2FMTUdpRVFrWW9EelZFQ0lmQ1Jwc2pDSVhDUmhnUEpVUWJBU1FZRHdWSWhVSkdSQnNUMUV" ascii /* base64 encoded string 'LAxxkQkYFRED7bYsTWA8VRBgPNUM/+ITCRjNFREiFwkaLMGiEQkYoDzVECIfCRpsjCIXCRhgPJUQbASQYDwVIhUJGRBsT1E' */ /* score: '31.00'*/
-      $x8 = "BQkFBQTZDeWhBQUJtRDI4RjVBOERBRVV6OXZNUGYwUWtVRUdMenNkRUpHQndlMTRBRDdiQkFrUWtVREJFREZGSS84RklnL2tTY3V3UHRrUWtVVUdMemtTSWRDUmpQQ0I" ascii /* base64 encoded string 'BAAA6CyhAABmD28F5A8DAEUz9vMPf0QkUEGLzsdEJGBwe14AD7bBAkQkUDBEDFFI/8FIg/kScuwPtkQkUUGLzkSIdCRjPCB' */ /* score: '31.00'*/
-      $x9 = "PWDBqeFB5UkhOSTBPUC9FL0VjZzFFY2cxOFQrc3dPMkppeXp4UHpNd1hlZFlJL0UvSmtpbkdUQWE4VDhSRVJFUkVSSHhQNEFRQWI3N0IvRS9FZkQrRVBEKzhEK2lKYlA" ascii /* base64 encoded string 'X0jxPyRHNI0OP/E/Ecg1Ecg18T+swO2JiyzxPzMwXedYI/E/JkinGTAa8T8RERERERHxP4AQAb77B/E/EfD+EPD+8D+iJbP' */ /* score: '31.00'*/
-      $s10 = "wQVhYWlNZdlA2TkVGQUFCSWkwM1kvOURwR0FJQUFFaUZ5WFFHL3hVYkxnSUFNOERIUmNCYkdEQXlab2xGeTdGYngwWEVMVG9vQUdiSFJjZ01COFpGeWdobVptWVBINFF" ascii /* base64 encoded string 'AXXZSYvP6NEFAABIi03Y/9DpGAIAAEiFyXQG/xUbLgIAM8DHRcBbGDAyZolFy7Fbx0XELTooAGbHRcgMB8ZFyghmZmYPH4Q' */ /* score: '29.00'*/
-      $s11 = "0a0syZ3JiQ3R3SzNRcmVDdDhLMEFyaEN1SUs0d3JrQ3VVSzVncm5DdWdLNlFycUN1c0s3QXJ0Q3U0Szd3cmdDdkVLOGdyekN2UUs5UXIyQ3ZjSytBcjVDdm9LK3dyOEN" ascii /* base64 encoded string 'kK2grbCtwK3QreCt8K0ArhCuIK4wrkCuUK5grnCugK6QrqCusK7ArtCu4K7wrgCvEK8grzCvQK9Qr2CvcK+Ar5CvoK+wr8C' */ /* score: '29.00'*/
-      $s12 = "CdVFDQUFBQVBINEFBQUFBQVJJbVFBUHovLzBHQndvdE1BQUNKRUlIQ1JwWUFBRVNKaUFBRUFBQkJnY0V2SFFBQWliQUFDQUFBZ2U0ekt3QUFpYmdBREFBQWdlL05WQUF" ascii /* base64 encoded string 'uQCAAAAPH4AAAAAARImQAPz//0GBwotMAACJEIHCRpYAAESJiAAEAABBgcEvHQAAibAACAAAge4zKwAAibgADAAAge/NVAA' */ /* score: '29.00'*/
-      $s13 = "5WFFHL3hVYkxnSUFNOERIUmNCYkdEQXlab2xGeTdGYngwWEVMVG9vQUdiSFJjZ01COFpGeWdobVptWVBINFFBQUFBQUFBTElNRXdGd1VqL3dFaUQrQXR6QmcrMlRjRHI" ascii /* base64 encoded string 'XQG/xUbLgIAM8DHRcBbGDAyZolFy7Fbx0XELTooAGbHRcgMB8ZFyghmZmYPH4QAAAAAAALIMEwFwUj/wEiD+AtzBg+2TcDr' */ /* score: '29.00'*/
-      $s14 = "Fd0ErRUNBRUFBSXRNSkVoSWpSV1NpLzMvSzB3a1RFRzRKZ0FBQUlsTUpFZ1BoVUw4Ly8rTFJDUlFpMHdrUUkwRWdBUEFLOGgwZlkxQi80dUVnamdYQXdDRndBK0V4Z0F" ascii /* base64 encoded string 'wA+ECAEAAItMJEhIjRWSi/3/K0wkTEG4JgAAAIlMJEgPhUL8//+LRCRQi0wkQI0EgAPAK8h0fY1B/4uEgjgXAwCFwA+ExgA' */ /* score: '29.00'*/
-      $s15 = "nQUJCdVFDQUFBQVBINEFBQUFBQVJJbVFBUHovLzBHQndvdE1BQUNKRUlIQ1JwWUFBRVNKaUFBRUFBQkJnY0V2SFFBQWliQUFDQUFBZ2U0ekt3QUFpYmdBREFBQWdlL05" ascii /* base64 encoded string 'ABBuQCAAAAPH4AAAAAARImQAPz//0GBwotMAACJEIHCRpYAAESJiAAEAABBgcEvHQAAibAACAAAge4zKwAAibgADAAAge/N' */ /* score: '29.00'*/
+      $x2 = "VRUdMenNkRUpHQndlMTRBRDdiQkFrUWtVREJFREZGSS84RklnL2tTY3V3UHRrUWtVVUdMemtTSWRDUmpQQ0I4RHp4K2Z3di93USsyUkF4UlBDQjk4VW0vSlNNaWhPU2M" ascii /* base64 encoded string*/ /* score: '31.00'*/
+      $x3 = "6UW9PWDBqeFB5UkhOSTBPUC9FL0VjZzFFY2cxOFQrc3dPMkppeXp4UHpNd1hlZFlJL0UvSmtpbkdUQWE4VDhSRVJFUkVSSHhQNEFRQWI3N0IvRS9FZkQrRVBEKzhEK2l" ascii /* base64 encoded string  */ /* score: '31.00'*/
+      $x4 = "RYmdBQkFBQTZDeWhBQUJtRDI4RjVBOERBRVV6OXZNUGYwUWtVRUdMenNkRUpHQndlMTRBRDdiQkFrUWtVREJFREZGSS84RklnL2tTY3V3UHRrUWtVVUdMemtTSWRDUmp" ascii /* base64 encoded string */ /* score: '31.00'*/
+      $x5 = "xQVhYWlNZdkk2TUZhQUFDTFZaaEZNOGxGTThCSmk4My8wTEF4eGtRa1lGUkVEN2JZc1RXQThWUkJnUE5VTS8rSVRDUmpORlJFaUZ3a2FMTUdpRVFrWW9EelZFQ0lmQ1J" ascii /* base64 encoded string  */ /* score: '31.00'*/
+      $x6 = "TWVBxQVhYWlNZdkk2TUZhQUFDTFZaaEZNOGxGTThCSmk4My8wTEF4eGtRa1lGUkVEN2JZc1RXQThWUkJnUE5VTS8rSVRDUmpORlJFaUZ3a2FMTUdpRVFrWW9EelZFQ0l" ascii /* base64 encoded string */ /* score: '31.00'*/
+      $x7 = "wTEF4eGtRa1lGUkVEN2JZc1RXQThWUkJnUE5VTS8rSVRDUmpORlJFaUZ3a2FMTUdpRVFrWW9EelZFQ0lmQ1Jwc2pDSVhDUmhnUEpVUWJBU1FZRHdWSWhVSkdSQnNUMUV" ascii /* base64 encoded string */ /* score: '31.00'*/
+      $x8 = "BQkFBQTZDeWhBQUJtRDI4RjVBOERBRVV6OXZNUGYwUWtVRUdMenNkRUpHQndlMTRBRDdiQkFrUWtVREJFREZGSS84RklnL2tTY3V3UHRrUWtVVUdMemtTSWRDUmpQQ0I" ascii /* base64 encoded string  */ /* score: '31.00'*/
+      $x9 = "PWDBqeFB5UkhOSTBPUC9FL0VjZzFFY2cxOFQrc3dPMkppeXp4UHpNd1hlZFlJL0UvSmtpbkdUQWE4VDhSRVJFUkVSSHhQNEFRQWI3N0IvRS9FZkQrRVBEKzhEK2lKYlA" ascii /* base64 encoded string  */ /* score: '31.00'*/
+      $s10 = "wQVhYWlNZdlA2TkVGQUFCSWkwM1kvOURwR0FJQUFFaUZ5WFFHL3hVYkxnSUFNOERIUmNCYkdEQXlab2xGeTdGYngwWEVMVG9vQUdiSFJjZ01COFpGeWdobVptWVBINFF" ascii /* base64 encoded string */ /* score: '29.00'*/
+      $s11 = "0a0syZ3JiQ3R3SzNRcmVDdDhLMEFyaEN1SUs0d3JrQ3VVSzVncm5DdWdLNlFycUN1c0s3QXJ0Q3U0Szd3cmdDdkVLOGdyekN2UUs5UXIyQ3ZjSytBcjVDdm9LK3dyOEN" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s12 = "CdVFDQUFBQVBINEFBQUFBQVJJbVFBUHovLzBHQndvdE1BQUNKRUlIQ1JwWUFBRVNKaUFBRUFBQkJnY0V2SFFBQWliQUFDQUFBZ2U0ekt3QUFpYmdBREFBQWdlL05WQUF" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s13 = "5WFFHL3hVYkxnSUFNOERIUmNCYkdEQXlab2xGeTdGYngwWEVMVG9vQUdiSFJjZ01COFpGeWdobVptWVBINFFBQUFBQUFBTElNRXdGd1VqL3dFaUQrQXR6QmcrMlRjRHI" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s14 = "Fd0ErRUNBRUFBSXRNSkVoSWpSV1NpLzMvSzB3a1RFRzRKZ0FBQUlsTUpFZ1BoVUw4Ly8rTFJDUlFpMHdrUUkwRWdBUEFLOGgwZlkxQi80dUVnamdYQXdDRndBK0V4Z0F" ascii /* base64 encoded string  */ /* score: '29.00'*/
+      $s15 = "nQUJCdVFDQUFBQVBINEFBQUFBQVJJbVFBUHovLzBHQndvdE1BQUNKRUlIQ1JwWUFBRVNKaUFBRUFBQkJnY0V2SFFBQWliQUFDQUFBZ2U0ekt3QUFpYmdBREFBQWdlL05" ascii /* base64 encoded string  */ /* score: '29.00'*/
    condition:
       uint16(0) == 0x7274 and filesize < 5000KB and
       1 of ($x*) and all of them
@@ -2944,13 +2944,13 @@ rule LummaStealer_signature__2 {
       $s6 = "                           <a href=\"https://admin.booking.com/hotel/hoteladmin/index-hotel.html?perform_routing=1&amp;ses=02287" ascii /* score: '27.00'*/
       $s7 = "i0yMC44Miw0Ni45Ni0yMC44MmwtMTMtMjEuNTlMMTEyMS44MSwzNDkuMTF6Ii8+CjwvZz4KPC9zdmc+ alt=\"Booking.com Logo\" class=ext-header__logo>" ascii /* score: '27.00'*/
       $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
-      $s9 = "AAAAAAAAAAAAAAB" ascii /* base64 encoded string '           ' */ /* reversed goodware string 'BAAAAAAAAAAAAAA' */ /* score: '26.50'*/
-      $s10 = "MS40MzA3TDQyLjQyMDMgOS42MTA3TDM5LjkxMDQgMTEuNDMwN0w0MC44NzAzIDguNDkwN0wzOC4zNjA0IDYuNjcwN0g0MS40NjA0TDQyLjQyMDMgMy43MjA3WiIgZmls" ascii /* base64 encoded string '1.4307L42.4203 9.6107L39.9104 11.4307L40.8703 8.4907L38.3604 6.6707H41.4604L42.4203 3.7207Z" fil' */ /* score: '25.00'*/
-      $s11 = "OUg2My40NjAxTDYwLjk1MDEgMjIuOTIwOUw2MS45MTAxIDI1Ljg3MDlMNTkuNDAwMSAyNC4wNTA5TDU2LjkwMDEgMjUuODcwOUw1Ny44NTAxIDIyLjkyMDlMNTUuMzUw" ascii /* base64 encoded string '9H63.4601L60.9501 22.9209L61.9101 25.8709L59.4001 24.0509L56.9001 25.8709L57.8501 22.9209L55.350' */ /* score: '25.00'*/
-      $s12 = "NjAuOTUwMSA1MS43OTA1TDYxLjkxMDEgNTQuNzMwNUw1OS40MDAxIDUyLjkxMDVMNTYuOTAwMSA1NC43MzA1TDU3Ljg1MDEgNTEuNzkwNUw1NS4zNTAxIDQ5Ljk3MDVI" ascii /* base64 encoded string '60.9501 51.7905L61.9101 54.7305L59.4001 52.9105L56.9001 54.7305L57.8501 51.7905L55.3501 49.9705H' */ /* score: '25.00'*/
-      $s13 = "MS40MzA3TDguNDUwMTQgOS42MTA3TDUuOTQwMTQgMTEuNDMwN0w2LjkwMDE0IDguNDkwN0w0LjM5MDE0IDYuNjcwN0g3LjQ5MDE0TDguNDUwMTQgMy43MjA3WiIgZmls" ascii /* base64 encoded string '1.4307L8.45014 9.6107L5.94014 11.4307L6.90014 8.4907L4.39014 6.6707H7.49014L8.45014 3.7207Z" fil' */ /* score: '25.00'*/
+      $s9 = "AAAAAAAAAAAAAAB" ascii /* base64 encoded string*/ /* reversed goodware string*/ /* score: '26.50'*/
+      $s10 = "MS40MzA3TDQyLjQyMDMgOS42MTA3TDM5LjkxMDQgMTEuNDMwN0w0MC44NzAzIDguNDkwN0wzOC4zNjA0IDYuNjcwN0g0MS40NjA0TDQyLjQyMDMgMy43MjA3WiIgZmls" ascii /* base64 encoded string */ /* score: '25.00'*/
+      $s11 = "OUg2My40NjAxTDYwLjk1MDEgMjIuOTIwOUw2MS45MTAxIDI1Ljg3MDlMNTkuNDAwMSAyNC4wNTA5TDU2LjkwMDEgMjUuODcwOUw1Ny44NTAxIDIyLjkyMDlMNTUuMzUw" ascii /* base64 encoded string  */ /* score: '25.00'*/
+      $s12 = "NjAuOTUwMSA1MS43OTA1TDYxLjkxMDEgNTQuNzMwNUw1OS40MDAxIDUyLjkxMDVMNTYuOTAwMSA1NC43MzA1TDU3Ljg1MDEgNTEuNzkwNUw1NS4zNTAxIDQ5Ljk3MDVI" ascii /* base64 encoded string  */ /* score: '25.00'*/
+      $s13 = "MS40MzA3TDguNDUwMTQgOS42MTA3TDUuOTQwMTQgMTEuNDMwN0w2LjkwMDE0IDguNDkwN0w0LjM5MDE0IDYuNjcwN0g3LjQ5MDE0TDguNDUwMTQgMy43MjA3WiIgZmls" ascii /* base64 encoded string  */ /* score: '25.00'*/
       $s14 = " Copyright <a href=\"https://www.booking.com/?lang=xu\" target=_blank class=\"bui-link bui-link--primary\">Booking.com</a> 2025<" ascii /* score: '25.00'*/
-      $s15 = "NTEuNzkwNUw5NS44ODAxIDU0LjczMDVMOTMuMzcwMSA1Mi45MTA1TDkwLjg2MDEgNTQuNzMwNUw5MS44MjAxIDUxLjc5MDVMODkuMzEwMSA0OS45NzA1SDkyLjQxMDFM" ascii /* base64 encoded string '51.7905L95.8801 54.7305L93.3701 52.9105L90.8601 54.7305L91.8201 51.7905L89.3101 49.9705H92.4101L' */ /* score: '25.00'*/
+      $s15 = "NTEuNzkwNUw5NS44ODAxIDU0LjczMDVMOTMuMzcwMSA1Mi45MTA1TDkwLjg2MDEgNTQuNzMwNUw5MS44MjAxIDUxLjc5MDVMODkuMzEwMSA0OS45NzA1SDkyLjQxMDFM" ascii /* base64 encoded string */ /* score: '25.00'*/
    condition:
       uint16(0) == 0x0a0d and filesize < 700KB and
       1 of ($x*) and 4 of them
@@ -3076,21 +3076,21 @@ rule Metasploit_signature_ {
       date = "2025-09-10"
       hash1 = "c631481da8dd93a3806614d1de47529114352a6d8175a53ed2f1b6635325d91f"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string 'l                                                                                                                                                                                                                                                                                                                                                                                                                                ' */ /* score: '25.00'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                   .t' */ /* score: '22.00'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
+      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '25.00'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '22.00'*/
       $s4 = "vWezmQGLIaU = \"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBw" ascii /* score: '18.00'*/
       $s5 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
       $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                   ' */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAAD" ascii /* base64 encoded string '        ' */ /* score: '16.50'*/
-      $s9 = "AAAAAAAAAB" ascii /* base64 encoded string '       ' */ /* score: '16.50'*/
-      $s10 = "AAAAADAAAE" ascii /* base64 encoded string '    0  ' */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s9 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s10 = "AAAAADAAAE" ascii /* base64 encoded string */ /* score: '16.50'*/
       $s11 = "QT4IYLI8bx9cwiXVsjFfmJlz4sSEBQjMbM6hRrbqBsewm1mXRLuEEsik7ZIZrB7q6Ltpgz8Y8QKtP+2NjSt8JE9WhRp1yXZmBxa8SdthUd7xGJEYEfallRXoMGgtw4sJ" ascii /* score: '16.00'*/
       $s12 = "klChtKEoKi = LmRdqcEsWFjlAe & \"\\\" & qoBVSUtMWQHPs.GetTempName()" fullword ascii /* score: '16.00'*/
       $s13 = "/gp1NxtvKgB83LZv3TIxCwybY08geEI5SlrHdNTf/HYgVEkCzBMJ1JTNpeyFXafw4oP9L6oh+oQTyHWyvX0c1635TYnKZt7GHHkeY89xIEGjNXmrmONkKTkctrRyi/Q8" ascii /* score: '14.00'*/
       $s14 = "nJmAZPyEXtlWc.run jIvfbXsKq, 0, true" fullword ascii /* score: '13.00'*/
-      $s15 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string '               ' */ /* score: '12.50'*/
+      $s15 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string */ /* score: '12.50'*/
    condition:
       uint16(0) == 0x7546 and filesize < 20KB and
       8 of them
@@ -3104,17 +3104,17 @@ rule Metasploit_signature__30c1a448 {
       date = "2025-09-10"
       hash1 = "30c1a44847a988679b9d31ee9a5a05dcaba0191571bc7054569cfac2c351a8db"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                                                                ' */ /* score: '24.00'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                   .t' */ /* score: '22.00'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
+      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '24.00'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '22.00'*/
       $s4 = "IUIvmBKujImrNso = \"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhp" ascii /* score: '22.00'*/
       $s5 = "jFDFQNDFYPD7/kboS+V69LvZogt3wLZ8uMjVvIbtAl6/oUbGIu0q2rZNEc+yc8ll/54g8ExeCXOnbonst/uh4sQ48bM54kngHwjqK7A+MlgT0CyBY8WNkoOSebZSEkGD" ascii /* score: '19.00'*/
-      $s6 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                   ' */ /* score: '16.50'*/
-      $s9 = "AAAAAAAAAAD" ascii /* base64 encoded string '        ' */ /* score: '16.50'*/
-      $s10 = "AAAAAAAAAB" ascii /* base64 encoded string '       ' */ /* score: '16.50'*/
-      $s11 = "AAAAADAAAE" ascii /* base64 encoded string '    0  ' */ /* score: '16.50'*/
+      $s6 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '16.50'*/
+      $s9 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s10 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s11 = "AAAAADAAAE" ascii /* base64 encoded string */ /* score: '16.50'*/
       $s12 = "GvVMhFfogp = GmlTnbBa & \"\\\" & ohdnwWhTb.GetTempName()" fullword ascii /* score: '16.00'*/
       $s13 = "BgMw84Oz14IIfS+oylLbVZ4Mt/jE+u7Fy6IgANQIujpAG00ZIRCVjTSz1X2aihtfZMDDKRSvup9Y9QPdFUkH4KP2eh1dSHdC3aO8wf1k0tOv8dIcK8F7Vkn5Y4dlmGzb" ascii /* score: '16.00'*/
       $s14 = "NSdxjYp6BVpeyRpdcC0ONdgX0NLc0pp2f6tNa0z0x+UZf/2jQdqa4Lw1AnxcrDTJOxShzlCyb2S2ZgawkoPLzms89s1He7pxTEzO3ezZu5TOyaU+FHmCggJ2oyHwNjuJ" ascii /* score: '15.00'*/
@@ -3132,19 +3132,19 @@ rule Metasploit_signature__64601f60 {
       date = "2025-09-10"
       hash1 = "64601f60843f6aec285023493ee85a90e5914604e716ba3d607e4a2a90c29a08"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                                                                ' */ /* score: '24.00'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                   .t' */ /* score: '22.00'*/
-      $s4 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                   ' */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string '        ' */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string '       ' */ /* score: '16.50'*/
-      $s9 = "AAAAADAAAE" ascii /* base64 encoded string '    0  ' */ /* score: '16.50'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
+      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '24.00'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '22.00'*/
+      $s4 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s9 = "AAAAADAAAE" ascii /* base64 encoded string */ /* score: '16.50'*/
       $s10 = "xVKK7oX+borttINgWgeTqQbPOdage/GlwzeHOCuczx2zgHXWSbVE4h3FTTuIWxj8RvdOGSnsu0QyyoS4fuGEuH7CUrYrjgINzmOgxfTQVXrDi/kbiH7fDCNN9LzbAWQg" ascii /* score: '16.00'*/
       $s11 = "tVBeUAlSRELG = jiYEOOYrHMtzQ & \"\\\" & xlqtkSBlEJi.GetTempName()" fullword ascii /* score: '16.00'*/
       $s12 = "qMQWrzIZRrZ.run lhSbiGZHbDiH, 0, true" fullword ascii /* score: '13.00'*/
-      $s13 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string '               ' */ /* score: '12.50'*/
+      $s13 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string*/ /* score: '12.50'*/
       $s14 = "Set qMQWrzIZRrZ = CreateObject(\"Wscript.Shell\")" fullword ascii /* score: '12.00'*/
       $s15 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwwAAAAAAAAAAAAAFQwAAA4MAAAA" ascii /* score: '11.00'*/
    condition:
@@ -3160,20 +3160,20 @@ rule Metasploit_signature__b7124c8d {
       date = "2025-09-10"
       hash1 = "b7124c8d6d295cf1e7bb013c96179c45044ada35cf64be76b08a954425e6a5de"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                                                                ' */ /* score: '24.00'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                   .t' */ /* score: '22.00'*/
-      $s4 = "8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                   ' */ /* score: '21.00'*/
-      $s5 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string '        ' */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string '       ' */ /* score: '16.50'*/
-      $s9 = "AAAAADAAAE" ascii /* base64 encoded string '    0  ' */ /* score: '16.50'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
+      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '24.00'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '22.00'*/
+      $s4 = "8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s5 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string */ /* score: '16.50'*/
+      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s9 = "AAAAADAAAE" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s10 = "BsEhQdwxmPmC = gzctbyQosy & \"\\\" & aqtKsFFOhYON.GetTempName()" fullword ascii /* score: '16.00'*/
       $s11 = "F5H1ue767jAxThtI7lz3flWuAcRUnwvWQoQLuNOZTjrlXZ49fWHrQhU0cd8UtcOZaA7nn04uyFFM4V8hTJlHejkXfxycgOXKqyWUzT0uVpaLgLIFzJicn6TQkwxbGQKQ" ascii /* score: '14.00'*/
       $s12 = "YYw1+XWCmIORT7kNyvYjXgUNmZzk/L9irN3+SYkcD63bAveOS/fYOz3BhUu4vPj4+VvEcfGxcDWE3JghkEYgXRYkx1TmmdRKGnfmEyLiHSL2CtgTWdH4qSxSZEMYyabf" ascii /* score: '14.00'*/
       $s13 = "KtZwQDufTiELP.run FPyYzbMRmHdVFED, 0, true" fullword ascii /* score: '13.00'*/
-      $s14 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string '               ' */ /* score: '12.50'*/
+      $s14 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string */ /* score: '12.50'*/
       $s15 = "Set KtZwQDufTiELP = CreateObject(\"Wscript.Shell\")" fullword ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x7546 and filesize < 20KB and
@@ -3188,19 +3188,19 @@ rule Metasploit_signature__d8bb8c4e {
       date = "2025-09-10"
       hash1 = "d8bb8c4e2bd050f63c21d4ec02c00804876b0c1679acdfd4f5f0694fb3f4509e"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                   .t' */ /* score: '22.00'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwwAAAAAAAAAAAAAFQwAAA4MAAAAAA" ascii /* base64 encoded string '                                                                         ,0          T0  80    ' */ /* score: '21.00'*/
-      $s4 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                   ' */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string '        ' */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string '       ' */ /* score: '16.50'*/
-      $s9 = "AAAAADAAAE" ascii /* base64 encoded string '    0  ' */ /* score: '16.50'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
+      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '22.00'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwwAAAAAAAAAAAAAFQwAAA4MAAAAAA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s4 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string*/ /* score: '16.50'*/
+      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s9 = "AAAAADAAAE" ascii /* base64 encoded string */ /* score: '16.50'*/
       $s10 = "VO260GVF24WEJs1aylE5cR1FBjjdFduF3gkKb3FtamRBa4RsQiwiUzEyElNZmMvZ1beqaGeA2gBALokpFnRYTGrlRiWIa7629hAjzs5PpsrdheF1qPxBy1xVdsKvkGR6" ascii /* score: '16.00'*/
       $s11 = "PSesfBWL = CxKIPtbGDRraJqD & \"\\\" & nNjwWVVgboJo.GetTempName()" fullword ascii /* score: '16.00'*/
       $s12 = "ptxOhSSGc.run AcEVukhKFLJDHNk, 0, true" fullword ascii /* score: '13.00'*/
-      $s13 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string '               ' */ /* score: '12.50'*/
+      $s13 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string*/ /* score: '12.50'*/
       $s14 = "Set ptxOhSSGc = CreateObject(\"Wscript.Shell\")" fullword ascii /* score: '12.00'*/
       $s15 = "iC69L9+vR9CoOz0cxSrRKxX+usAS4yiJbOF2niIgxke2s4aJDhOfi1UyQFz+4JP2OS8KcTCLazxWsKOwdY/QVoDGe3jepGVQFNOLIIeK13dIDwwTUA/3TIFrIkDN8qiu" ascii /* score: '11.00'*/
    condition:
@@ -3216,20 +3216,20 @@ rule Metasploit_signature__da9a88ec {
       date = "2025-09-10"
       hash1 = "da9a88ecb9765e86f41dc8dfe0e12cf753b6dd1eb8783a10372e07d165c94ff7"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                               ' */ /* score: '26.50'*/
-      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                                                                ' */ /* score: '24.00'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                   .t' */ /* score: '22.00'*/
-      $s4 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string '          ' */ /* score: '16.50'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                          ' */ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                                                                                                                                                   ' */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string '        ' */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string '       ' */ /* score: '16.50'*/
-      $s9 = "AAAAADAAAE" ascii /* base64 encoded string '    0  ' */ /* score: '16.50'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
+      $s2 = "bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '24.00'*/
+      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '22.00'*/
+      $s4 = "AAAAAAAAAAAAAF" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAD" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s8 = "AAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
+      $s9 = "AAAAADAAAE" ascii /* base64 encoded string */ /* score: '16.50'*/
       $s10 = "iOZefWJfWz = WfrSPeDiW & \"\\\" & xeXrPBht.GetTempName()" fullword ascii /* score: '16.00'*/
       $s11 = "Fiif+XvbA4D19/SF1jZnGFjiXqj0sDJUeM+E9laftKXCOMSiXieNMdfseTk39Nu/JRQL5yCtT2DGD+FaRWDuMJLzXlSmx3KqWpD84pl+d6vKIXsGgqyO/xEXTctJFpNm" ascii /* score: '14.00'*/
       $s12 = "UVCjyWYQcmVg.run hwTHbsLLSM, 0, true" fullword ascii /* score: '13.00'*/
       $s13 = "IdsjSwjnTTLRrGR = \"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhp" ascii /* score: '13.00'*/
-      $s14 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string '               ' */ /* score: '12.50'*/
+      $s14 = "AAAAAAAAAAAAAAAAAACAA" ascii /* base64 encoded string*/ /* score: '12.50'*/
       $s15 = "Set UVCjyWYQcmVg = CreateObject(\"Wscript.Shell\")" fullword ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x7546 and filesize < 20KB and
@@ -3404,8 +3404,8 @@ rule LummaStealer_signature__2eabe9054cad5152567f0699947a2c5b_imphash__e8d3ec16 
       date = "2025-09-10"
       hash1 = "e8d3ec1635f8099552083229aa4b6734e9fa270fe65be3284403fee1fb0922db"
    strings:
-      $s1 = "Oi8vcGtpLWNybC5zeW1hdXRoLmNvbS9vZmZsaW5lY2EvVGhlSW5zdGl0dXRlb2ZF" fullword ascii /* base64 encoded string '://pki-crl.symauth.com/offlineca/TheInstituteofE' */ /* score: '14.00'*/
-      $s2 = "bGVjdHJpY2FsYW5kRWxlY3Ryb25pY3NFbmdpbmVlcnNJbmNJRUVFUm9vdENBLmNy" fullword ascii /* base64 encoded string 'lectricalandElectronicsEngineersIncIEEERootCA.cr' */ /* score: '14.00'*/
+      $s1 = "Oi8vcGtpLWNybC5zeW1hdXRoLmNvbS9vZmZsaW5lY2EvVGhlSW5zdGl0dXRlb2ZF" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
+      $s2 = "bGVjdHJpY2FsYW5kRWxlY3Ryb25pY3NFbmdpbmVlcnNJbmNJRUVFUm9vdENBLmNy" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
       $s3 = "* Ig_.A" fullword ascii /* score: '9.00'*/
       $s4 = "0XdLLx0F" fullword ascii /* score: '9.00'*/
       $s5 = "Y2FsIGFuZCBFbGVjdHJvbmljcyBFbmdpbmVlcnMsIEluYy4xDTALBgNVBAsTBElF" fullword ascii /* score: '9.00'*/
@@ -4367,7 +4367,7 @@ rule MassLogger_signature__e0c223c3 {
       date = "2025-09-10"
       hash1 = "e0c223c32b5a099b8be2c78731102f857ef5f9fb641a0e22542dd6dea5d125d7"
    strings:
-      $s1 = "XStPY1h7e6" fullword ascii /* base64 encoded string ']+OcX{{' */ /* score: '14.00'*/
+      $s1 = "XStPY1h7e6" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
       $s2 = "RoqEx9z:\\G" fullword ascii /* score: '10.00'*/
       $s3 = "* 4O&." fullword ascii /* score: '9.00'*/
    condition:
@@ -4555,21 +4555,21 @@ rule Metasploit_signature__2 {
       date = "2025-09-10"
       hash1 = "f2decde2ad9b56abb32ec27ddba67860404c1919d30b387559cd043206229a78"
    strings:
-      $s1 = "NgA7ACQAUwBbACQASQBdACwAJABTAFsAJABIAF0APQAkAFMAWwAkAEgAXQAsACQAUwBbACQASQBdADsAJABfAC0AQgB4AG8AUgAkAFMAWwAoACQAUwBbACQASQBdACsA" ascii /* base64 encoded string '6 ; $ S [ $ I ] , $ S [ $ H ] = $ S [ $ H ] , $ S [ $ I ] ; $ _ - B x o R $ S [ ( $ S [ $ I ] + ' */ /* score: '21.00'*/
+      $s1 = "NgA7ACQAUwBbACQASQBdACwAJABTAFsAJABIAF0APQAkAFMAWwAkAEgAXQAsACQAUwBbACQASQBdADsAJABfAC0AQgB4AG8AUgAkAFMAWwAoACQAUwBbACQASQBdACsA" ascii /* base64 encoded string*/ /* score: '21.00'*/
       $s2 = "powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAFIAcwBJAE8ATgBUAGEAQgBsAGUALgBQAFMAVgBlAFIAUwBJAE8AbgAuAE0AYQBKAG8AUgAgAC0A" ascii /* score: '21.00'*/
-      $s3 = "QQBOAEEAZwBFAFIAXQA6ADoARQB4AHAAZQBDAFQAMQAwADAAQwBvAG4AVABJAE4AVQBFAD0AMAA7ACQAZQBiAEQAZAA9AE4AZQB3AC0ATwBiAGoARQBjAHQAIABTAFkA" ascii /* base64 encoded string 'A N A g E R ] : : E x p e C T 1 0 0 C o n T I N U E = 0 ; $ e b D d = N e w - O b j E c t   S Y ' */ /* score: '21.00'*/
-      $s4 = "JABKAF0ALAAkAFMAWwAkAF8AXQB9ADsAJABEAHwAJQB7ACQASQA9ACgAJABJACsAMQApACUAMgA1ADYAOwAkAEgAPQAoACQASAArACQAUwBbACQASQBdACkAJQAyADUA" ascii /* base64 encoded string '$ J ] , $ S [ $ _ ] } ; $ D | % { $ I = ( $ I + 1 ) % 2 5 6 ; $ H = ( $ H + $ S [ $ I ] ) % 2 5 ' */ /* score: '21.00'*/
-      $s5 = "dgBZAGkAVQBvAHEAUwBLAE8AVQBPAD0AUwA2AFMAeABtAGYAWQBBAEwAZAAvAFoAdQBUAE0AbQBqAEsASgBxAHgAbgBDAE0AbwBrAEkAPQAiACkAOwAkAEQAYQB0AGEA" ascii /* base64 encoded string 'v Y i U o q S K O U O = S 6 S x m f Y A L d / Z u T M m j K J q x n C M o k I = " ) ; $ D a t a ' */ /* score: '21.00'*/
-      $s6 = "JABKACsAJABTAFsAJABfAF0AKwAkAEsAWwAkAF8AJQAkAEsALgBDAG8AVQBuAFQAXQApACUAMgA1ADYAOwAkAFMAWwAkAF8AXQAsACQAUwBbACQASgBdAD0AJABTAFsA" ascii /* base64 encoded string '$ J + $ S [ $ _ ] + $ K [ $ _ % $ K . C o U n T ] ) % 2 5 6 ; $ S [ $ _ ] , $ S [ $ J ] = $ S [ ' */ /* score: '21.00'*/
-      $s7 = "agAyAHoAdgBiAFUAJwApADsAJABSAD0AewAkAEQALAAkAEsAPQAkAEEAUgBHAHMAOwAkAFMAPQAwAC4ALgAyADUANQA7ADAALgAuADIANQA1AHwAJQB7ACQASgA9ACgA" ascii /* base64 encoded string 'j 2 z v b U ' ) ; $ R = { $ D , $ K = $ A R G s ; $ S = 0 . . 2 5 5 ; 0 . . 2 5 5 | % { $ J = ( ' */ /* score: '21.00'*/
-      $s8 = "ZQB0AC4AQwBSAEUAZABlAG4AdABpAGEATABDAEEAYwBoAEUAXQA6ADoARABlAGYAYQB1AGwAdABOAEUAVABXAE8AcgBLAEMAUgBlAGQARQBOAFQASQBhAGwAUwA7ACQA" ascii /* base64 encoded string 'e t . C R E d e n t i a L C A c h E ] : : D e f a u l t N E T W O r K C R e d E N T I a l S ; $ ' */ /* score: '21.00'*/
-      $s9 = "PQAkAEUAQgBkAGQALgBEAG8AdwBOAEwATwBhAGQARABBAHQAYQAoACQAUwBlAFIAKwAkAFQAKQA7ACQAaQB2AD0AJABEAEEAVABBAFsAMAAuAC4AMwBdADsAJABEAGEA" ascii /* base64 encoded string '= $ E B d d . D o w N L O a d D A t a ( $ S e R + $ T ) ; $ i v = $ D A T A [ 0 . . 3 ] ; $ D a ' */ /* score: '21.00'*/
-      $s10 = "RQB0AFYAYQBsAHUAZQAoACQATgB1AGwATAAsACQAdAByAFUAZQApADsAfQA7AFsAUwB5AFMAVABFAG0ALgBOAEUAdAAuAFMARQBSAFYAaQBDAGUAUABvAGkAbgBUAE0A" ascii /* base64 encoded string 'E t V a l u e ( $ N u l L , $ t r U e ) ; } ; [ S y S T E m . N E t . S E R V i C e P o i n T M ' */ /* score: '21.00'*/
-      $s11 = "JABTAFsAJABIAF0AKQAlADIANQA2AF0AfQB9ADsAJABlAEIAZABEAC4ASABFAGEAZABFAFIAUwAuAEEARABEACgAIgBDAG8AbwBrAGkAZQAiACwAIgBuAG8AbgBLAGsA" ascii /* base64 encoded string '$ S [ $ H ] ) % 2 5 6 ] } } ; $ e B d D . H E a d E R S . A D D ( " C o o k i e " , " n o n K k ' */ /* score: '21.00'*/
-      $s12 = "RQB0AFYAQQBMAHUARQAoACQATgBVAGwATAAsACgATgBFAHcALQBPAEIASgBlAEMAVAAgAEMAbwBMAEwARQBDAFQASQBvAE4AcwAuAEcAZQBuAGUAUgBpAEMALgBIAGEA" ascii /* base64 encoded string 'E t V A L u E ( $ N U l L , ( N E w - O B J e C T   C o L L E C T I o N s . G e n e R i C . H a ' */ /* score: '17.00'*/
-      $s13 = "QQBEAFEAQQBOAEEAQQB1AEEARABFAEEATgBnAEEAegBBAEMANABBAE0AZwBBAHcAQQBEAE0AQQBPAGcAQQAzAEEARABjAEEATwBBAEEANABBAEEAPQA9ACcAKQApACkA" ascii /* base64 encoded string 'A D Q A N A A u A D E A N g A z A C 4 A M g A w A D M A O g A 3 A D c A O A A 4 A A = = ' ) ) ) ' */ /* score: '17.00'*/
-      $s14 = "JwBFAG4AYQBiAGwAZQBTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAwADsAJABiADMAOQA5AFsAJwBTAGMAcgBpAHAAdABCACcA" ascii /* base64 encoded string '' E n a b l e S c r i p t B ' + ' l o c k L o g g i n g ' ] = 0 ; $ b 3 9 9 [ ' S c r i p t B ' ' */ /* score: '17.00'*/
-      $s15 = "UwBvAGYAdAB3AGEAcgBlAFwAUABvAGwAaQBjAGkAZQBzAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAUABvAHcAZQByAFMAaABlAGwAbABcAFMA" ascii /* base64 encoded string 'S o f t w a r e \ P o l i c i e s \ M i c r o s o f t \ W i n d o w s \ P o w e r S h e l l \ S ' */ /* score: '17.00'*/
+      $s3 = "QQBOAEEAZwBFAFIAXQA6ADoARQB4AHAAZQBDAFQAMQAwADAAQwBvAG4AVABJAE4AVQBFAD0AMAA7ACQAZQBiAEQAZAA9AE4AZQB3AC0ATwBiAGoARQBjAHQAIABTAFkA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s4 = "JABKAF0ALAAkAFMAWwAkAF8AXQB9ADsAJABEAHwAJQB7ACQASQA9ACgAJABJACsAMQApACUAMgA1ADYAOwAkAEgAPQAoACQASAArACQAUwBbACQASQBdACkAJQAyADUA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s5 = "dgBZAGkAVQBvAHEAUwBLAE8AVQBPAD0AUwA2AFMAeABtAGYAWQBBAEwAZAAvAFoAdQBUAE0AbQBqAEsASgBxAHgAbgBDAE0AbwBrAEkAPQAiACkAOwAkAEQAYQB0AGEA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s6 = "JABKACsAJABTAFsAJABfAF0AKwAkAEsAWwAkAF8AJQAkAEsALgBDAG8AVQBuAFQAXQApACUAMgA1ADYAOwAkAFMAWwAkAF8AXQAsACQAUwBbACQASgBdAD0AJABTAFsA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s7 = "agAyAHoAdgBiAFUAJwApADsAJABSAD0AewAkAEQALAAkAEsAPQAkAEEAUgBHAHMAOwAkAFMAPQAwAC4ALgAyADUANQA7ADAALgAuADIANQA1AHwAJQB7ACQASgA9ACgA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s8 = "ZQB0AC4AQwBSAEUAZABlAG4AdABpAGEATABDAEEAYwBoAEUAXQA6ADoARABlAGYAYQB1AGwAdABOAEUAVABXAE8AcgBLAEMAUgBlAGQARQBOAFQASQBhAGwAUwA7ACQA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s9 = "PQAkAEUAQgBkAGQALgBEAG8AdwBOAEwATwBhAGQARABBAHQAYQAoACQAUwBlAFIAKwAkAFQAKQA7ACQAaQB2AD0AJABEAEEAVABBAFsAMAAuAC4AMwBdADsAJABEAGEA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s10 = "RQB0AFYAYQBsAHUAZQAoACQATgB1AGwATAAsACQAdAByAFUAZQApADsAfQA7AFsAUwB5AFMAVABFAG0ALgBOAEUAdAAuAFMARQBSAFYAaQBDAGUAUABvAGkAbgBUAE0A" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s11 = "JABTAFsAJABIAF0AKQAlADIANQA2AF0AfQB9ADsAJABlAEIAZABEAC4ASABFAGEAZABFAFIAUwAuAEEARABEACgAIgBDAG8AbwBrAGkAZQAiACwAIgBuAG8AbgBLAGsA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s12 = "RQB0AFYAQQBMAHUARQAoACQATgBVAGwATAAsACgATgBFAHcALQBPAEIASgBlAEMAVAAgAEMAbwBMAEwARQBDAFQASQBvAE4AcwAuAEcAZQBuAGUAUgBpAEMALgBIAGEA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s13 = "QQBEAFEAQQBOAEEAQQB1AEEARABFAEEATgBnAEEAegBBAEMANABBAE0AZwBBAHcAQQBEAE0AQQBPAGcAQQAzAEEARABjAEEATwBBAEEANABBAEEAPQA9ACcAKQApACkA" ascii /* base64 encoded string */ /* score: '17.00'*/
+      $s14 = "JwBFAG4AYQBiAGwAZQBTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAwADsAJABiADMAOQA5AFsAJwBTAGMAcgBpAHAAdABCACcA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s15 = "UwBvAGYAdAB3AGEAcgBlAFwAUABvAGwAaQBjAGkAZQBzAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAUABvAHcAZQByAFMAaABlAGwAbABcAFMA" ascii /* base64 encoded string  */ /* score: '17.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 20KB and
       8 of them
@@ -4584,20 +4584,20 @@ rule Metasploit_signature__1ae5bccc {
       hash1 = "1ae5bccc24447fd6ecf4fe1f16b284af42332a248652253a774fbafb9c893813"
    strings:
       $s1 = "powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAcwBJAG8AbgBUAEEAQgBMAEUALgBQAFMAVgBFAHIAUwBJAE8AbgAuAE0AYQBqAE8AcgAgAC0A" ascii /* score: '22.00'*/
-      $s2 = "dQApADsAJAA1ADcAOQAzAC4AUAByAG8AeABZAD0AWwBTAHkAUwB0AEUAbQAuAE4ARQB0AC4AVwBlAEIAUgBlAHEAdQBFAFMAVABdADoAOgBEAGUAZgBBAFUATAB0AFcA" ascii /* base64 encoded string 'u ) ; $ 5 7 9 3 . P r o x Y = [ S y S t E m . N E t . W e B R e q u E S T ] : : D e f A U L t W ' */ /* score: '22.00'*/
-      $s3 = "dAA6AFAAcgBvAHgAeQAgAD0AIAAkADUANwA5ADMALgBQAHIAbwB4AHkAOwAkAEsAPQBbAFMAWQBzAFQAZQBNAC4AVABFAFgAdAAuAEUAbgBDAG8AZABpAG4ARwBdADoA" ascii /* base64 encoded string 't : P r o x y   =   $ 5 7 9 3 . P r o x y ; $ K = [ S Y s T e M . T E X t . E n C o d i n G ] : ' */ /* score: '21.00'*/
-      $s4 = "bgBMAE8AQQBkAEQAYQBUAEEAKAAkAFMARQBSACsAJABUACkAOwAkAGkAdgA9ACQAZABBAFQAQQBbADAALgAuADMAXQA7ACQARABhAHQAYQA9ACQARABhAFQAQQBbADQA" ascii /* base64 encoded string 'n L O A d D a T A ( $ S E R + $ T ) ; $ i v = $ d A T A [ 0 . . 3 ] ; $ D a t a = $ D a T A [ 4 ' */ /* score: '21.00'*/
-      $s5 = "WwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMAbwB1AG4AdABdACkAJQAyADUANgA7ACQAUwBbACQAXwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQA" ascii /* base64 encoded string '[ $ _ ] + $ K [ $ _ % $ K . C o u n t ] ) % 2 5 6 ; $ S [ $ _ ] , $ S [ $ J ] = $ S [ $ J ] , $ ' */ /* score: '21.00'*/
+      $s2 = "dQApADsAJAA1ADcAOQAzAC4AUAByAG8AeABZAD0AWwBTAHkAUwB0AEUAbQAuAE4ARQB0AC4AVwBlAEIAUgBlAHEAdQBFAFMAVABdADoAOgBEAGUAZgBBAFUATAB0AFcA" ascii /* base64 encoded string */ /* score: '22.00'*/
+      $s3 = "dAA6AFAAcgBvAHgAeQAgAD0AIAAkADUANwA5ADMALgBQAHIAbwB4AHkAOwAkAEsAPQBbAFMAWQBzAFQAZQBNAC4AVABFAFgAdAAuAEUAbgBDAG8AZABpAG4ARwBdADoA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s4 = "bgBMAE8AQQBkAEQAYQBUAEEAKAAkAFMARQBSACsAJABUACkAOwAkAGkAdgA9ACQAZABBAFQAQQBbADAALgAuADMAXQA7ACQARABhAHQAYQA9ACQARABhAFQAQQBbADQA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s5 = "WwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMAbwB1AG4AdABdACkAJQAyADUANgA7ACQAUwBbACQAXwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQA" ascii /* base64 encoded string  */ /* score: '21.00'*/
       $s6 = "powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBFAHIAcwBJAG8AbgBUAEEAQgBMAEUALgBQAFMAVgBFAHIAUwBJAE8AbgAuAE0AYQBqAE8AcgAgAC0A" ascii /* score: '21.00'*/
-      $s7 = "UwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgAJABIACsAJABTAFsAJABJAF0AKQAlADIANQA2ADsAJABTAFsA" ascii /* base64 encoded string 'S [ $ _ ] } ; $ D | % { $ I = ( $ I + 1 ) % 2 5 6 ; $ H = ( $ H + $ S [ $ I ] ) % 2 5 6 ; $ S [ ' */ /* score: '21.00'*/
-      $s8 = "ZQBiAFAAUgBvAHgAWQA7ACQANQA3ADkAMwAuAFAAUgBPAHgAWQAuAEMAUgBFAEQARQBOAFQAaQBBAGwAcwAgAD0AIABbAFMAWQBTAHQARQBtAC4ATgBlAHQALgBDAFIA" ascii /* base64 encoded string 'e b P R o x Y ; $ 5 7 9 3 . P R O x Y . C R E D E N T i A l s   =   [ S Y S t E m . N e t . C R ' */ /* score: '21.00'*/
-      $s9 = "ZQB0AFYAQQBsAFUAZQAoACQAbgBVAGwAbAAsACQAdAByAHUARQApADsAfQA7AFsAUwBZAHMAdABFAE0ALgBOAGUAdAAuAFMARQBSAFYAaQBjAEUAUABvAGkATgB0AE0A" ascii /* base64 encoded string 'e t V A l U e ( $ n U l l , $ t r u E ) ; } ; [ S Y s t E M . N e t . S E R V i c E P o i N t M ' */ /* score: '21.00'*/
-      $s10 = "QQBOAEEAZwBFAFIAXQA6ADoARQBYAFAARQBjAFQAMQAwADAAQwBPAE4AdABpAE4AVQBlAD0AMAA7ACQANQA3ADkAMwA9AE4ARQB3AC0ATwBiAGoAZQBDAFQAIABTAHkA" ascii /* base64 encoded string 'A N A g E R ] : : E X P E c T 1 0 0 C O N t i N U e = 0 ; $ 5 7 9 3 = N E w - O b j e C T   S y ' */ /* score: '21.00'*/
-      $s11 = "QQBEAFEAQQBOAEEAQQB1AEEARABFAEEATgBnAEEAegBBAEMANABBAE0AZwBBAHcAQQBEAE0AQQBPAGcAQQAzAEEARABjAEEATwBBAEEANABBAEEAPQA9ACcAKQApACkA" ascii /* base64 encoded string 'A D Q A N A A u A D E A N g A z A C 4 A M g A w A D M A O g A 3 A D c A O A A 4 A A = = ' ) ) ) ' */ /* score: '17.00'*/
-      $s12 = "UwBvAGYAdAB3AGEAcgBlAFwAUABvAGwAaQBjAGkAZQBzAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAUABvAHcAZQByAFMAaABlAGwAbABcAFMA" ascii /* base64 encoded string 'S o f t w a r e \ P o l i c i e s \ M i c r o s o f t \ W i n d o w s \ P o w e r S h e l l \ S ' */ /* score: '17.00'*/
-      $s13 = "LgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcAZQBjAGsAbwAnADsAJABzAGUA" ascii /* base64 encoded string '. 1 ;   W O W 6 4 ;   T r i d e n t / 7 . 0 ;   r v : 1 1 . 0 )   l i k e   G e c k o ' ; $ s e ' */ /* score: '17.00'*/
-      $s14 = "KwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0AWwAnAEUAbgBhAGIAbABlAFMAYwByAGkAcAB0AEIAbABvAGMAawBJAG4AdgBvAGMAYQB0AGkAbwBuAEwAbwBnAGcA" ascii /* base64 encoded string '+ ' l o c k L o g g i n g ' ] [ ' E n a b l e S c r i p t B l o c k I n v o c a t i o n L o g g ' */ /* score: '17.00'*/
-      $s15 = "VQAnACkAOwAkAFIAPQB7ACQARAAsACQASwA9ACQAQQBSAGcAUwA7ACQAUwA9ADAALgAuADIANQA1ADsAMAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMA" ascii /* base64 encoded string 'U ' ) ; $ R = { $ D , $ K = $ A R g S ; $ S = 0 . . 2 5 5 ; 0 . . 2 5 5 | % { $ J = ( $ J + $ S ' */ /* score: '17.00'*/
+      $s7 = "UwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgAJABIACsAJABTAFsAJABJAF0AKQAlADIANQA2ADsAJABTAFsA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s8 = "ZQBiAFAAUgBvAHgAWQA7ACQANQA3ADkAMwAuAFAAUgBPAHgAWQAuAEMAUgBFAEQARQBOAFQAaQBBAGwAcwAgAD0AIABbAFMAWQBTAHQARQBtAC4ATgBlAHQALgBDAFIA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s9 = "ZQB0AFYAQQBsAFUAZQAoACQAbgBVAGwAbAAsACQAdAByAHUARQApADsAfQA7AFsAUwBZAHMAdABFAE0ALgBOAGUAdAAuAFMARQBSAFYAaQBjAEUAUABvAGkATgB0AE0A" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s10 = "QQBOAEEAZwBFAFIAXQA6ADoARQBYAFAARQBjAFQAMQAwADAAQwBPAE4AdABpAE4AVQBlAD0AMAA7ACQANQA3ADkAMwA9AE4ARQB3AC0ATwBiAGoAZQBDAFQAIABTAHkA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s11 = "QQBEAFEAQQBOAEEAQQB1AEEARABFAEEATgBnAEEAegBBAEMANABBAE0AZwBBAHcAQQBEAE0AQQBPAGcAQQAzAEEARABjAEEATwBBAEEANABBAEEAPQA9ACcAKQApACkA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s12 = "UwBvAGYAdAB3AGEAcgBlAFwAUABvAGwAaQBjAGkAZQBzAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAUABvAHcAZQByAFMAaABlAGwAbABcAFMA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s13 = "LgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcAZQBjAGsAbwAnADsAJABzAGUA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s14 = "KwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0AWwAnAEUAbgBhAGIAbABlAFMAYwByAGkAcAB0AEIAbABvAGMAawBJAG4AdgBvAGMAYQB0AGkAbwBuAEwAbwBnAGcA" ascii /* base64 encoded string */ /* score: '17.00'*/
+      $s15 = "VQAnACkAOwAkAFIAPQB7ACQARAAsACQASwA9ACQAQQBSAGcAUwA7ACQAUwA9ADAALgAuADIANQA1ADsAMAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMA" ascii /* base64 encoded string  */ /* score: '17.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 20KB and
       8 of them
@@ -4612,20 +4612,20 @@ rule Metasploit_signature__2e0c0cc2 {
       hash1 = "2e0c0cc26fc95d78e41bb257ac142a0fd8af3383ff343ad92534811ddc8b707c"
    strings:
       $s1 = "powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBlAFIAUwBpAG8ATgBUAEEAQgBMAEUALgBQAFMAVgBlAFIAcwBpAG8AbgAuAE0AQQBKAE8AcgAgAC0A" ascii /* score: '21.00'*/
-      $s2 = "XwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQAUwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgA" ascii /* base64 encoded string '_ ] , $ S [ $ J ] = $ S [ $ J ] , $ S [ $ _ ] } ; $ D | % { $ I = ( $ I + 1 ) % 2 5 6 ; $ H = ( ' */ /* score: '21.00'*/
-      $s3 = "MAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMAWwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMATwBVAG4AVABdACkAJQAyADUANgA7ACQAUwBbACQA" ascii /* base64 encoded string '0 . . 2 5 5 | % { $ J = ( $ J + $ S [ $ _ ] + $ K [ $ _ % $ K . C O U n T ] ) % 2 5 6 ; $ S [ $ ' */ /* score: '21.00'*/
-      $s4 = "QwBvAG8AawBpAGUAIgAsACIAZwBTAHMAZwB4AEMAbABnAHEAQgA9AG8AOABPAEYAMQBKAHgAbgBiAG0AQwBOAGMAdgBnAGoAOAB6AHUASABhADQAUQA3AGwAQQBNAD0A" ascii /* base64 encoded string 'C o o k i e " , " g S s g x C l g q B = o 8 O F 1 J x n b m C N c v g j 8 z u H a 4 Q 7 l A M = ' */ /* score: '21.00'*/
-      $s5 = "YQB0AGkAYwAnACkALgBTAGUAdABWAEEATABVAEUAKAAkAG4AdQBsAEwALAAoAE4AZQB3AC0ATwBiAGoAZQBDAFQAIABDAG8ATABMAGUAQwB0AEkAbwBuAFMALgBHAEUA" ascii /* base64 encoded string 'a t i c ' ) . S e t V A L U E ( $ n u l L , ( N e w - O b j e C T   C o L L e C t I o n S . G E ' */ /* score: '21.00'*/
-      $s6 = "JABIACsAJABTAFsAJABJAF0AKQAlADIANQA2ADsAJABTAFsAJABJAF0ALAAkAFMAWwAkAEgAXQA9ACQAUwBbACQASABdACwAJABTAFsAJABJAF0AOwAkAF8ALQBiAHgA" ascii /* base64 encoded string '$ H + $ S [ $ I ] ) % 2 5 6 ; $ S [ $ I ] , $ S [ $ H ] = $ S [ $ H ] , $ S [ $ I ] ; $ _ - b x ' */ /* score: '21.00'*/
-      $s7 = "IgApADsAJABkAEEAVABBAD0AJABhADkANAA4ADYALgBEAG8AdwBOAGwATwBhAEQARABBAHQAYQAoACQAUwBFAHIAKwAkAFQAKQA7ACQASQBWAD0AJABEAGEAVABhAFsA" ascii /* base64 encoded string '" ) ; $ d A T A = $ a 9 4 8 6 . D o w N l O a D D A t a ( $ S E r + $ T ) ; $ I V = $ D a T a [ ' */ /* score: '21.00'*/
-      $s8 = "YQB0AGkAYwAnACkALgBTAEUAVABWAGEAbABVAGUAKAAkAE4AVQBMAEwALAAkAHQAcgBVAGUAKQA7AH0AOwBbAFMAeQBzAHQARQBtAC4ATgBFAHQALgBTAEUAUgB2AEkA" ascii /* base64 encoded string 'a t i c ' ) . S E T V a l U e ( $ N U L L , $ t r U e ) ; } ; [ S y s t E m . N E t . S E R v I ' */ /* score: '21.00'*/
-      $s9 = "MAAuAC4AMwBdADsAJABkAEEAVABBAD0AJABEAEEAVABBAFsANAAuAC4AJABkAGEAVABhAC4AbABFAE4ARwB0AEgAXQA7AC0AagBvAEkAbgBbAEMASABBAHIAWwBdAF0A" ascii /* base64 encoded string '0 . . 3 ] ; $ d A T A = $ D A T A [ 4 . . $ d a T a . l E N G t H ] ; - j o I n [ C H A r [ ] ] ' */ /* score: '21.00'*/
-      $s10 = "cQB1AEUAUwBUAF0AOgA6AEQAZQBGAGEAVQBMAFQAVwBFAEIAUAByAE8AWAB5ADsAJABBADkANAA4ADYALgBQAHIAbwBYAFkALgBDAHIARQBEAEUAbgBUAEkAYQBMAFMA" ascii /* base64 encoded string 'q u E S T ] : : D e F a U L T W E B P r O X y ; $ A 9 4 8 6 . P r o X Y . C r E D E n T I a L S ' */ /* score: '21.00'*/
-      $s11 = "bwByACQAUwBbACgAJABTAFsAJABJAF0AKwAkAFMAWwAkAEgAXQApACUAMgA1ADYAXQB9AH0AOwAkAEEAOQA0ADgANgAuAEgAZQBBAEQARQByAHMALgBBAGQARAAoACIA" ascii /* base64 encoded string 'o r $ S [ ( $ S [ $ I ] + $ S [ $ H ] ) % 2 5 6 ] } } ; $ A 9 4 8 6 . H e A D E r s . A d D ( " ' */ /* score: '21.00'*/
-      $s12 = "WwBDAE8ATgBWAEUAUgBUAF0AOgA6AEYAcgBvAG0AQgBhAFMAZQA2ADQAUwB0AFIASQBOAEcAKAAnAGEAQQBCADAAQQBIAFEAQQBjAEEAQQA2AEEAQwA4AEEATAB3AEEA" ascii /* base64 encoded string '[ C O N V E R T ] : : F r o m B a S e 6 4 S t R I N G ( ' a A B 0 A H Q A c A A 6 A C 8 A L w A ' */ /* score: '17.00'*/
-      $s13 = "cgBTAGgAZQBsAGwAXABTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAkAFYAQQBMAH0ARQBMAHMAZQB7AFsAUwBjAHIAaQBwAHQA" ascii /* base64 encoded string 'r S h e l l \ S c r i p t B ' + ' l o c k L o g g i n g ' ] = $ V A L } E L s e { [ S c r i p t ' */ /* score: '17.00'*/
-      $s14 = "RABLAF0AbAAuACsAeQBGAD8AfQBMAE4APQBqADIAegB2AGIAVQAnACkAOwAkAFIAPQB7ACQARAAsACQASwA9ACQAQQByAEcAcwA7ACQAUwA9ADAALgAuADIANQA1ADsA" ascii /* base64 encoded string 'D K ] l . + y F ? } L N = j 2 z v b U ' ) ; $ R = { $ D , $ K = $ A r G s ; $ S = 0 . . 2 5 5 ; ' */ /* score: '17.00'*/
-      $s15 = "ZABvAHcAcwAgAE4AVAAgADYALgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcA" ascii /* base64 encoded string 'd o w s   N T   6 . 1 ;   W O W 6 4 ;   T r i d e n t / 7 . 0 ;   r v : 1 1 . 0 )   l i k e   G ' */ /* score: '17.00'*/
+      $s2 = "XwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQAUwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s3 = "MAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMAWwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMATwBVAG4AVABdACkAJQAyADUANgA7ACQAUwBbACQA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s4 = "QwBvAG8AawBpAGUAIgAsACIAZwBTAHMAZwB4AEMAbABnAHEAQgA9AG8AOABPAEYAMQBKAHgAbgBiAG0AQwBOAGMAdgBnAGoAOAB6AHUASABhADQAUQA3AGwAQQBNAD0A" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s5 = "YQB0AGkAYwAnACkALgBTAGUAdABWAEEATABVAEUAKAAkAG4AdQBsAEwALAAoAE4AZQB3AC0ATwBiAGoAZQBDAFQAIABDAG8ATABMAGUAQwB0AEkAbwBuAFMALgBHAEUA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s6 = "JABIACsAJABTAFsAJABJAF0AKQAlADIANQA2ADsAJABTAFsAJABJAF0ALAAkAFMAWwAkAEgAXQA9ACQAUwBbACQASABdACwAJABTAFsAJABJAF0AOwAkAF8ALQBiAHgA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s7 = "IgApADsAJABkAEEAVABBAD0AJABhADkANAA4ADYALgBEAG8AdwBOAGwATwBhAEQARABBAHQAYQAoACQAUwBFAHIAKwAkAFQAKQA7ACQASQBWAD0AJABEAGEAVABhAFsA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s8 = "YQB0AGkAYwAnACkALgBTAEUAVABWAGEAbABVAGUAKAAkAE4AVQBMAEwALAAkAHQAcgBVAGUAKQA7AH0AOwBbAFMAeQBzAHQARQBtAC4ATgBFAHQALgBTAEUAUgB2AEkA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s9 = "MAAuAC4AMwBdADsAJABkAEEAVABBAD0AJABEAEEAVABBAFsANAAuAC4AJABkAGEAVABhAC4AbABFAE4ARwB0AEgAXQA7AC0AagBvAEkAbgBbAEMASABBAHIAWwBdAF0A" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s10 = "cQB1AEUAUwBUAF0AOgA6AEQAZQBGAGEAVQBMAFQAVwBFAEIAUAByAE8AWAB5ADsAJABBADkANAA4ADYALgBQAHIAbwBYAFkALgBDAHIARQBEAEUAbgBUAEkAYQBMAFMA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s11 = "bwByACQAUwBbACgAJABTAFsAJABJAF0AKwAkAFMAWwAkAEgAXQApACUAMgA1ADYAXQB9AH0AOwAkAEEAOQA0ADgANgAuAEgAZQBBAEQARQByAHMALgBBAGQARAAoACIA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s12 = "WwBDAE8ATgBWAEUAUgBUAF0AOgA6AEYAcgBvAG0AQgBhAFMAZQA2ADQAUwB0AFIASQBOAEcAKAAnAGEAQQBCADAAQQBIAFEAQQBjAEEAQQA2AEEAQwA4AEEATAB3AEEA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s13 = "cgBTAGgAZQBsAGwAXABTAGMAcgBpAHAAdABCACcAKwAnAGwAbwBjAGsATABvAGcAZwBpAG4AZwAnAF0APQAkAFYAQQBMAH0ARQBMAHMAZQB7AFsAUwBjAHIAaQBwAHQA" ascii /* base64 encoded string */ /* score: '17.00'*/
+      $s14 = "RABLAF0AbAAuACsAeQBGAD8AfQBMAE4APQBqADIAegB2AGIAVQAnACkAOwAkAFIAPQB7ACQARAAsACQASwA9ACQAQQByAEcAcwA7ACQAUwA9ADAALgAuADIANQA1ADsA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s15 = "ZABvAHcAcwAgAE4AVAAgADYALgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcA" ascii /* base64 encoded string  */ /* score: '17.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 20KB and
       8 of them
@@ -4641,19 +4641,19 @@ rule Metasploit_signature__48c668e2 {
    strings:
       $x1 = "# 2>NUL & @CLS & PUSHD \"%~dp0\" & \"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nol -nop -ep bypass \"[I" ascii /* score: '47.00'*/
       $x2 = "# 2>NUL & @CLS & PUSHD \"%~dp0\" & \"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nol -nop -ep bypass \"[I" ascii /* score: '44.00'*/
-      $s3 = "XwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQAUwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgA" ascii /* base64 encoded string '_ ] , $ S [ $ J ] = $ S [ $ J ] , $ S [ $ _ ] } ; $ D | % { $ I = ( $ I + 1 ) % 2 5 6 ; $ H = ( ' */ /* score: '21.00'*/
-      $s4 = "IgApADsAJABkAGEAdABBAD0AJAA4AEYANQBiADkALgBEAG8AVwBuAEwAbwBhAGQARABBAHQAQQAoACQAUwBlAFIAKwAkAFQAKQA7ACQAaQBWAD0AJABkAEEAdABBAFsA" ascii /* base64 encoded string '" ) ; $ d a t A = $ 8 F 5 b 9 . D o W n L o a d D A t A ( $ S e R + $ T ) ; $ i V = $ d A t A [ ' */ /* score: '21.00'*/
-      $s5 = "MAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMAWwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMATwB1AE4AdABdACkAJQAyADUANgA7ACQAUwBbACQA" ascii /* base64 encoded string '0 . . 2 5 5 | % { $ J = ( $ J + $ S [ $ _ ] + $ K [ $ _ % $ K . C O u N t ] ) % 2 5 6 ; $ S [ $ ' */ /* score: '21.00'*/
-      $s6 = "YQB0AGkAYwAnACkALgBTAEUAdABWAGEAbABVAGUAKAAkAG4AVQBMAEwALAAoAE4AZQBXAC0ATwBiAGoAZQBDAFQAIABDAG8AbABsAGUAQwB0AGkAbwBuAFMALgBHAEUA" ascii /* base64 encoded string 'a t i c ' ) . S E t V a l U e ( $ n U L L , ( N e W - O b j e C T   C o l l e C t i o n S . G E ' */ /* score: '21.00'*/
-      $s7 = "TwBiAGoAZQBDAHQAIABTAFkAcwBUAGUATQAuAE4AZQB0AC4AVwBFAEIAQwBMAEkAZQBuAFQAOwAkAHUAPQAnAE0AbwB6AGkAbABsAGEALwA1AC4AMAAgACgAVwBpAG4A" ascii /* base64 encoded string 'O b j e C t   S Y s T e M . N e t . W E B C L I e n T ; $ u = ' M o z i l l a / 5 . 0   ( W i n ' */ /* score: '21.00'*/
-      $s8 = "TwBSACQAUwBbACgAJABTAFsAJABJAF0AKwAkAFMAWwAkAEgAXQApACUAMgA1ADYAXQB9AH0AOwAkADgARgA1AGIAOQAuAEgARQBBAGQARQBSAHMALgBBAEQAZAAoACIA" ascii /* base64 encoded string 'O R $ S [ ( $ S [ $ I ] + $ S [ $ H ] ) % 2 5 6 ] } } ; $ 8 F 5 b 9 . H E A d E R s . A D d ( " ' */ /* score: '21.00'*/
-      $s9 = "YQB0AGkAYwAnACkALgBTAGUAVABWAEEATABVAEUAKAAkAE4AVQBsAEwALAAkAFQAcgB1AEUAKQA7AH0AOwBbAFMAWQBTAFQAZQBNAC4ATgBlAFQALgBTAEUAcgB2AEkA" ascii /* base64 encoded string 'a t i c ' ) . S e T V A L U E ( $ N U l L , $ T r u E ) ; } ; [ S Y S T e M . N e T . S E r v I ' */ /* score: '21.00'*/
-      $s10 = "MAAuAC4AMwBdADsAJABEAGEAdABhAD0AJABEAGEAVABBAFsANAAuAC4AJABEAEEAVABhAC4ATABFAE4ARwB0AGgAXQA7AC0ASgBvAGkAbgBbAEMASABBAFIAWwBdAF0A" ascii /* base64 encoded string '0 . . 3 ] ; $ D a t a = $ D a T A [ 4 . . $ D A T a . L E N G t h ] ; - J o i n [ C H A R [ ] ] ' */ /* score: '21.00'*/
+      $s3 = "XwBdACwAJABTAFsAJABKAF0APQAkAFMAWwAkAEoAXQAsACQAUwBbACQAXwBdAH0AOwAkAEQAfAAlAHsAJABJAD0AKAAkAEkAKwAxACkAJQAyADUANgA7ACQASAA9ACgA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s4 = "IgApADsAJABkAGEAdABBAD0AJAA4AEYANQBiADkALgBEAG8AVwBuAEwAbwBhAGQARABBAHQAQQAoACQAUwBlAFIAKwAkAFQAKQA7ACQAaQBWAD0AJABkAEEAdABBAFsA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s5 = "MAAuAC4AMgA1ADUAfAAlAHsAJABKAD0AKAAkAEoAKwAkAFMAWwAkAF8AXQArACQASwBbACQAXwAlACQASwAuAEMATwB1AE4AdABdACkAJQAyADUANgA7ACQAUwBbACQA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s6 = "YQB0AGkAYwAnACkALgBTAEUAdABWAGEAbABVAGUAKAAkAG4AVQBMAEwALAAoAE4AZQBXAC0ATwBiAGoAZQBDAFQAIABDAG8AbABsAGUAQwB0AGkAbwBuAFMALgBHAEUA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s7 = "TwBiAGoAZQBDAHQAIABTAFkAcwBUAGUATQAuAE4AZQB0AC4AVwBFAEIAQwBMAEkAZQBuAFQAOwAkAHUAPQAnAE0AbwB6AGkAbABsAGEALwA1AC4AMAAgACgAVwBpAG4A" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s8 = "TwBSACQAUwBbACgAJABTAFsAJABJAF0AKwAkAFMAWwAkAEgAXQApACUAMgA1ADYAXQB9AH0AOwAkADgARgA1AGIAOQAuAEgARQBBAGQARQBSAHMALgBBAEQAZAAoACIA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s9 = "YQB0AGkAYwAnACkALgBTAGUAVABWAEEATABVAEUAKAAkAE4AVQBsAEwALAAkAFQAcgB1AEUAKQA7AH0AOwBbAFMAWQBTAFQAZQBNAC4ATgBlAFQALgBTAEUAcgB2AEkA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s10 = "MAAuAC4AMwBdADsAJABEAGEAdABhAD0AJABEAGEAVABBAFsANAAuAC4AJABEAEEAVABhAC4ATABFAE4ARwB0AGgAXQA7AC0ASgBvAGkAbgBbAEMASABBAFIAWwBdAF0A" ascii /* base64 encoded string  */ /* score: '21.00'*/
       $s11 = "powershell -noP -sta -w 1 -enc  SQBmACgAJABQAFMAVgBlAHIAUwBJAE8AbgBUAGEAQgBsAEUALgBQAFMAVgBFAFIAUwBJAG8AbgAuAE0AYQBqAG8AcgAgAC0A" ascii /* score: '21.00'*/
-      $s12 = "ZABvAHcAcwAgAE4AVAAgADYALgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcA" ascii /* base64 encoded string 'd o w s   N T   6 . 1 ;   W O W 6 4 ;   T r i d e n t / 7 . 0 ;   r v : 1 1 . 0 )   l i k e   G ' */ /* score: '17.00'*/
-      $s13 = "NABBAEQATQBBAEwAZwBBAHkAQQBEAFEAQQBOAEEAQQB1AEEARABFAEEATgBnAEEAegBBAEMANABBAE0AZwBBAHcAQQBEAE0AQQBPAGcAQQAzAEEARABjAEEATwBBAEEA" ascii /* base64 encoded string '4 A D M A L g A y A D Q A N A A u A D E A N g A z A C 4 A M g A w A D M A O g A 3 A D c A O A A ' */ /* score: '17.00'*/
-      $s14 = "TQBBAEMASABJAE4ARQBcAFMAbwBmAHQAdwBhAHIAZQBcAFAAbwBsAGkAYwBpAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0AFwAVwBpAG4AZABvAHcAcwBcAFAAbwB3AGUA" ascii /* base64 encoded string 'M A C H I N E \ S o f t w a r e \ P o l i c i e s \ M i c r o s o f t \ W i n d o w s \ P o w e ' */ /* score: '17.00'*/
-      $s15 = "YwByAGkAcAB0AEIAJwArACcAbABvAGMAawBMAG8AZwBnAGkAbgBnACcAXQBbACcARQBuAGEAYgBsAGUAUwBjAHIAaQBwAHQAQgBsAG8AYwBrAEkAbgB2AG8AYwBhAHQA" ascii /* base64 encoded string 'c r i p t B ' + ' l o c k L o g g i n g ' ] [ ' E n a b l e S c r i p t B l o c k I n v o c a t ' */ /* score: '17.00'*/
+      $s12 = "ZABvAHcAcwAgAE4AVAAgADYALgAxADsAIABXAE8AVwA2ADQAOwAgAFQAcgBpAGQAZQBuAHQALwA3AC4AMAA7ACAAcgB2ADoAMQAxAC4AMAApACAAbABpAGsAZQAgAEcA" ascii /* base64 encoded string  */ /* score: '17.00'*/
+      $s13 = "NABBAEQATQBBAEwAZwBBAHkAQQBEAFEAQQBOAEEAQQB1AEEARABFAEEATgBnAEEAegBBAEMANABBAE0AZwBBAHcAQQBEAE0AQQBPAGcAQQAzAEEARABjAEEATwBBAEEA" ascii /* base64 encoded string */ /* score: '17.00'*/
+      $s14 = "TQBBAEMASABJAE4ARQBcAFMAbwBmAHQAdwBhAHIAZQBcAFAAbwBsAGkAYwBpAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0AFwAVwBpAG4AZABvAHcAcwBcAFAAbwB3AGUA" ascii /* base64 encoded string */ /* score: '17.00'*/
+      $s15 = "YwByAGkAcAB0AEIAJwArACcAbABvAGMAawBMAG8AZwBnAGkAbgBnACcAXQBbACcARQBuAGEAYgBsAGUAUwBjAHIAaQBwAHQAQgBsAG8AYwBrAEkAbgB2AG8AYwBhAHQA" ascii /* base64 encoded string  */ /* score: '17.00'*/
    condition:
       uint16(0) == 0x2023 and filesize < 20KB and
       1 of ($x*) and 4 of them
@@ -4669,19 +4669,19 @@ rule Metasploit_signature__720dc997 {
    strings:
       $x1 = "# 2>NUL & @CLS & PUSHD \"%~dp0\" & \"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nol -nop -ep bypass \"[I" ascii /* score: '47.00'*/
       $x2 = "# 2>NUL & @CLS & PUSHD \"%~dp0\" & \"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nol -nop -ep bypass \"[I" ascii /* score: '44.00'*/
-      $s3 = "JABuAHUATABMACwAJAB0AFIAVQBlACkAOwB9ADsAWwBTAHkAcwBUAGUAbQAuAE4AZQB0AC4AUwBFAFIAVgBJAEMARQBQAE8AaQBOAHQATQBhAE4AQQBnAEUAcgBdADoA" ascii /* base64 encoded string '$ n u L L , $ t R U e ) ; } ; [ S y s T e m . N e t . S E R V I C E P O i N t M a N A g E r ] : ' */ /* score: '21.00'*/
+      $s3 = "JABuAHUATABMACwAJAB0AFIAVQBlACkAOwB9ADsAWwBTAHkAcwBUAGUAbQAuAE4AZQB0AC4AUwBFAFIAVgBJAEMARQBQAE8AaQBOAHQATQBhAE4AQQBnAEUAcgBdADoA" ascii /* base64 encoded string */ /* score: '21.00'*/
       $s4 = "powershell -noP -sta -w 1 -enc  SQBGACgAJABQAFMAVgBlAFIAUwBJAE8AbgBUAGEAQgBsAEUALgBQAFMAVgBFAFIAcwBpAE8ATgAuAE0AYQBKAE8AcgAgAC0A" ascii /* score: '21.00'*/
-      $s5 = "KQA7ACQANAA2AGQALgBQAHIATwBYAFkAPQBbAFMAWQBzAHQAZQBNAC4ATgBFAFQALgBXAGUAYgBSAEUAcQB1AEUAcwB0AF0AOgA6AEQAZQBGAEEAVQBMAHQAVwBlAEIA" ascii /* base64 encoded string ') ; $ 4 6 d . P r O X Y = [ S Y s t e M . N E T . W e b R E q u E s t ] : : D e F A U L t W e B ' */ /* score: '21.00'*/
-      $s6 = "SQBJAC4ARwBlAFQAQgBZAFQAZQBzACgAJwBTAEAAPgBaAH4AYQBwACwAbgBvAGUAMABKAEQASwBdAGwALgArAHkARgA/AH0ATABOAD0AagAyAHoAdgBiAFUAJwApADsA" ascii /* base64 encoded string 'I I . G e T B Y T e s ( ' S @ > Z ~ a p , n o e 0 J D K ] l . + y F ? } L N = j 2 z v b U ' ) ; ' */ /* score: '21.00'*/
-      $s7 = "KwAkAEsAWwAkAF8AJQAkAEsALgBDAG8AdQBuAHQAXQApACUAMgA1ADYAOwAkAFMAWwAkAF8AXQAsACQAUwBbACQASgBdAD0AJABTAFsAJABKAF0ALAAkAFMAWwAkAF8A" ascii /* base64 encoded string '+ $ K [ $ _ % $ K . C o u n t ] ) % 2 5 6 ; $ S [ $ _ ] , $ S [ $ J ] = $ S [ $ J ] , $ S [ $ _ ' */ /* score: '21.00'*/
-      $s8 = "YQBUAGEAKAAkAHMAZQBSACsAJAB0ACkAOwAkAEkAVgA9ACQARABBAFQAQQBbADAALgAuADMAXQA7ACQARABhAHQAQQA9ACQARABBAHQAQQBbADQALgAuACQARABhAFQA" ascii /* base64 encoded string 'a T a ( $ s e R + $ t ) ; $ I V = $ D A T A [ 0 . . 3 ] ; $ D a t A = $ D A t A [ 4 . . $ D a T ' */ /* score: '21.00'*/
-      $s9 = "bQBlAG4AdAAuAEEAdQB0AG8AbQBhAHQAaQBvAG4ALgBVAHQAaQBsAHMAJwApAC4AIgBHAEUAVABGAGkARQBgAGwARAAiACgAJwBjAGEAYwBoAGUAZABHAHIAbwB1AHAA" ascii /* base64 encoded string 'm e n t . A u t o m a t i o n . U t i l s ' ) . " G E T F i E ` l D " ( ' c a c h e d G r o u p ' */ /* score: '21.00'*/
-      $s10 = "JABSAD0AewAkAEQALAAkAEsAPQAkAEEAUgBnAFMAOwAkAFMAPQAwAC4ALgAyADUANQA7ADAALgAuADIANQA1AHwAJQB7ACQASgA9ACgAJABKACsAJABTAFsAJABfAF0A" ascii /* base64 encoded string '$ R = { $ D , $ K = $ A R g S ; $ S = 0 . . 2 5 5 ; 0 . . 2 5 5 | % { $ J = ( $ J + $ S [ $ _ ] ' */ /* score: '21.00'*/
-      $s11 = "cgBJAE4AZwBdACkAKQB9ACQAUgBlAEYAPQBbAFIAZQBGAF0ALgBBAFMAcwBFAE0AYgBMAFkALgBHAGUAVABUAHkAUABlACgAJwBTAHkAcwB0AGUAbQAuAE0AYQBuAGEA" ascii /* base64 encoded string 'r I N g ] ) ) } $ R e F = [ R e F ] . A S s E M b L Y . G e T T y P e ( ' S y s t e m . M a n a ' */ /* score: '21.00'*/
-      $s12 = "XQB9ADsAJABEAHwAJQB7ACQASQA9ACgAJABJACsAMQApACUAMgA1ADYAOwAkAEgAPQAoACQASAArACQAUwBbACQASQBdACkAJQAyADUANgA7ACQAUwBbACQASQBdACwA" ascii /* base64 encoded string '] } ; $ D | % { $ I = ( $ I + 1 ) % 2 5 6 ; $ H = ( $ H + $ S [ $ I ] ) % 2 5 6 ; $ S [ $ I ] , ' */ /* score: '21.00'*/
-      $s13 = "UABSAG8AWABZADsAJAA0ADYAZAAuAFAAUgBvAFgAWQAuAEMAcgBlAGQAZQBOAFQASQBBAEwAUwAgAD0AIABbAFMAeQBTAHQAZQBtAC4ATgBFAFQALgBDAFIARQBEAEUA" ascii /* base64 encoded string 'P R o X Y ; $ 4 6 d . P R o X Y . C r e d e N T I A L S   =   [ S y S t e m . N E T . C R E D E ' */ /* score: '21.00'*/
-      $s14 = "fQAkAFYAQQBMAD0AWwBDAG8AbABMAEUAQwB0AEkAbwBOAHMALgBHAGUATgBFAFIAaQBjAC4ARABpAEMAVABJAG8ATgBhAFIAeQBbAFMAdAByAGkAbgBHACwAUwBZAFMA" ascii /* base64 encoded string '} $ V A L = [ C o l L E C t I o N s . G e N E R i c . D i C T I o N a R y [ S t r i n G , S Y S ' */ /* score: '21.00'*/
-      $s15 = "OgBFAHgAUABlAEMAVAAxADAAMABDAE8ATgB0AGkATgBVAGUAPQAwADsAJAA0ADYAZAA9AE4AZQBXAC0ATwBiAEoARQBjAHQAIABTAFkAcwB0AEUAbQAuAE4ARQB0AC4A" ascii /* base64 encoded string ': E x P e C T 1 0 0 C O N t i N U e = 0 ; $ 4 6 d = N e W - O b J E c t   S Y s t E m . N E t . ' */ /* score: '21.00'*/
+      $s5 = "KQA7ACQANAA2AGQALgBQAHIATwBYAFkAPQBbAFMAWQBzAHQAZQBNAC4ATgBFAFQALgBXAGUAYgBSAEUAcQB1AEUAcwB0AF0AOgA6AEQAZQBGAEEAVQBMAHQAVwBlAEIA" ascii /* base64 encoded string*/ /* score: '21.00'*/
+      $s6 = "SQBJAC4ARwBlAFQAQgBZAFQAZQBzACgAJwBTAEAAPgBaAH4AYQBwACwAbgBvAGUAMABKAEQASwBdAGwALgArAHkARgA/AH0ATABOAD0AagAyAHoAdgBiAFUAJwApADsA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s7 = "KwAkAEsAWwAkAF8AJQAkAEsALgBDAG8AdQBuAHQAXQApACUAMgA1ADYAOwAkAFMAWwAkAF8AXQAsACQAUwBbACQASgBdAD0AJABTAFsAJABKAF0ALAAkAFMAWwAkAF8A" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s8 = "YQBUAGEAKAAkAHMAZQBSACsAJAB0ACkAOwAkAEkAVgA9ACQARABBAFQAQQBbADAALgAuADMAXQA7ACQARABhAHQAQQA9ACQARABBAHQAQQBbADQALgAuACQARABhAFQA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s9 = "bQBlAG4AdAAuAEEAdQB0AG8AbQBhAHQAaQBvAG4ALgBVAHQAaQBsAHMAJwApAC4AIgBHAEUAVABGAGkARQBgAGwARAAiACgAJwBjAGEAYwBoAGUAZABHAHIAbwB1AHAA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s10 = "JABSAD0AewAkAEQALAAkAEsAPQAkAEEAUgBnAFMAOwAkAFMAPQAwAC4ALgAyADUANQA7ADAALgAuADIANQA1AHwAJQB7ACQASgA9ACgAJABKACsAJABTAFsAJABfAF0A" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s11 = "cgBJAE4AZwBdACkAKQB9ACQAUgBlAEYAPQBbAFIAZQBGAF0ALgBBAFMAcwBFAE0AYgBMAFkALgBHAGUAVABUAHkAUABlACgAJwBTAHkAcwB0AGUAbQAuAE0AYQBuAGEA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s12 = "XQB9ADsAJABEAHwAJQB7ACQASQA9ACgAJABJACsAMQApACUAMgA1ADYAOwAkAEgAPQAoACQASAArACQAUwBbACQASQBdACkAJQAyADUANgA7ACQAUwBbACQASQBdACwA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s13 = "UABSAG8AWABZADsAJAA0ADYAZAAuAFAAUgBvAFgAWQAuAEMAcgBlAGQAZQBOAFQASQBBAEwAUwAgAD0AIABbAFMAeQBTAHQAZQBtAC4ATgBFAFQALgBDAFIARQBEAEUA" ascii /* base64 encoded string  */ /* score: '21.00'*/
+      $s14 = "fQAkAFYAQQBMAD0AWwBDAG8AbABMAEUAQwB0AEkAbwBOAHMALgBHAGUATgBFAFIAaQBjAC4ARABpAEMAVABJAG8ATgBhAFIAeQBbAFMAdAByAGkAbgBHACwAUwBZAFMA" ascii /* base64 encoded string */ /* score: '21.00'*/
+      $s15 = "OgBFAHgAUABlAEMAVAAxADAAMABDAE8ATgB0AGkATgBVAGUAPQAwADsAJAA0ADYAZAA9AE4AZQBXAC0ATwBiAEoARQBjAHQAIABTAFkAcwB0AEUAbQAuAE4ARQB0AC4A" ascii /* base64 encoded string */ /* score: '21.00'*/
    condition:
       uint16(0) == 0x2023 and filesize < 20KB and
       1 of ($x*) and 4 of them
@@ -5391,7 +5391,7 @@ rule _MassLogger_signature__5ba0e07214b3423072c72a6e1cb6e11f_imphash__MassLogger
       $s4 = "NSystem.ComponentModel.TypeConverter.dll" fullword ascii /* score: '29.00'*/
       $s5 = "        publickeublickeykeytokenretargetrgetablecontentttenttypewindowsrsruntime" fullword wide /* score: '28.00'*/
       $s6 = "System.Numerics, Version=4.0.0.0, PublicKeyToken=b77a5c561934e089" fullword ascii /* score: '27.00'*/
-      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                ' */ /* score: '26.50'*/
+      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
       $s8 = "HSystem.ComponentModel.Primitives.dll$System.ObjectModel" fullword ascii /* score: '25.00'*/
       $s9 = "System.Collections.Generic.IEnumerator<System.Runtime.Loader.LibraryNameVariation>.get_Current@" fullword ascii /* score: '24.00'*/
       $s10 = "FinishStageTwo FinishStageThreeJNotifyParentIfPotentiallyAttachedTask,ProcessChildCompletion2AddExceptionsFromChildren@" fullword ascii /* score: '23.00'*/
@@ -5578,7 +5578,7 @@ rule _MassLogger_signature__1895460fffad9475fda0c84755ecfee1_imphash__MetaSteale
       $s2 = "/AutoIt3ExecuteLine" fullword wide /* PEStudio Blacklist: strings */ /* score: '23.00'*/
       $s3 = "PROCESSGETSTATS" fullword wide /* score: '22.50'*/
       $s4 = "WINGETPROCESS" fullword wide /* score: '22.50'*/
-      $s5 = "SCRIPTNAME" fullword wide /* base64 encoded string 'H$H=3@0' */ /* score: '22.50'*/
+      $s5 = "SCRIPTNAME" fullword wide /* base64 encoded string */ /* score: '22.50'*/
       $s6 = "SHELLEXECUTEWAIT" fullword wide /* PEStudio Blacklist: strings */ /* score: '21.50'*/
       $s7 = "SHELLEXECUTE" fullword wide /* PEStudio Blacklist: strings */ /* score: '21.50'*/
       $s8 = "*Unable to get a list of running processes." fullword wide /* score: '20.00'*/
@@ -6150,7 +6150,7 @@ rule _MassLogger_signature__995cce3d6fb20b2d8af502c8788f55d7_imphash__MassLogger
       hash1 = "6518acc1ac256a5e244adce532e52a42c09f8599fc38229adb55fce4826cae85"
       hash2 = "984277311c91dbc49e63998341931c412a246899679e0797304a4ea7e88f37d6"
    strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                      ' */ /* score: '26.50'*/
+      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '26.50'*/
       $s2 = "DSystem.Text.RegularExpressions.dll" fullword ascii /* score: '26.00'*/
       $s3 = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089$RelativeOrAbsolute" fullword ascii /* score: '24.00'*/
       $s4 = "<EnsureSufficientExecutionStackBTryEnsureSufficientExecutionStack.GetSufficientStackLimit" fullword ascii /* score: '21.00'*/
@@ -6158,7 +6158,7 @@ rule _MassLogger_signature__995cce3d6fb20b2d8af502c8788f55d7_imphash__MassLogger
       $s6 = "xSystem.Collections.Generic.IDictionary<TKey,TValue>.get_Keys@" fullword ascii /* score: '18.00'*/
       $s7 = "Decoded string is not a valid IDN name" fullword wide /* score: '18.00'*/
       $s8 = "2GetUriPartsFromUserString<GetLengthWithoutTrailingSpaces" fullword ascii /* score: '17.00'*/
-      $s9 = "AAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                 ' */ /* score: '16.50'*/
+      $s9 = "AAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s10 = "Invalid IDN encoded string" fullword wide /* score: '16.00'*/
       $s11 = "nSystem.Collections.Generic.ICollection<TValue>.ContainsxSystem.Collections.Generic.IEnumerable<TValue>.GetEnumerator@" fullword ascii /* score: '15.00'*/
       $s12 = "|System.Collections.Generic.IDictionary<TKey,TValue>.get_Values@" fullword ascii /* score: '15.00'*/
@@ -6297,7 +6297,7 @@ rule _Mirai_signature__06660a84_Mirai_signature__082d7412_Mirai_signature__0e4fc
       $s3 = "sefaexec" fullword ascii /* score: '16.00'*/
       $s4 = "1337SoraLOADER" fullword ascii /* score: '13.00'*/
       $s5 = "deexec" fullword ascii /* score: '13.00'*/
-      $s6 = "SO190Ij1X" fullword ascii /* base64 encoded string ';_t"=W' */ /* score: '11.00'*/
+      $s6 = "SO190Ij1X" fullword ascii /* base64 encoded string*/ /* score: '11.00'*/
       $s7 = "airdropmalware" fullword ascii /* score: '10.00'*/
       $s8 = "trojan" fullword ascii /* PEStudio Blacklist: strings */ /* score: '10.00'*/
       $s9 = "GhostWuzHere666" fullword ascii /* score: '10.00'*/
@@ -6746,7 +6746,7 @@ rule _LummaStealer_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__LummaSte
       $s2 = " by zerointerface conversion: kernel32.dll not foundminpc or maxpc invalidnetwork is unreachablenon-Go function at pc=oldoverflo" ascii /* score: '19.00'*/
       $s3 = "aceGCSweepStartno buffer space availableno such device or addressoperation now in progressreleasep: invalid p stateremaining poi" ascii /* score: '17.00'*/
       $s4 = "e:scanstack: gp=s.freeindex > s.nelemsscanstack - bad statussend on closed channelspan has no free spacestack not a power of 2ti" ascii /* score: '16.00'*/
-      $s5 = "allocSpan" fullword ascii /* base64 encoded string 'jYhq*Z' */ /* score: '14.00'*/
+      $s5 = "allocSpan" fullword ascii /* base64 encoded string */ /* score: '14.00'*/
       $s6 = "CertGetCertificateChainFreeEnvironmentStringsWGetEnvironmentVariableWGetSystemTimeAsFileTimeMB during sweep; swept SetEnvironmen" ascii /* score: '13.00'*/
       $s7 = "internal/reflectlite.(*rtype).common" fullword ascii /* score: '11.00'*/
       $s8 = "egc: phase errorgc_trigger underflowgo of nil func valuegopark: bad g statusinvalid request codeis a named type filekey has been" ascii /* score: '10.00'*/
@@ -7271,7 +7271,7 @@ rule _Kimsuky_signature__b66e456457142424c4274ccc4a6e3326_imphash__LummaStealer_
       $s2 = "i32.dll" fullword ascii /* score: '20.00'*/
       $s3 = "rof.dll" fullword ascii /* score: '20.00'*/
       $s4 = "_32.dll" fullword ascii /* score: '17.00'*/
-      $s5 = "SystemFuH" fullword ascii /* base64 encoded string 'K+-zan' */ /* score: '17.00'*/
+      $s5 = "SystemFuH" fullword ascii /* base64 encoded string */ /* score: '17.00'*/
       $s6 = "ntdll.dlH" fullword ascii /* score: '15.00'*/
       $s7 = "runtime.(*pageAlloc).sysGrow.func2" fullword ascii /* score: '11.00'*/
       $s8 = "runtime.(*pageAlloc).sysGrow.func1" fullword ascii /* score: '11.00'*/
