@@ -1776,19 +1776,6 @@ rule XWorm_signature__94b9aa89 {
       1 of ($x*) and 4 of them
 }
 
-rule XWorm_signature__709335ec {
-   meta:
-      description = "_subset_batch - file XWorm(signature)_709335ec.bat"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "709335ecd149a26555831399ac627f4e7606fdf082ea196d11e5ac1b5ca7be7d"
-   strings:
-      $s1 = "nAom0Lo0N0U0T0Wl" ascii wide /* score: '21.00'*/
-   condition:
-      $s1
-}
-
 rule VIPKeylogger_signature__2 {
    meta:
       description = "_subset_batch - file VIPKeylogger(signature).rar"
