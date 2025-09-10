@@ -1,23 +1,32 @@
-# Which files are YARA rules
+branches:
+  accept:
+    - "main"
+    - "refs/pull/*"
+
 files:
   accept:
-  - "**.yar"
-  - "**.yara"
-
-# Negative datasets → anything matching here is a FALSE POSITIVE
-false_positives:
+    - "rules/*.yar"
+    - "rules/*.yara"
   ignore:
-    - rule: "pe_contains_wevt_template"
-    - rule: "susp_fully_hex_encoded_file_alt"
-    - rule: "zip_encrypted_single_file"
-    - rule: "multiple_exports_same_rva"
-    - rule: "dll_multiple_exports_same_rva"
-    - rule: "check_unwanted_files"
-    - rule: "FBI_Flash_Alert"
-    - rule: "heuristic_tiny_file_eval"
-    - rule: "SUSP_PEB_Access"
-    - rule: "two_byte_xor_pe_and_mz"
-    - rule: "four_byte_xor_pe_and_mz"
-    - rule: "single_byte_xor_pe_and_mz"
-    - rule: "win_plugx_encrypted_hunting"
-    - rule: "zip_compressed_with_LZMA"
+    - "rules/_experimental/**"   # opsiyonel: gürültülü/hunt kuralları
+
+# Kurallarında external variable kullanıyorsan burada tanımla (opsiyonel)
+# variables:
+#   my_external_variable: 10
+# ↑ Dış değişkenleri burada tanımlamazsan derleme hatası alırsın.
+# (Ayrıntı: "Defining variables") 
+# 
+false_negatives:
+  # Kural metadatasından hangi alanlardan hash toplanacağını belirt
+  meta_names:
+    - "hash*"
+    - "sha256*"
+    - "sha1*"
+    - "md5*"
+
+false_positives:
+  # Gürültülü kuralları kapsam dışı bırakma örnekleri (istenirse)
+  ignore:
+    - file: "rules/_experimental/**"
+    - rule: "**generic**"
+    - meta_value: "**hunt**"   # metadata'da "hunt" geçenleri sayma
