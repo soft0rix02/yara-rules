@@ -1663,7 +1663,7 @@ rule DCRat_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__486f3560 {
       $s1 = "ABCDEFGHIJ" fullword ascii /* reversed goodware string 'JIHGFEDCBA' */ /* score: '16.50'*/
       $s2 = "_cvLqaqExecKKlvizcsdHy" fullword ascii /* score: '16.00'*/
       $s3 = "&UlxIIn1+" fullword ascii /* base64 encoded string 'R\H"}~' */ /* score: '14.00'*/
-      $s4 = "YDtpAEwkR" fullword ascii /* base64 encoded string 'i L$' */ /* score: '14.00'*/
+      $s4 = "YDtpAEwkR" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
       $s5 = "5ICX5ICU5ICX5ICU5ICX5ICZ5ICY5ICZ5ICY5ICS5ICT5ICd5ICQ5ICT5ICf5ICb5ICQ5ICX5ICU5ICX5ICZ5ICY5ICZ5ICY5ICS5ICT5ICd5ICQ5ICT5ICf5ICb5ICQ" wide /* score: '11.00'*/
       $s6 = "_QoccMKuFsPipEaH" fullword ascii /* score: '10.00'*/
       $s7 = "WMDByYCAs" fullword ascii /* base64 encoded string '00r` ,' */ /* score: '10.00'*/
