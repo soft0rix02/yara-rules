@@ -179,7 +179,7 @@ rule b26458a0b60f4af597433fb7eff7b949ca96e59330f4e4bb85005e8bbcfa4f59_b26458a0 {
       $s4 = "ub.com/shadow1ng/fscan" fullword ascii /* score: '15.00'*/
       $s5 = "PROT_EXEC|PROT_WRITE failed." fullword ascii /* score: '15.00'*/
       $s6 = "(*RegArgs).Dump9I.w" fullword ascii /* score: '14.00'*/
-      $s7 = "AGRGZGduo" fullword ascii /* base64 encoded string 'dFdgn' */ /* score: '14.00'*/
+      $s7 = "AGRGZGduo" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
       $s8 = "eyJtZDUiOnRc" fullword ascii /* base64 encoded string '"md5":t\' */ /* score: '14.00'*/
       $s9 = "MGFiY2RlZ" fullword ascii /* base64 encoded string '0abcde' */ /* score: '14.00'*/
       $s10 = "U3ByaW5nQmxC" fullword ascii /* base64 encoded string 'SpringBlB' */ /* score: '14.00'*/
