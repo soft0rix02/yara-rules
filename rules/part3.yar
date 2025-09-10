@@ -1805,21 +1805,6 @@ rule DarkTortilla_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash_ {
       8 of them
 }
 
-rule b3fe67410ec75cef848ca1c06ebef4246229af295b82c2ce9968826bbfef2030_b3fe6741 {
-   meta:
-      description = "_subset_batch - file b3fe67410ec75cef848ca1c06ebef4246229af295b82c2ce9968826bbfef2030_b3fe6741.xlsx"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "b3fe67410ec75cef848ca1c06ebef4246229af295b82c2ce9968826bbfef2030"
-   strings:
-      $s1 = "xl/printerSettings/printerSettings1.bin" fullword ascii /* score: '10.00'*/
-      $s2 = "xl/sharedStrings.xml" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x4b50 and filesize < 1000KB and
-      all of them
-}
-
 rule c3f451354de6fe675f1c756733208fc6739ebb3603449b68a1c41419d952944b_c3f45135 {
    meta:
       description = "_subset_batch - file c3f451354de6fe675f1c756733208fc6739ebb3603449b68a1c41419d952944b_c3f45135.xls"
@@ -5165,34 +5150,6 @@ rule e84d460480b190d7147880984e300ca2e755bde57c95e479b93c41d35930026a_e84d4604 {
    condition:
       uint16(0) == 0x5a4d and filesize < 20KB and
       1 of ($x*) and all of them
-}
-
-rule e39e79c35067291d1279f07bb501b99ecd2030daaa38113fe59296c8e0bdc718_e39e79c3 {
-   meta:
-      description = "_subset_batch - file e39e79c35067291d1279f07bb501b99ecd2030daaa38113fe59296c8e0bdc718_e39e79c3.dmg"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "e39e79c35067291d1279f07bb501b99ecd2030daaa38113fe59296c8e0bdc718"
-   strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '26.50'*/
-      $s2 = "AAAAAAAAAAAAAAB" ascii /* base64 encoded string*/ /* reversed goodware string 'BAAAAAAAAAAAAAA' */ /* score: '26.50'*/
-      $s3 = "fAAAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '24.00'*/
-      $s4 = "AAAAAAAAAAAAE" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s5 = "AAAAAAAAAAAAAAD" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAC" ascii /* base64 encoded string  */ /* score: '16.50'*/
-      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAA" fullword ascii /* base64 encoded string  */ /* score: '16.50'*/
-      $s9 = "AAAAAAAAAAAAAAAAAAAAAAAAADAAAA" ascii /* base64 encoded string*/ /* score: '16.50'*/
-      $s10 = "aAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.00'*/
-      $s11 = "AAAAAAAAAAAAAADZAAAAAAAAAAA=" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s12 = "8AAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '14.00'*/
-      $s13 = "AAAAAAAAAAAAAABnAAAAAAAAAAA=" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s14 = "aAAAAAEAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s15 = "d0AAAAAAAAAAA" ascii /* base64 encoded string*/ /* score: '14.00'*/
-   condition:
-      uint16(0) == 0xda78 and filesize < 4000KB and
-      8 of them
 }
 
 rule e5d826785a0c698bb94d548a9236da84890f5de15eb0a3ddd3ff2684883545cf_e5d82678 {
