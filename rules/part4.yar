@@ -5427,10 +5427,9 @@ rule _LummaStealer_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__LummaSte
       $x11 = "Go pointer stored into non-Go memoryUnable to determine system directoryaccessing a corrupted shared libraryruntime: VirtualQuer" ascii /* score: '31.00'*/
       $s12 = "apViewOfFileRegEnumKeyExWRegOpenKeyExWVirtualUnlockWriteConsoleWadvapi32.dll" fullword ascii /* score: '28.00'*/
       $s13 = "ProcessGetShortPathNameWLookupAccountSidWWSAEnumProtocolsWbad TinySizeClassdebugPtrmask.lockentersyscallblockexec format errorg " ascii /* score: '27.00'*/
-      $s14 = "ime: p scheddetailsecur32.dllshell32.dlltracealloc(unreachableuserenv.dll KiB total,  [recovered] allocCount  found at *( gcscan" ascii /* score: '27.00'*/
       $s15 = "structure needs cleaning bytes failed with errno= to unused region of span with too many arguments GODEBUG: can not enable \"Get" ascii /* score: '27.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 5000KB and ( 4 of ($x*) and 2 of them )
+      ( uint16(0) == 0x5a4d and filesize < 5000KB and ( 4 of ($x*) and 2 of ($x*) ))
 
 }
 
