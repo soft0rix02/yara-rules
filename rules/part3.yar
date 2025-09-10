@@ -663,7 +663,7 @@ rule f34d5f2d4577ed6d9ceec516c1f5a744_imphash__75a7477e {
       $s3 = "rnateEncoding and AlternateEncodingUsage instead." fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 700KB and
-      all of them
+      2 of them
 }
 
 rule DiskWriter_signature__027be59081662e40c7e00ab2ad8ef629_imphash_ {
@@ -2114,7 +2114,7 @@ rule c62ea690698c36abdbe048dbb933b30863014b70a951978517f72d42cdc3b02c_c62ea690 {
       $s10 = "winDir = sh.ExpandEnvironmentStrings(\"%windir%\") : i = \"in\" : j = \"instant\" : k = \"v\" : l = \"cn\" : m = 0" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x704f and filesize < 3KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 5 of them
 }
 
 rule cddd3f99b7888355e27c3ca20eec65f4f4adc219b84de5ca67cb6e9bc93d19bc_cddd3f99 {
@@ -2427,7 +2427,7 @@ rule b9c8e36504a6c1e6ecb3c1dbc008c60d1793735e9c6bb092aba8e491103c1764_b9c8e365 {
       $s5 = "wlhead!" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x0100 and filesize < 100KB and
-      all of them
+      3 of them
 }
 
 rule DarkCloud_signature__83f7b78217399a53bfe6705fb71ec96a_imphash_ {
@@ -3789,7 +3789,7 @@ rule f0ff9941ea4264083094fd5005b047667e2f5b32acd97c04f144a9c0034428f5_f0ff9941 {
       $s15 = "var res = WMIQuery(\"winmgmts:{impersonationLevel=impersonate}!\\\\\\\\.\\\\root\\\\cimv2\", \"Select * from Win32_NetworkAdapte" ascii /* score: '26.00'*/
    condition:
       uint16(0) == 0x7546 and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 10 of them
 }
 
 rule c7aa8bd1e7be1c70bc5d7079dca10ae9bc84641e993bb08c0f25e4e017f7a751_c7aa8bd1 {
@@ -3998,7 +3998,7 @@ rule ca705f3b80b7e5140b7de8913b67177ac126f9eff7e2fa3974828844f70ecab7_ca705f3b {
       $x2 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command \"iex ((New-Object Net.WebClient).DownloadString('htt" ascii /* score: '44.00'*/
       $s3 = "s://bkngssercise.com/bomla'))\"" fullword ascii /* score: '14.00'*/
    condition:
-      uint16(0) == 0x6f70 and filesize < 1KB and
+      uint16(0) == 0x6f70 and filesize < 1000KB and
       1 of ($x*) and all of them
 }
 
@@ -4096,12 +4096,9 @@ rule DiskWriter_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__d83ef371 {
    strings:
       $x1 = "C:\\Users\\sun\\source\\repos\\proxxside\\proxxside\\obj\\Debug\\proxxside.pdb" fullword ascii /* score: '33.00'*/
       $s2 = "proxxside.exe" fullword wide /* score: '22.00'*/
-      $s3 = ".NET Framework 4.7.2" fullword ascii /* score: '10.00'*/
-      $s4 = ".NETFramework,Version=v4.7.2" fullword ascii /* score: '10.00'*/
-      $s5 = "proxxside" fullword wide /* score: '8.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 20KB and
-      1 of ($x*) and all of them
+      one of them
 }
 
 rule dae02f32a21e03ce65412f6e56942daa_imphash__a8c3af06 {
@@ -6064,7 +6061,7 @@ rule dd3aef03fa889c6daa441af89a9cdf2c71f4d8b1ddc59e0b43d6e284a21fd2d1_dd3aef03 {
       $s6 = "ad(Request.ContentLength);System.Security.Cryptography.RijndaelManaged Brx1u4 = new System.Security.Cryptography.RijndaelManaged" ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x253c and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 3 of them
 }
 
 rule f2dd39956c54dfa372c88f487428d4a8138adeee5a822ee894fb65853cfc0a3f_f2dd3995 {
@@ -6201,7 +6198,7 @@ rule DonutLoader_signature__4 {
       $s8 = "gqAC3GTBAv4X0UsAz0eOVJ4Anzftn8u93A=');$i=[Convert]::FromBase64String('pH9ExyiKxulYBxXpDyntJg==');$d=(New-Object Net.WebClient).D" ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x6540 and filesize < 2KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 5 of them
 }
 
 rule DonutLoader_signature__5 {
