@@ -147,34 +147,6 @@ rule ValleyRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__67c39f2e {
       1 of ($x*) and 4 of them
 }
 
-rule Rhadamanthys_signature__39525b45c40c6c59481ed9e5dc908b2d_imphash_ {
-   meta:
-      description = "_subset_batch - file Rhadamanthys(signature)_39525b45c40c6c59481ed9e5dc908b2d(imphash).dll"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "df9c29d572bb487183074120585275e5ef17f5baf00da512de2e7517ced89d8e"
-   strings:
-      $s1 = "   -f      Dump file headers" fullword ascii /* score: '26.00'*/
-      $s2 = "   -s      Dump section headers" fullword ascii /* score: '26.00'*/
-      $s3 = "   -a      Dump everything" fullword ascii /* score: '21.00'*/
-      $s4 = "  ProcessContext(%X)" fullword ascii /* score: '15.00'*/
-      $s5 = "       Compiler: %s - front end [%d.%d bld %d] - back end [%d.%d bld %d]" fullword ascii /* score: '15.00'*/
-      $s6 = "    GetFpoFrameBase: PC %X, Func %X, first %d, FPO %p [%d,%d,%d]" fullword ascii /* score: '12.50'*/
-      $s7 = " - symbol prompts on" fullword ascii /* score: '12.00'*/
-      $s8 = " - symbol prompts off" fullword ascii /* score: '12.00'*/
-      $s9 = "Tolgres.kjk" fullword ascii /* score: '10.00'*/
-      $s10 = "GenReadTlsDirectory.ReadQSUV" fullword ascii /* score: '10.00'*/
-      $s11 = "Plak.ecp" fullword ascii /* score: '10.00'*/
-      $s12 = "  Unable to read basic unwind info at %I64X" fullword ascii /* score: '10.00'*/
-      $s13 = "  %02X: Code %X offs %03X, RSP %I64X" fullword ascii /* score: '9.00'*/
-      $s14 = "      processed a user callback, args %u" fullword ascii /* score: '9.00'*/
-      $s15 = " - Can't validate symbols, if present." fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 3000KB and
-      8 of them
-}
-
 rule SalatStealer_signature__94400fe3e62cd2376124312fe435b8e4_imphash_ {
    meta:
       description = "_subset_batch - file SalatStealer(signature)_94400fe3e62cd2376124312fe435b8e4(imphash).exe"
