@@ -527,34 +527,6 @@ rule Mirai_signature__f29eec20 {
       all of them
 }
 
-rule Mirai_signature__f9cb6c68 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_f9cb6c68.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "f9cb6c68a33d15b16fa6fba1408355d35918c79a9a09677b2d61ac6368d47583"
-   strings:
-      $s1 = "AWAVAUATA" fullword ascii /* reversed goodware string 'ATAUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
-
-rule Mirai_signature__fe47bc1c {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_fe47bc1c.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "fe47bc1c98fa84078cdf441066eb902777dcc6a2b3d3e60b84c9126fa5bfbc3c"
-   strings:
-      $s1 = "AWAVAUA" fullword ascii /* reversed goodware string 'AUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 100KB and
-      all of them
-}
-
 rule Ngioweb_signature__0b899bb6 {
    meta:
       description = "_subset_batch - file Ngioweb(signature)_0b899bb6.elf"
@@ -1025,7 +997,7 @@ rule OrcusRAT_signature__471485476459c716374c5ae96580f71f_imphash_ {
       $x15 = "k:=\"powershell.exe -command \"\"Set-MpPreference -ModerateThreatDefaultAction 6\"\"`n\"" fullword ascii /* score: '32.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 4000KB and
-      1 of ($x*)
+      10 of ($x*)
 }
 
 rule PurpleFo_signature_ {
@@ -2547,34 +2519,6 @@ rule QuasarRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__161b4cad {
       $s15 = "iRcP_.-" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 1000KB and
-      8 of them
-}
-
-rule QuasarRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__8aeaeaa9 {
-   meta:
-      description = "_subset_batch - file QuasarRAT(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_8aeaeaa9.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "8aeaeaa9bf27b99f933d7479f77d6b91249cdca0e6967eb22456844c0dbb2098"
-   strings:
-      $s1 = "server1.exe" fullword wide /* score: '22.00'*/
-      $s2 = "        <requestedExecutionLevel  level=\"asInvoker\" uiAccess=\"false\" />" fullword ascii /* score: '15.00'*/
-      $s3 = "            compatibility then delete the requestedExecutionLevel node." fullword ascii /* score: '14.00'*/
-      $s4 = "OkoqWDgjh" fullword ascii /* base64 encoded string*/ /* score: '14.00'*/
-      $s5 = "lns:asmv2=\"urn:schemas-microsoft-com:asm.v2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">" fullword ascii /* score: '13.00'*/
-      $s6 = "most compatible environment.-->" fullword ascii /* score: '12.00'*/
-      $s7 = "My.Computer" fullword ascii /* score: '11.00'*/
-      $s8 = "        <requestedExecutionLevel  level=\"requireAdministrator\" uiAccess=\"false\" />" fullword ascii /* score: '11.00'*/
-      $s9 = "        <requestedExecutionLevel  level=\"highestAvailable\" uiAccess=\"false\" />" fullword ascii /* score: '11.00'*/
-      $s10 = "            Specifying requestedExecutionLevel node will disable file and registry virtualization." fullword ascii /* score: '11.00'*/
-      $s11 = "            requestedExecutionLevel node with one of the following." fullword ascii /* score: '11.00'*/
-      $s12 = "System.Windows.Forms.Form" fullword ascii /* score: '10.00'*/
-      $s13 = "      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->" fullword ascii /* score: '10.00'*/
-      $s14 = "Important System File" fullword wide /* score: '10.00'*/
-      $s15 = ".NET Framework 4.8" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 12000KB and
       8 of them
 }
 
