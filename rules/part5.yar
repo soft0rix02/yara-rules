@@ -5844,36 +5844,6 @@ rule _Mirai_signature__ec70ee15_Mirai_signature__f7a08a55_16 {
       ) or ( all of them )
 }
 
-rule _Mirai_signature__e64a7016_Mirai_signature__e724c031_Mirai_signature__f655d8f9_17 {
-   meta:
-      description = "_subset_batch - from files Mirai(signature)_e64a7016.elf, Mirai(signature)_e724c031.elf, Mirai(signature)_f655d8f9.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "e64a7016accf95f6c7ca9f60183d9f34e1dc47bf66f27889964bfd185f3afa97"
-      hash2 = "e724c0315b16e070a8408bd63678b363419b127313335303bd660c6333b490b3"
-      hash3 = "f655d8f958ac76b94b196b1e4db839cf75599f7f71f31cd92d3d60609f330521"
-   strings:
-      $s1 = "__pthread_mutexattr_getkind_np" fullword ascii /* score: '23.00'*/
-      $s2 = "__pthread_mutexattr_gettype" fullword ascii /* score: '23.00'*/
-      $s3 = "grep -l '%s' /proc/[0-9]*/comm 2>/dev/null | head -n1 | xargs dirname 2>/dev/null | xargs basename 2>/dev/null" fullword ascii /* score: '23.00'*/
-      $s4 = "__pthread_mutexattr_getpshared" fullword ascii /* score: '23.00'*/
-      $s5 = "__pthread_mutexattr_settype" fullword ascii /* score: '18.00'*/
-      $s6 = "__pthread_mutexattr_setkind_np" fullword ascii /* score: '18.00'*/
-      $s7 = "__pthread_mutexattr_init" fullword ascii /* score: '18.00'*/
-      $s8 = "__pthread_mutexattr_setpshared" fullword ascii /* score: '18.00'*/
-      $s9 = "pthread_keys_mutex" fullword ascii /* score: '18.00'*/
-      $s10 = "__pthread_mutexattr_destroy" fullword ascii /* score: '18.00'*/
-      $s11 = "mutex.c" fullword ascii /* score: '15.00'*/
-      $s12 = "attack_mutex" fullword ascii /* score: '15.00'*/
-      $s13 = "set_process_name" fullword ascii /* score: '15.00'*/
-      $s14 = "pthread_onexit_process" fullword ascii /* score: '15.00'*/
-      $s15 = "__GI_gethostname" fullword ascii /* score: '14.00'*/
-   condition:
-      ( uint16(0) == 0x457f and filesize < 700KB and ( 8 of them )
-      ) or ( all of them )
-}
-
 rule _RedLineStealer_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__e2f43548_RedLineStealer_signature__f34d5f2d4577ed6d9cee_18 {
    meta:
       description = "_subset_batch - from files RedLineStealer(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_e2f43548.exe, RedLineStealer(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_fcdc9e82.exe"
