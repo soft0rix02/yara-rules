@@ -1209,20 +1209,6 @@ rule Rhadamanthys_signature__6566b5de91bbc293c6eea50eb6537989_imphash_ {
       all of them
 }
 
-rule Rhadamanthys_signature__7ccdf26f81c5c13d798e8a7ffab09084_imphash__155f5320 {
-   meta:
-      description = "_subset_batch - file Rhadamanthys(signature)_7ccdf26f81c5c13d798e8a7ffab09084(imphash)_155f5320.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "155f53209e7e4aacf1efb3c929a2aaa659f98f9dd3ff703d0eed9ff7379a7da3"
-   strings:
-      $s1 = "            <requestedExecutionLevel" fullword ascii /* score: '11.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 3000KB and
-      all of them
-}
-
 rule Stealc_signature__f3f2becbefab403299b367e6b024bf66_imphash_ {
    meta:
       description = "_subset_batch - file Stealc(signature)_f3f2becbefab403299b367e6b024bf66(imphash).exe"
