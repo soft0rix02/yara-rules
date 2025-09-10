@@ -308,22 +308,6 @@ rule Mirai_signature__9fd09078 {
       uint16(0) == 0x457f and filesize < 200KB and
       8 of them
 
-rule Mirai_signature__ca22edc4 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_ca22edc4.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "ca22edc45c71f43a4f1841a03f21fc03fc8ecc03da7d00afa34b78cb5425b337"
-   strings:
-      $s1 = "AWAVAUA" fullword ascii /* reversed goodware string 'AUAVAWA' */ /* score: '16.50'*/
-      $s2 = "AWAVAUATA" fullword ascii /* reversed goodware string 'ATAUAVAWA' */ /* score: '16.50'*/
-      $s3 = "zl}Jffb`l!." fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      all of them
-}
-
 rule Mirai_signature__aa6a0e34 {
    meta:
       description = "_subset_batch - file Mirai(signature)_aa6a0e34.elf"
@@ -2205,7 +2189,7 @@ rule _Mirai_signature__9ffa58f4_Mirai_signature__a1a57a79_Mirai_signature__a9e51
       $s3 = "sefaexec" fullword ascii /* score: '16.00'*/
       $s4 = "deexec" fullword ascii /* score: '13.00'*/
       $s5 = "1337SoraLOADER" fullword ascii /* score: '13.00'*/
-      $s6 = "SO190Ij1X" fullword ascii /* base64 encoded string ';_t"=W' */ /* score: '11.00'*/
+      $s6 = "SO190Ij1X" fullword ascii /* base64 encoded string*/ /* score: '11.00'*/
       $s7 = "airdropmalware" fullword ascii /* score: '10.00'*/
       $s8 = "trojan" fullword ascii /* PEStudio Blacklist: strings */ /* score: '10.00'*/
       $s9 = "GhostWuzHere666" fullword ascii /* score: '10.00'*/
