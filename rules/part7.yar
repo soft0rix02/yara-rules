@@ -8370,7 +8370,7 @@ rule _RemcosRAT_signature__a8741f2d_RemcosRAT_signature__aa569300_99 {
       $s4 = "AAAAAAAAAAAAAABAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s5 = "AABAAAAAAAAAAAAAADAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
-      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                               ' */ /* score: '16.50'*/
+      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s8 = "ADAAAAAAAAAAAAAAAB" ascii /* base64 encoded string  */ /* score: '16.50'*/
       $s9 = "4AAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '14.00'*/
       $s10 = "fEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string  */ /* score: '14.00'*/
