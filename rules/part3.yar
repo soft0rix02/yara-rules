@@ -1488,7 +1488,7 @@ rule DiskWriter_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__5cb1497a {
       $s1 = "nitroxide.exe" fullword wide /* score: '22.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 300KB and
-      one of them
+      $x1 or $s1
 }
 
 rule DarkCloud_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__aa8573d4 {
