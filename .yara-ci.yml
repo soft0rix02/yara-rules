@@ -19,13 +19,16 @@ files:
 false_negatives:
   # Kural metadatasından hangi alanlardan hash toplanacağını belirt
   meta_names:
-    - "hash*" # sha256
-
+    - "hash*"
+    - "sha256*"
+    - "sha1*"
+    - "md5*"
 false_positives:
   # Gürültülü kuralları kapsam dışı bırakma örnekleri (istenirse)
   ignore:
     - file: "rules/_experimental/**"
     - rule: "**generic**"
     - meta_value: "**hunt**"   # metadata'da "hunt" geçenleri sayma
+
 
 
