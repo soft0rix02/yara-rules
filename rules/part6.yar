@@ -753,23 +753,6 @@ rule Mirai_signature__a29d703f {
       8 of them
 }
 
-rule Mirai_signature__a32bb4c1 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_a32bb4c1.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "a32bb4c1a081c4269e9f0ef385599ee4b8301843a4789756f0f2db3fe5324e9e"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " http://196.251.70.174/bins/mips; /bin/busybox chmod 777 * atp.mips; ./atp.mips huawei)</NewStatusURL><NewDownloadURL>$(echo HUA" ascii /* score: '29.00'*/
-      $s3 = "WEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 430" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and $s2
-}
-
 rule Mirai_signature__d27f42e7 {
    meta:
       description = "_subset_batch - file Mirai(signature)_d27f42e7.elf"
