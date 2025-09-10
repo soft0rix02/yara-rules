@@ -1485,23 +1485,10 @@ rule DiskWriter_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__5cb1497a {
       hash1 = "5cb1497aacdec1dbbd53abebb014e6067da1478de8489d9c46646d881c7d1fd3"
    strings:
       $x1 = "C:\\Users\\David\\source\\repos\\nitroxide\\obj\\Debug\\nitroxide.pdb" fullword ascii /* score: '33.00'*/
-      $s2 = "logo comunes de Windows (Windows XP y versiones posteriores) -->" fullword ascii /* score: '29.00'*/
-      $s3 = "n sea compatible con rutas de acceso largas. Consulte https://docs.microsoft.com/windows/win32/fileio/maximum-file-path-limitati" ascii /* score: '28.00'*/
-      $s4 = "nitroxide.exe" fullword wide /* score: '22.00'*/
-      $s5 = "n sea compatible con rutas de acceso largas. Consulte https://docs.microsoft.com/windows/win32/fileio/maximum-file-path-limitati" ascii /* score: '19.00'*/
-      $s6 = "s compatible. -->" fullword ascii /* score: '16.00'*/
-      $s7 = "windows poisoned" fullword wide /* score: '16.00'*/
-      $s8 = "        <requestedExecutionLevel  level=\"asInvoker\" uiAccess=\"false\" />" fullword ascii /* score: '15.00'*/
-      $s9 = "/k reg delete HKCR /f && reg delete HKCU /f" fullword wide /* score: '15.00'*/
-      $s10 = "      <!-- Windows 7 -->" fullword ascii /* score: '12.00'*/
-      $s11 = "      <!-- Windows Vista -->" fullword ascii /* score: '12.00'*/
-      $s12 = "      <!-- Windows 8.1 -->" fullword ascii /* score: '12.00'*/
-      $s13 = "      <dpiAware xmlns=\"http://schemas.microsoft.com/SMI/2005/WindowsSettings\">true</dpiAware>" fullword ascii /* score: '12.00'*/
-      $s14 = "      <!-- Windows 10 -->" fullword ascii /* score: '12.00'*/
-      $s15 = "      <!-- Windows 8 -->" fullword ascii /* score: '12.00'*/
+      $s1 = "nitroxide.exe" fullword wide /* score: '22.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 300KB and
-      1 of ($x*) and 4 of them
+      all of them
 }
 
 rule DarkCloud_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__aa8573d4 {
@@ -7046,37 +7033,6 @@ rule _ca9b1a39503792da1c4d11741d205b38_imphash__f34d5f2d4577ed6d9ceec516c1f5a744
       ) or ( all of them )
 }
 
-rule _Cephalus_signature__d42595b695fc008ef2c56aabd8efd68e_imphash__da06a1fea03a65303b4dd9e7cc4337a127ad450d07bb7939de6c2e27a0cb2_19 {
-   meta:
-      description = "_subset_batch - from files Cephalus(signature)_d42595b695fc008ef2c56aabd8efd68e(imphash).exe, da06a1fea03a65303b4dd9e7cc4337a127ad450d07bb7939de6c2e27a0cb23b5_da06a1fe.elf, DonutLoader(signature)_d42595b695fc008ef2c56aabd8efd68e(imphash).exe, e689afee5f7bdbd1613bd9a3915ef2a185a05c72aaae4df3dee988fa7109cb0b_e689afee.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "a34acd47127196ab867d572c2c6cf2fcccffa3a7a87e82d338a8efed898ca722"
-      hash2 = "da06a1fea03a65303b4dd9e7cc4337a127ad450d07bb7939de6c2e27a0cb23b5"
-      hash3 = "93a76dcb046672ce458a272400fdc8040942c1dd8605ed7b81bc98fcca3b5e1b"
-      hash4 = "e689afee5f7bdbd1613bd9a3915ef2a185a05c72aaae4df3dee988fa7109cb0b"
-   strings:
-      $s1 = "sync/atomic.(*Pointer[go.shape.struct { math/rand.src math/rand.Source; math/rand.s64 math/rand.Source64; math/rand.readVal int6" ascii /* score: '17.00'*/
-      $s2 = "runtime.getStaticuint64s" fullword ascii /* score: '15.00'*/
-      $s3 = "cmp.Compare[go.shape.float64]" fullword ascii /* score: '14.00'*/
-      $s4 = "4; math/rand.readPos int8 }]).CompareAndSwap" fullword ascii /* score: '14.00'*/
-      $s5 = "cmp.Compare[go.shape.uint64]" fullword ascii /* score: '14.00'*/
-      $s6 = "cmp.Compare[go.shape.uintptr]" fullword ascii /* score: '14.00'*/
-      $s7 = "time.commaOrPeriod" fullword ascii /* score: '14.00'*/
-      $s8 = "cmp.Compare[go.shape.int64]" fullword ascii /* score: '14.00'*/
-      $s9 = "strings.Compare" fullword ascii /* score: '14.00'*/
-      $s10 = "cmp.Compare[go.shape.string]" fullword ascii /* score: '14.00'*/
-      $s11 = "vendor/golang.org/x/crypto/cryptobyte.(*String).ReadASN1ObjectIdentifier" fullword ascii /* score: '13.00'*/
-      $s12 = "crypto/internal/fips140/rsa.(*PrivateKey).PublicKey" fullword ascii /* score: '13.00'*/
-      $s13 = "internal/runtime/maps.(*Iter).Key" fullword ascii /* score: '13.00'*/
-      $s14 = "crypto/internal/fips140/ed25519.(*PrivateKey).PublicKey" fullword ascii /* score: '13.00'*/
-      $s15 = "time.getnum" fullword ascii /* score: '12.00'*/
-   condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 24000KB and pe.imphash() == "d42595b695fc008ef2c56aabd8efd68e" and ( 8 of them )
-      ) or ( all of them )
-}
-
 rule _f34d5f2d4577ed6d9ceec516c1f5a744_imphash__3b79e53a_f34d5f2d4577ed6d9ceec516c1f5a744_imphash__5c69a4e5_21 {
    meta:
       description = "_subset_batch - from files f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_3b79e53a.exe, f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_5c69a4e5.exe"
@@ -7370,14 +7326,9 @@ rule _cdb0a360cca7a5099c2d2357be1a833e032ffdeb3f467a6fac845f6bb77031c9_cdb0a360_
       $s8 = "costura.costura.dll.compressed" fullword wide /* score: '22.00'*/
       $s9 = "system.runtime.compilerservices.unsafe" fullword wide /* score: '20.00'*/
       $s10 = "eed|Newtonsoft.Json.dll|1E76E6099570EDE620B76ED47CF8D03A936D49F8|711952" fullword ascii /* score: '18.00'*/
-      $s11 = ".compressed" fullword wide /* score: '11.00'*/
-      $s12 = "system.buffers" fullword wide /* score: '10.00'*/
-      $s13 = "system.memory" fullword wide /* score: '10.00'*/
-      $s14 = "system.numerics.vectors" fullword wide /* score: '10.00'*/
-      $s15 = "costura" fullword wide /* score: '8.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 17000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 1 of ($x*) and 4 of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x5a4d and filesize < 17000KB and and 3 of them )
+      
 }
 
 rule _f34d5f2d4577ed6d9ceec516c1f5a744_imphash__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__06f0b886_f34d5f2d4577ed6d9ceec516c1f5a7_31 {
@@ -7737,35 +7688,6 @@ rule _Cephalus_signature__d42595b695fc008ef2c56aabd8efd68e_imphash__DonutLoader_
       $s15 = "internal/testlog/log.go" fullword ascii /* score: '9.00'*/
    condition:
       ( uint16(0) == 0x5a4d and filesize < 17000KB and pe.imphash() == "d42595b695fc008ef2c56aabd8efd68e" and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _cdb0a360cca7a5099c2d2357be1a833e032ffdeb3f467a6fac845f6bb77031c9_cdb0a360_df875748170a5e5cf55bd12dfdc70ae68bd91219b0d4bd71b_43 {
-   meta:
-      description = "_subset_batch - from files cdb0a360cca7a5099c2d2357be1a833e032ffdeb3f467a6fac845f6bb77031c9_cdb0a360.exe, df875748170a5e5cf55bd12dfdc70ae68bd91219b0d4bd71b4320fb095cbe3b3_df875748.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "cdb0a360cca7a5099c2d2357be1a833e032ffdeb3f467a6fac845f6bb77031c9"
-      hash2 = "df875748170a5e5cf55bd12dfdc70ae68bd91219b0d4bd71b4320fb095cbe3b3"
-   strings:
-      $x1 = "costura.system.numerics.vectors.dll.compressed|4.1.4.0|System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken" ascii /* score: '44.00'*/
-      $x2 = "costura.system.buffers.dll.compressed|4.0.3.0|System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51|" ascii /* score: '44.00'*/
-      $x3 = "costura.system.memory.dll.compressed|4.0.1.2|System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51|Sy" ascii /* score: '44.00'*/
-      $x4 = "costura.system.buffers.dll.compressed|4.0.3.0|System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51|" ascii /* score: '42.00'*/
-      $x5 = "costura.system.numerics.vectors.dll.compressed|4.1.4.0|System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken" ascii /* score: '42.00'*/
-      $x6 = "costura.system.memory.dll.compressed|4.0.1.2|System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51|Sy" ascii /* score: '42.00'*/
-      $x7 = "costura.costura.dll.compressed|5.7.0.0|Costura, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null|Costura.dll|F1F25C01F6ACF3" ascii /* score: '41.00'*/
-      $x8 = "costura.system.runtime.compilerservices.unsafe.dll.compressed|6.0.0.0|System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, C" ascii /* score: '40.00'*/
-      $x9 = "costura.costura.dll.compressed|5.7.0.0|Costura, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null|Costura.dll|F1F25C01F6ACF3" ascii /* score: '39.00'*/
-      $x10 = "costura.system.runtime.compilerservices.unsafe.dll.compressed|6.0.0.0|System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, C" ascii /* score: '36.00'*/
-      $s11 = "ulture=neutral, PublicKeyToken=b03f5f7f11d50a3a|System.Runtime.CompilerServices.Unsafe.dll|180A7BAAFBC820A838BBACA434032D9D33CCE" ascii /* score: '27.00'*/
-      $s12 = "costura.system.diagnostics.diagnosticsource.dll.compressed" fullword wide /* score: '25.00'*/
-      $s13 = "System.Buffers.dll|2F410A0396BC148ED533AD49B6415FB58DD4D641|20856" fullword ascii /* score: '24.00'*/
-      $s14 = "=b03f5f7f11d50a3a|System.Numerics.Vectors.dll|3D216458740AD5CB05BC5F7C3491CDE44A1E5DF0|115856" fullword ascii /* score: '21.00'*/
-      $s15 = "stem.Memory.dll|3C5C5DF5F8F8DB3F0A35C5ED8D357313A54E3CDE|142240" fullword ascii /* score: '21.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 16000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
@@ -8815,32 +8737,6 @@ rule _c7269d59926fa4252270f407e4dab043_imphash__c7269d59926fa4252270f407e4dab043
       $s11 = "compress/flate.(*byFreq).Len" fullword ascii /* score: '10.00'*/
    condition:
       ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 24000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _df875748170a5e5cf55bd12dfdc70ae68bd91219b0d4bd71b4320fb095cbe3b3_df875748_f34d5f2d4577ed6d9ceec516c1f5a744_imphash__662a1ce_80 {
-   meta:
-      description = "_subset_batch - from files df875748170a5e5cf55bd12dfdc70ae68bd91219b0d4bd71b4320fb095cbe3b3_df875748.exe, f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_662a1ce6.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "df875748170a5e5cf55bd12dfdc70ae68bd91219b0d4bd71b4320fb095cbe3b3"
-      hash2 = "662a1ce669ea5867deb1e22b76c29e8a4d6e2cd8b8becbec0aa7dc9d80748a60"
-   strings:
-      $x1 = "costura.system.security.principal.windows.dll.compressed|5.0.0.0|System.Security.Principal.Windows, Version=5.0.0.0, Culture=neu" ascii /* score: '44.00'*/
-      $x2 = "costura.system.serviceprocess.servicecontroller.dll.compressed" fullword wide /* score: '33.00'*/
-      $x3 = "costura.system.security.principal.windows.dll.compressed|5.0.0.0|System.Security.Principal.Windows, Version=5.0.0.0, Culture=neu" ascii /* score: '33.00'*/
-      $s4 = "costura.system.diagnostics.eventlog.dll.compressed" fullword wide /* score: '30.00'*/
-      $s5 = "tral, PublicKeyToken=b03f5f7f11d50a3a|System.Security.Principal.Windows.dll|9A5BE1FCF410FE5934D720329D36A2377E83747E|18312" fullword ascii /* score: '30.00'*/
-      $s6 = "costura.system.net.ipnetwork.dll.compressed" fullword wide /* score: '25.00'*/
-      $s7 = "costura.system.security.principal.windows.dll.compressed" fullword wide /* score: '25.00'*/
-      $s8 = "costura.microsoft.win32.taskscheduler.dll.compressed" fullword wide /* score: '22.00'*/
-      $s9 = "system.serviceprocess.servicecontroller" fullword wide /* score: '18.00'*/
-      $s10 = "system.diagnostics.eventlog" fullword wide /* score: '15.00'*/
-      $s11 = "system.net.ipnetwork" fullword wide /* score: '13.00'*/
-      $s12 = "system.security.principal.windows" fullword wide /* score: '10.00'*/
-   condition:
-      ( uint16(0) == 0x5a4d and filesize < 17000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
