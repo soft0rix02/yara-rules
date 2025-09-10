@@ -420,20 +420,6 @@ rule Renamer_signature__c00b6ba7dbbc6abee9ace3a65a49ba24_imphash_ {
       8 of them
 }
 
-rule Rhadamanthys_signature__4ff126a37cacf7b37858d8f2b2459f60_imphash_ {
-   meta:
-      description = "_subset_batch - file Rhadamanthys(signature)_4ff126a37cacf7b37858d8f2b2459f60(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "9deb2baeb081e01d0eb2454839edb37094aacae1f093cadf0e648a3774b62950"
-   strings:
-      $s1 = "Neetchart.mcc" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 16000KB and
-      all of them
-}
-
 rule Rhadamanthys_signature__b4f070f0028c97d4b44509b262314b3d_imphash_ {
    meta:
       description = "_subset_batch - file Rhadamanthys(signature)_b4f070f0028c97d4b44509b262314b3d(imphash).exe"
@@ -589,23 +575,16 @@ rule ValleyRAT_signature__71f9847d471117d3d5852a01b4f24cb3_imphash_ {
       hash1 = "1107160996aad02e3d44572030599713712db1e7538a346d5bd885f1ff88fdaa"
    strings:
       $x1 = "<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"><assemblyIdentity version=\"1.0.0.0\" processorArch" ascii /* score: '48.00'*/
-      $s2 = "cy><dependentAssembly><assemblyIdentity type=\"win32\" name=\"Microsoft.Windows.Common-Controls\" version=\"6.0.0.0\" processorA" ascii /* score: '26.00'*/
-      $s3 = "rn:schemas-microsoft-com:asm.v3\"><security><requestedPrivileges><requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"" ascii /* score: '26.00'*/
-      $s4 = "<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"><assemblyIdentity version=\"1.0.0.0\" processorArch" ascii /* score: '22.00'*/
-      $s5 = "WinMergeU.EXE" fullword wide /* score: '22.00'*/
-      $s6 = "questedExecutionLevel></requestedPrivileges></security></trustInfo><application xmlns=\"urn:schemas-microsoft-com:asm.v3\"><wind" ascii /* score: '18.00'*/
-      $s7 = "FEDCBA?" fullword ascii /* reversed goodware string '?ABCDEF' */ /* score: '14.00'*/
-      $s8 = "2.16.46.0" fullword wide /* score: '14.00'*/ /* hex encoded string '!d`' */
-      $s9 = "sSettings><dpiAware xmlns=\"http://schemas.microsoft.com/SMI/2005/WindowsSettings\">true</dpiAware></windowsSettings></applicati" ascii /* score: '13.00'*/
-      $s10 = "987654321" ascii /* reversed goodware string '123456789' */ /* score: '11.00'*/
-      $s11 = "CPNOTEMPTY)" fullword ascii /* score: '11.00'*/
-      $s12 = "9rrrr9999rrrr9999rrrr9999rrrr999ArrrrAAAArrrrAAAArrrrAAAArrrrAAABrrrrBBBBrrrrBBBBrrrrBBBBrrrrBBBCrrrrCCCCrrrrCCCCrrrrCCCCrrrrCCC" ascii /* score: '11.00'*/
-      $s13 = "83d0f6d0da78}\"></ms_compatibility:supportedOS><ms_compatibility:supportedOS xmlns:ms_compatibility=\"urn:schemas-microsoft-com:" ascii /* score: '10.00'*/
-      $s14 = "><ms_compatibility:supportedOS xmlns:ms_compatibility=\"urn:schemas-microsoft-com:compatibility.v1\" Id=\"{1f676c76-80e1-4239-95" ascii /* score: '10.00'*/
-      $s15 = "\\,4<D\\." fullword ascii /* score: '10.00'*/ /* hex encoded string 'M' */
+      $s1 = "cy><dependentAssembly><assemblyIdentity type=\"win32\" name=\"Microsoft.Windows.Common-Controls\" version=\"6.0.0.0\" processorA" ascii /* score: '26.00'*/
+      $s2 = "rn:schemas-microsoft-com:asm.v3\"><security><requestedPrivileges><requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"" ascii /* score: '26.00'*/
+      $s3 = "<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"><assemblyIdentity version=\"1.0.0.0\" processorArch" ascii /* score: '22.00'*/
+      $s4 = "WinMergeU.EXE" fullword wide /* score: '22.00'*/
+      $s5 = "questedExecutionLevel></requestedPrivileges></security></trustInfo><application xmlns=\"urn:schemas-microsoft-com:asm.v3\"><wind" ascii /* score: '18.00'*/
+      $s6 = "FEDCBA?" fullword ascii /* reversed goodware string '?ABCDEF' */ /* score: '14.00'*/
+      $s7 = "2.16.46.0" fullword wide /* score: '14.00'*/ /* hex encoded string '!d`' */
    condition:
       uint16(0) == 0x5a4d and filesize < 5000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 5 of them
 }
 
 rule RemcosRAT_signature__4fccf079 {
@@ -1794,16 +1773,9 @@ rule Rhadamanthys_signature__f6baa5eaa8231d4fe8e922a2e6d240ea_imphash_ {
       $s6 = "sfxelevation" fullword wide /* score: '20.00'*/
       $s7 = "PreExtract=\"%%P:hidcon:cmd /c \\\"\\\"%%T\\\\KillDuplicate.cmd\\\" \\\"%%T\\\" \\\"%%M\\\"\\\"\"" fullword ascii /* score: '16.00'*/
       $s8 = "YC.exe" fullword wide /* score: '16.00'*/
-      $s9 = "Error in command line:" fullword ascii /* score: '15.00'*/
-      $s10 = "InstallPath=\"%Temp%\\\\main\"" fullword ascii /* score: '15.00'*/
-      $s11 = " - Copyright (c) 2005-2012 " fullword ascii /* score: '14.00'*/
-      $s12 = "SFX module - Copyright (c) 2005-2012 Oleg Scherbakov" fullword ascii /* score: '14.00'*/
-      $s13 = " 7-Zip - Copyright (c) 1999-2011 " fullword ascii /* score: '14.00'*/
-      $s14 = "7-Zip archiver - Copyright (c) 1999-2011 Igor Pavlov" fullword ascii /* score: '14.00'*/
-      $s15 = "7zSfxVarSystemPlatform" fullword wide /* score: '14.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 9000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 5 of them
 }
 
 rule RemcosRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__9151f8c3 {
