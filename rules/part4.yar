@@ -720,7 +720,7 @@ rule Mirai_signature__07959d83 {
       $s11 = "Content-Length: 227" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 7 of them
 }
 
 rule Kimsuky_signature__9afe3b074151497bd679a59dd4495420_imphash_ {
@@ -4942,7 +4942,7 @@ rule Mirai_signature__0bbca6a1 {
       $s11 = "Content-Length: 227" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 7 of them
 }
 
 rule Mirai_signature__0d5caf1e {
@@ -5082,7 +5082,7 @@ rule Mirai_signature__00d422b8 {
       $s10 = "botkill" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 300KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 4 of them
 }
 
 rule Mirai_signature__02359fea {
@@ -5215,7 +5215,7 @@ rule Mirai_signature__0ecf90de {
       $s4 = "dURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 2 of them
 }
 
 rule Mirai_signature__060a45cf {
