@@ -34,11 +34,22 @@ rule DLL_DiceLoader_Fin7_Feb2024 {
        $other = "GetAdaptersInfo"
        
     condition:
-        pe.imphash() == "37af5cd8fc35f39f0815827f7b80b304" //matches on 7 Dice Loader Samples
-        or 
-        (pe.number_of_exports == 1
-        and pe.export_details[0].ordinal == 1  
-        and ($exp_func at (0x2888) or $exp_func at (0x2338))) //Checking for export function name 
-        and 5 of ($s*) and 4 of ($net*) and $other
+        // branch 1: exact imphash match
+        pe.imphash() == "37af5cd8fc35f39f0815827f7b80b304"
+
+    or
+
+        // branch 2: semantic export checks + other string families
+    (
+      pe.number_of_exports == 1
+      and pe.export_details[0].ordinal == 1
+      and for any i in (0..pe.number_of_exports - 1) :
+          ( pe.exports[i].name matches /^[A-Za-z]{16}$/ )
+      and 5 of ($s*)
+      and 4 of ($net*)
+      and $other
+    )
+
             
  }
+
