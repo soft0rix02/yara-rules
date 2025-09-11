@@ -15,7 +15,7 @@ rule php_hide_wp_plugin_a8b373fb {
 
     strings:
         $meta_1 = /add_filter\('all_plugins', '[a-z_A-Z]{1,30}'\);/
-        $meta_2 = /function hide_plugin.{1,20}\(\$plug.{1,5}\) {/
+        $meta_2 = /function hide_plugin.{1,20}\(\$plug.{1,5}\) \{/
         $meta_3 = /unset\(\$plugins\['[a-z_A-Z]{2,20}\/[a-z_A-Z]{2,20}.php'\]\);/
         $meta_4 = /return \$[a-z_A-Z]{1,20};/
     condition:
