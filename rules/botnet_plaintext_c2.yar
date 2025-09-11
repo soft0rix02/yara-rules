@@ -34,5 +34,6 @@ rule botnet_plaintext_c2
         $ping = "PING"
 
     condition:
-        4 of them
+        8 of them
+
 }
