@@ -1,9 +1,7 @@
 rule meth_get_eip {
   meta:
     date = "2022-06-13"
-    author = "Willi Ballenthin"
-    yarahub_author_email = "william.ballenthin@mandiant.com"
-    yarahub_author_twitter = "@williballenthin"
+    author = "Metin Yiğit"
     yarahub_uuid = "666bfd55-7931-454e-beb8-22b5211ab04f"
     yarahub_license = "CC BY 4.0"
     yarahub_rule_matching_tlp = "TLP:WHITE"
@@ -20,5 +18,5 @@ rule meth_get_eip {
        $x86 = { e8 00 00 00 00 (58 | 5b | 59 | 5a | 5e | 5f) }
 
     condition:
-       $x86
+       #x86 >= 3
 }
