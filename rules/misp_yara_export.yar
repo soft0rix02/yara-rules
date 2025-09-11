@@ -1300,47 +1300,13 @@ all of them
 
 // MISP event:1282 uuid:85308947-6c2f-4f91-ad0c-fa8c2657127d org: to_ids:True tags:[]
 rule apt29_QUARTERRIG {
+
 strings:
 $str_dll_name = "hijacker.dll"
 $str_import_name = "VCRUNTIME140.dll"
-// 48 8B 15 39 6A 00 00
-mov
-rdx, cs:api_stuff.OpenThread
-// 48 8D 0D FA 68 00 00
-lea
-rcx, api_stuff
-// 8B D8
-mov
-ebx, eax
-// E8 3F 25 00 00
-call
-load_api_addr
-// 44 8B C3
-mov
-r8d, ebx
-// 33 D2
-xor
-edx, edx
-// B9 FF FF 1F 00
-mov
-ecx, 1FFFFFh
-// FF D0
-call
-rax
 $op_resolve_and_call_openthread = { 48 [6] 48 [6] 8B D8 E8 [4] [3] 33 D2 B9 FF FF 1F 00 FF D0 }
-// E8 A0 25 00 00
-call
-load_api_addr
-// 48 8B CB
-mov
-rcx, rbx
-// FF D0
-call
-rax
-// 83 F8 FF
-cmp
-eax, 0FFFFFFFFh
 $op_resolve_and_call_suspendthread = { E8 [4] 48 8B CB FF D0 83 F8 FF }
+
 condition:
 all of them
 }
