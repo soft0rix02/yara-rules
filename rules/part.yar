@@ -6858,7 +6858,7 @@ rule _97b2588f938cb00e2722645865a7fab1ade3b969d8a5e5a0f8ec02d8578632d0_97b2588f_
       $s14 = "*runtime.errorString" fullword ascii /* score: '10.00'*/
       $s15 = "*runtime.modulehash" fullword ascii /* score: '10.00'*/
    condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f or uint16(0) == 0xfacf ) and filesize < 24000KB and ( 12 of them )
+      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f or uint16(0) == 0xfacf ) and filesize < 24000KB and ( all of them )
       ) or ( all of them )
 }
 
@@ -10505,7 +10505,7 @@ rule HijackLoader_signature__7adcc846 {
       $s15 = "t extends code type or option flags of the Type column.Foreign key into Feature table.Foreign key into Component table.Name of p" ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 15000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule HijackLoader_signature__c3c7f284 {
@@ -13668,7 +13668,7 @@ rule _MetaStealer_signature__MetaStealer_signature__0d7e3c76_MetaStealer_signatu
       $s14 = "oductIDMigrateFeatureStatesProcessComponentsUnpublishFeaturesRemoveRegistryValuesWriteRegistryValuesResolveSourceNOT REMOVE ~=\"" ascii /* score: '18.00'*/
       $s15 = "ack cabinet order.IconPrimary key. Name of the icon file.Binary stream. The binary icon data in PE (.DLL or .EXE) or icon (.ICO)" ascii /* score: '18.00'*/
    condition:
-      ( uint16(0) == 0xcfd0 and filesize < 18000KB and ( 1 of ($x*) and 4 of them )
+      ( uint16(0) == 0xcfd0 and filesize < 18000KB and ( 1 of ($x*) and 10 of them )
       ) or ( all of them )
 }
 
@@ -15300,7 +15300,7 @@ rule _HijackLoader_signature__d8b31f8c03e0c76ff245ed05a15ffe6c_imphash__Kaiji_si
       $s14 = "runtime.addfinalizer" fullword ascii /* score: '10.00'*/
       $s15 = "runtime.SetFinalizer.func1" fullword ascii /* score: '10.00'*/
    condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 17000KB and ( 8 of them )
+      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 17000KB and ( all of them )
       ) or ( all of them )
 }
 
@@ -18788,20 +18788,6 @@ rule XWorm_signature__f39ac81b {
       1 of ($x*) and all of them
 }
 
-rule ValleyRAT_signature__c1201007f24fe8ef3e37fc185993eed2_imphash_ {
-   meta:
-      description = "_subset_batch - file ValleyRAT(signature)_c1201007f24fe8ef3e37fc185993eed2(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "4770597491c90a78bb6915362e19c5feb822ef0386f35cbddf37dd9673bf1396"
-   strings:
-      $s1 = "        <requestedExecutionLevel level=\"asInvoker\"/>" fullword ascii /* score: '15.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 100KB and
-      all of them
-}
-
 rule Vidar_signature__2eabe9054cad5152567f0699947a2c5b_imphash_ {
    meta:
       description = "_subset_batch - file Vidar(signature)_2eabe9054cad5152567f0699947a2c5b(imphash).exe"
@@ -20375,7 +20361,7 @@ rule _SnakeKeylogger_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__4ac3f3
       $s14 = ".0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3auSystem.Windows.Forms.Padding, System.Windows.Forms, Version=4.0.0.0, Cult" ascii /* score: '24.00'*/
       $s15 = ".0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3afSystem.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, Pu" ascii /* score: '24.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 2000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 1 of ($x*) and 4 of them )
+      ( uint16(0) == 0x5a4d and filesize < 2000KB and pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 1 of ($x*) and 10 of them )
       ) or ( all of them )
 }
 
@@ -21984,7 +21970,7 @@ rule _Stealc_signature__d42595b695fc008ef2c56aabd8efd68e_imphash__ValleyRAT_sign
       $s11 = "runtime.runfinq" fullword ascii /* score: '10.00'*/
       $s12 = "tryGetFast" fullword ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 9000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 9000KB and ( 10 of them )
       ) or ( all of them )
 }
 
@@ -28795,7 +28781,7 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s14 = "runtime.getitab" fullword ascii /* score: '15.00'*/
       $s15 = "runtime.deductSweepCredit" fullword ascii /* score: '15.00'*/
    condition:
-      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( 12 of them )
+      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( all of them )
       ) or ( all of them )
 }
 
@@ -30015,7 +30001,7 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s10 = "reflect.cvtRunesString" fullword ascii /* score: '10.00'*/
       $s11 = "waitsema" fullword ascii /* score: '8.00'*/
    condition:
-      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( 10 of them )
+      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( all of them )
       ) or ( all of them )
 }
 
@@ -38191,7 +38177,7 @@ rule _Mirai_signature__32ac2cc4_Mirai_signature__421688ae_Mirai_signature__4afab
       $s14 = "_thread_db_pthread_key_data_seq" fullword ascii /* score: '10.00'*/
       $s15 = "_thread_db___pthread_keys" fullword ascii /* score: '10.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 700KB and ( 8 of them )
+      ( uint16(0) == 0x457f and filesize < 700KB and ( 12 of them )
       ) or ( all of them )
 }
 
