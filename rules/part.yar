@@ -25,6 +25,7 @@ rule MooBot_signature__9597ea18 {
       uint16(0) == 0x457f and filesize < 300KB and
       all of them
 }
+
 rule AsyncRAT_signature__f34d5f2d4577ed6d9ceec516c1f5a744_imphash__6be74443 {
    meta:
       description = "_subset_batch - file AsyncRAT(signature)_f34d5f2d4577ed6d9ceec516c1f5a744(imphash)_6be74443.exe"
