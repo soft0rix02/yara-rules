@@ -23,7 +23,7 @@ false_negatives:
     - "sha256*"
     - "sha1*"
     - "md5*"
-false_positives:
+#false_positives:
   # Gürültülü kuralları kapsam dışı bırakma örnekleri (istenirse)
   #ignore:
   #  - file: "rules/_experimental/**"
