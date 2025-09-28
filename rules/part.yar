@@ -10491,7 +10491,7 @@ rule HijackLoader_signature__72acf597 {
       $s15 = "nnectsText;Formatted;Template;Condition;Guid;Path;Version;Language;Identifier;Binary;UpperCase;LowerCase;Filename;Paths;AnyPath;" ascii /* score: '13.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 10000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule HijackLoader_signature__7adcc846 {
@@ -10547,7 +10547,7 @@ rule HijackLoader_signature__c3c7f284 {
       $s15 = "ne will terminate, returning iesBadActionData.Number that determines the sort order in which the actions are to be executed. Lea" ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 21000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule HijackLoader_signature__e6f4d4f6 {
