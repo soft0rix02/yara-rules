@@ -36045,7 +36045,7 @@ rule Mirai_signature__27732f1d {
       $s8 = "botkill" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 3 of ($s*)
 }
 
 rule Mirai_signature__41392c1b {
@@ -36192,27 +36192,6 @@ rule Mirai_signature__4b263d7e {
       $s8 = "POST /GponForm/diag_Form?style/ HTTP/1.1" fullword ascii /* score: '16.00'*/
       $s9 = "Host: 127.0.0.1:80" fullword ascii /* score: '14.00'*/
       $s10 = " POST /cdn-cgi/" fullword ascii /* score: '13.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__50f7b8b6 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_50f7b8b6.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "50f7b8b6303f296ec48f49b8bc311115e16d8618636ad12c55259ca5f7c8a396"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
       1 of ($x*) and all of them
