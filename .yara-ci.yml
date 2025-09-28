@@ -25,9 +25,9 @@ false_negatives:
     - "md5*"
 false_positives:
   # Gürültülü kuralları kapsam dışı bırakma örnekleri (istenirse)
-  ignore:
-    - file: "rules/_experimental/**"
-    - rule: "**generic**"
-    - meta_value: "**hunt**"   # metadata'da "hunt" geçenleri sayma
+  #ignore:
+  #  - file: "rules/_experimental/**"
+  #  - rule: "**generic**"
+  #  - meta_value: "**hunt**"   # metadata'da "hunt" geçenleri sayma
 
 
