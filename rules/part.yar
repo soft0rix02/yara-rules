@@ -36,7 +36,7 @@ rule sig_97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15e
       $s1 = " Y=0x0,N,G,n=0x0;G=X['charAt'](n++);~G&&(N=Y%0x4?N*0x40+G:G,Y++%0x4)?f+=String['fromCharCode'](0xff&N>>(-0x2*Y&0x6)):0x0){G=P['i" ascii /* score: '9.00'*/
       $s2 = "(function(W,D){var G=i,a=W();while(!![]){try{var V=parseInt(G(0x150,'BHVk'))/0x1*(parseInt(G(0x30b,'w0Ul'))/0x2)+-parseInt(G(0x1" ascii /* score: '8.00'*/
    condition:
-      uint16(0) == 0x6628 and filesize < 70KB and
+      uint16(0) == 0x6628 and filesize < 1000KB and
       all of them
 }
 
@@ -21970,7 +21970,7 @@ rule _Stealc_signature__d42595b695fc008ef2c56aabd8efd68e_imphash__ValleyRAT_sign
       $s11 = "runtime.runfinq" fullword ascii /* score: '10.00'*/
       $s12 = "tryGetFast" fullword ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 9000KB and ( 10 of them )
+      ( uint16(0) == 0x5a4d and filesize < 9000KB and ( all of them )
       ) or ( all of them )
 }
 
@@ -29969,39 +29969,6 @@ rule _7100aad9d24cb928369369e5b2141e5a_imphash__7100aad9d24cb928369369e5b2141e5a
       $s15 = "We will provide payment information, once payment is done, we will sent you a decryptor!" fullword ascii /* score: '11.00'*/
    condition:
       ( uint16(0) == 0x5a4d and filesize < 60KB and pe.imphash() == "7100aad9d24cb928369369e5b2141e5a" and ( 1 of ($x*) and 4 of them )
-      ) or ( all of them )
-}
-
-rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_0512719a1f878b3611b03d100a854910_imphash__37d3842_57 {
-   meta:
-      description = "_subset_batch - from files 00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c.elf, 0512719a1f878b3611b03d100a854910(imphash).exe, 37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857_37d38427.elf, 3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a4a2b29afb6bff08_3ad87cc8.elf, 4035d2883e01d64f3e7a9dccb1d63af5(imphash).exe, 4035d2883e01d64f3e7a9dccb1d63af5(imphash)_30344db9.exe, 416aff537cf06107cccfcbff2b142e2f92d23f7aacc51c0e19a66b92b0797fe7_416aff53.elf, 6c5348ed0a55e1c69b6ce05a34879033ae04807f92211eb1fb959b207bb32506_6c5348ed.elf, 6d5f17d7b00a92e39881ac506210c7d6725c92db86942a931e711fb1aede4ce7_6d5f17d7.elf, 7de5b038c5ce3d401bf2c8c38ddf7d71dd3af0018a66fe9bc71a35f912e21c02_7de5b038.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d"
-      hash2 = "418ec7ea2b11e518fea98992db9c087d4a38df8b4e9c52b55045d7cd0abdd9ac"
-      hash3 = "37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857"
-      hash4 = "3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a4a2b29afb6bff08"
-      hash5 = "931651b9bbcb39eca9b48f5a4b733d949248ed09e1d239f9150c336480d9a973"
-      hash6 = "30344db9ed508306a213aeae8762cff8789eac9501632c6b35de82586acba07c"
-      hash7 = "416aff537cf06107cccfcbff2b142e2f92d23f7aacc51c0e19a66b92b0797fe7"
-      hash8 = "6c5348ed0a55e1c69b6ce05a34879033ae04807f92211eb1fb959b207bb32506"
-      hash9 = "6d5f17d7b00a92e39881ac506210c7d6725c92db86942a931e711fb1aede4ce7"
-      hash10 = "7de5b038c5ce3d401bf2c8c38ddf7d71dd3af0018a66fe9bc71a35f912e21c02"
-   strings:
-      $s1 = "targetpc" fullword ascii /* score: '18.00'*/
-      $s2 = "reflect.makeComplex" fullword ascii /* score: '10.00'*/
-      $s3 = "reflect.Value.runes" fullword ascii /* score: '10.00'*/
-      $s4 = "reflect.Value.setRunes" fullword ascii /* score: '10.00'*/
-      $s5 = "reflect.cvtComplex" fullword ascii /* score: '10.00'*/
-      $s6 = "runtime.FuncForPC" fullword ascii /* score: '10.00'*/
-      $s7 = "reflect.(*rtype).Key" fullword ascii /* score: '10.00'*/
-      $s8 = "reflect.cvtStringRunes" fullword ascii /* score: '10.00'*/
-      $s9 = "reflect.makeRunes" fullword ascii /* score: '10.00'*/
-      $s10 = "reflect.cvtRunesString" fullword ascii /* score: '10.00'*/
-      $s11 = "waitsema" fullword ascii /* score: '8.00'*/
-   condition:
-      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( all of them )
       ) or ( all of them )
 }
 
