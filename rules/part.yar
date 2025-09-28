@@ -6872,7 +6872,7 @@ rule _97b2588f938cb00e2722645865a7fab1ade3b969d8a5e5a0f8ec02d8578632d0_97b2588f_
       $s14 = "*runtime.errorString" fullword ascii /* score: '10.00'*/
       $s15 = "*runtime.modulehash" fullword ascii /* score: '10.00'*/
    condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f or uint16(0) == 0xfacf ) and filesize < 24000KB and ( 8 of them )
+      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f or uint16(0) == 0xfacf ) and filesize < 24000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -13711,7 +13711,7 @@ rule _Mirai_signature__11bcd56a_Mirai_signature__19e62b77_20 {
       $s14 = "stop_attack_by_target" fullword ascii /* score: '14.00'*/
       $s15 = "__GI_pthread_attr_getscope" fullword ascii /* score: '12.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 600KB and ( 8 of them )
+      ( uint16(0) == 0x457f and filesize < 600KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -25268,26 +25268,6 @@ rule sig_0975b172f22deff878d2f0c06ffce6aac9b7da5b7ddcc8ed991bfbfdb9bb6feb_0975b1
       $s5 = "matplotlib version3.1.0, http://matplotlib.org/" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x4b50 and filesize < 300KB and
-      all of them
-}
-
-rule sig_7ea447e8f6f0685afb3ae17a54e6acfc62d68ad4aaeeea1ecc7adbc6d3b515dd_7ea447e8 {
-   meta:
-      description = "_subset_batch - file 7ea447e8f6f0685afb3ae17a54e6acfc62d68ad4aaeeea1ecc7adbc6d3b515dd_7ea447e8.xlsx"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "7ea447e8f6f0685afb3ae17a54e6acfc62d68ad4aaeeea1ecc7adbc6d3b515dd"
-   strings:
-      $s1 = "customXml/itemProps1.xml " fullword ascii /* score: '14.00'*/
-      $s2 = "customXml/itemProps3.xml " fullword ascii /* score: '14.00'*/
-      $s3 = "customXml/itemProps2.xml " fullword ascii /* score: '14.00'*/
-      $s4 = "customXml/itemProps1.xmlPK" fullword ascii /* score: '11.00'*/
-      $s5 = "customXml/itemProps3.xmlPK" fullword ascii /* score: '11.00'*/
-      $s6 = "customXml/itemProps2.xmlPK" fullword ascii /* score: '11.00'*/
-      $s7 = "xl/sharedStrings.xml" fullword ascii /* score: '10.00'*/
-   condition:
-      uint16(0) == 0x4b50 and filesize < 200KB and
       all of them
 }
 
@@ -37884,7 +37864,7 @@ rule _Mirai_signature__420c7996_Mirai_signature__44381eff_Mirai_signature__4e872
       $s14 = "__pthread_getconcurrency" fullword ascii /* score: '12.00'*/
       $s15 = "__GI_pthread_attr_getschedpolicy" fullword ascii /* score: '12.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 700KB and ( 8 of them )
+      ( uint16(0) == 0x457f and filesize < 700KB and ( 12 of them )
       ) or ( all of them )
 }
 
