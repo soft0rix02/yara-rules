@@ -10463,7 +10463,7 @@ rule HijackLoader_signature__5deb702c {
       $s15 = "ort order in which the actions are to be executed.  Leave blank to suppress action.Optional expression which skips the action if" ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 22000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule HijackLoader_signature__72acf597 {
