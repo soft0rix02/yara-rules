@@ -33496,11 +33496,9 @@ rule fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c_fc552292 {
       hash1 = "fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c"
    strings:
       $s1 = "l=http://8.134.74.227/gg4.hta\";</script></head></html>" fullword ascii /* score: '30.00'*/
-      $s2 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '26.00'*/
-      $s3 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '14.00'*/
    condition:
-      uint16(0) == 0x683c and filesize < 1KB and
-      all of them
+      uint16(0) == 0x683c and filesize < 100KB and
+      $s1
 }
 
 rule fd842c505db96c6967b882917002e649df2d889043686c1e0664ee95839660a7_fd842c50 {
@@ -33531,13 +33529,12 @@ rule fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849_fe06905f {
       hash1 = "fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849"
    strings:
       $x1 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '63.00'*/
-      $x2 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '59.00'*/
-      $s3 = "1.122:8888/lol111' -OutFile ([IO.Path]::Combine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); & ([IO.Path]::C" ascii /* score: '22.00'*/
-      $s4 = "ombine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); Remove-Item ([IO.Path]::Combine([Environment]::GetFolder" ascii /* score: '18.00'*/
-      $s5 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
+      $s2 = "1.122:8888/lol111' -OutFile ([IO.Path]::Combine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); & ([IO.Path]::C" ascii /* score: '22.00'*/
+      $s3 = "ombine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); Remove-Item ([IO.Path]::Combine([Environment]::GetFolder" ascii /* score: '18.00'*/
+      $s4 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x0a0d and filesize < 1KB and
-      1 of ($x*) and all of them
+      $x1 and 1 of ($s*)
 }
 
 rule fe3b52ffa96a6c7474982f6a49c1ceea67f55b1dc7881e77394966d5ca03173c_fe3b52ff {
