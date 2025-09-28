@@ -29,21 +29,6 @@ rule sig_81b187eca349978e3078c7638f065375_imphash_ {
       all of them
 }
 
-rule sig_97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb8 {
-   meta:
-      description = "_subset_batch - file 97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb8.js"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614"
-   strings:
-      $s1 = " Y=0x0,N,G,n=0x0;G=X['charAt'](n++);~G&&(N=Y%0x4?N*0x40+G:G,Y++%0x4)?f+=String['fromCharCode'](0xff&N>>(-0x2*Y&0x6)):0x0){G=P['i" ascii /* score: '9.00'*/
-      $s2 = "(function(W,D){var G=i,a=W();while(!![]){try{var V=parseInt(G(0x150,'BHVk'))/0x1*(parseInt(G(0x30b,'w0Ul'))/0x2)+-parseInt(G(0x1" ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x6628 and filesize < 70KB and
-      all of them
-}
-
 rule sig_81b187eca349978e3078c7638f065375_imphash__cabf6539 {
    meta:
       description = "_subset_batch - file 81b187eca349978e3078c7638f065375(imphash)_cabf6539.exe"
