@@ -33495,7 +33495,7 @@ rule fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c_fc552292 {
       date = "2025-09-28"
       hash1 = "fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c"
    strings:
-      $s1 = "l=http://8.134.74.227/gg4.hta\";</script></head></html>" fullword ascii /* score: '30.00'*/
+      $s1 = "l=http://8.134.74.227/gg4.hta\";</script></head></html>" ascii /* score: '30.00'*/
    condition:
       uint16(0) == 0x683c and filesize < 100KB and
       $s1
