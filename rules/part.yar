@@ -25,21 +25,6 @@ rule sig_97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15e
       all of them
 }
 
-rule sig_97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb9 {
-   meta:
-      description = "_subset_batch - file 97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb8.js"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "fd48897c282b6d96657bd559057cc5d2b78ad51f981025c94966ec229de4e180"
-   strings:
-      $s1 = " Y=0x0,N,G,n=0x0;G=X['charAt'](n++);~G&&(N=Y%0x4?N*0x40+G:G,Y++%0x4)?f+=String['fromCharCode'](0xff&N>>(-0x2*Y&0x6)):0x0){G=P['i" ascii /* score: '9.00'*/
-      $s2 = "(function(W,D){var G=i,a=W();while(!![]){try{var V=parseInt(G(0x150,'BHVk'))/0x1*(parseInt(G(0x30b,'w0Ul'))/0x2)+-parseInt(G(0x1" ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x6628 and filesize < 1000KB and
-      all of them
-}
-
 rule MooBot_signature__9597ea18 {
    meta:
       description = "_subset_batch - file MooBot(signature)_9597ea18.elf"
