@@ -14158,7 +14158,7 @@ rule _Kaiji_signature__c6c0da6a_Kaiji_signature__ded5e440_Kaiji_signature__eec9b
       $s14 = "to read random data from the kernel" fullword ascii /* score: '14.00'*/
       $s15 = "stack=[_gatewayaddress bad MASKbash_cfgbrotli: cgocheckcontinuecpsr    deadlockdefault:defaultsdns-tcp4documenterror   execwaite" ascii /* score: '13.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 16000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 16000KB and ( 5 of ($x*) and 3 of ($s*) )
       ) or ( all of them )
 }
 
