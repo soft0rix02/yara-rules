@@ -33581,9 +33581,10 @@ rule fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c_fc552292 {
    strings:
       $s1 = "l=http://8.134.74.227/gg4.hta\";</script></head></html>" fullword ascii /* score: '30.00'*/
       $s2 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '26.00'*/
+      $s3 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '14.00'*/
    condition:
-      uint16(0) == 0x683c and filesize < 10KB and
-      one of ($s*)
+      uint16(0) == 0x683c and filesize < 1KB and
+      all of them
 }
 
 rule fd842c505db96c6967b882917002e649df2d889043686c1e0664ee95839660a7_fd842c50 {
