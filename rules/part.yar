@@ -10633,7 +10633,7 @@ rule HijackLoader_signature__562fce7b {
       $s3 = "powershell -wind mi -Enc KAAuACAAKAAoAGcAYQBsACAAKgApAFsAMQA0ADkAXQAuAE4AYQBtAGUAKQAgAC0AdQBzAGUAYgBhACAAaAB0AHQAcABzADoALwAvAG0" ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1KB and
-      all of them
+      2 of ($s*)
 }
 
 rule HijackLoader_signature__84aca602 {
