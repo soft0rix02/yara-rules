@@ -36236,21 +36236,6 @@ rule _Ga_gyt_signature__Ga_gyt_signature__8da6474c_Ga_gyt_signature__c9d27f1a_Ga
       ) or ( all of them )
 }
 
-rule Mirai_signature__1d06d6e7 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_1d06d6e7.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "1d06d6e7860b88457b88256b7ae77bf28ed0f54cb473dd28f1bf05f8b7262673"
-   strings:
-      $s1 = "AWAVAUATA" fullword ascii /* reversed goodware string 'ATAUAVAWA' */ /* score: '16.50'*/
-      $s2 = "AWAVAUA" fullword ascii /* reversed goodware string 'AUAVAWA' */ /* score: '16.50'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 400KB and
-      all of them
-}
-
 rule Mirai_signature__27732f1d {
    meta:
       description = "_subset_batch - file Mirai(signature)_27732f1d.elf"
