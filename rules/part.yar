@@ -36236,30 +36236,6 @@ rule _Ga_gyt_signature__Ga_gyt_signature__8da6474c_Ga_gyt_signature__c9d27f1a_Ga
       ) or ( all of them )
 }
 
-rule _eecde392387f983dbd8f222cb344d1d5d1368a79fee431de63415386702e7057_eecde392_f52a293724e9edfa2934196b922f1500114459869d31047ee_48 {
-   meta:
-      description = "_subset_batch - from files eecde392387f983dbd8f222cb344d1d5d1368a79fee431de63415386702e7057_eecde392.js, f52a293724e9edfa2934196b922f1500114459869d31047ee8261b9e26dcf8a5_f52a2937.lzh"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "eecde392387f983dbd8f222cb344d1d5d1368a79fee431de63415386702e7057"
-      hash2 = "f52a293724e9edfa2934196b922f1500114459869d31047ee8261b9e26dcf8a5"
-   strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                           ' */ /* score: '26.50'*/
-      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                               ' */ /* score: '26.50'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                           ' */ /* score: '26.50'*/
-      $s4 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                                   ' */ /* score: '26.50'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                           ' */ /* score: '26.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                       ' */ /* score: '26.50'*/
-      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                                                       ' */ /* score: '26.50'*/
-      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                               ' */ /* score: '16.50'*/
-      $s9 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                       ' */ /* score: '16.50'*/
-      $s10 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                                                                                                                                                                           ' */ /* score: '16.50'*/
-   condition:
-      ( ( uint16(0) == 0x6632 or uint16(0) == 0x675a ) and filesize < 2000KB and ( all of them )
-      ) or ( all of them )
-}
-
 rule Mirai_signature__1d06d6e7 {
    meta:
       description = "_subset_batch - file Mirai(signature)_1d06d6e7.elf"
