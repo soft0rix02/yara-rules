@@ -1661,20 +1661,6 @@ rule aa0340651089c88231a6751eba2fb08bd40da2e7670384b301ee835d75eaa555_aa034065 {
       all of them
 }
 
-rule sig_9de2606cfa0aa0d2eef8afd2762e167e497e35b354a69c03cbb6b907cec1bd6b_9de2606c {
-   meta:
-      description = "_subset_batch - file 9de2606cfa0aa0d2eef8afd2762e167e497e35b354a69c03cbb6b907cec1bd6b_9de2606c.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "9de2606cfa0aa0d2eef8afd2762e167e497e35b354a69c03cbb6b907cec1bd6b"
-   strings:
-      $s1 = "__vdso_clock_gettime" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 400KB and
-      all of them
-}
-
 rule a2f1713fe7b19d0edf6f36ffa30b4db79ea1bf318187ac7c0a5d59749c7ea84e_a2f1713f {
    meta:
       description = "_subset_batch - file a2f1713fe7b19d0edf6f36ffa30b4db79ea1bf318187ac7c0a5d59749c7ea84e_a2f1713f.elf"
@@ -22806,7 +22792,7 @@ rule sig_02b04677321d823fbe529a06e47a701e_imphash_ {
       $s15 = "|}|||||" fullword ascii /* reversed goodware string '|||||}|' */ /* score: '11.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
-      8 of them
+      12 of them
 }
 
 rule sig_4c1fc10aff32912a1483ff882a457baf_imphash_ {
@@ -28809,7 +28795,7 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s14 = "runtime.getitab" fullword ascii /* score: '15.00'*/
       $s15 = "runtime.deductSweepCredit" fullword ascii /* score: '15.00'*/
    condition:
-      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( 8 of them )
+      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -29739,43 +29725,6 @@ rule _084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94_
       ) or ( all of them )
 }
 
-rule _0512719a1f878b3611b03d100a854910_imphash__084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94_0f50ae3_48 {
-   meta:
-      description = "_subset_batch - from files 0512719a1f878b3611b03d100a854910(imphash).exe, 084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94.elf, 0f50ae3b7720e4746f66011e6d008da66fe072bdc1d2b436e38425a7b885693b_0f50ae3b.elf, 33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d.elf, 36bf2503a88c8d7798a0751ff12f0126dd48db205109aa42a2b7129317a627ed_36bf2503.elf, 37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d_37c14ac6.elf, 4035d2883e01d64f3e7a9dccb1d63af5(imphash).exe, 4035d2883e01d64f3e7a9dccb1d63af5(imphash)_30344db9.exe, 44c6fbea46ea8d2b1c42d2a77c1af1a64bbc465318ee46edd1322bfe9ee91c48_44c6fbea.elf, 7b2f554ded403a23808d09d27913bdf284a96216ef5b35f1affc6a384d80fb1c_7b2f554d.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "418ec7ea2b11e518fea98992db9c087d4a38df8b4e9c52b55045d7cd0abdd9ac"
-      hash2 = "084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba"
-      hash3 = "0f50ae3b7720e4746f66011e6d008da66fe072bdc1d2b436e38425a7b885693b"
-      hash4 = "33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c"
-      hash5 = "36bf2503a88c8d7798a0751ff12f0126dd48db205109aa42a2b7129317a627ed"
-      hash6 = "37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d"
-      hash7 = "931651b9bbcb39eca9b48f5a4b733d949248ed09e1d239f9150c336480d9a973"
-      hash8 = "30344db9ed508306a213aeae8762cff8789eac9501632c6b35de82586acba07c"
-      hash9 = "44c6fbea46ea8d2b1c42d2a77c1af1a64bbc465318ee46edd1322bfe9ee91c48"
-      hash10 = "7b2f554ded403a23808d09d27913bdf284a96216ef5b35f1affc6a384d80fb1c"
-   strings:
-      $s1 = "sync.runtime_SemacquireMutex" fullword ascii /* score: '21.00'*/
-      $s2 = "syscall.CloseOnExec" fullword ascii /* score: '15.00'*/
-      $s3 = "runtime.traceGCSweepStart" fullword ascii /* score: '15.00'*/
-      $s4 = "runtime.traceGCSweepDone" fullword ascii /* score: '15.00'*/
-      $s5 = "runtime.getRandomData" fullword ascii /* score: '15.00'*/
-      $s6 = "runtime.getargp" fullword ascii /* score: '15.00'*/
-      $s7 = "runtime.hashGrow" fullword ascii /* score: '13.00'*/
-      $s8 = "tophash" fullword ascii /* score: '11.00'*/
-      $s9 = "runtime.traceGoUnpark" fullword ascii /* score: '10.00'*/
-      $s10 = "runtime.traceProcStop" fullword ascii /* score: '10.00'*/
-      $s11 = "runtime.traceGCStart" fullword ascii /* score: '10.00'*/
-      $s12 = "runtime.traceGoStart" fullword ascii /* score: '10.00'*/
-      $s13 = "sync.runtime_doSpin" fullword ascii /* score: '10.00'*/
-      $s14 = "runtime.fastrand" fullword ascii /* score: '10.00'*/
-      $s15 = "runtime.traceGoCreate" fullword ascii /* score: '10.00'*/
-   condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 17000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
 rule _33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d_37c14ac6942e05caf18340201ab76c17220d446104349ec45_49 {
    meta:
       description = "_subset_batch - from files 33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d.elf, 37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d_37c14ac6.elf"
@@ -30066,7 +30015,7 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s10 = "reflect.cvtRunesString" fullword ascii /* score: '10.00'*/
       $s11 = "waitsema" fullword ascii /* score: '8.00'*/
    condition:
-      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( 8 of them )
+      ( ( uint16(0) == 0x457f or uint16(0) == 0x5a4d ) and filesize < 24000KB and ( 10 of them )
       ) or ( all of them )
 }
 
@@ -37864,7 +37813,7 @@ rule _Mirai_signature__420c7996_Mirai_signature__44381eff_Mirai_signature__4e872
       $s14 = "__pthread_getconcurrency" fullword ascii /* score: '12.00'*/
       $s15 = "__GI_pthread_attr_getschedpolicy" fullword ascii /* score: '12.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 700KB and ( 12 of them )
+      ( uint16(0) == 0x457f and filesize < 700KB and ( 15 of them )
       ) or ( all of them )
 }
 
