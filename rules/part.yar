@@ -22514,7 +22514,7 @@ rule sig_1ff8268fa64c8f55eb750c4433c1e9e47dc7359b7fcc653215423ed3fe5d8b4d_1ff826
       $x15 = "%s\\System32\\cmd.exe" fullword wide /* score: '32.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 12000KB and
-      1 of ($x*)
+      10 of ($x*)
 }
 
 rule sig_0c3512c1117033e345356f48160c06d7ae2973b51f6fc3add0b35556dbd15eda_0c3512c1 {
@@ -23450,34 +23450,6 @@ rule sig_04ba61b30b4469b6953b018b576ec53ccc752b2304fad1c98dbe1dadae70478a_04ba61
    condition:
       uint16(0) == 0x4b50 and filesize < 600KB and
       all of them
-}
-
-rule sig_04e378b653cb975609ab637eef36bf92d26867dcd79fb90c5f7e1993019eff91_04e378b6 {
-   meta:
-      description = "_subset_batch - file 04e378b653cb975609ab637eef36bf92d26867dcd79fb90c5f7e1993019eff91_04e378b6.msc"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "04e378b653cb975609ab637eef36bf92d26867dcd79fb90c5f7e1993019eff91"
-   strings:
-      $s1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                            ' */ /* score: '26.50'*/
-      $s2 = "AAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                  ' */ /* score: '26.50'*/
-      $s3 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                   ' */ /* score: '26.50'*/
-      $s4 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                    ' */ /* score: '26.50'*/
-      $s5 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                  ' */ /* score: '26.50'*/
-      $s6 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                     ' */ /* score: '26.50'*/
-      $s7 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                       ' */ /* score: '26.50'*/
-      $s8 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                    ' */ /* score: '26.50'*/
-      $s9 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                                      ' */ /* score: '26.50'*/
-      $s10 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                             ' */ /* score: '26.50'*/
-      $s11 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                          ' */ /* score: '26.50'*/
-      $s12 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                 ' */ /* score: '26.50'*/
-      $s13 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                           ' */ /* score: '26.50'*/
-      $s14 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                      ' */ /* score: '26.50'*/
-      $s15 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ascii /* base64 encoded string '                                         ' */ /* score: '26.50'*/
-   condition:
-      uint16(0) == 0x3f3c and filesize < 4000KB and
-      8 of them
 }
 
 rule sig_20b90d4f56029a19868023288e8552ccda6a62fdda33fe177f3a5f4d0e9cf7d1_20b90d4f {
