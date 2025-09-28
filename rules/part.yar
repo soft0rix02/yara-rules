@@ -9063,7 +9063,7 @@ rule MeshAgent_signature__7aa58492bf5691114c98568704d048cd_imphash_ {
       $x15 = "process.versions.commitHash" fullword ascii /* score: '31.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 11000KB and
-      1 of ($x*)
+      10 of ($x*)
 }
 
 rule HijackLoader_signature__492a5d3560401c2811de048088bf91d0_imphash_ {
@@ -10631,7 +10631,7 @@ rule HijackLoader_signature__f1051b84 {
       $s15 = "sPrimary key, name of action, normally appears in sequence table unless private use.The numeric custom action type, consisting o" ascii /* score: '13.00'*/
    condition:
       uint16(0) == 0xcfd0 and filesize < 9000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule HijackLoader_signature__562fce7b {
@@ -15598,7 +15598,7 @@ rule UltraVNC_signature__1d1577d864d2da06952f7affd8635371_imphash_ {
       $s15 = " - Copyright (c) 2005-2012 " fullword ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
-      1 of ($x*) and 4 of them
+      1 of ($x*) and 10 of them
 }
 
 rule YoungLotus_signature__fadd76ef2c914e3919d7c39efa50d468_imphash_ {
@@ -22433,7 +22433,7 @@ rule sig_6031d51ac05a0e710227c35fbd66134d4df6912c064dcbe07452ab09abd4f763_6031d5
       $s15 = "failed to map segment from shared object" fullword ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 2000KB and
-      10 of them
+      12 of them
 }
 
 rule sig_17688c66dfa94e9fbe8b54d5160c3b19_imphash_ {
@@ -25287,7 +25287,7 @@ rule sig_7ea447e8f6f0685afb3ae17a54e6acfc62d68ad4aaeeea1ecc7adbc6d3b515dd_7ea447
       $s6 = "customXml/itemProps2.xmlPK" fullword ascii /* score: '11.00'*/
       $s7 = "xl/sharedStrings.xml" fullword ascii /* score: '10.00'*/
    condition:
-      uint16(0) == 0x4b50 and filesize < 400KB and
+      uint16(0) == 0x4b50 and filesize < 200KB and
       all of them
 }
 
