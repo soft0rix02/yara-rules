@@ -22433,7 +22433,7 @@ rule sig_6031d51ac05a0e710227c35fbd66134d4df6912c064dcbe07452ab09abd4f763_6031d5
       $s15 = "failed to map segment from shared object" fullword ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 2000KB and
-      8 of them
+      10 of them
 }
 
 rule sig_17688c66dfa94e9fbe8b54d5160c3b19_imphash_ {
@@ -26199,7 +26199,7 @@ rule sig_2d7847e1b6289ade3c7ab13a185fad64_imphash__d9c08e5b {
       $s4 = "            publicKeyToken=\"6595b64144ccf1df\" " fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 2000KB and
-      all of them
+      3 of ($s*)
 }
 
 rule sig_1701a879c9faabcab5006dd0ae0edea0ab7f64b264248a4d3016fa759be1ba80_1701a879 {
@@ -27708,22 +27708,6 @@ rule sig_3f404b43fd2bfc6c89d30eafc9fecdb1ff984450166191b8e9de48531de9cfc6_3f404b
    condition:
       uint16(0) == 0x6f70 and filesize < 20KB and
       1 of ($x*) and all of them
-}
-
-rule sig_8037f87cc3b8f50e48ff14170081c0e5_imphash_ {
-   meta:
-      description = "_subset_batch - file 8037f87cc3b8f50e48ff14170081c0e5(imphash).exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "ae9a2dd2a9f2bac451b66f28d1db521eaa6f3b3a2639e7229588ab80275fd328"
-   strings:
-      $s1 = "      <assemblyIdentity type=\"win32\" name=\"Microsoft.VC90.CRT\" version=\"9.0.21022.8\" processorArchitecture=\"amd64\" publi" ascii /* score: '18.00'*/
-      $s2 = "        <requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"></requestedExecutionLevel>" fullword ascii /* score: '15.00'*/
-      $s3 = "      <assemblyIdentity type=\"win32\" name=\"Microsoft.VC90.CRT\" version=\"9.0.21022.8\" processorArchitecture=\"amd64\" publi" ascii /* score: '15.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 40KB and
-      all of them
 }
 
 rule sig_4133198dcc1f423b3ef56fcb9a66d6c84366d3ed23c95cf5d2a71efe229bd7ee_4133198d {
