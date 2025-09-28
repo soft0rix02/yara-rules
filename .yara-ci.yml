@@ -18,7 +18,7 @@ files:
 # 
 false_negatives:
   # Kural metadatasından hangi alanlardan hash toplanacağını belirt
-  meta_names:
+  meta:
     - "*hash*"
     - "*sha256*"
     - "*sha1*"
