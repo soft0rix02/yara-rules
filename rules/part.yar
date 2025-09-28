@@ -14446,7 +14446,7 @@ rule _Kaiji_signature__8895157c_Kaiji_signature__af3c1821_43 {
       $s14 = "  minutes nalloc= newval= nfreed= packed= ping=%q pointer stack=[ status %!Month() errno=/gid_map/uid_map/var/run2.5.4.102.5.4.1" ascii /* score: '12.00'*/
       $s15 = "nvalid length of trace eventio: read/write on closed pipemachine is not on the networkmismatched local address typeno XENIX sema" ascii /* score: '12.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 17000KB and ( 2 of ($x*) and 8 of ($s*) )
       ) or ( all of them )
 }
 
@@ -27896,7 +27896,7 @@ rule sig_5ba851a46be6fec695c68a3c1facceeaee9248b7fea4d058229adec568e2a987_5ba851
    strings:
       $x1 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command \"iex ((New-Object Net.WebClient).DownloadString('htt" ascii /* score: '47.00'*/
       $x2 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command \"iex ((New-Object Net.WebClient).DownloadString('htt" ascii /* score: '44.00'*/
-      $s3 = "s://ctrlcapaserc.com/bomla'))\"" fullword ascii /* score: '10.00'*/
+      $s3 = "s://ctrlcapaserc.com/bomla'))\"" ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1KB and
       1 of ($x*) and $s3
@@ -29041,7 +29041,7 @@ rule _416aff537cf06107cccfcbff2b142e2f92d23f7aacc51c0e19a66b92b0797fe7_416aff53_
       $s14 = "untime: work.nwait = runtime:scanstack: gp=scanstack - bad statusheadTailIndex overflowruntime.main not on m0set_crosscall2 miss" ascii /* score: '21.00'*/
       $s15 = "RCodeFormatErrorunpacking headerContent-Languageinvalid encodingempty hex numberlength too large[bisect-match 0xCloseCurlyQuote;" ascii /* score: '20.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 24000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 24000KB and ( 5 of ($x*) and 3 of ($s*) )
       ) or ( all of them )
 }
 
@@ -29191,7 +29191,7 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s14 = "sia/ShanghaiNative Clientgzip, deflateAT&T Mobilityhttps://%s:%sX-Remote-AddrX-Incap-Proxy1.1 %s.%s.comvisitor_id=%slevel 3 rese" ascii /* score: '18.50'*/
       $s15 = " trying to unmarshal %q into %vexec: command with a non-nil Cancel was not created with CommandContextrange function recovered a" ascii /* score: '18.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 21000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 21000KB and ( 3 of ($x*) and 5 of ($s*) )
       ) or ( all of them )
 }
 
@@ -29254,35 +29254,6 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s15 = "indefinite length found (not DER)struct contains unexported fieldsleafCounts[maxBits][maxBits] != nscalar has high bit set illeg" ascii /* score: '20.00'*/
    condition:
       ( uint16(0) == 0x457f and filesize < 24000KB and ( 1 of ($x*) and 4 of them )
-      ) or ( all of them )
-}
-
-rule _37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857_37d38427_3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a_34 {
-   meta:
-      description = "_subset_batch - from files 37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857_37d38427.elf, 3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a4a2b29afb6bff08_3ad87cc8.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857"
-      hash2 = "3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a4a2b29afb6bff08"
-   strings:
-      $x1 = "unsafe.String: len out of range.lib section in a.out corruptedcannot assign requested addressmalformed time zone informationcryp" ascii /* score: '76.50'*/
-      $x2 = "lock: lock countbad system huge page sizearena already initialized to unused region of spanunaligned sysNoHugePageOS/sched/gomax" ascii /* score: '61.50'*/
-      $x3 = "tls: internal error: sending non-handshake message to QUIC transportcrypto/hmac: hash generation function does not produce uniqu" ascii /* score: '51.50'*/
-      $x4 = "5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296" ascii /* score: '49.50'*/
-      $x5 = "crypto/ecdsa: use of custom curves is not allowed in FIPS 140-only modex509: issuer has name constraints but leaf doesn't have a" ascii /* score: '40.00'*/
-      $x6 = "runtime: morestack on g0, stack [runtime: castogscanstatus oldval=stoplockedm: inconsistent lockingfindrunnable: negative nmspin" ascii /* score: '40.00'*/
-      $x7 = "crypto/rand: failed to read random data (see https://go.dev/issue/66821): tls: certificate RSA key size too small for supported " ascii /* score: '38.50'*/
-      $x8 = "MapIter.Next called on an iterator that does not have an associated map Valuerange function continued iteration after function f" ascii /* score: '37.00'*/
-      $x9 = "socks bindProcessingNo Content%s|%s%s|%s/dev/stdinreaddirent (deleted)pidfd_openpidfd_waitexecerrdotnotifyListprofInsertstackLar" ascii /* score: '33.00'*/
-      $x10 = ".com/EDDYCJY/fake-useragent/v0.2.0/static/tls: server's certificate contains an unsupported type of public key: %Truntime.Goexit" ascii /* score: '32.00'*/
-      $s11 = "tinvalid request :path %qread_frame_conn_error_%sRequest Entity Too Largehttp: nil Request.Headerexec: Stdout already settracech" ascii /* score: '27.00'*/
-      $s12 = "system huge page size (runtime: s.allocCount= s.allocCount > s.nelems/gc/heap/allocs:objectsmissing type in runfinqruntime: inte" ascii /* score: '24.00'*/
-      $s13 = "evaluefloat  -%s(nil)Errorlinuxfileshttpsimap2imap3imapspop3shostsclose&amp;&#34;&#39;:***@Rangerange:pathHTTP1%s %q%s=%sHTTP/so" ascii /* score: '23.00'*/
-      $s14 = "_eofunknown error unknown code: Not Acceptable (core dumped)/proc/self/exe" fullword ascii /* score: '21.00'*/
-      $s15 = " beginning of a header blockcouldn't find DNS entries for the given domain. Try using DialDualStackhttps://raw.githubusercontent" ascii /* score: '20.00'*/
-   condition:
-      ( uint16(0) == 0x457f and filesize < 21000KB and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
@@ -29706,7 +29677,7 @@ rule _084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94_
       $s14 = "thContent-Lengthread_frame_eofNot AcceptableMAX_FRAME_SIZEPROTOCOL_ERRORINTERNAL_ERRORREFUSED_STREAMbad record MACinternal error" ascii /* score: '18.00'*/
       $s15 = "henticateproxy-connectionread_frame_otherContent-Encoding%s %s HTTP/1.1" fullword ascii /* score: '17.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 17000KB and ( 2 of ($x*) and 10 of ($s*) )
       ) or ( all of them )
 }
 
@@ -29735,7 +29706,7 @@ rule _33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d_
       $s14 = "ject at *( in prepareForSweep; sweepgen /cpu/classes/total:cpu-seconds/gc/cycles/automatic:gc-cycles/sync/mutex/wait/total:secon" ascii /* score: '20.00'*/
       $s15 = "out of range [%x:]SIGSEGV: segmentation violationinternal error - misuse of itab) not in usable address space: runtime: cannot a" ascii /* score: '19.50'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 17000KB and ( 4 of ($x*) and 5 of ($s*) )
       ) or ( all of them )
 }
 
@@ -30216,7 +30187,7 @@ rule _33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d_
       $s14 = "erUpgradechunkedCONNECTupgradeOPTIONSCreatedIM Used%s%s|%sHTTP/1.HEADERSderived. Got: 19531259765625abortedstoppedsignal Tuesday" ascii /* score: '16.00'*/
       $s15 = "stack=[ minutes etypes SHA1-RSADSA-SHA1x509sha1DNS nameRSV1 setRSV2 setRSV3 setbad MASKGoStringReceivedif-rangeMD5+SHA1SHA3-224S" ascii /* score: '14.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 17000KB and ( 2 of ($x*) and 10 of ($s*) )
       ) or ( all of them )
 }
 
@@ -31210,7 +31181,7 @@ rule e18705a442ebb0d82cf9218e8217c71b14d1c52ecb41cc50fc0d4a2f4d2d023c_e18705a4 {
       $s15 = "'private const aarnamvgj = \"  winrm enum wmicimv2/* -filter:\"\"select * from win32_service where StartMode=\\\"\"Auto\\\"\" an" ascii /* score: '27.00'*/
    condition:
       uint16(0) == 0x0d27 and filesize < 500KB and
-      1 of ($x*) and all of them
+      3 of ($x*) and 5 of ($s*)
 }
 
 rule Formbook_signature__424ae294 {
@@ -33610,10 +33581,9 @@ rule fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c_fc552292 {
    strings:
       $s1 = "l=http://8.134.74.227/gg4.hta\";</script></head></html>" fullword ascii /* score: '30.00'*/
       $s2 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '26.00'*/
-      $s3 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '14.00'*/
    condition:
-      uint16(0) == 0x683c and filesize < 1KB and
-      all of them
+      uint16(0) == 0x683c and filesize < 10KB and
+      one of ($s*)
 }
 
 rule fd842c505db96c6967b882917002e649df2d889043686c1e0664ee95839660a7_fd842c50 {
@@ -33644,13 +33614,12 @@ rule fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849_fe06905f {
       hash1 = "fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849"
    strings:
       $x1 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '63.00'*/
-      $x2 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '59.00'*/
       $s3 = "1.122:8888/lol111' -OutFile ([IO.Path]::Combine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); & ([IO.Path]::C" ascii /* score: '22.00'*/
       $s4 = "ombine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); Remove-Item ([IO.Path]::Combine([Environment]::GetFolder" ascii /* score: '18.00'*/
       $s5 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
    condition:
-      uint16(0) == 0x0a0d and filesize < 1KB and
-      1 of ($x*) and all of them
+      uint16(0) == 0x0a0d and filesize < 10KB and
+      $x1 and 2 of ($s*)
 }
 
 rule fe3b52ffa96a6c7474982f6a49c1ceea67f55b1dc7881e77394966d5ca03173c_fe3b52ff {
