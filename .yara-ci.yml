@@ -6,6 +6,7 @@ branches:
 files:
   accept:
     - "rules/*.yar"
+    - "rules/*.yara"
   ignore:
     - "rules/_experimental/**"   # opsiyonel: gürültülü/hunt kuralları
 
