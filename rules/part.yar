@@ -12371,62 +12371,6 @@ rule Meterpreter_signature__b4c6fff030479aa3b12625be67bf4914_imphash_ {
       all of them
 }
 
-rule Mirai_signature_ {
-   meta:
-      description = "_subset_batch - file Mirai(signature).elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "8c9f2f7075b94037df0c51e200c4e624c5ec351321287754e4ea88a9fd1d7d51"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "POST /ctrlt/DeviceUpgrade_1 HTTP/1.1" fullword ascii /* score: '16.00'*/
-      $s4 = "g/soap/encoding/\"><s:Body><u:Upgrade xmlns:u=\"urn:schemas-upnp-org:service:WANPPPConnection:1\"><NewStatusURL>$(/bin/busybox w" ascii /* score: '15.00'*/
-      $s5 = "Authorization: Digest username=\"dslf-config\", realm=\"HuaweiHomeGateway\", nonce=\"88645cefb1f9ede0e336e3569d75ee30\", uri=\"/" ascii /* score: '12.00'*/
-      $s6 = "Authorization: Digest username=\"dslf-config\", realm=\"HuaweiHomeGateway\", nonce=\"88645cefb1f9ede0e336e3569d75ee30\", uri=\"/" ascii /* score: '12.00'*/
-      $s7 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s8 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '10.00'*/
-      $s9 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s10 = "eviceUpgrade_1\", response=\"3612f843a42db38f48f59d2a3597e19c\", algorithm=\"MD5\", qop=\"auth\", nc=00000001, cnonce=\"248d1a25" ascii /* score: '9.00'*/
-      $s11 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s12 = "killattk" fullword ascii /* score: '8.00'*/
-      $s13 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s14 = "assword" fullword ascii /* score: '8.00'*/
-      $s15 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and 4 of them
-}
-
-rule Mirai_signature__067d7dcc {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_067d7dcc.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "067d7dcced0ad1e6302da96e82316f13293f59cbd9dc62818831c3e74f7c3645"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "POST /ctrlt/DeviceUpgrade_1 HTTP/1.1" fullword ascii /* score: '16.00'*/
-      $s4 = "auth.binaries.lol" fullword ascii /* score: '16.00'*/
-      $s5 = "g/soap/encoding/\"><s:Body><u:Upgrade xmlns:u=\"urn:schemas-upnp-org:service:WANPPPConnection:1\"><NewStatusURL>$(/bin/busybox w" ascii /* score: '15.00'*/
-      $s6 = "Authorization: Digest username=\"dslf-config\", realm=\"HuaweiHomeGateway\", nonce=\"88645cefb1f9ede0e336e3569d75ee30\", uri=\"/" ascii /* score: '12.00'*/
-      $s7 = "Authorization: Digest username=\"dslf-config\", realm=\"HuaweiHomeGateway\", nonce=\"88645cefb1f9ede0e336e3569d75ee30\", uri=\"/" ascii /* score: '12.00'*/
-      $s8 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s9 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '10.00'*/
-      $s10 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s11 = "eviceUpgrade_1\", response=\"3612f843a42db38f48f59d2a3597e19c\", algorithm=\"MD5\", qop=\"auth\", nc=00000001, cnonce=\"248d1a25" ascii /* score: '9.00'*/
-      $s12 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s13 = "killattk" fullword ascii /* score: '8.00'*/
-      $s14 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s15 = "assword" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 300KB and
-      1 of ($x*) and 4 of them
-}
-
 rule Mirai_signature__0864e7ab {
    meta:
       description = "_subset_batch - file Mirai(signature)_0864e7ab.elf"
@@ -12452,34 +12396,6 @@ rule Mirai_signature__0864e7ab {
       $s15 = "botkill" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and 4 of them
-}
-
-rule Mirai_signature__0ae4ca42 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_0ae4ca42.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "0ae4ca42cebf46220acaf97ef4eaba3533d71c8a20a099a143e6b25f6cf62d8a"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "POST /ctrlt/DeviceUpgrade_1 HTTP/1.1" fullword ascii /* score: '16.00'*/
-      $s4 = "g/soap/encoding/\"><s:Body><u:Upgrade xmlns:u=\"urn:schemas-upnp-org:service:WANPPPConnection:1\"><NewStatusURL>$(/bin/busybox w" ascii /* score: '15.00'*/
-      $s5 = "Authorization: Digest username=\"dslf-config\", realm=\"HuaweiHomeGateway\", nonce=\"88645cefb1f9ede0e336e3569d75ee30\", uri=\"/" ascii /* score: '12.00'*/
-      $s6 = "Authorization: Digest username=\"dslf-config\", realm=\"HuaweiHomeGateway\", nonce=\"88645cefb1f9ede0e336e3569d75ee30\", uri=\"/" ascii /* score: '12.00'*/
-      $s7 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s8 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '10.00'*/
-      $s9 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s10 = "eviceUpgrade_1\", response=\"3612f843a42db38f48f59d2a3597e19c\", algorithm=\"MD5\", qop=\"auth\", nc=00000001, cnonce=\"248d1a25" ascii /* score: '9.00'*/
-      $s11 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s12 = "killattk" fullword ascii /* score: '8.00'*/
-      $s13 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s14 = "assword" fullword ascii /* score: '8.00'*/
-      $s15 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 300KB and
       1 of ($x*) and 4 of them
 }
 
@@ -36025,27 +35941,6 @@ rule _Ga_gyt_signature__Ga_gyt_signature__8da6474c_Ga_gyt_signature__c9d27f1a_Ga
    condition:
       ( uint16(0) == 0x457f and filesize < 500KB and ( 8 of them )
       ) or ( all of them )
-}
-
-rule Mirai_signature__27732f1d {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_27732f1d.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "27732f1d9364ded49b2fe6f25e04b7e153967816e10d43b1de82e1e5735ddf64"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and 3 of ($s*)
 }
 
 rule Mirai_signature__41392c1b {
