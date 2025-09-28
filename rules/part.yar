@@ -33614,12 +33614,13 @@ rule fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849_fe06905f {
       hash1 = "fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849"
    strings:
       $x1 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '63.00'*/
+      $x2 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '59.00'*/
       $s3 = "1.122:8888/lol111' -OutFile ([IO.Path]::Combine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); & ([IO.Path]::C" ascii /* score: '22.00'*/
       $s4 = "ombine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); Remove-Item ([IO.Path]::Combine([Environment]::GetFolder" ascii /* score: '18.00'*/
       $s5 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
    condition:
-      uint16(0) == 0x0a0d and filesize < 10KB and
-      $x1 and 2 of ($s*)
+      uint16(0) == 0x0a0d and filesize < 1KB and
+      1 of ($x*) and all of them
 }
 
 rule fe3b52ffa96a6c7474982f6a49c1ceea67f55b1dc7881e77394966d5ca03173c_fe3b52ff {
