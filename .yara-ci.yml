@@ -29,8 +29,3 @@ false_positives:
     - file: "rules/_experimental/**"
     - rule: "**generic**"
     - meta_value: "**hunt**"   # metadata'da "hunt" geçenleri sayma
-
-
-
-
-
