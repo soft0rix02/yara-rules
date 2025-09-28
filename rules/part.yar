@@ -10,36 +10,6 @@
 
 import "pe"
 
-rule sig_97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb8 {
-   meta:
-      description = "_subset_batch - file 97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb8.js"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614"
-   strings:
-      $s1 = " Y=0x0,N,G,n=0x0;G=X['charAt'](n++);~G&&(N=Y%0x4?N*0x40+G:G,Y++%0x4)?f+=String['fromCharCode'](0xff&N>>(-0x2*Y&0x6)):0x0){G=P['i" ascii /* score: '9.00'*/
-      $s2 = "(function(W,D){var G=i,a=W();while(!![]){try{var V=parseInt(G(0x150,'BHVk'))/0x1*(parseInt(G(0x30b,'w0Ul'))/0x2)+-parseInt(G(0x1" ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x6628 and filesize < 70KB and
-      all of them
-}
-
-rule sig_97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb9 {
-   meta:
-      description = "_subset_batch - file 97b15eb8b293e5f3a1efb1b3da057cb1d2e91a03bbddcc0203f717ab932a4614_97b15eb8.js"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "fd48897c282b6d96657bd559057cc5d2b78ad51f981025c94966ec229de4e180"
-   strings:
-      $s1 = " Y=0x0,N,G,n=0x0;G=X['charAt'](n++);~G&&(N=Y%0x4?N*0x40+G:G,Y++%0x4)?f+=String['fromCharCode'](0xff&N>>(-0x2*Y&0x6)):0x0){G=P['i" ascii /* score: '9.00'*/
-      $s2 = "(function(W,D){var G=i,a=W();while(!![]){try{var V=parseInt(G(0x150,'BHVk'))/0x1*(parseInt(G(0x30b,'w0Ul'))/0x2)+-parseInt(G(0x1" ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x6628 and filesize < 70KB and
-      all of them
-}
-
 rule MooBot_signature__9597ea18 {
    meta:
       description = "_subset_batch - file MooBot(signature)_9597ea18.elf"
@@ -10646,7 +10616,7 @@ rule HijackLoader_signature__562fce7b {
       $s2 = "powershell -wind mi -Enc KAAuACAAKAAoAGcAYQBsACAAKgApAFsAMQA0ADkAXQAuAE4AYQBtAGUAKQAgAC0AdQBzAGUAYgBhACAAaAB0AHQAcABzADoALwAvAG0" ascii /* score: '9.00'*/
       $s3 = "powershell -wind mi -Enc KAAuACAAKAAoAGcAYQBsACAAKgApAFsAMQA0ADkAXQAuAE4AYQBtAGUAKQAgAC0AdQBzAGUAYgBhACAAaAB0AHQAcABzADoALwAvAG0" ascii /* score: '9.00'*/
    condition:
-      uint16(0) == 0x6f70 and filesize < 1KB and
+      uint16(0) == 0x6f70 and filesize < 400KB and
       all of them
 }
 
@@ -14172,8 +14142,8 @@ rule _Kaiji_signature__c6c0da6a_Kaiji_signature__ded5e440_Kaiji_signature__eec9b
       $s14 = "to read random data from the kernel" fullword ascii /* score: '14.00'*/
       $s15 = "stack=[_gatewayaddress bad MASKbash_cfgbrotli: cgocheckcontinuecpsr    deadlockdefault:defaultsdns-tcp4documenterror   execwaite" ascii /* score: '13.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 16000KB and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x457f and filesize < 16000KB and ( 1 of ($x*) and 5 of them )
+      ) or ( 10 of them )
 }
 
 rule _Mirai_signature__084ba7f2_Mirai_signature__0984cc42_Mirai_signature__0bc0cf73_35 {
@@ -14460,8 +14430,8 @@ rule _Kaiji_signature__8895157c_Kaiji_signature__af3c1821_43 {
       $s14 = "  minutes nalloc= newval= nfreed= packed= ping=%q pointer stack=[ status %!Month() errno=/gid_map/uid_map/var/run2.5.4.102.5.4.1" ascii /* score: '12.00'*/
       $s15 = "nvalid length of trace eventio: read/write on closed pipemachine is not on the networkmismatched local address typeno XENIX sema" ascii /* score: '12.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and 8 of them )
+      ) or ( 10 of them )
 }
 
 rule _Kaiji_signature__Kaiji_signature__a82036bb_Kaiji_signature__bd7a37a8_Kaiji_signature__c6c0da6a_Kaiji_signature__ded5e440_Ka_44 {
@@ -18389,7 +18359,7 @@ rule STRRAT_signature__7ece07ec {
       $s5 = "ar i=0; i<this.toString().length; i++){d = eval(\"var cd = this.toString().substr(i, 1);cd;\") + d;}return d;}}.mp3;" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x7453 and filesize < 3000KB and
-      all of them
+      4 of them
 }
 
 rule STRRAT_signature__2 {
@@ -23365,7 +23335,7 @@ rule sig_033036c8e1e40d53c90f93a224265cb798c58bf5d48f9e7160a540c958f5b3ad_033036
       $s3 = "powershell -wind mi -Enc LgAgACgAZwBhAGwAIAB3AGcAPwA/ACkAIAAtAHUAcwBlAGIAIABoAHQAdABwAHMAOgAvAC8AYQBuAGcAZQBsAGEAaQByAHMALgBjAG8" ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1KB and
-      all of them
+      2 of them
 }
 
 rule sig_03fa7fb2ba9d530afdd0deb7d19496ea34950ed3a0800558f3695d2b5dc34329_03fa7fb2 {
@@ -24832,7 +24802,7 @@ rule sig_7eceff81d7ba3b8a12d93221b1f564d8835b339669a382800f47df159159e17d_7eceff
       $s4 = "93.32.162.27/00101010101001/morte.mips; chmod 777 morte.mips; ./morte.mips morte.mips;</value>" fullword ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x623c and filesize < 2KB and
-      all of them
+      3 of ($s*)
 }
 
 rule sig_453ffaa4b93d44f9fdec327e92740ba2b9ed6e080df9b6c0834a79c8fa34e9f7_453ffaa4 {
@@ -27004,7 +26974,7 @@ rule sig_24d7520206452bbe32986b7d5347150ad2e33acdee1ab622dbe53d91d96ae88e_24d752
       $s15 = "nngkfonwkzveliguafxswqnrzgjrdwixgoxkkahiftwoexyrjnzcjbnrvydeumgftcixcomwwpmtegxxmghrqvqhgywdjlzurkeymelpbpfiicetfholzvnbmaodkkxd" ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0xfeff and filesize < 2000KB and
-      1 of ($x*) and all of them
+      3 of ($x*) and 5 of ($s*)
 }
 
 rule sig_3659ac46a884e4e2774c9c6f3230f65af5c517d365ee16cffd50027d1d725f83_3659ac46 {
@@ -27079,8 +27049,8 @@ rule sig_45843c4aba63cba8c3c23aeb702550269ee704371ce687c94d4440149fba598c_45843c
       $s6 = "call IllIIlIlIllllIlI.bat" fullword ascii /* score: '11.00'*/
       $s7 = "del llIlIllllIlllIll.txt" fullword ascii /* score: '11.00'*/
    condition:
-      uint16(0) == 0x6540 and filesize < 2KB and
-      all of them
+      uint16(0) == 0x6540 and filesize < 10KB and
+      5 of ($s*)
 }
 
 rule sig_5533c4c461fe08f8ff000d14998f590f52d840be2263ccaa100ab49a4ae51f5e_5533c4c4 {
@@ -27595,7 +27565,7 @@ rule sig_37e96cc01fcf657c68d05cb1814e63eaa46582c21a23edec1a8e5d6d81257f9c_37e96c
       $s6 = "fileName = Split-Path -Path $p1 -Leaf; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-W" ascii /* score: '11.00'*/
    condition:
       uint16(0) == 0x4e28 and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 3 of ($s*)
 }
 
 rule sig_3913b5412de2af6aa07d2048b01cfd8cb29b1648b98c03cc047fbc0e6174a8a3_3913b541 {
@@ -29151,7 +29121,7 @@ rule _416aff537cf06107cccfcbff2b142e2f92d23f7aacc51c0e19a66b92b0797fe7_416aff53_
       $s14 = "untime: work.nwait = runtime:scanstack: gp=scanstack - bad statusheadTailIndex overflowruntime.main not on m0set_crosscall2 miss" ascii /* score: '21.00'*/
       $s15 = "RCodeFormatErrorunpacking headerContent-Languageinvalid encodingempty hex numberlength too large[bisect-match 0xCloseCurlyQuote;" ascii /* score: '20.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 24000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 24000KB and ( 3 of ($x*) and 3 of ($s*) )
       ) or ( all of them )
 }
 
@@ -29301,7 +29271,7 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s14 = "sia/ShanghaiNative Clientgzip, deflateAT&T Mobilityhttps://%s:%sX-Remote-AddrX-Incap-Proxy1.1 %s.%s.comvisitor_id=%slevel 3 rese" ascii /* score: '18.50'*/
       $s15 = " trying to unmarshal %q into %vexec: command with a non-nil Cancel was not created with CommandContextrange function recovered a" ascii /* score: '18.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 21000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 21000KB and ( 3 of ($x*) and 5 of ($s*) )
       ) or ( all of them )
 }
 
@@ -29364,35 +29334,6 @@ rule _00b1ee6cfc8153ec2db1554076bd3db28102dac4e68901c824083bf4d913315d_00b1ee6c_
       $s15 = "indefinite length found (not DER)struct contains unexported fieldsleafCounts[maxBits][maxBits] != nscalar has high bit set illeg" ascii /* score: '20.00'*/
    condition:
       ( uint16(0) == 0x457f and filesize < 24000KB and ( 1 of ($x*) and 4 of them )
-      ) or ( all of them )
-}
-
-rule _37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857_37d38427_3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a_34 {
-   meta:
-      description = "_subset_batch - from files 37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857_37d38427.elf, 3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a4a2b29afb6bff08_3ad87cc8.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "37d3842741544d0ed5833a7b726448a1a51617dbf5e9e2f273022eb2a06b8857"
-      hash2 = "3ad87cc8e1672fac36db963bab65fb9d72c255eee04be9a2a4a2b29afb6bff08"
-   strings:
-      $x1 = "unsafe.String: len out of range.lib section in a.out corruptedcannot assign requested addressmalformed time zone informationcryp" ascii /* score: '76.50'*/
-      $x2 = "lock: lock countbad system huge page sizearena already initialized to unused region of spanunaligned sysNoHugePageOS/sched/gomax" ascii /* score: '61.50'*/
-      $x3 = "tls: internal error: sending non-handshake message to QUIC transportcrypto/hmac: hash generation function does not produce uniqu" ascii /* score: '51.50'*/
-      $x4 = "5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296" ascii /* score: '49.50'*/
-      $x5 = "crypto/ecdsa: use of custom curves is not allowed in FIPS 140-only modex509: issuer has name constraints but leaf doesn't have a" ascii /* score: '40.00'*/
-      $x6 = "runtime: morestack on g0, stack [runtime: castogscanstatus oldval=stoplockedm: inconsistent lockingfindrunnable: negative nmspin" ascii /* score: '40.00'*/
-      $x7 = "crypto/rand: failed to read random data (see https://go.dev/issue/66821): tls: certificate RSA key size too small for supported " ascii /* score: '38.50'*/
-      $x8 = "MapIter.Next called on an iterator that does not have an associated map Valuerange function continued iteration after function f" ascii /* score: '37.00'*/
-      $x9 = "socks bindProcessingNo Content%s|%s%s|%s/dev/stdinreaddirent (deleted)pidfd_openpidfd_waitexecerrdotnotifyListprofInsertstackLar" ascii /* score: '33.00'*/
-      $x10 = ".com/EDDYCJY/fake-useragent/v0.2.0/static/tls: server's certificate contains an unsupported type of public key: %Truntime.Goexit" ascii /* score: '32.00'*/
-      $s11 = "tinvalid request :path %qread_frame_conn_error_%sRequest Entity Too Largehttp: nil Request.Headerexec: Stdout already settracech" ascii /* score: '27.00'*/
-      $s12 = "system huge page size (runtime: s.allocCount= s.allocCount > s.nelems/gc/heap/allocs:objectsmissing type in runfinqruntime: inte" ascii /* score: '24.00'*/
-      $s13 = "evaluefloat  -%s(nil)Errorlinuxfileshttpsimap2imap3imapspop3shostsclose&amp;&#34;&#39;:***@Rangerange:pathHTTP1%s %q%s=%sHTTP/so" ascii /* score: '23.00'*/
-      $s14 = "_eofunknown error unknown code: Not Acceptable (core dumped)/proc/self/exe" fullword ascii /* score: '21.00'*/
-      $s15 = " beginning of a header blockcouldn't find DNS entries for the given domain. Try using DialDualStackhttps://raw.githubusercontent" ascii /* score: '20.00'*/
-   condition:
-      ( uint16(0) == 0x457f and filesize < 21000KB and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
@@ -29789,37 +29730,6 @@ rule _08e72ab453af9c98b11ad8b304266ea0_imphash__3f26b33b312325e720d7b471536e1fec
       ) or ( all of them )
 }
 
-rule _084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94_33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11_47 {
-   meta:
-      description = "_subset_batch - from files 084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94.elf, 33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d.elf, 37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d_37c14ac6.elf, 7b2f554ded403a23808d09d27913bdf284a96216ef5b35f1affc6a384d80fb1c_7b2f554d.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba"
-      hash2 = "33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c"
-      hash3 = "37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d"
-      hash4 = "7b2f554ded403a23808d09d27913bdf284a96216ef5b35f1affc6a384d80fb1c"
-   strings:
-      $x1 = " [failed to parse Location header %q: %vnet/http: invalid header field name %qtls: invalid ServerKeyExchange messageexpected an " ascii /* score: '66.50'*/
-      $x2 = "sched={pc:, gp->status= pluginpath= : unknown pc  called from  in host nameSHA256-RSAPSSSHA384-RSAPSSSHA512-RSAPSStrailing dataS" ascii /* score: '51.00'*/
-      $x3 = "morebuf={pc:: no frame (sp=runtime: frame runtimer: bad ptraceback stuckruntime.gopanicinvalid argSize<invalid Value>data before" ascii /* score: '31.00'*/
-      $x4 = "runtime: sp=abi mismatchreflect.Copy/dev/urandomECDSA-SHA256ECDSA-SHA384ECDSA-SHA512SSL_CERT_DIR (no status)%!(BADWIDTH)randauto" ascii /* score: '31.00'*/
-      $s5 = "stem.mark/etc/rc.d/init.dreading header: *http2.TransportWww-Authenticatecontent-encodingcontent-languagecontent-locationwww-aut" ascii /* score: '25.00'*/
-      $s6 = "re dumped)unexpected EOFsingle-request/etc/protocolsunknown mode: userArenaStateread mem statsallocfreetracegcstoptheworldGC ass" ascii /* score: '24.00'*/
-      $s7 = "pstime.Date(time.Local%!Weekday(short readreaddirent/dev/stdin/etc/hostsunixpacketnameservergetsockoptnetlinkribIP addresssetsoc" ascii /* score: '23.00'*/
-      $s8 = "runtime: casgstatus: oldval=gcstopm: negative nmspinningfindrunnable: netpoll with psave on system g not allowednewproc1: newg m" ascii /* score: '22.00'*/
-      $s9 = "244140625ParseUintinterruptbus errorcontinuedWednesdaySeptember-07:00:00Z07:00:00localtimefork/execattempts:no-reloadfiles,dnsdn" ascii /* score: '21.00'*/
-      $s10 = " with invalid signature algorithm -- obsoleteuconn.Extensions contains %v separate SupportedVersions extensionsruntime: unexpect" ascii /* score: '21.00'*/
-      $s11 = " unexpected overflowstream error: stream ID %d; %vframe_settings_ack_with_lengthillegal window increment valueHEADERS frame with" ascii /* score: '20.50'*/
-      $s12 = "ize == 0/gc/cycles/total:gc-cyclesnegative idle mark workersuse of invalid sweepLockerruntime: bad span s.state=runtime: pipe fa" ascii /* score: '18.00'*/
-      $s13 = "vel 2 haltedprotocol errortoo many userswindow changedtime.Location(: extra text: /etc/localtime.WithDeadline(<not Stringer> (co" ascii /* score: '18.00'*/
-      $s14 = "thContent-Lengthread_frame_eofNot AcceptableMAX_FRAME_SIZEPROTOCOL_ERRORINTERNAL_ERRORREFUSED_STREAMbad record MACinternal error" ascii /* score: '18.00'*/
-      $s15 = "henticateproxy-connectionread_frame_otherContent-Encoding%s %s HTTP/1.1" fullword ascii /* score: '17.00'*/
-   condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
-      ) or ( all of them )
-}
-
 rule _0512719a1f878b3611b03d100a854910_imphash__084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94_0f50ae3_48 {
    meta:
       description = "_subset_batch - from files 0512719a1f878b3611b03d100a854910(imphash).exe, 084fbd94693c1a41c17459784e5691d37dee3ab33379097da0f3a06a4ef484ba_084fbd94.elf, 0f50ae3b7720e4746f66011e6d008da66fe072bdc1d2b436e38425a7b885693b_0f50ae3b.elf, 33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d.elf, 36bf2503a88c8d7798a0751ff12f0126dd48db205109aa42a2b7129317a627ed_36bf2503.elf, 37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d_37c14ac6.elf, 4035d2883e01d64f3e7a9dccb1d63af5(imphash).exe, 4035d2883e01d64f3e7a9dccb1d63af5(imphash)_30344db9.exe, 44c6fbea46ea8d2b1c42d2a77c1af1a64bbc465318ee46edd1322bfe9ee91c48_44c6fbea.elf, 7b2f554ded403a23808d09d27913bdf284a96216ef5b35f1affc6a384d80fb1c_7b2f554d.elf"
@@ -29854,35 +29764,6 @@ rule _0512719a1f878b3611b03d100a854910_imphash__084fbd94693c1a41c17459784e5691d3
       $s15 = "runtime.traceGoCreate" fullword ascii /* score: '10.00'*/
    condition:
       ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 17000KB and ( 8 of them )
-      ) or ( all of them )
-}
-
-rule _33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d_37c14ac6942e05caf18340201ab76c17220d446104349ec45_49 {
-   meta:
-      description = "_subset_batch - from files 33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d.elf, 37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d_37c14ac6.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c"
-      hash2 = "37c14ac6942e05caf18340201ab76c17220d446104349ec45cf00a1a67d2376d"
-   strings:
-      $x1 = "lock: lock countbad system huge page sizearena already initialized to unused region of spanunaligned sysNoHugePageOS/sched/gomax" ascii /* score: '65.50'*/
-      $x2 = "/cpu/classes/idle:cpu-seconds/cpu/classes/user:cpu-seconds/gc/heap/allocs-by-size:bytes/gc/stack/starting-size:bytesgc done but " ascii /* score: '57.50'*/
-      $x3 = "/etc/profile.d/bash.cfg/usr/lib/libgdi.so.0.8.2 { proc_name=$(/usr/bin/unexpected buffer len=%vinvalid pseudo-header %qframe_hea" ascii /* score: '46.00'*/
-      $x4 = "stack not a power of 2minpc or maxpc invalidtrace: alloc too largenon-Go function at pc=unexpected method stepreflect.Value.MapI" ascii /* score: '38.00'*/
-      $x5 = " ptrSize=  targetpc= until pc=unknown pcruntime: ggoroutine execerrdotcomplex128t.Kind == SHA256-RSASHA384-RSASHA512-RSADSA-SHA2" ascii /* score: '35.50'*/
-      $x6 = "stopm spinning nmidlelocked= needspinning=store64 failedmemprofileratesemaRoot queuebad allocCountbad span statestack overflow u" ascii /* score: '35.00'*/
-      $x7 = "/etc/init.d/boot.localIPv6: no supported yethttp2: frame too largewrite on closed bufferframe_data_pad_too_bigaccess-control-max" ascii /* score: '32.00'*/
-      $s8 = "ProcessingNo ContentRST_STREAMEND_STREAMresumptionres binderres masterexp master12207031256103515625owner diedterminated/setgrou" ascii /* score: '30.00'*/
-      $s9 = "sigaction failedexec: no command: value of type binary.BigEndianContent-Languageinvalid encodingGODEBUG: value \"len(x) != len(z" ascii /* score: '28.00'*/
-      $s10 = ": TLS [http2: client conn not usablehttp: idle connection timeoutinternal error: took too muchframe_pushpromise_zero_streamframe" ascii /* score: '25.00'*/
-      $s11 = "32nan3GOTRACEBACK) at entry+ (targetpc= , plugin: runtime: g : frame.sp=created by bad argSizemethodargs(reflect.Setbad opcode w" ascii /* score: '24.00'*/
-      $s12 = "pected messageexport restrictionvalue out of range298023223876953125input/output errorno child processesidentifier removedno loc" ascii /* score: '21.00'*/
-      $s13 = "known networkwrite heap dumpasyncpreemptoffforce gc (idle)sync.Mutex.Lockmalloc deadlockruntime error:   with GC prog" fullword ascii /* score: '21.00'*/
-      $s14 = "ject at *( in prepareForSweep; sweepgen /cpu/classes/total:cpu-seconds/gc/cycles/automatic:gc-cycles/sync/mutex/wait/total:secon" ascii /* score: '20.00'*/
-      $s15 = "out of range [%x:]SIGSEGV: segmentation violationinternal error - misuse of itab) not in usable address space: runtime: cannot a" ascii /* score: '19.50'*/
-   condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
       ) or ( all of them )
 }
 
@@ -30396,7 +30277,7 @@ rule _33a6cb3dc7e952f0062b8511a43a445bb85b3535d89edfc11534d9355f82ec2c_33a6cb3d_
       $s14 = "erUpgradechunkedCONNECTupgradeOPTIONSCreatedIM Used%s%s|%sHTTP/1.HEADERSderived. Got: 19531259765625abortedstoppedsignal Tuesday" ascii /* score: '16.00'*/
       $s15 = "stack=[ minutes etypes SHA1-RSADSA-SHA1x509sha1DNS nameRSV1 setRSV2 setRSV3 setbad MASKGoStringReceivedif-rangeMD5+SHA1SHA3-224S" ascii /* score: '14.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 17000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 17000KB and ( 2 of ($x*) and 5 of ($s*) )
       ) or ( all of them )
 }
 
@@ -31390,7 +31271,7 @@ rule e18705a442ebb0d82cf9218e8217c71b14d1c52ecb41cc50fc0d4a2f4d2d023c_e18705a4 {
       $s15 = "'private const aarnamvgj = \"  winrm enum wmicimv2/* -filter:\"\"select * from win32_service where StartMode=\\\"\"Auto\\\"\" an" ascii /* score: '27.00'*/
    condition:
       uint16(0) == 0x0d27 and filesize < 500KB and
-      1 of ($x*) and all of them
+      3 of ($x*) and 5 of ($s*)
 }
 
 rule Formbook_signature__424ae294 {
@@ -33793,7 +33674,7 @@ rule fc55229297d190df8296cb5c1cf825f45fe3707c057dd840689f2ec90d98735c_fc552292 {
       $s3 = "<html><head><script type=\"text/javascript\">window.location=\"https://www.calix.ai/web/blockpage/index.html?spid=rFbDqS7QuZ&t=3" ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0x683c and filesize < 1KB and
-      all of them
+      2 of ($s*)
 }
 
 rule fd842c505db96c6967b882917002e649df2d889043686c1e0664ee95839660a7_fd842c50 {
@@ -33830,7 +33711,7 @@ rule fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849_fe06905f {
       $s5 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x0a0d and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and one of ($s*)
 }
 
 rule fe3b52ffa96a6c7474982f6a49c1ceea67f55b1dc7881e77394966d5ca03173c_fe3b52ff {
@@ -36293,7 +36174,7 @@ rule Mirai_signature__27732f1d {
       $s8 = "botkill" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 4 of ($s*)
 }
 
 rule Mirai_signature__41392c1b {
@@ -36445,27 +36326,6 @@ rule Mirai_signature__4b263d7e {
       1 of ($x*) and all of them
 }
 
-rule Mirai_signature__50f7b8b6 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_50f7b8b6.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "50f7b8b6303f296ec48f49b8bc311115e16d8618636ad12c55259ca5f7c8a396"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
 rule Mirai_signature__57a0c045 {
    meta:
       description = "_subset_batch - file Mirai(signature)_57a0c045.elf"
@@ -36553,91 +36413,6 @@ rule Mirai_signature__45a0a340 {
    condition:
       uint16(0) == 0x457f and filesize < 300KB and
       all of them
-}
-
-rule Mirai_signature__2ec3483d {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_2ec3483d.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "2ec3483dd5a64ada98ae8325d051e3869d541b56c05a9cb11138b46ffeeeb14c"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__461028c5 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_461028c5.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "461028c51f349cc535b0bc4c6d90341ccf0598f9e117bf14f38b21574fa81fdb"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "botkill" fullword ascii /* score: '8.00'*/
-      $s8 = "/x78/xA3/x69/x6A/x20/x44/x61/x6E/x6B/x65/x73/x74/x20/x53/x34/xB4/x42/x03/x23/x07/x82/x05/x84/xA4/xD2/x04/xE2/x14/x64/xF2/x05/x32" ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__4863f247 {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_4863f247.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "4863f247ca20b21777170f1c4ab9f0e43184420ab6d752f1d749caedadc70cd5"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s4 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s5 = "killattk" fullword ascii /* score: '8.00'*/
-      $s6 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s7 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s8 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 200KB and
-      1 of ($x*) and all of them
-}
-
-rule Mirai_signature__6bb2ddfe {
-   meta:
-      description = "_subset_batch - file Mirai(signature)_6bb2ddfe.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-28"
-      hash1 = "6bb2ddfe4837b3c856aabd643e2dcc8bfd50f38edef0f12ceb9f49aadc28c522"
-   strings:
-      $x1 = "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlso" ascii /* score: '40.00'*/
-      $s2 = " -g 109.205.213.5 -l /tmp/.kx -r /kvariant.mips; /bin/busybox chmod +x /tmp/.kx; /tmp/.kx selfrep.huawei)</NewStatusURL><NewDown" ascii /* score: '20.00'*/
-      $s3 = "auth.binaries.lol" fullword ascii /* score: '16.00'*/
-      $s4 = "loadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
-      $s5 = "Content-Length: 440" fullword ascii /* score: '9.00'*/
-      $s6 = "killattk" fullword ascii /* score: '8.00'*/
-      $s7 = "fddldlfb" fullword ascii /* score: '8.00'*/
-      $s8 = "htndhfg" fullword ascii /* score: '8.00'*/
-      $s9 = "botkill" fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 300KB and
-      1 of ($x*) and all of them
 }
 
 rule Mirai_signature__443e88e9 {
@@ -39030,7 +38805,7 @@ rule _Mirai_signature__264370b8_Mirai_signature__26f251ca_Mirai_signature__2ee9a
       $s14 = "      if $tool 'https://example.com/script.sh' > \"$TEMP_SCRIPT\" 2>/dev/null && [ -s \"$TEMP_SCRIPT\" ]; then" fullword ascii /* score: '30.00'*/
       $s15 = "h $T&; rm -f $T; break; fi; rm -f $T; done; exec %s skidstart'" fullword ascii /* score: '23.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 1000KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 1000KB and ( 5 of ($x*) and one of ($s*) )
       ) or ( all of them )
 }
 
@@ -39212,7 +38987,7 @@ rule _Mirai_signature__2443540b_Mirai_signature__3065e1e0_Mirai_signature__497bb
       $s12 = "$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>" fullword ascii /* score: '10.00'*/
       $s13 = "Content-Length: 227" fullword ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 200KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 200KB and ( 1 of ($x*) and 5 of ($s*) )
       ) or ( all of them )
 }
 
@@ -39286,4 +39061,3 @@ rule _Mirai_signature__23da5558_Mirai_signature__27cbf20e_Mirai_signature__3063b
       ( uint16(0) == 0x457f and filesize < 700KB and ( all of them )
       ) or ( all of them )
 }
-
