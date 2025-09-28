@@ -33531,12 +33531,13 @@ rule fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849_fe06905f {
       hash1 = "fe06905f78cd76a3735654f08b313d7ad07c5cbf7e73d91a1200f10db299a849"
    strings:
       $x1 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '63.00'*/
+      $x2 = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -WindowStyle Hidden -Command \"Invoke-WebRequest -Uri 'http://144.31.2" ascii /* score: '59.00'*/
       $s3 = "1.122:8888/lol111' -OutFile ([IO.Path]::Combine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); & ([IO.Path]::C" ascii /* score: '22.00'*/
       $s4 = "ombine([Environment]::GetFolderPath('ApplicationData'), 'script.ps1')); Remove-Item ([IO.Path]::Combine([Environment]::GetFolder" ascii /* score: '18.00'*/
       $s5 = "Path('ApplicationData'), 'script.ps1'));\"" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x0a0d and filesize < 1KB and
-      1 of ($x*) and one of ($s*)
+      1 of ($x*) and all of them
 }
 
 rule fe3b52ffa96a6c7474982f6a49c1ceea67f55b1dc7881e77394966d5ca03173c_fe3b52ff {
@@ -38591,7 +38592,7 @@ rule _Mirai_signature__264370b8_Mirai_signature__26f251ca_Mirai_signature__2ee9a
       $s14 = "      if $tool 'https://example.com/script.sh' > \"$TEMP_SCRIPT\" 2>/dev/null && [ -s \"$TEMP_SCRIPT\" ]; then" fullword ascii /* score: '30.00'*/
       $s15 = "h $T&; rm -f $T; break; fi; rm -f $T; done; exec %s skidstart'" fullword ascii /* score: '23.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 1000KB and ( 10 of ($x*) and one of ($s*) )
+      ( uint16(0) == 0x457f and filesize < 1000KB and ( 10 of ($x*) and 1 of ($s*) )
       ) or ( all of them )
 }
 
@@ -38625,7 +38626,7 @@ rule _Mirai_signature__3faf4357_Mirai_signature__551cbc16_Mirai_signature__56ca2
       $s14 = "        if $tool 'http://94.154.35.154/script.sh' > \"$TEMP_SCRIPT\" 2>/dev/null && [ -s \"$TEMP_SCRIPT\" ]; then" fullword ascii /* score: '28.00'*/
       $s15 = " -s $T ]; then sh $T&; rm -f $T; break; fi; rm -f $T; done; %s skidstart)' ; echo '@hourly for t in curl wget; do T=/tmp/.s$$; i" ascii /* score: '23.00'*/
    condition:
-      ( uint16(0) == 0x457f and filesize < 900KB and ( 1 of ($x*) and all of them )
+      ( uint16(0) == 0x457f and filesize < 900KB and ( 10 of ($x*) and 1 of ($s*) )
       ) or ( all of them )
 }
 
