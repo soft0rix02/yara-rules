@@ -26185,23 +26185,6 @@ rule sig_157c514360320d8aeacf6e2efbf593ce61eb775bae7c7cbae2a5038087f32acf_157c51
       all of them
 }
 
-rule sig_2d7847e1b6289ade3c7ab13a185fad64_imphash__d9c08e5b {
-   meta:
-      description = "_subset_batch - file 2d7847e1b6289ade3c7ab13a185fad64(imphash)_d9c08e5b.exe"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-26"
-      hash1 = "d9c08e5bb3eb2a9a939298efab3ce041dd35efdc5248e824532457c3b94f4043"
-   strings:
-      $s1 = "            processorArchitecture=\"X86\" " fullword ascii /* score: '10.00'*/
-      $s2 = "<description>Your app description here</description> " fullword ascii /* score: '10.00'*/
-      $s3 = "    processorArchitecture=\"X86\" " fullword ascii /* score: '10.00'*/
-      $s4 = "            publicKeyToken=\"6595b64144ccf1df\" " fullword ascii /* score: '8.00'*/
-   condition:
-      uint16(0) == 0x5a4d and filesize < 2000KB and
-      3 of ($s*)
-}
-
 rule sig_1701a879c9faabcab5006dd0ae0edea0ab7f64b264248a4d3016fa759be1ba80_1701a879 {
    meta:
       description = "_subset_batch - file 1701a879c9faabcab5006dd0ae0edea0ab7f64b264248a4d3016fa759be1ba80_1701a879.zip"
