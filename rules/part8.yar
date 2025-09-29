@@ -4598,7 +4598,7 @@ rule _Vidar_signature__c4b185fc6a9ca983e00f1684a13ef4e1_imphash__XWorm_signature
       $s7 = "4222442420" ascii /* score: '17.00'*/ /* hex encoded string 'B"D$ ' */
       $s8 = "/L language ID</S Hide intialization dialog.  For silent mode use: /S /v/qn" fullword wide /* score: '13.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 26000KB and ( all of them )
+      ( uint16(0) == 0x5a4d and filesize < 5000KB and ( all of them )
       ) or ( all of them )
 }
 
