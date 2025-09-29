@@ -6857,7 +6857,7 @@ rule _97b2588f938cb00e2722645865a7fab1ade3b969d8a5e5a0f8ec02d8578632d0_97b2588f_
       $s14 = "*runtime.errorString" fullword ascii /* score: '10.00'*/
       $s15 = "*runtime.modulehash" fullword ascii /* score: '10.00'*/
    condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f or uint16(0) == 0xfacf ) and filesize < 24000KB and ( 8 of them )
+      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f or uint16(0) == 0xfacf ) and filesize < 24000KB and ( 11 of them )
       ) or ( all of them )
 }
 
