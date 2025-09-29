@@ -2005,12 +2005,12 @@ rule XWorm_signature__7 {
       $s2 = "function prerace(devModeProperties, scriptContext, printTicket) {" fullword ascii /* score: '13.00'*/
       $s3 = "function rammish(printTicket, scriptContext, devModeProperties) {" fullword ascii /* score: '13.00'*/
       $s4 = "var excretal = new ActiveXObject(\"WScript.Shell\");" fullword ascii /* score: '12.00'*/
-      $s5 = "        var hading = getParameterDefs(scriptContext);" fullword ascii /* score: '10.00'*/
+      $s5 = "var hading = getParameterDefs(scriptContext);" fullword ascii /* score: '10.00'*/
       $s6 = "function nonMexican(printTicket, scriptContext, printCapabilities) {" fullword ascii /* score: '9.00'*/
       $s7 = "ot circuiting the rest of the code." fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x683c and filesize < 100KB and
-      all of them
+      5 of ($s*)
 }
 
 rule XWorm_signature__8d96e934 {
