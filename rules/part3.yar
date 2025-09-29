@@ -7421,7 +7421,7 @@ rule _c7269d59926fa4252270f407e4dab043_imphash__c7269d59926fa4252270f407e4dab043
       $s14 = "strconv.appendQuotedRuneWith" fullword ascii /* score: '10.00'*/
       $s15 = "reflect.Value.Len" fullword ascii /* score: '10.00'*/
    condition:
-      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 24000KB and ( 8 of them )
+      ( ( uint16(0) == 0x5a4d or uint16(0) == 0x457f ) and filesize < 24000KB and ( 12 of them )
       ) or ( all of them )
 }
 
