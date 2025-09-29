@@ -148,7 +148,7 @@ rule XWorm_signature__112bfbb18727302cb5425c20a464b02e_imphash__0d648574 {
       $s15 = "Syka blyat. Fuck all. Made in Russia. Neshta_v3" fullword ascii /* score: '9.00'*/
    condition:
       uint16(0) == 0x5a4d and filesize < 3000KB and
-      8 of them
+      11 of them
 }
 
 rule XWorm_signature__112bfbb18727302cb5425c20a464b02e_imphash_ {
