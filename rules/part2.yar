@@ -1646,20 +1646,6 @@ rule aa0340651089c88231a6751eba2fb08bd40da2e7670384b301ee835d75eaa555_aa034065 {
       all of them
 }
 
-rule sig_9de2606cfa0aa0d2eef8afd2762e167e497e35b354a69c03cbb6b907cec1bd6b_9de2606c {
-   meta:
-      description = "_subset_batch - file 9de2606cfa0aa0d2eef8afd2762e167e497e35b354a69c03cbb6b907cec1bd6b_9de2606c.elf"
-      author = "Metin Yigit"
-      reference = "internal"
-      date = "2025-09-10"
-      hash1 = "9de2606cfa0aa0d2eef8afd2762e167e497e35b354a69c03cbb6b907cec1bd6b"
-   strings:
-      $s1 = "__vdso_clock_gettime" fullword ascii /* score: '9.00'*/
-   condition:
-      uint16(0) == 0x457f and filesize < 400KB and
-      all of them
-}
-
 rule a2f1713fe7b19d0edf6f36ffa30b4db79ea1bf318187ac7c0a5d59749c7ea84e_a2f1713f {
    meta:
       description = "_subset_batch - file a2f1713fe7b19d0edf6f36ffa30b4db79ea1bf318187ac7c0a5d59749c7ea84e_a2f1713f.elf"
