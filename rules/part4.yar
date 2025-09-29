@@ -5618,7 +5618,7 @@ rule _Kimsuky_signature__b66e456457142424c4274ccc4a6e3326_imphash__LummaStealer_
       $s14 = "internal/testlog.Logger" fullword ascii /* score: '18.00'*/
       $s15 = "*func(*os.Process) error" fullword ascii /* score: '18.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 29000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 29000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -6489,7 +6489,7 @@ rule _LummaStealer_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__LummaSte
       $s14 = "runtime.name.tagLen" fullword ascii /* score: '10.00'*/
       $s15 = "runtime.gcWaitOnMark" fullword ascii /* score: '10.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 7000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 7000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -6609,7 +6609,7 @@ rule _LummaStealer_signature__1aae8bf580c846f39c71c05898e57e88_imphash__LummaSte
       $s14 = "runtime/error.go" fullword ascii /* score: '10.00'*/
       $s15 = "runtime.float64toint64" fullword ascii /* score: '10.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 7000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 7000KB and ( 12 of them )
       ) or ( all of them )
 }
 
