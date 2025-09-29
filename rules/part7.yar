@@ -7242,7 +7242,7 @@ rule _Sliver_signature__c2d457ad8ac36fc9f18d45bffcd450c2_imphash__SparkRAT_signa
       $s14 = "reflect.cvtStringRunes" fullword ascii /* score: '10.00'*/
       $s15 = "reflect.makeRunes" fullword ascii /* score: '10.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 25000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 25000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -7497,7 +7497,7 @@ rule _Rhadamanthys_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__Rhadaman
       $s14 = "runtime.traceNextGC" fullword ascii /* score: '10.00'*/
       $s15 = "readerPass" fullword ascii /* score: '10.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -7562,7 +7562,7 @@ rule _Rhadamanthys_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__Rhadaman
       $s14 = "internal/testlog.Stat" fullword ascii /* score: '9.00'*/
       $s15 = "os.openFileNolog" fullword ascii /* score: '9.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 12 of them )
       ) or ( all of them )
 }
 
@@ -9381,7 +9381,7 @@ rule _Rhadamanthys_signature__4035d2883e01d64f3e7a9dccb1d63af5_imphash__Rhadaman
       $s14 = "runtime.fatalthrow" fullword ascii /* score: '10.00'*/
       $s15 = "runtime.panicmem" fullword ascii /* score: '10.00'*/
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 8 of them )
+      ( uint16(0) == 0x5a4d and filesize < 30000KB and ( 12 of them )
       ) or ( all of them )
 }
 
