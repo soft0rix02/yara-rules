@@ -3982,7 +3982,7 @@ rule ca705f3b80b7e5140b7de8913b67177ac126f9eff7e2fa3974828844f70ecab7_ca705f3b {
       hash1 = "ca705f3b80b7e5140b7de8913b67177ac126f9eff7e2fa3974828844f70ecab7"
    strings:
       $x1 = "powershell -WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command \"iex ((New-Object Net.WebClient).DownloadString('htt" ascii /* score: '51.00'*/
-      $s1 = "s://bkngssercise.com/bomla'))\"" fullword ascii /* score: '14.00'*/
+      $s1 = "s://bkngssercise.com/bomla'))\"" ascii /* score: '14.00'*/
    condition:
       uint16(0) == 0x6f70 and filesize < 1000KB and
       $x1 and $s1
