@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_73cbd3c02714abe9_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250909-h9vz2azpw7"
+    sha256 = "73cbd3c02714abe93aae9e08401d86b04a10671a4514331e516f7f5c483c3e73"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "xworm"
+    config_version = "0.3.1"
+    config_c2 = ":6000; aaslooria.com; aaslooria.com:6000; c.pki.goog; http://c.pki.goog/r/r1.crl; https://raw.githubusercontent.com/Shadow252141/login/refs/heads/main/Image.png; nexusrules.officeapps.live.com; raw.githubusercontent.com"
+  strings:
+    $mut1 = "['5EttZk9oxo4LZRra']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_94d2644b2ebb3550_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-xnvvgazkx8"
+    sha256 = "94d2644b2ebb3550d36d658111eb5054703ee6d160bf970ed9a625363aaa742e"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "asyncrat"
+    config_version = "0.3.1"
+    config_c2 = "8.8.8.8.in-addr.arpa; ctldl.windowsupdate.com; envio1009.duckdns.org; envio1009.duckdns.org:2815"
+  strings:
+    $mut1 = "['DcRatMutex_qwqdanchun']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

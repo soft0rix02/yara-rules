@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_4e90fa3f4197c83e_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-ynnltszp15"
+    sha256 = "4e90fa3f4197c83ee858b522e2a99a8145da5e0f972f06a9b825e4a2781dc550"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "xworm"
+    config_version = "0.3.1"
+    config_c2 = "https://pastebin.com/raw/Hicz3DVN; pastebin.com"
+  strings:
+    $mut1 = "['867aeGIEEecFXBcr']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_0e2dffdcf5778674_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250914-v5ylkswqt2"
+    sha256 = "0e2dffdcf5778674c79dcc9deaf605b1c2cc91264d4d16396fbafa4658d43ccd"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "quasar"
+    config_version = "0.3.1"
+    config_c2 = "8.8.8.8.in-addr.arpa; anonam39-21749.portmap.io; anonam39-21749.portmap.io:21749; c.pki.goog; github.com; http://c.pki.goog/r/r1.crl; https://github.com/tsgjm123/am/raw/refs/heads/main/ShellHost.exe; https://raw.githubusercontent.com/tsgjm1"
+  strings:
+    $mut1 = "['bcabad1b-b1a9-478b-a187-3607b6476fd1']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

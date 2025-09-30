@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_595b3e370a653b8f_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-wc6bdshl2w"
+    sha256 = "595b3e370a653b8f722105d4aaf464b577c8f242504743519d7b5e96ba073fe0"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "xworm"
+    config_version = "0.3.1"
+    config_c2 = "31.57.97.5:901; c.pki.goog; discord.com; http://c.pki.goog/r/r1.crl; http://ip-api.com/csv/?fields=status,query; https://discord.com/api/webhooks/1408790216101204049/yQcPJJr5WXRZbuD5LfJYkG5HS9uQ-ctNNdscgyHaN8pqc4OFFV7haB4WHuqq9POScIRf; ip-a"
+  strings:
+    $mut1 = "['ENpXm3eBNKLHMqPE']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

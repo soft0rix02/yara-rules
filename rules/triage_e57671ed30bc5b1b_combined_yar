@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_e57671ed30bc5b1b_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-l53e4axqt8"
+    sha256 = "e57671ed30bc5b1b4e249c1ce33316030108a0f04938f60c6b9ba4ef3a9981e5"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "xworm"
+    config_version = "0.3.1"
+    config_c2 = "150.29.20.104.in-addr.arpa; 233.17.178.52.in-addr.arpa; 31.221.185.147.in-addr.arpa; 38.38.61.109.in-addr.arpa; 7.98.22.2.in-addr.arpa; ctldl.windowsupdate.com; feb-poll.gl.at.ply.gg; https://pastebin.com/raw/EJvb0KgJ; ocsp.digicert.com; pa"
+  strings:
+    $mut1 = "['WVM5WzMAXuPoyWve']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

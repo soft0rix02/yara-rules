@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_723dd272c8c8e8ec_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-xqyzxaaj5w"
+    sha256 = "723dd272c8c8e8ec05ecfe65291317330effab78c59d7093d19fd35611900c6b"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "asyncrat"
+    config_version = "0.3.1"
+    config_c2 = "37.0.14.200:5033"
+  strings:
+    $mut1 = "['Venom_RAT_HVNC_Mutex_Venom RAT_HVNC']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

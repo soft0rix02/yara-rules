@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_c4d4752a4eacc4ce_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-jrsmmafr6t"
+    sha256 = "c4d4752a4eacc4ce1d617cddedfbd5fcb527fc0500f2a4e442a28bd05bce329a"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "njrat"
+    config_version = "0.3.1"
+    config_c2 = "c.pki.goog; http://c.pki.goog/r/r1.crl; youri.mooo.com; youri.mooo.com:1605"
+  strings:
+    $mut1 = "['e936a10f968ac948cd351c9629dbd36d']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

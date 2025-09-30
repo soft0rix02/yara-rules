@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_d12dcc56ce90eaf9_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250914-t34t5sdj9t"
+    sha256 = "d12dcc56ce90eaf9b62dcc75559936deb327cd8ed839f93ff7b38e3429efbf21"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "blihanstealer"
+    config_version = "0.3.1"
+    config_c2 = "c.pki.goog; http://c.pki.goog/r/r1.crl"
+  strings:
+    $mut1 = "['pomdfghrt']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

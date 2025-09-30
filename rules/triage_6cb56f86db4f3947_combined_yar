@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_6cb56f86db4f3947_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250914-qqsdssap4w"
+    sha256 = "6cb56f86db4f39472414027c1c24437b761a653d78806497832d7061246fd923"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "quasar"
+    config_version = "0.3.1"
+    config_c2 = "http://ip-api.com/json/; ip-api.com; vilvaraj-32652.portmap.io; vilvaraj-32652.portmap.io:32652"
+  strings:
+    $mut1 = "['VNM_MUTEX_leHlASKNUnPs1TrSC1']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

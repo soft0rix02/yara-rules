@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_590c93db5b211d41_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250914-sqmjnacl4t"
+    sha256 = "590c93db5b211d4103163b9932bfbcd53d2ac6702caf6397bf2fac3269f8bbd2"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "quasar"
+    config_version = "0.3.1"
+    config_c2 = "c.pki.goog; gta5.servegame.com; gta5.servegame.com:7777; http://c.pki.goog/r/r1.crl; https://ipwho.is/; https://th.bing.com/th/id/R.4e773659bcf0dba3f6feb217d4541aae?rik=JE9A9Ss5p%2bHFZA&pid=ImgRaw&r=0; ipwho.is; th.bing.com"
+  strings:
+    $mut1 = "['7a35d1d2-a55d-4f9b-830f-bd9ccf2ff3c1']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_f93ac1a526998ef8_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-lqpwfsgr9v"
+    sha256 = "f93ac1a526998ef84868a15c12a2e4826226f18b971cb6382cf2cd32a8aa7ef2"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "phantomstealer"
+    config_version = "0.3.1"
+    config_c2 = "api.msn.com; apis.google.com; assets.msn.com; browser.events.data.msn.com; c.bing.com; c.msn.com; c.pki.goog; clients2.google.com; clients2.googleusercontent.com; content-signature-chains.prod.autograph.services.mozaws.net; copilot.microsof"
+  strings:
+    $mut1 = "['RTDNUUFWBV1X92FEZSZI']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

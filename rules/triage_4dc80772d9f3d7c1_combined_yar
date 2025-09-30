@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_4dc80772d9f3d7c1_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250909-q6knwssmv4"
+    sha256 = "4dc80772d9f3d7c17801f501c3eca84ba462658c3ec0aa2f46669e109e017634"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "quasar"
+    config_version = "0.3.1"
+    config_c2 = "134.19.178.162:5700; c.pki.goog; ctldl.windowsupdate.com; http://c.pki.goog/r/r1.crl; https://upload.betray.cfd/d/eyJmaWxlX2lkIjoiZjkyMThmMWEtODg0OC00MmZhLWJlZmItYzk3MjU2NDBiNjZhIn0.aLzuvA.OQL2jCwRdy0NcrITj40nYq9jh3o; nexusrules.officeapps."
+  strings:
+    $mut1 = "['9238980c-0b2f-4cfd-a63d-3418e177a461']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

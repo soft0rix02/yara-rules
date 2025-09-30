@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_e451a4d0bfa7b938_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250913-s1lp4scr8y"
+    sha256 = "e451a4d0bfa7b9380e3e152c05132122958f8fa592a7436736e61bd8fdc9f4fb"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "quasar"
+    config_version = "0.3.1"
+    config_c2 = "147.185.221.30:62710; c.pki.goog; http://c.pki.goog/r/r1.crl; https://ipwho.is/; ipwho.is"
+  strings:
+    $mut1 = "['8fbabd67-debd-42d4-9df2-11d56a151b2a']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

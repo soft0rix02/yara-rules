@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_7432b10bc1f3eb8a_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250909-mw3vyaap7s"
+    sha256 = "7432b10bc1f3eb8aab9e010a1070a3889f6304e99b09554a42e5447ba597d5ba"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "quasar"
+    config_version = "0.3.1"
+    config_c2 = "hidra991.hldns.ru; hidra991.hldns.ru:4782"
+  strings:
+    $mut1 = "['3bd904ea-ff5e-4d46-9ec4-b0224e1121aa']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

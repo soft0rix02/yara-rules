@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_ac60a2587753f73a_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250909-j4lpva1js5"
+    sha256 = "ac60a2587753f73ab0c84da790ed71496cbb83e18213dd485fe579392aa51fb4"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "xworm"
+    config_version = "0.3.1"
+    config_c2 = "82.24.40.12:5000; c.pki.goog; dayzcheatcheck.online; http://c.pki.goog/r/r1.crl"
+  strings:
+    $mut1 = "['U7rvKwbRxtiQXcEa']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}

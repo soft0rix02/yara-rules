@@ -1,0 +1,18 @@
+import "pe"
+
+rule Triage_triage_3755718db9d33f4a_combined {
+  meta:
+    source = "Recorded Future Triage"
+    triage_id = "250910-wc2m7shl2s"
+    sha256 = "3755718db9d33f4aba2563de454d4530a308b41b1096c904102d08e2101f2020"
+    triage_score = "10"
+    indicators = "registry|pipes|mutex (mutex non-whitelisted)"
+    config_family = "redline"
+    config_version = "0.3.1"
+    config_c2 = "154.91.34.165:64951; 17.aa.4t.com; 192.168.1.221; 5kidontknowit.com; api.ipify.org; api.pcloud.com; api.telegram.org; blackswmxc.top; c.pki.goog; c291daa6.pythonanywhere.com; checkip.dyndns.org; cladwybn.digital; cloud-api.yandex.net; cxcs."
+  strings:
+    $mut1 = "['Y1mBse1uakfJ6zP1']" ascii wide fullword
+  condition:
+    ( uint16(0) == 0x5A4D or defined(pe) ) and
+    1 of them
+}
